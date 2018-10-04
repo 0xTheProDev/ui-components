@@ -1,13 +1,15 @@
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
+import { Column } from '../src/grid/column';
+import { Row } from '../src/grid/row';
 import { NumberedStep, NumberedSteps } from '../src/numbered-steps';
 
 const stories = storiesOf('NumberedSteps', module);
 
 stories.add('Numbered Steps with short content', () => (
-  <div className="row">
-    <div className="col-4">
+  <Row>
+    <Column width={4}>
       <NumberedSteps>
         <NumberedStep header="Use these settings">
           <p>Configure your application with the settings below.</p>
@@ -16,13 +18,13 @@ stories.add('Numbered Steps with short content', () => (
           <p>Test your integration by sending email through your application.</p>
         </NumberedStep>
       </NumberedSteps>
-    </div>
-  </div>
+    </Column>
+  </Row>
 ));
 
 stories.add('Numbered Steps with longer content', () => (
-  <div className="row">
-    <div className="col-4">
+  <Row>
+    <Column width={4}>
       <NumberedSteps>
         <NumberedStep header="Use these settings">
           <p>Configure your application with the settings below.</p>
@@ -48,6 +50,6 @@ stories.add('Numbered Steps with longer content', () => (
           </div>
         </NumberedStep>
       </NumberedSteps>
-    </div>
-  </div>
+    </Column>
+  </Row>
 ));
