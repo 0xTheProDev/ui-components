@@ -7,7 +7,7 @@ const stories = storiesOf('NumberedSteps', module);
 
 stories.add('Numbered Steps with short content', () => (
   <div className="row">
-    <div className="col-4" style={{ width: '300px' }}>
+    <div className="col-4">
       <NumberedSteps>
         <NumberedStep header="Use these settings">
           <p>Configure your application with the settings below.</p>
@@ -22,7 +22,7 @@ stories.add('Numbered Steps with short content', () => (
 
 stories.add('Numbered Steps with longer content', () => (
   <div className="row">
-    <div className="col-4" style={{ width: '300px' }}>
+    <div className="col-4">
       <NumberedSteps>
         <NumberedStep header="Use these settings">
           <p>Configure your application with the settings below.</p>
