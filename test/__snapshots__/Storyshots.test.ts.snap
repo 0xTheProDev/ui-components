@@ -772,7 +772,7 @@ exports[`Storyshots Alerts Alert which is not dismissable 1`] = `
     />
     Changes you've made to this email have not been applied to your live automation.
     <button
-      className="btn btn-primary"
+      className="btn btn-primary btn-small"
       disabled={false}
       id={undefined}
       onClick={[Function]}
