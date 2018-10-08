@@ -1,4 +1,5 @@
 module.exports = {
+    testEnvironment: 'node',
   setupTestFrameworkScriptFile: '<rootDir>jestSetup.js',
   moduleFileExtensions: ['ts', 'tsx', 'js', 'json'],
   moduleNameMapper: {
