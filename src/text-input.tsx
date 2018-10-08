@@ -5,6 +5,8 @@ import { InputType } from './types/inputs';
 import { Units } from './types/units';
 import { Omit } from './types/utils';
 import cn from './utilities/classnames';
+
+// Converts Input Value to Number if The FIeld is Specified such
 const convertInputValue = (value: string, inputType: InputType) => {
   return inputType === 'number' ? Number(value) : value;
 };
