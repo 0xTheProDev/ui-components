@@ -17498,6 +17498,42 @@ exports[`Storyshots Text Input Stateless Text Input with No Value Passed In 1`] 
 </div>
 `;
 
+exports[`Storyshots Text Input Stateless Text Input with a Component Passed as Info prop 1`] = `
+<div
+  className="input-text-wrap"
+  style={Object {}}
+>
+  <label
+    className="input-text-label"
+    htmlFor="test-input-simple"
+  >
+    Stateless Input
+  </label>
+  <input
+    aria-describedby="test-input-simple-info"
+    id="test-input-simple"
+    name="simple"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    step={null}
+    type="text"
+    value=""
+  />
+  <span
+    className="input-info"
+    id="test-input-simple-info"
+  >
+    <a
+      href="#"
+    >
+      Test Info Link
+    </a>
+  </span>
+  
+</div>
+`;
+
 exports[`Storyshots Text Input Stateless Text Input with a Value Passed as a Prop 1`] = `
 <div
   className="input-text-wrap has-value"
