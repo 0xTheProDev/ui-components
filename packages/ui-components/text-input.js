@@ -10,7 +10,6 @@ var __rest = (this && this.__rest) || function (s, e) {
 import React from 'react';
 import Styles from './styles/text-input.module.scss';
 import cn from './utilities/classnames';
-// Converts Input Value to Number if The FIeld is Specified such
 const convertInputValue = (value, inputType) => {
     return inputType === 'number' ? Number(value) : value;
 };
