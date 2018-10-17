@@ -3,8 +3,6 @@ import React from 'react';
 
 import { TextInput } from './text-input';
 
-const comp = <a href='sample_link'>Something</a>;
-
 describe('Input', () => {
   let cmp: any;
   const mockOnChange = jest.fn();
@@ -17,7 +15,6 @@ describe('Input', () => {
           type="text"
           label="Test Input"
           id="test-input-simple"
-          info={comp}
           onChange={mockOnChange}
         />
       );
@@ -30,10 +27,6 @@ describe('Input', () => {
     it('has the correct label', () => {
       expect(cmp.find('.input-text-label').text()).toBe('Test Input');
     });
-  });
-
-  it('renders info component as JSX element', () => {
-      expect(cmp.find('.input-info').contains(comp)).toBe(true);
   });
 
   describe('text input change and focus', () => {
