@@ -42,7 +42,7 @@ export interface TextInputProps {
   isLarge?: boolean;
   isSearch?: boolean;
   label?: string;
-  info?: string | JSX.Element;
+  info?: React.ReactNode;
   onBlur?: (event: FocusEvent, value: string | number) => void;
   style?: CSSProperties;
   step?: number;
