@@ -11722,7 +11722,7 @@ exports[`Storyshots Grid Offset 5 1`] = `
   className="row"
 >
   <div
-    className="col-start-5"
+    className="col-start-7"
   >
     <div
       className="card"

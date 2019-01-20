@@ -10,7 +10,8 @@ export interface ColumnProps {
 
 export const Column: React.SFC<ColumnProps> = ({ children, width, offset }) => {
   const colClass = width > 0 ? `col-${width}` : '';
-  const offsetClass = offset > 0 ? `col-start-${offset}` : '';
+  const offsetClass =
+    offset > 0 && offset < 12 ? `col-start-${12 - (width || 0) - (offset || 0)}` : '';
 
   return (
     <div
