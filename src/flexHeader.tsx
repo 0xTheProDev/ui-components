@@ -6,7 +6,7 @@ import Counter from './counter';
 import { Icon } from './icon';
 
 import Styles from './styles/flex-header.module.scss';
-import { TooltipLength } from './tooltip';
+import { HTMLTooltip, Tooltip, TooltipLength } from './tooltip';
 import { IconType } from './types/icons';
 import cn from './utilities/classnames';
 
@@ -46,14 +46,25 @@ export class FlexHeader extends Component<FlexHeaderProps> {
           <div className={Styles['flex-header-title']}>
             <h3>
               {title}
-              {tooltipText && (
-                <span
-                  data-tooltip={tooltipText}
-                  data-tooltip-pos="down"
-                  data-tooltip-length={tooltipSize}
+              {typeof tooltipText === 'string' ? (
+                <Tooltip
+                  content={tooltipText}
+                  length={tooltipSize}
+                  direction="down"
                 >
                   <Icon type="info-circle" />
-                </span>
+                </Tooltip>
+              ) : (
+                tooltipText && (
+                  <HTMLTooltip
+                    style={{ display: 'inline-block' }}
+                    direction="right"
+                    length={tooltipSize}
+                    hoverTarget={<Icon type="info-circle" />}
+                  >
+                    {tooltipText}
+                  </HTMLTooltip>
+                )
               )}
             </h3>
           </div>

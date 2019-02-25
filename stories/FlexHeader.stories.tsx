@@ -69,3 +69,10 @@ loaderStories.add('Email Preview', () =>
 
 loaderStories.add('Edit Code - with a large tooltip', () =>
   <FlexHeader title="Email Code Module" onClose={()=>{}} tooltipText={'Edit Code Module '.repeat(10)} tooltipLength="large" headerActions={renderActions} />);
+
+loaderStories.add('Import HTML - with html tooltip', () =>
+  <FlexHeader title="Import Drag & Drop HTML" onClose={()=>{}} tooltipText={
+    <div>
+      This is an HTML tooltip with a link. <a href="#">Learn More</a>
+    </div>
+  } tooltipLength="large" headerActions={renderActions} />);

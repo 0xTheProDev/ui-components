@@ -9022,6 +9022,7 @@ exports[`Storyshots Flex Header Edit Code - with a large tooltip 1`] = `
       <h3>
         Email Code Module
         <span
+          className={undefined}
           data-tooltip="Edit Code Module Edit Code Module Edit Code Module Edit Code Module Edit Code Module Edit Code Module Edit Code Module Edit Code Module Edit Code Module Edit Code Module "
           data-tooltip-length="large"
           data-tooltip-pos="down"
@@ -9136,6 +9137,100 @@ exports[`Storyshots Flex Header Image Library 1`] = `
     className="flex-header-right"
   >
     
+  </div>
+</header>
+`;
+
+exports[`Storyshots Flex Header Import HTML - with html tooltip 1`] = `
+<header
+  className="flex-header"
+>
+  <div>
+    <a
+      className="flex-header-action"
+      onClick={[Function]}
+    >
+      <i
+        className="sg-icon sg-icon-x"
+        onClick={undefined}
+        style={null}
+      />
+    </a>
+    <div
+      className="flex-header-title"
+    >
+      <h3>
+        Import Drag & Drop HTML
+        <div
+          length="large"
+          style={
+            Object {
+              "display": "inline-block",
+              "position": "relative",
+            }
+          }
+        >
+          <div
+            className="tooltip-js-parent"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+          >
+            <i
+              className="sg-icon sg-icon-info-circle"
+              onClick={undefined}
+              style={null}
+            />
+          </div>
+          <div
+            className="tooltip-js-content"
+            data-tooltip-length="large"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={
+              Object {
+                "top": -3,
+              }
+            }
+          >
+            <div>
+              This is an HTML tooltip with a link. 
+              <a
+                href="#"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+      </h3>
+    </div>
+  </div>
+  <div
+    className="flex-header-right"
+  >
+    
+    <div
+      className="btn-list"
+    >
+      <button
+        className="btn btn-tertiary"
+        disabled={false}
+        id={undefined}
+        onClick={[Function]}
+        type="button"
+      >
+        Cancel
+      </button>
+      <button
+        className="btn btn-primary btn btn-primary"
+        disabled={false}
+        id={undefined}
+        onClick={[Function]}
+        type="button"
+      >
+        Update
+      </button>
+    </div>
   </div>
 </header>
 `;
@@ -9497,6 +9592,7 @@ exports[`Storyshots FullScreen Modal Fullscreen Modal with renderProps 1`] = `
           <h3>
             With Render Props
             <span
+              className={undefined}
               data-tooltip="here is a tooltip here is a tooltip here is a tooltip here is a tooltip here is a tooltip here is a tooltip here is a tooltip here is a tooltip here is a tooltip here is a tooltip "
               data-tooltip-length="large"
               data-tooltip-pos="down"

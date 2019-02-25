@@ -1,6 +1,7 @@
 module.exports = {
   setupTestFrameworkScriptFile: '<rootDir>jestSetup.js',
   moduleFileExtensions: ['ts', 'tsx', 'js', 'json'],
+  testURL: "http://localhost/",
   moduleNameMapper: {
     '^.+\\.(css|less|scss)$': 'identity-obj-proxy',
   },
