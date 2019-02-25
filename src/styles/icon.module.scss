@@ -266,6 +266,12 @@
   }
 }
 
+.sg-icon-filter {
+  &::before {
+    content: $icon-filter;
+  }
+}
+
 .sg-icon-forms {
   &::before {
     content: $icon-forms;
@@ -329,6 +335,12 @@
 .sg-icon-mail {
   &::before {
     content: $icon-mail;
+  }
+}
+
+.sg-icon-mail-multi {
+  &::before {
+    content: $icon-mail-multi;
   }
 }
 
