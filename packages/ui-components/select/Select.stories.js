@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 import ReactSelect, { components } from 'react-select';
-import Select, { Createable } from '.';
+import Select, { AsyncSelect, Createable } from '.';
 import './select.module.scss';
 const stories = storiesOf('Select', module);
 const feels = [
@@ -99,3 +99,22 @@ labelStories.add('label', () => (React.createElement(React.Fragment, null,
 labelStories.add('label - required', () => (React.createElement(React.Fragment, null,
     React.createElement(Select, { label: 'Powerups', options: powerups, required: true, info: `it's a trap` }))));
 labelStories.add('info', () => (React.createElement(Select, { options: powerups, info: 'Read this to better understand the dropdown.' })));
+const asyncSelectStories = storiesOf('Select/AsyncSelect', module);
+const filterPowerups = (inputValue) => {
+    return powerups.filter(i => i.label.toLowerCase().includes(inputValue.toLowerCase()));
+};
+const promiseOptions = (inputValue) => new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve(filterPowerups(inputValue));
+    }, 1000);
+});
+asyncSelectStories.add('Single select', () => (React.createElement("div", { className: "input-select-wrap" },
+    React.createElement(AsyncSelect, { loadOptions: promiseOptions }))));
+asyncSelectStories.add('Single select with default options', () => (React.createElement("div", { className: "input-select-wrap" },
+    React.createElement(AsyncSelect, { defaultOptions: powerups, loadOptions: promiseOptions }))));
+asyncSelectStories.add('Single select with custom no options and loading messages', () => (React.createElement("div", { className: "input-select-wrap" },
+    React.createElement(AsyncSelect, { defaultOptions: powerups, loadOptions: promiseOptions, loadingMessage: () => 'Some custom loading message...', noOptionsMessage: () => 'Some custom no options message...' }))));
+asyncSelectStories.add('Multi select', () => (React.createElement("div", { className: "input-select-wrap" },
+    React.createElement(AsyncSelect, { isMulti: true, loadOptions: promiseOptions }))));
+asyncSelectStories.add('Multi select with default and cache options', () => (React.createElement("div", { className: "input-select-wrap" },
+    React.createElement(AsyncSelect, { isMulti: true, defaultOptions: powerups, cacheOptions: true, loadOptions: promiseOptions }))));

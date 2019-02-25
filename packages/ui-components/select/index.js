@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactSelect, { components } from 'react-select';
+import ReactAsyncSelect from 'react-select/lib/Async';
 import ReactCreateable from 'react-select/lib/Creatable';
 import Icon from '../icon';
 import mixins from '../styles/global/mixins.scss';
@@ -206,5 +207,37 @@ const Createable = props => {
                 [Styles.isDisabled]: props.disabled,
             }) }, props.info))));
 };
+// Async Select has a lot of the same props as the original Select
+// The notable different props include the following:
+// defaultOptions, loadOptions, cacheOptions, and onInputChange
+const AsyncSelect = props => {
+    // Override dropdownIndicator styling when tooltip is present
+    let dropdownIndicatorStylesOverride;
+    if (props.tooltip) {
+        dropdownIndicatorStylesOverride = {
+            dropdownIndicator: DropdownIndicatorStylesOverride,
+        };
+    }
+    return (React.createElement("div", { className: cn('input-select-wrap', Styles['input-select-wrap'], {
+            [Styles['is-disabled']]: props.disabled,
+            'is-disabled': props.disabled,
+            [Styles['is-error']]: props.error,
+            'is-error': props.error,
+            [Styles['is-required']]: props.required,
+            'is-required': props.required,
+        }) },
+        props.label && (React.createElement("label", { className: cn('input-select-label', Styles['input-select-label']) }, props.label)),
+        React.createElement(ReactAsyncSelect, Object.assign({}, props, { components: {
+                DropdownIndicator,
+                // Disabling default loading dots
+                LoadingIndicator: null,
+            }, styles: Object.assign({}, SelectStyles, props.styles, dropdownIndicatorStylesOverride), isDisabled: props.disabled })),
+        props.info && (React.createElement("span", { className: cn('input-info', Styles['input-info'], {
+                danger: props.error,
+                [Styles.danger]: props.error,
+                isDisabled: props.disabled,
+                [Styles.isDisabled]: props.disabled,
+            }) }, props.info))));
+};
 export default Select;
-export { Select, Createable };
+export { Select, Createable, AsyncSelect };

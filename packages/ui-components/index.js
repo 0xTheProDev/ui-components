@@ -38,7 +38,7 @@ export { SideModal } from './side-modal';
 export { Slider } from './slider';
 export { SplitCard, SplitCardSeparator } from './split-card';
 export { SegmentTerm, SegmentWrapper } from './segment-term';
-export { Select, Createable } from './select';
+export { Select, Createable, AsyncSelect } from './select';
 export { SimpleSelect } from './simple-select';
 export { SortableTable } from './table/sortable-table';
 export { Switch } from './switch';
