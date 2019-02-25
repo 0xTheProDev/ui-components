@@ -10,6 +10,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 import React from 'react';
 import { Icon } from './icon';
 import Styles from './styles/text-input.module.scss';
+import Tooltip from './tooltip';
 import cn from './utilities/classnames';
 const convertInputValue = (value, inputType) => {
     return inputType === 'number' ? Number(value) : value;
@@ -63,7 +64,7 @@ export class TextInput extends React.Component {
         onChange(event, resetValue);
     }
     render() {
-        const _a = this.props, { children, type, id, onChange, value, name, fullWidth, icon, isValid, isRequired, isDisabled, isLarge, isSearch, label, info, onBlur, resetValue, style, units } = _a, attributes = __rest(_a, ["children", "type", "id", "onChange", "value", "name", "fullWidth", "icon", "isValid", "isRequired", "isDisabled", "isLarge", "isSearch", "label", "info", "onBlur", "resetValue", "style", "units"]);
+        const _a = this.props, { children, type, id, onChange, value, name, fullWidth, icon, isValid, isRequired, isDisabled, isLarge, isSearch, label, info, onBlur, resetValue, style, tooltip, tooltipDirection, tooltipLength, units } = _a, attributes = __rest(_a, ["children", "type", "id", "onChange", "value", "name", "fullWidth", "icon", "isValid", "isRequired", "isDisabled", "isLarge", "isSearch", "label", "info", "onBlur", "resetValue", "style", "tooltip", "tooltipDirection", "tooltipLength", "units"]);
         const hasValidResetValue = resetValue && typeof resetValue === 'string';
         const classes = cn('input-text-wrap', Styles['input-text-wrap'], {
             [Styles['has-reset']]: hasValidResetValue,
@@ -98,7 +99,10 @@ export class TextInput extends React.Component {
                     [Styles.danger]: !isValid,
                     danger: !isValid,
                 }), id: infoId }, info)),
-            children || ''));
+            children || '',
+            tooltip && (React.createElement("div", { className: cn('input-tooltip', Styles['input-tooltip']) },
+                React.createElement(Tooltip, { content: tooltip, length: tooltipLength, direction: tooltipDirection },
+                    React.createElement(Icon, { type: "info-circle" }))))));
     }
 }
 TextInput.defaultProps = {

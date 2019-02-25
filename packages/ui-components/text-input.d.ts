@@ -1,4 +1,5 @@
 import React, { CSSProperties } from 'react';
+import { TooltipDirection, TooltipLength } from './tooltip';
 import { InputIcons } from './types/input-icons';
 import { InputType } from './types/inputs';
 import { Units } from './types/units';
@@ -23,6 +24,9 @@ export interface TextInputProps {
     resetValue?: string;
     style?: CSSProperties;
     step?: number;
+    tooltip?: string;
+    tooltipDirection?: TooltipDirection;
+    tooltipLength?: TooltipLength;
     units?: Units;
 }
 /**
