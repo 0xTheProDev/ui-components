@@ -231,3 +231,16 @@ stories.add('Stateless Text Input with a Component Passed as Info prop', () => (
     onBlur={action('onBlur Called')}
   />
 ));
+
+stories.add('Stateless Text Input With Tooltip', () => (
+  <TextInput
+    type="text"
+    label="Stateless Input"
+    id="test-input-simple"
+    onChange={action('Input Changed')}
+    onBlur={action('onBlur called')}
+    tooltip="Some tooltip content."
+    tooltipDirection="left"
+    tooltipLength="medium"
+  />
+));

@@ -1,6 +1,7 @@
 import React, { CSSProperties } from 'react';
 import { Icon } from './icon';
 import Styles from './styles/text-input.module.scss';
+import Tooltip, { TooltipDirection, TooltipLength } from './tooltip';
 import { InputIcons } from './types/input-icons';
 import { InputType } from './types/inputs';
 import { Units } from './types/units';
@@ -48,6 +49,9 @@ export interface TextInputProps {
   resetValue?: string;
   style?: CSSProperties;
   step?: number;
+  tooltip?: string;
+  tooltipDirection?: TooltipDirection;
+  tooltipLength?: TooltipLength;
   units?: Units;
 }
 /**
@@ -139,6 +143,9 @@ export class TextInput extends React.Component<
       onBlur,
       resetValue,
       style,
+      tooltip,
+      tooltipDirection,
+      tooltipLength,
       units,
       ...attributes
     } = this.props;
@@ -213,6 +220,17 @@ export class TextInput extends React.Component<
           </span>
         )}
         {children || ''}
+        {tooltip && (
+          <div className={cn('input-tooltip', Styles['input-tooltip'])}>
+            <Tooltip
+              content={tooltip}
+              length={tooltipLength}
+              direction={tooltipDirection}
+            >
+              <Icon type="info-circle" />
+            </Tooltip>
+          </div>
+        )}
       </div>
     );
   }
