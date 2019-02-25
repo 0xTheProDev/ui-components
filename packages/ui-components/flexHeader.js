@@ -11,6 +11,7 @@ import React, { Component } from 'react';
 import Counter from './counter';
 import { Icon } from './icon';
 import Styles from './styles/flex-header.module.scss';
+import { HTMLTooltip, Tooltip } from './tooltip';
 import cn from './utilities/classnames';
 export class FlexHeader extends Component {
     render() {
@@ -22,8 +23,8 @@ export class FlexHeader extends Component {
                 React.createElement("div", { className: Styles['flex-header-title'] },
                     React.createElement("h3", null,
                         title,
-                        tooltipText && (React.createElement("span", { "data-tooltip": tooltipText, "data-tooltip-pos": "down", "data-tooltip-length": tooltipSize },
-                            React.createElement(Icon, { type: "info-circle" }))))),
+                        typeof tooltipText === 'string' ? (React.createElement(Tooltip, { content: tooltipText, length: tooltipSize, direction: "down" },
+                            React.createElement(Icon, { type: "info-circle" }))) : (tooltipText && (React.createElement(HTMLTooltip, { style: { display: 'inline-block' }, direction: "right", length: tooltipSize, hoverTarget: React.createElement(Icon, { type: "info-circle" }) }, tooltipText))))),
                 headerTabs),
             React.createElement("div", { className: Styles['flex-header-right'] },
                 typeof creditsCount !== 'undefined' ? (React.createElement(Counter, { text: "Credits", count: creditsCount })) : (''),
