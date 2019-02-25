@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 import ReactSelect, { components } from 'react-select';
-import Select, { Createable } from '.';
+import Select, { AsyncSelect, Createable } from '.';
 import './select.module.scss';
 
 const stories = storiesOf('Select', module);
@@ -294,4 +294,59 @@ labelStories.add('info', () => (
     options={powerups}
     info={'Read this to better understand the dropdown.'}
   />
+));
+
+const asyncSelectStories = storiesOf('Select/AsyncSelect', module);
+
+const filterPowerups = (inputValue: string) => {
+  return powerups.filter(i =>
+    i.label.toLowerCase().includes(inputValue.toLowerCase())
+  );
+};
+
+const promiseOptions = (inputValue: string) =>
+  new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(filterPowerups(inputValue));
+    }, 1000);
+  });
+
+asyncSelectStories.add('Single select', () => (
+  <div className="input-select-wrap">
+    <AsyncSelect loadOptions={promiseOptions} />
+  </div>
+));
+asyncSelectStories.add('Single select with default options', () => (
+  <div className="input-select-wrap">
+    <AsyncSelect defaultOptions={powerups} loadOptions={promiseOptions} />
+  </div>
+));
+asyncSelectStories.add(
+  'Single select with custom no options and loading messages',
+  () => (
+    <div className="input-select-wrap">
+      <AsyncSelect
+        defaultOptions={powerups}
+        loadOptions={promiseOptions}
+        loadingMessage={() => 'Some custom loading message...'}
+        noOptionsMessage={() => 'Some custom no options message...'}
+      />
+    </div>
+  )
+);
+
+asyncSelectStories.add('Multi select', () => (
+  <div className="input-select-wrap">
+    <AsyncSelect isMulti loadOptions={promiseOptions} />
+  </div>
+));
+asyncSelectStories.add('Multi select with default and cache options', () => (
+  <div className="input-select-wrap">
+    <AsyncSelect
+      isMulti
+      defaultOptions={powerups}
+      cacheOptions
+      loadOptions={promiseOptions}
+    />
+  </div>
 ));

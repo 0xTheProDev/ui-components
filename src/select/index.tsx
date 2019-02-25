@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactSelect, { components } from 'react-select';
+import ReactAsyncSelect from 'react-select/lib/Async';
 import { SelectComponents } from 'react-select/lib/components';
 import { IndicatorProps } from 'react-select/lib/components/indicators';
 import ReactCreateable from 'react-select/lib/Creatable';
-import { CommonProps, InnerRef } from 'react-select/lib/types';
+import { CommonProps } from 'react-select/lib/types';
 import Icon from '../icon';
 import mixins from '../styles/global/mixins.scss';
 import dropDownShadow from '../styles/global/mixins/dropdownShadow.scss';
@@ -353,5 +354,65 @@ const Createable: React.SFC<any> = props => {
   );
 };
 
+// Async Select has a lot of the same props as the original Select
+// The notable different props include the following:
+// defaultOptions, loadOptions, cacheOptions, and onInputChange
+const AsyncSelect: React.SFC<any> = props => {
+  // Override dropdownIndicator styling when tooltip is present
+  let dropdownIndicatorStylesOverride;
+  if (props.tooltip) {
+    dropdownIndicatorStylesOverride = {
+      dropdownIndicator: DropdownIndicatorStylesOverride,
+    };
+  }
+
+  return (
+    <div
+      className={cn('input-select-wrap', Styles['input-select-wrap'], {
+        [Styles['is-disabled']]: props.disabled,
+        'is-disabled': props.disabled,
+        [Styles['is-error']]: props.error,
+        'is-error': props.error,
+        [Styles['is-required']]: props.required,
+        'is-required': props.required,
+      })}
+    >
+      {props.label && (
+        <label
+          className={cn('input-select-label', Styles['input-select-label'])}
+        >
+          {props.label}
+        </label>
+      )}
+      <ReactAsyncSelect
+        {...props}
+        components={{
+          DropdownIndicator,
+          // Disabling default loading dots
+          LoadingIndicator: null,
+        }}
+        styles={{
+          ...SelectStyles,
+          ...props.styles,
+          ...dropdownIndicatorStylesOverride,
+        }}
+        isDisabled={props.disabled}
+      />
+      {props.info && (
+        <span
+          className={cn('input-info', Styles['input-info'], {
+            danger: props.error,
+            [Styles.danger]: props.error,
+            isDisabled: props.disabled,
+            [Styles.isDisabled]: props.disabled,
+          })}
+        >
+          {props.info}
+        </span>
+      )}
+    </div>
+  );
+};
+
 export default Select;
-export { Select, Createable };
+export { Select, Createable, AsyncSelect };
