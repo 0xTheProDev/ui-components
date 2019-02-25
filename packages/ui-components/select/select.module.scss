@@ -28,6 +28,12 @@
     cursor: pointer;
   }
 
+  [data-tooltip] {
+    position: absolute;
+    right: 0;
+    top: 5px;
+  }
+
   &.is-required {
     label::after {
       position: absolute;
