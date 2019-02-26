@@ -2,11 +2,12 @@ import React from 'react';
 export declare type TooltipDirection = 'up' | 'down' | 'left' | 'right';
 export declare type TooltipLength = 'small' | 'medium' | 'large' | 'xlarge';
 export interface TooltipProps {
-    content?: string;
+    content?: string | React.ReactElement<any>;
     direction?: TooltipDirection;
     length?: TooltipLength;
     className?: string;
     children?: React.ReactElement<any>;
+    hoverTarget?: React.ReactElement<any>;
 }
 export declare const Tooltip: React.SFC<TooltipProps>;
 export declare type HtmlTooltipDirection = 'left' | 'right';

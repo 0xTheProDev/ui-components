@@ -11,8 +11,8 @@ import React from 'react';
 import Styles from './styles/tooltip.module.scss';
 import cn from './utilities/classnames';
 export const Tooltip = (_a) => {
-    var { content, direction, length, className, children } = _a, attributes = __rest(_a, ["content", "direction", "length", "className", "children"]);
-    return (React.createElement("span", Object.assign({ className: className, "data-tooltip": content, "data-tooltip-pos": direction, "data-tooltip-length": length }, attributes), children));
+    var { content, direction, length, className, children, hoverTarget } = _a, attributes = __rest(_a, ["content", "direction", "length", "className", "children", "hoverTarget"]);
+    return typeof content === 'string' ? (React.createElement("span", Object.assign({ className: className, "data-tooltip": content, "data-tooltip-pos": direction, "data-tooltip-length": length }, attributes), children)) : (React.createElement(HTMLTooltip, { style: { display: 'inline-block' }, direction: direction === 'left' || direction === 'right' ? direction : null, length: length, className: className, hoverTarget: hoverTarget }, content));
 };
 Tooltip.defaultProps = {
     direction: 'up',
