@@ -8,7 +8,7 @@ import { HTMLTooltip, Tooltip } from '../src/tooltip';
 const stories = storiesOf('Tooltip', module);
 
 stories.add('Standard', () => (
-  <div style={{ maxWidth: "500px", width: "100%", margin: "0 auto" }}>
+  <div style={{ maxWidth: '500px', width: '100%', margin: '0 auto' }}>
     <h2>No Direction Specified</h2>
     <h3>
       Up
@@ -148,17 +148,48 @@ stories.add('Standard', () => (
     </h3>
     <hr />
     <h2>Style Bleed</h2>
-    <h3 style={{ letterSpacing: "5px", textTransform: "uppercase", fontFamily: "Comic Sans MS", fontSize: "2em", color: "rebeccapurple" }}>
+    <h3 style={{ letterSpacing: '5px', textTransform: 'uppercase', fontFamily: 'Comic Sans MS', fontSize: '2em', color: 'rebeccapurple' }}>
       Oh god why
       <Tooltip content="This should not display any of the following styles set on the parent element: text-transform, letter-spacing, font-size, font-family, or color." direction="right" length="large">
         <Icon type="info-circle" />
       </Tooltip>
     </h3>
+    <hr />
+    <h2>With HTML Content</h2>
+    <h3>
+      Right
+      <Tooltip
+        content={
+          <p>
+            The <a href="#">CCV number</a> is a 3 or 4 digit security code printed
+            on the front or back of your card.
+          </p>
+        }
+        direction="up"
+        hoverTarget={<Icon type="info-circle" />}
+      >
+        <span>testing testing testing</span>
+      </Tooltip>
+    </h3>
+    <h3>
+      Left
+      <Tooltip
+        className="input-info-tooltip"
+        content={
+          <p>
+            The <a href="#">CCV number</a> is a 3 or 4 digit security code printed
+            on the front or back of your card.
+          </p>
+        }
+        direction="left"
+        hoverTarget={<Icon type="info-circle" />}
+      />
+    </h3>
   </div>
 ));
 
 stories.add('Underline', () => (
-  <div style={{ maxWidth: "500px", width: "100%", margin: "0 auto" }}>
+  <div style={{ maxWidth: '500px', width: '100%', margin: '0 auto' }}>
     <h2>No Length Specified</h2>
     <Tooltip
       content="That means automatic teller machine."
@@ -185,7 +216,7 @@ stories.add('Underline', () => (
     >
       <span>Up</span>
     </Tooltip>
-    {" • "}
+    {' • '}
     <Tooltip
       content="A word."
       length="small"
@@ -194,7 +225,7 @@ stories.add('Underline', () => (
     >
       <span>Right</span>
     </Tooltip>
-    {" • "}
+    {' • '}
     <Tooltip
       content="A word."
       length="small"
@@ -203,7 +234,7 @@ stories.add('Underline', () => (
     >
       <span>Down</span>
     </Tooltip>
-    {" • "}
+    {' • '}
     <Tooltip
       content="A word."
       length="small"
@@ -222,7 +253,7 @@ stories.add('Underline', () => (
     >
       <span>Up</span>
     </Tooltip>
-    {" • "}
+    {' • '}
     <Tooltip
       content="Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet."
       length="medium"
@@ -231,7 +262,7 @@ stories.add('Underline', () => (
     >
       <span>Right</span>
     </Tooltip>
-    {" • "}
+    {' • '}
     <Tooltip
       content="Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet."
       length="medium"
@@ -240,7 +271,7 @@ stories.add('Underline', () => (
     >
       <span>Down</span>
     </Tooltip>
-    {" • "}
+    {' • '}
     <Tooltip
       content="Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet."
       length="medium"
@@ -259,7 +290,7 @@ stories.add('Underline', () => (
     >
       <span>Up</span>
     </Tooltip>
-    {" • "}
+    {' • '}
     <Tooltip
       content="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
       length="large"
@@ -268,7 +299,7 @@ stories.add('Underline', () => (
     >
       <span>Right</span>
     </Tooltip>
-    {" • "}
+    {' • '}
     <Tooltip
       content="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
       length="large"
@@ -277,7 +308,7 @@ stories.add('Underline', () => (
     >
       <span>Down</span>
     </Tooltip>
-    {" • "}
+    {' • '}
     <Tooltip
       content="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
       length="large"
@@ -296,7 +327,7 @@ stories.add('Underline', () => (
     >
       <span>Up</span>
     </Tooltip>
-    {" • "}
+    {' • '}
     <Tooltip
       content="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
       length="xlarge"
@@ -305,7 +336,7 @@ stories.add('Underline', () => (
     >
       <span>Right</span>
     </Tooltip>
-    {" • "}
+    {' • '}
     <Tooltip
       content="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
       length="xlarge"
@@ -314,7 +345,7 @@ stories.add('Underline', () => (
     >
       <span>Down</span>
     </Tooltip>
-    {" • "}
+    {' • '}
     <Tooltip
       content="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
       length="xlarge"
@@ -327,7 +358,7 @@ stories.add('Underline', () => (
 ));
 
 stories.add('HTML Content', () => (
-  <div style={{ maxWidth: "500px", width: "100%", margin: "0 auto" }}>
+  <div style={{ maxWidth: '500px', width: '100%', margin: '0 auto' }}>
     <h2>No Direction Specified</h2>
     <div className="input-text-wrap">
       <TextInput
@@ -341,7 +372,7 @@ stories.add('HTML Content', () => (
             <p>
               The <a href="#">CCV number</a> is a 3 or 4 digit security code printed
               on the front or back of your card.
-          </p>
+            </p>
           </HTMLTooltip>
         </div>
       </TextInput>
@@ -360,7 +391,7 @@ stories.add('HTML Content', () => (
             <p>
               The <a href="#">CCV number</a> is a 3 or 4 digit security code printed
               on the front or back of your card.
-          </p>
+            </p>
           </HTMLTooltip>
         </div>
       </TextInput>

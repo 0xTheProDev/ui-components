@@ -9235,7 +9235,7 @@ exports[`Storyshots Flex Header Import HTML - with html tooltip 1`] = `
 </header>
 `;
 
-exports[`Storyshots Flex Header KANPE - No Credits 1`] = `
+exports[`Storyshots Flex Header KANPE - No Credits [skip] 1`] = `
 <header
   className="flex-header"
 >
@@ -21590,6 +21590,100 @@ exports[`Storyshots Tooltip Standard 1`] = `
         style={null}
       />
     </span>
+  </h3>
+  <hr />
+  <h2>
+    With HTML Content
+  </h2>
+  <h3>
+    Right
+    <div
+      length={undefined}
+      style={
+        Object {
+          "display": "inline-block",
+          "position": "relative",
+        }
+      }
+    >
+      <div
+        className="tooltip-js-parent"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <i
+          className="sg-icon sg-icon-info-circle"
+          onClick={undefined}
+          style={null}
+        />
+      </div>
+      <div
+        className="tooltip-js-content"
+        data-tooltip-length={undefined}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        style={
+          Object {
+            "top": -3,
+          }
+        }
+      >
+        <p>
+          The 
+          <a
+            href="#"
+          >
+            CCV number
+          </a>
+           is a 3 or 4 digit security code printed on the front or back of your card.
+        </p>
+      </div>
+    </div>
+  </h3>
+  <h3>
+    Left
+    <div
+      length={undefined}
+      style={
+        Object {
+          "display": "inline-block",
+          "position": "relative",
+        }
+      }
+    >
+      <div
+        className="tooltip-js-parent"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <i
+          className="sg-icon sg-icon-info-circle"
+          onClick={undefined}
+          style={null}
+        />
+      </div>
+      <div
+        className="tooltip-js-content input-info-tooltip is-left"
+        data-tooltip-length={undefined}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        style={
+          Object {
+            "top": -3,
+          }
+        }
+      >
+        <p>
+          The 
+          <a
+            href="#"
+          >
+            CCV number
+          </a>
+           is a 3 or 4 digit security code printed on the front or back of your card.
+        </p>
+      </div>
+    </div>
   </h3>
 </div>
 `;

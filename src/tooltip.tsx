@@ -7,11 +7,12 @@ export type TooltipDirection = 'up' | 'down' | 'left' | 'right';
 export type TooltipLength = 'small' | 'medium' | 'large' | 'xlarge';
 
 export interface TooltipProps {
-  content?: string;
+  content?: string | React.ReactElement<any>;
   direction?: TooltipDirection;
   length?: TooltipLength;
   className?: string;
   children?: React.ReactElement<any>;
+  hoverTarget?: React.ReactElement<any>;
 }
 
 export const Tooltip: React.SFC<TooltipProps> = ({
@@ -20,9 +21,10 @@ export const Tooltip: React.SFC<TooltipProps> = ({
   length,
   className,
   children,
+  hoverTarget,
   ...attributes
 }) => {
-  return (
+  return typeof content === 'string' ? (
     <span
       className={className}
       data-tooltip={content}
@@ -32,6 +34,18 @@ export const Tooltip: React.SFC<TooltipProps> = ({
     >
       {children}
     </span>
+  ) : (
+    <HTMLTooltip
+      style={{ display: 'inline-block' }}
+      direction={
+        direction === 'left' || direction === 'right' ? direction : null
+      }
+      length={length}
+      className={className}
+      hoverTarget={hoverTarget}
+    >
+      {content}
+    </HTMLTooltip>
   );
 };
 

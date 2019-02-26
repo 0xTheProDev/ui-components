@@ -208,7 +208,8 @@
 
 :global {
   [data-tooltip],
-  .input-info-tooltip {
+  .input-info-tooltip,
+  .tooltip-js-parent {
     .sg-icon {
       margin-left: 3px;
       color: $slate-60;
