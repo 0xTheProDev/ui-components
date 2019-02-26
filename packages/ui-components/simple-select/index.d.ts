@@ -1,9 +1,11 @@
 import React, { Component, MouseEvent } from 'react';
+import { IconType } from '../types/icons';
 export interface SimpleSelectOptionData {
     label: string;
     selectedValue?: string;
     style?: React.CSSProperties;
     value: string;
+    iconType?: IconType;
 }
 export interface SimpleSelectProps {
     defaultValue?: SimpleSelectOptionData;

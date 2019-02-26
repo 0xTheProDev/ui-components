@@ -50,6 +50,16 @@ const feels = [
     { label: 'Stupendous', value: 'stupendous' },
     { label: 'Extraordinary', value: 'plvs_extra' },
 ];
+const withIcons = [
+    { label: 'Double plus ungood', value: 'dbl_plus-un', iconType: 'text-only' },
+    { label: 'Good', value: 'sys_good_01', iconType: 'text-only' },
+    { label: 'Great', value: 'sys_great_id', iconType: 'text-only' },
+    { label: 'Grand', value: 'grand', iconType: 'text-only' },
+    { label: 'Fantastic', value: 'fantastic', iconType: 'text-only' },
+    { label: 'Superb', value: 'superb', iconType: 'text-only' },
+    { label: 'Stupendous', value: 'stupendous', iconType: 'text-only' },
+    { label: 'Extraordinary', value: 'plvs_extra', iconType: 'clear-formatting' },
+];
 class SimpleSelectContainer extends React.Component {
     constructor() {
         super(...arguments);
@@ -97,3 +107,4 @@ stories.add('Required, label', () => (React.createElement(DemoSelect, { required
 stories.add('Required, label, info', () => (React.createElement(DemoSelect, { required: true, placeholder: "Choose a thing", label: "This is required", info: "For your information, this is required", options: feels })));
 stories.add('Default Value, label, info', () => (React.createElement(DemoSelect, { required: true, defaultValue: feels[3], label: "Check out this default", info: "For your information, this is required", options: feels })));
 stories.add('Wacky custom option styling', () => (React.createElement(DemoSelect, { required: true, label: "This is required", info: "For your information, this is required", options: powerups })));
+stories.add('With Icons', () => (React.createElement(DemoSelect, { required: true, label: "This is required", info: "For your information, this is required", options: withIcons })));

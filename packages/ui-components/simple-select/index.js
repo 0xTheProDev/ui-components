@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Icon } from '../icon';
 import cn from '../utilities/classnames';
 import Styles from './simple-select.module.scss';
 import SimpleSelectOption from './SimpleSelectOption';
@@ -20,8 +21,11 @@ class SimpleSelect extends Component {
                         'is-active': isActive,
                         [Styles['is-disabled']]: disabled,
                         'is-disabled': disabled,
-                    }) }, value.label || defaultValue.label || placeholder || 'Select...'),
-                isOpen && (React.createElement("div", { className: cn('simple-select-options', Styles['simple-select-options']) }, options.map((o, i) => (React.createElement(SimpleSelectOption, { key: `${i + o.value}`, data: o, onOptionSelect: onOptionSelect, selectedValue: value.value })))))),
+                    }) }, (value.iconType ? (React.createElement(Icon, { type: value.iconType, size: 24 })) : (value.label)) ||
+                    (defaultValue.iconType ? (React.createElement(Icon, { type: defaultValue.iconType, size: 24 })) : (defaultValue.label)) ||
+                    placeholder ||
+                    'Select...'),
+                isOpen && (React.createElement("div", { className: cn('simple-select-options', Styles['simple-select-options']) }, options.map((o, i) => (React.createElement(SimpleSelectOption, { key: `${i + o.value}`, data: o, iconType: o.iconType, onOptionSelect: onOptionSelect, selectedValue: value.value })))))),
             info && (React.createElement("span", { className: cn('input-info', Styles['input-info'], {
                     danger: error,
                     [Styles.danger]: error,

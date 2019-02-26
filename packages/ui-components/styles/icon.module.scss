@@ -529,3 +529,9 @@
     content: $icon-x-legacy;
   }
 }
+
+.sg-icon-clear-formatting {
+  &::before {
+    content: $icon-clear-formatting;
+  }
+}
