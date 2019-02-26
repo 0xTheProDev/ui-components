@@ -129,5 +129,10 @@
       color: $slate;
       background-color: $slate-20;
     }
+    :global(.sg-icon) {
+      font-size: 24px;
+      top: 4px;
+      position: relative;
+    }
   }
 }

@@ -16,6 +16,7 @@ export type IconType =
   | 'check-shield'
   | 'check-thin'
   | 'clean-ui'
+  | 'clear-formatting'
   | 'click'
   | 'clock'
   | 'cloud-question'

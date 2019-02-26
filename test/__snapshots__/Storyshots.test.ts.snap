@@ -17956,6 +17956,33 @@ exports[`Storyshots Simple Select Wacky custom option styling 1`] = `
 </div>
 `;
 
+exports[`Storyshots Simple Select With Icons 1`] = `
+<div
+  className="simple-select-wrap is-required"
+>
+  <label
+    className="simple-select-label"
+  >
+    This is required
+  </label>
+  <div
+    className="simple-select"
+  >
+    <div
+      className="simple-select-control"
+      onMouseDown={[Function]}
+    >
+      Select...
+    </div>
+  </div>
+  <span
+    className="input-info"
+  >
+    For your information, this is required
+  </span>
+</div>
+`;
+
 exports[`Storyshots Simple Select placeholder, does not steal focus 1`] = `
 Array [
   <div

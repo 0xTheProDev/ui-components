@@ -58,6 +58,17 @@ const feels = [
   { label: 'Extraordinary', value: 'plvs_extra' },
 ];
 
+const withIcons = [
+  { label: 'Double plus ungood', value: 'dbl_plus-un', iconType: 'text-only' },
+  { label: 'Good', value: 'sys_good_01', iconType: 'text-only' },
+  { label: 'Great', value: 'sys_great_id', iconType: 'text-only' },
+  { label: 'Grand', value: 'grand', iconType: 'text-only' },
+  { label: 'Fantastic', value: 'fantastic', iconType: 'text-only' },
+  { label: 'Superb', value: 'superb', iconType: 'text-only' },
+  { label: 'Stupendous', value: 'stupendous', iconType: 'text-only' },
+  { label: 'Extraordinary', value: 'plvs_extra', iconType: 'clear-formatting' },
+];
+
 class SimpleSelectContainer extends React.Component<{
   defaultValue?: SimpleSelectOptionData;
   info?: string;
@@ -177,5 +188,14 @@ stories.add('Wacky custom option styling', () => (
     label="This is required"
     info="For your information, this is required"
     options={powerups}
+  />
+));
+
+stories.add('With Icons', () => (
+  <DemoSelect
+    required={true}
+    label="This is required"
+    info="For your information, this is required"
+    options={withIcons}
   />
 ));

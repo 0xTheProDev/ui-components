@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Icon from '../icon';
+import { IconType } from '../types/icons';
 import cn from '../utilities/classnames';
 import { SimpleSelectOptionData, SimpleSelectProps } from './';
 import Styles from './simple-select.module.scss';
@@ -9,6 +11,7 @@ export type SimpleSelectOptionProps = Pick<
 > & {
   data: SimpleSelectOptionData;
   selectedValue: string;
+  iconType?: IconType;
 };
 
 export default class SimpleSelectOption extends Component<
@@ -18,6 +21,7 @@ export default class SimpleSelectOption extends Component<
     const {
       data: { label, style, value },
       selectedValue,
+      iconType,
     } = this.props;
     return (
       <div
@@ -28,6 +32,7 @@ export default class SimpleSelectOption extends Component<
         onMouseDown={this.handleClick}
         style={style}
       >
+        {iconType ? <Icon type={iconType} size={24} /> : ''}
         {label}
       </div>
     );

@@ -1,4 +1,6 @@
 import React, { Component, MouseEvent } from 'react';
+import { Icon } from '../icon';
+import { IconType } from '../types/icons';
 import cn from '../utilities/classnames';
 import Styles from './simple-select.module.scss';
 import SimpleSelectOption from './SimpleSelectOption';
@@ -8,6 +10,7 @@ export interface SimpleSelectOptionData {
   selectedValue?: string;
   style?: React.CSSProperties;
   value: string;
+  iconType?: IconType;
 }
 
 export interface SimpleSelectProps {
@@ -81,7 +84,18 @@ class SimpleSelect extends Component<SimpleSelectProps> {
               }
             )}
           >
-            {value.label || defaultValue.label || placeholder || 'Select...'}
+            {(value.iconType ? (
+              <Icon type={value.iconType} size={24} />
+            ) : (
+              value.label
+            )) ||
+              (defaultValue.iconType ? (
+                <Icon type={defaultValue.iconType} size={24} />
+              ) : (
+                defaultValue.label
+              )) ||
+              placeholder ||
+              'Select...'}
           </div>
 
           {isOpen && (
@@ -95,6 +109,7 @@ class SimpleSelect extends Component<SimpleSelectProps> {
                 <SimpleSelectOption
                   key={`${i + o.value}`}
                   data={o}
+                  iconType={o.iconType}
                   onOptionSelect={onOptionSelect}
                   selectedValue={value.value}
                 />
