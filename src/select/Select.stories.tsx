@@ -1,6 +1,7 @@
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 import ReactSelect, { components } from 'react-select';
+import { Props as SelectProps } from 'react-select/lib/Select';
 import Select, { AsyncSelect, Createable } from '.';
 import './select.module.scss';
 
@@ -117,39 +118,6 @@ stories.add('Multi select - open', () => (
       isMulti
       menuIsOpen
       options={powerups}
-    />
-  </div>
-));
-
-stories.add('Tagging', () => (
-  <div className="input-select-wrap">
-    <Createable
-      isMulti
-      options={powerups}
-      value={[powerups[0], powerups[1], { label: 'row', value: 'row' }]}
-    />
-  </div>
-));
-
-stories.add('Tagging - open', () => (
-  <div className="input-select-wrap">
-    <Createable
-      isMulti
-      options={powerups}
-      value={[powerups[0], powerups[1], { label: 'row', value: 'row' }]}
-      menuIsOpen
-    />
-  </div>
-));
-
-stories.add('Tagging - tooltip', () => (
-  <div className="input-select-wrap">
-    <Createable
-      isMulti
-      options={powerups}
-      value={[powerups[0], powerups[1], { label: 'row', value: 'row' }]}
-      tooltip="Much Power"
-      tooltipDirection="down"
     />
   </div>
 ));
@@ -294,6 +262,107 @@ labelStories.add('info', () => (
     options={powerups}
     info={'Read this to better understand the dropdown.'}
   />
+));
+
+export interface FieldState {
+  value: Array<{ label: string; value: string }>;
+  inputValue: string;
+}
+export class CreateableTextInput extends React.Component<SelectProps<any>> {
+  public readonly state: FieldState = {
+    inputValue: '',
+    value: [powerups[0], powerups[1], { label: 'row', value: 'row' }],
+  };
+
+  public render() {
+    return (
+      <Createable
+        {...this.props}
+        inputValue={this.state.inputValue}
+        value={this.state.value}
+        onChange={this.handleChange}
+        onInputChange={this.handleInputChange}
+        onKeyDown={this.handleKeyDown}
+      />
+    );
+  }
+
+  private handleKeyDown = (event: React.KeyboardEvent<HTMLElement>) => {
+    const { value, inputValue } = this.state;
+
+    if (!inputValue) {
+      return;
+    }
+
+    switch (event.key) {
+      case 'Enter':
+      case 'Tab':
+        this.setState({
+          inputValue: '',
+          value: [...value, { value: inputValue, label: inputValue }],
+        });
+        event.preventDefault();
+    }
+  };
+
+  private handleInputChange = (inputValue: string) => {
+    this.setState({ inputValue });
+  };
+
+  private handleChange = (value: Array<{ label: string; value: string }>) => {
+    this.setState({ value, inputValue: '' });
+  };
+}
+
+const createableStories = storiesOf('Select/Createable', module);
+
+createableStories.add('Createable', () => (
+  <div className="input-select-wrap">
+    <CreateableTextInput isMulti isClearable options={powerups} />
+  </div>
+));
+
+createableStories.add('Multi-select text input', () => (
+  <div className="input-select-wrap">
+    <CreateableTextInput
+      components={{ DropdownIndicator: null }}
+      isMulti
+      menuIsOpen={false}
+    />
+  </div>
+));
+
+createableStories.add('Tagging', () => (
+  <div className="input-select-wrap">
+    <Createable
+      isMulti
+      options={powerups}
+      value={[powerups[0], powerups[1], { label: 'row', value: 'row' }]}
+    />
+  </div>
+));
+
+createableStories.add('Tagging - open', () => (
+  <div className="input-select-wrap">
+    <Createable
+      isMulti
+      options={powerups}
+      value={[powerups[0], powerups[1], { label: 'row', value: 'row' }]}
+      menuIsOpen
+    />
+  </div>
+));
+
+createableStories.add('Tagging - tooltip', () => (
+  <div className="input-select-wrap">
+    <Createable
+      isMulti
+      options={powerups}
+      value={[powerups[0], powerups[1], { label: 'row', value: 'row' }]}
+      tooltip="Much Power"
+      tooltipDirection="down"
+    />
+  </div>
 ));
 
 const asyncSelectStories = storiesOf('Select/AsyncSelect', module);

@@ -58,7 +58,22 @@ const DropdownIndicatorStylesOverride = (base: object) => ({
 
 const SelectStyles = {
   clearIndicator: (base: object) => {
-    return { display: 'none' };
+    return {
+      padding: 0,
+
+      '&::after': {
+        ...mixins,
+        color: SassVars['slate-60'],
+        content: `${SassVars['icon-x']}`,
+        position: 'absolute',
+        right: 20,
+        transform: 'scale(0.6)',
+      },
+
+      svg: {
+        display: 'none',
+      },
+    };
   },
   container: (base: object) => {
     return { ...base, ...{ pointerEvents: 'initial' } };
@@ -277,7 +292,8 @@ const Select: React.SFC<any> = props => {
       )}
       <ReactSelect
         {...props}
-        components={{ DropdownIndicator }}
+        components={props.components || { DropdownIndicator }}
+        isClearable={props.isClearable || false}
         styles={{
           ...SelectStyles,
           ...props.styles,
@@ -330,7 +346,8 @@ const Createable: React.SFC<any> = props => {
       )}
       <ReactCreateable
         {...props}
-        components={{ DropdownIndicator }}
+        components={props.components || { DropdownIndicator }}
+        isClearable={props.isClearable || false}
         styles={{
           ...SelectStyles,
           ...props.styles,
@@ -386,11 +403,14 @@ const AsyncSelect: React.SFC<any> = props => {
       )}
       <ReactAsyncSelect
         {...props}
-        components={{
-          DropdownIndicator,
-          // Disabling default loading dots
-          LoadingIndicator: null,
-        }}
+        components={
+          props.components || {
+            DropdownIndicator,
+            // Disabling default loading dots
+            LoadingIndicator: null,
+          }
+        }
+        isClearable={props.isClearable || false}
         styles={{
           ...SelectStyles,
           ...props.styles,
