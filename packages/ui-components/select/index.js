@@ -37,7 +37,13 @@ const DropdownIndicatorStyles = (base) => {
 const DropdownIndicatorStylesOverride = (base) => (Object.assign({}, base, { pointerEvents: 'initial' }));
 const SelectStyles = {
     clearIndicator: (base) => {
-        return { display: 'none' };
+        return {
+            padding: 0,
+            '&::after': Object.assign({}, mixins, { color: SassVars['slate-60'], content: `${SassVars['icon-x']}`, position: 'absolute', right: 20, transform: 'scale(0.6)' }),
+            svg: {
+                display: 'none',
+            },
+        };
     },
     container: (base) => {
         return Object.assign({}, base, { pointerEvents: 'initial' });
@@ -174,7 +180,7 @@ const Select = props => {
             'is-required': props.required,
         }) },
         props.label && (React.createElement("label", { className: cn('input-select-label', Styles['input-select-label']) }, props.label)),
-        React.createElement(ReactSelect, Object.assign({}, props, { components: { DropdownIndicator }, styles: Object.assign({}, SelectStyles, props.styles, dropdownIndicatorStylesOverride), isDisabled: props.disabled })),
+        React.createElement(ReactSelect, Object.assign({}, props, { components: props.components || { DropdownIndicator }, isClearable: props.isClearable || false, styles: Object.assign({}, SelectStyles, props.styles, dropdownIndicatorStylesOverride), isDisabled: props.disabled })),
         props.info && (React.createElement("span", { className: cn('input-info', Styles['input-info'], {
                 danger: props.error,
                 [Styles.danger]: props.error,
@@ -199,7 +205,7 @@ const Createable = props => {
             'is-required': props.required,
         }) },
         props.label && (React.createElement("label", { className: cn('input-select-label', Styles['input-select-label']) }, props.label)),
-        React.createElement(ReactCreateable, Object.assign({}, props, { components: { DropdownIndicator }, styles: Object.assign({}, SelectStyles, props.styles, dropdownIndicatorStylesOverride), isDisabled: props.disabled })),
+        React.createElement(ReactCreateable, Object.assign({}, props, { components: props.components || { DropdownIndicator }, isClearable: props.isClearable || false, styles: Object.assign({}, SelectStyles, props.styles, dropdownIndicatorStylesOverride), isDisabled: props.disabled })),
         props.info && (React.createElement("span", { className: cn('input-info', Styles['input-info'], {
                 danger: props.error,
                 [Styles.danger]: props.error,
@@ -227,11 +233,11 @@ const AsyncSelect = props => {
             'is-required': props.required,
         }) },
         props.label && (React.createElement("label", { className: cn('input-select-label', Styles['input-select-label']) }, props.label)),
-        React.createElement(ReactAsyncSelect, Object.assign({}, props, { components: {
+        React.createElement(ReactAsyncSelect, Object.assign({}, props, { components: props.components || {
                 DropdownIndicator,
                 // Disabling default loading dots
                 LoadingIndicator: null,
-            }, styles: Object.assign({}, SelectStyles, props.styles, dropdownIndicatorStylesOverride), isDisabled: props.disabled })),
+            }, isClearable: props.isClearable || false, styles: Object.assign({}, SelectStyles, props.styles, dropdownIndicatorStylesOverride), isDisabled: props.disabled })),
         props.info && (React.createElement("span", { className: cn('input-info', Styles['input-info'], {
                 danger: props.error,
                 [Styles.danger]: props.error,

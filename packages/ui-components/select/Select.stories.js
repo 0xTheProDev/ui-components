@@ -45,12 +45,6 @@ stories.add('Multi select', () => (React.createElement("div", { className: "inpu
     React.createElement(Select, { defaultValue: [powerups[0], powerups[1]], isSearchable: true, isMulti: true, options: powerups }))));
 stories.add('Multi select - open', () => (React.createElement("div", { className: "input-select-wrap" },
     React.createElement(Select, { defaultValue: [powerups[0], powerups[1]], isSearchable: true, isMulti: true, menuIsOpen: true, options: powerups }))));
-stories.add('Tagging', () => (React.createElement("div", { className: "input-select-wrap" },
-    React.createElement(Createable, { isMulti: true, options: powerups, value: [powerups[0], powerups[1], { label: 'row', value: 'row' }] }))));
-stories.add('Tagging - open', () => (React.createElement("div", { className: "input-select-wrap" },
-    React.createElement(Createable, { isMulti: true, options: powerups, value: [powerups[0], powerups[1], { label: 'row', value: 'row' }], menuIsOpen: true }))));
-stories.add('Tagging - tooltip', () => (React.createElement("div", { className: "input-select-wrap" },
-    React.createElement(Createable, { isMulti: true, options: powerups, value: [powerups[0], powerups[1], { label: 'row', value: 'row' }], tooltip: "Much Power", tooltipDirection: "down" }))));
 stories.add('Option groups', () => (React.createElement("div", { className: "input-select-wrap" },
     React.createElement(Select, { name: "groups", placeholder: "Feels vs. Powerups", options: [
             { label: 'Feels', options: feels },
@@ -99,6 +93,50 @@ labelStories.add('label', () => (React.createElement(React.Fragment, null,
 labelStories.add('label - required', () => (React.createElement(React.Fragment, null,
     React.createElement(Select, { label: 'Powerups', options: powerups, required: true, info: `it's a trap` }))));
 labelStories.add('info', () => (React.createElement(Select, { options: powerups, info: 'Read this to better understand the dropdown.' })));
+export class CreateableTextInput extends React.Component {
+    constructor() {
+        super(...arguments);
+        this.state = {
+            inputValue: '',
+            value: [powerups[0], powerups[1], { label: 'row', value: 'row' }],
+        };
+        this.handleKeyDown = (event) => {
+            const { value, inputValue } = this.state;
+            if (!inputValue) {
+                return;
+            }
+            switch (event.key) {
+                case 'Enter':
+                case 'Tab':
+                    this.setState({
+                        inputValue: '',
+                        value: [...value, { value: inputValue, label: inputValue }],
+                    });
+                    event.preventDefault();
+            }
+        };
+        this.handleInputChange = (inputValue) => {
+            this.setState({ inputValue });
+        };
+        this.handleChange = (value) => {
+            this.setState({ value, inputValue: '' });
+        };
+    }
+    render() {
+        return (React.createElement(Createable, Object.assign({}, this.props, { inputValue: this.state.inputValue, value: this.state.value, onChange: this.handleChange, onInputChange: this.handleInputChange, onKeyDown: this.handleKeyDown })));
+    }
+}
+const createableStories = storiesOf('Select/Createable', module);
+createableStories.add('Createable', () => (React.createElement("div", { className: "input-select-wrap" },
+    React.createElement(CreateableTextInput, { isMulti: true, isClearable: true, options: powerups }))));
+createableStories.add('Multi-select text input', () => (React.createElement("div", { className: "input-select-wrap" },
+    React.createElement(CreateableTextInput, { components: { DropdownIndicator: null }, isMulti: true, menuIsOpen: false }))));
+createableStories.add('Tagging', () => (React.createElement("div", { className: "input-select-wrap" },
+    React.createElement(Createable, { isMulti: true, options: powerups, value: [powerups[0], powerups[1], { label: 'row', value: 'row' }] }))));
+createableStories.add('Tagging - open', () => (React.createElement("div", { className: "input-select-wrap" },
+    React.createElement(Createable, { isMulti: true, options: powerups, value: [powerups[0], powerups[1], { label: 'row', value: 'row' }], menuIsOpen: true }))));
+createableStories.add('Tagging - tooltip', () => (React.createElement("div", { className: "input-select-wrap" },
+    React.createElement(Createable, { isMulti: true, options: powerups, value: [powerups[0], powerups[1], { label: 'row', value: 'row' }], tooltip: "Much Power", tooltipDirection: "down" }))));
 const asyncSelectStories = storiesOf('Select/AsyncSelect', module);
 const filterPowerups = (inputValue) => {
     return powerups.filter(i => i.label.toLowerCase().includes(inputValue.toLowerCase()));
