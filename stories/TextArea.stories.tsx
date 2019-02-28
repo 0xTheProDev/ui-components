@@ -150,3 +150,23 @@ stories.add('With Tooltip [skip]', () => (
     )}
   </TextAreaContainer>
 ));
+
+stories.add('With HTML Tooltip', () => (
+  <TextAreaContainer>
+    {(value, handleChange) => (
+      <TextArea
+        id="textarea-html-tooltip"
+        label="Label"
+        value={value}
+        onChange={handleChange}
+        tooltip={
+          <p>
+            The <a href="#">CCV number</a> is a 3 or 4 digit security code printed
+            on the front or back of your card.
+          </p>
+        }
+        tooltipDirection="left"
+      />
+    )}
+  </TextAreaContainer>
+));

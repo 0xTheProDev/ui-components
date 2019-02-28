@@ -13,7 +13,7 @@ export interface TextAreaProps {
   maxHeight?: number;
   required?: boolean;
   scrollable?: boolean;
-  tooltip?: string;
+  tooltip?: string | React.ReactElement<any>;
   tooltipDirection?: TooltipDirection;
   value: string;
 }
@@ -152,9 +152,8 @@ export class TextArea extends Component<
               content={tooltip}
               length="large"
               direction={tooltipDirection}
-            >
-              <Icon type="info-circle" />
-            </Tooltip>
+              hoverTarget={<Icon type="info-circle" />}
+            />
           </div>
         )}
       </div>

@@ -32,7 +32,7 @@ export const Tooltip: React.SFC<TooltipProps> = ({
       data-tooltip-length={length}
       {...attributes}
     >
-      {children}
+      {children || hoverTarget}
     </span>
   ) : (
     <HTMLTooltip
@@ -140,7 +140,11 @@ export class HTMLTooltip extends React.Component<
     } = this.props;
 
     return (
-      <div style={{ position: 'relative', ...style }} {...attributes}>
+      <div
+        className="html-tooltip"
+        style={{ position: 'relative', ...style }}
+        {...attributes}
+      >
         <div
           className={cn('tooltip-js-parent', Styles['tooltip-js-parent'])}
           onMouseEnter={this.handleHoverIn}
@@ -160,7 +164,7 @@ export class HTMLTooltip extends React.Component<
               'is-visible': this.state.opened,
             }
           )}
-          style={{ top: -(this.state.tooltipHeight / 2) - 3 }}
+          style={{ top: -(this.state.tooltipHeight / 2) + 8 }}
           data-tooltip-length={this.props.length}
           ref={input => {
             this.tooltipRef = input;

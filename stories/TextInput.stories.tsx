@@ -244,3 +244,21 @@ stories.add('Stateless Text Input With Tooltip', () => (
     tooltipLength="medium"
   />
 ));
+
+stories.add('Stateless Text Input With HTML Tooltip', () => (
+  <TextInput
+    type="text"
+    label="Stateless Input"
+    id="text-input-simple"
+    onChange={action('Input Changed')}
+    onBlur={action('onBlur called')}
+    tooltip={
+      <p>
+        The <a href="#">CCV number</a> is a 3 or 4 digit security code printed
+        on the front or back of your card.
+      </p>
+    }
+    tooltipDirection="left"
+    tooltipLength="large"
+  />
+));

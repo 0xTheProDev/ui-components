@@ -256,9 +256,8 @@ const DropdownIndicator: React.SFC<
         content={props.selectProps.tooltip}
         direction={props.selectProps.tooltipDirection}
         length={props.selectProps.tooltipLength}
-      >
-        <Icon type="info-circle" />
-      </Tooltip>
+        hoverTarget={<Icon type="info-circle" />}
+      />
     </components.DropdownIndicator>
   );
 };

@@ -49,7 +49,7 @@ export interface TextInputProps {
   resetValue?: string;
   style?: CSSProperties;
   step?: number;
-  tooltip?: string;
+  tooltip?: string | React.ReactElement<any>;
   tooltipDirection?: TooltipDirection;
   tooltipLength?: TooltipLength;
   units?: Units;
@@ -226,9 +226,8 @@ export class TextInput extends React.Component<
               content={tooltip}
               length={tooltipLength}
               direction={tooltipDirection}
-            >
-              <Icon type="info-circle" />
-            </Tooltip>
+              hoverTarget={<Icon type="info-circle" />}
+            />
           </div>
         )}
       </div>

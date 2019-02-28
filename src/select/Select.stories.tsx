@@ -69,6 +69,23 @@ stories.add('With long tooltip', () => (
   </div>
 ));
 
+stories.add('With HTML tooltip', () => (
+  <div className="input-select-wrap">
+    <Select
+      options={feels}
+      placeholder="Goobers"
+      tooltip={
+        <p>
+          The <a href="#">CCV number</a> is a 3 or 4 digit security code printed
+          on the front or back of your card.
+        </p>
+      }
+      tooltipDirection="left"
+      tooltipLength="large"
+    />
+  </div>
+));
+
 stories.add('Disabled', () => (
   <div className="input-select-wrap is-disabled">
     <Select defaultValue={feels[7]} disabled options={feels} />
