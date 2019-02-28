@@ -101,8 +101,7 @@ export class TextInput extends React.Component {
                 }), id: infoId }, info)),
             children || '',
             tooltip && (React.createElement("div", { className: cn('input-tooltip', Styles['input-tooltip']) },
-                React.createElement(Tooltip, { content: tooltip, length: tooltipLength, direction: tooltipDirection },
-                    React.createElement(Icon, { type: "info-circle" }))))));
+                React.createElement(Tooltip, { content: tooltip, length: tooltipLength, direction: tooltipDirection, hoverTarget: React.createElement(Icon, { type: "info-circle" }) })))));
     }
 }
 TextInput.defaultProps = {

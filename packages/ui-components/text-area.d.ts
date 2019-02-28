@@ -9,7 +9,7 @@ export interface TextAreaProps {
     maxHeight?: number;
     required?: boolean;
     scrollable?: boolean;
-    tooltip?: string;
+    tooltip?: string | React.ReactElement<any>;
     tooltipDirection?: TooltipDirection;
     value: string;
 }

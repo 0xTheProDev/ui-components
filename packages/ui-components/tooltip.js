@@ -12,7 +12,7 @@ import Styles from './styles/tooltip.module.scss';
 import cn from './utilities/classnames';
 export const Tooltip = (_a) => {
     var { content, direction, length, className, children, hoverTarget } = _a, attributes = __rest(_a, ["content", "direction", "length", "className", "children", "hoverTarget"]);
-    return typeof content === 'string' ? (React.createElement("span", Object.assign({ className: className, "data-tooltip": content, "data-tooltip-pos": direction, "data-tooltip-length": length }, attributes), children)) : (React.createElement(HTMLTooltip, { style: { display: 'inline-block' }, direction: direction === 'left' || direction === 'right' ? direction : null, length: length, className: className, hoverTarget: hoverTarget }, content));
+    return typeof content === 'string' ? (React.createElement("span", Object.assign({ className: className, "data-tooltip": content, "data-tooltip-pos": direction, "data-tooltip-length": length }, attributes), children || hoverTarget)) : (React.createElement(HTMLTooltip, { style: { display: 'inline-block' }, direction: direction === 'left' || direction === 'right' ? direction : null, length: length, className: className, hoverTarget: hoverTarget }, content));
 };
 Tooltip.defaultProps = {
     direction: 'up',
@@ -56,14 +56,14 @@ export class HTMLTooltip extends React.Component {
     }
     render() {
         const _a = this.props, { direction, className, children, hoverTarget, debounce, style } = _a, attributes = __rest(_a, ["direction", "className", "children", "hoverTarget", "debounce", "style"]);
-        return (React.createElement("div", Object.assign({ style: Object.assign({ position: 'relative' }, style) }, attributes),
+        return (React.createElement("div", Object.assign({ className: "html-tooltip", style: Object.assign({ position: 'relative' }, style) }, attributes),
             React.createElement("div", { className: cn('tooltip-js-parent', Styles['tooltip-js-parent']), onMouseEnter: this.handleHoverIn, onMouseLeave: this.handleHoverOut }, hoverTarget),
             React.createElement("div", { className: cn('tooltip-js-content', Styles['tooltip-js-content'], className, {
                     [Styles['is-left']]: direction === 'left',
                     'is-left': direction === 'left',
                     [Styles['is-visible']]: this.state.opened,
                     'is-visible': this.state.opened,
-                }), style: { top: -(this.state.tooltipHeight / 2) - 3 }, "data-tooltip-length": this.props.length, ref: input => {
+                }), style: { top: -(this.state.tooltipHeight / 2) + 8 }, "data-tooltip-length": this.props.length, ref: input => {
                     this.tooltipRef = input;
                 }, onMouseEnter: this.handleHoverIn, onMouseLeave: this.handleHoverOut }, children)));
     }

@@ -24,7 +24,7 @@ export interface TextInputProps {
     resetValue?: string;
     style?: CSSProperties;
     step?: number;
-    tooltip?: string;
+    tooltip?: string | React.ReactElement<any>;
     tooltipDirection?: TooltipDirection;
     tooltipLength?: TooltipLength;
     units?: Units;

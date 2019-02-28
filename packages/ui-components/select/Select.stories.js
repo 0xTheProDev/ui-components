@@ -33,6 +33,11 @@ stories.add('With tooltip', () => (React.createElement("div", { className: "inpu
     React.createElement(Select, { options: feels, placeholder: "Goobers", tooltip: "Great stuff!", tooltipDirection: "left" }))));
 stories.add('With long tooltip', () => (React.createElement("div", { className: "input-select-wrap" },
     React.createElement(Select, { options: feels, placeholder: "Goobers", tooltip: "This tooltip has a lot of words, but that's okay because it should wrap. Don't be afraid to be descriptive using this select tooltip!", tooltipDirection: "left", tooltipLength: "large" }))));
+stories.add('With HTML tooltip', () => (React.createElement("div", { className: "input-select-wrap" },
+    React.createElement(Select, { options: feels, placeholder: "Goobers", tooltip: React.createElement("p", null,
+            "The ",
+            React.createElement("a", { href: "#" }, "CCV number"),
+            " is a 3 or 4 digit security code printed on the front or back of your card."), tooltipDirection: "left", tooltipLength: "large" }))));
 stories.add('Disabled', () => (React.createElement("div", { className: "input-select-wrap is-disabled" },
     React.createElement(Select, { defaultValue: feels[7], disabled: true, options: feels }))));
 stories.add('Disabled with tooltip', () => (React.createElement("div", { className: "input-select-wrap" },

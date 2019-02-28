@@ -70,8 +70,7 @@ export class TextArea extends Component {
                 }), id: `${id}-info` }, info)),
             children,
             tooltip && (React.createElement("div", { className: cn('textarea-tooltip', Styles['textarea-tooltip']) },
-                React.createElement(Tooltip, { content: tooltip, length: "large", direction: tooltipDirection },
-                    React.createElement(Icon, { type: "info-circle" }))))));
+                React.createElement(Tooltip, { content: tooltip, length: "large", direction: tooltipDirection, hoverTarget: React.createElement(Icon, { type: "info-circle" }) })))));
     }
 }
 TextArea.defaultProps = {

@@ -28,8 +28,9 @@
     cursor: pointer;
   }
 
+  :global(.html-tooltip),
   [data-tooltip] {
-    position: absolute;
+    position: absolute !important;
     right: 0;
     top: 5px;
   }

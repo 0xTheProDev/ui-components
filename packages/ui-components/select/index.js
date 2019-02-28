@@ -160,8 +160,7 @@ const DropdownIndicator = props => {
         return React.createElement(components.DropdownIndicator, Object.assign({}, props));
     }
     return (React.createElement(components.DropdownIndicator, Object.assign({}, props),
-        React.createElement(Tooltip, { content: props.selectProps.tooltip, direction: props.selectProps.tooltipDirection, length: props.selectProps.tooltipLength },
-            React.createElement(Icon, { type: "info-circle" }))));
+        React.createElement(Tooltip, { content: props.selectProps.tooltip, direction: props.selectProps.tooltipDirection, length: props.selectProps.tooltipLength, hoverTarget: React.createElement(Icon, { type: "info-circle" }) })));
 };
 const Select = props => {
     // Override dropdownIndicator styling when tooltip is present
