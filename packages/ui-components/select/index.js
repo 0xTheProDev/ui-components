@@ -18,11 +18,20 @@ const multiValueBaseStyles = {
     color: SassVars.white,
     fontSize: 12,
 };
+const errorLabel = (error) => error
+    ? {
+        backgroundColor: SassVars['ron-burgundy'],
+    }
+    : {};
 const disabledLabel = (disabled) => disabled
     ? {
         backgroundColor: SassVars['select-disabled-color'],
     }
     : {};
+const hoverMultiValueRemove = (error) => ({
+    backgroundColor: error ? SassVars['ron-burgundy'] : SassVars['sg-blue'],
+    cursor: 'pointer',
+});
 const DropdownIndicatorStyles = (base) => {
     const dropdownIndicator = {
         padding: 0,
@@ -107,20 +116,17 @@ const SelectStyles = {
         return Object.assign({}, base, menu);
     },
     multiValue: (base, state) => {
-        return Object.assign({}, base, multiValueBaseStyles, disabledLabel(state.selectProps.disabled));
+        return Object.assign({}, base, multiValueBaseStyles, errorLabel(state.data.error), disabledLabel(state.selectProps.disabled));
     },
     multiValueLabel: (base, state) => {
         return Object.assign({}, base, multiValueBaseStyles, {
             padding: 3,
             paddingLeft: 6,
             paddingTop: 4,
-        }, disabledLabel(state.selectProps.disabled));
+        }, errorLabel(state.data.error), disabledLabel(state.selectProps.disabled));
     },
     multiValueRemove: (base, state) => {
-        return Object.assign({}, base, Object.assign({}, multiValueBaseStyles, { ':hover': {
-                backgroundColor: SassVars['sg-blue'],
-                cursor: 'pointer',
-            }, paddingLeft: 0 }), disabledLabel(state.selectProps.disabled));
+        return Object.assign({}, base, Object.assign({}, multiValueBaseStyles, { ':hover': hoverMultiValueRemove(state.data.error), paddingLeft: 0 }), errorLabel(state.data.error), disabledLabel(state.selectProps.disabled));
     },
     option: (base, state) => {
         const focusedState = state.isFocused

@@ -136,6 +136,12 @@ createableStories.add('Createable', () => (React.createElement("div", { classNam
     React.createElement(CreateableTextInput, { isMulti: true, isClearable: true, options: powerups }))));
 createableStories.add('Multi-select text input', () => (React.createElement("div", { className: "input-select-wrap" },
     React.createElement(CreateableTextInput, { components: { DropdownIndicator: null }, isMulti: true, menuIsOpen: false }))));
+createableStories.add('Multi-select text input with errors', () => (React.createElement("div", { className: "input-select-wrap" },
+    React.createElement(Createable, { components: { DropdownIndicator: null }, isMulti: true, menuIsOpen: false, info: 'Please enter valid powerups', error: true, value: [
+            powerups[0],
+            powerups[1],
+            { error: true, label: 'row', value: 'row' },
+        ] }))));
 createableStories.add('Tagging', () => (React.createElement("div", { className: "input-select-wrap" },
     React.createElement(Createable, { isMulti: true, options: powerups, value: [powerups[0], powerups[1], { label: 'row', value: 'row' }] }))));
 createableStories.add('Tagging - open', () => (React.createElement("div", { className: "input-select-wrap" },
