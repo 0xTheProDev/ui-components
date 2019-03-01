@@ -1,4 +1,5 @@
 import { Component, ReactNode } from 'react';
+import { CardStatType } from '../types/stats';
 export interface CardStatProps {
     className?: string;
     label: CardStatType['label'];

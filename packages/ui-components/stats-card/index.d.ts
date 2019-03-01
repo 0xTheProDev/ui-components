@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { CardStatType } from '../types/stats';
 export interface StatsCardProps {
     className?: string;
     stats?: Array<CardStatType>;
