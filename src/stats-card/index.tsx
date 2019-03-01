@@ -1,6 +1,7 @@
 import cn from 'classnames';
 import React, { Component } from 'react';
 
+import { CardStatType } from '../types/stats';
 import CardStat from './CardStat';
 import Styles from './StatsCard.module.scss';
 

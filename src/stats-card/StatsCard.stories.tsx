@@ -1,6 +1,7 @@
 import { storiesOf } from '@storybook/react';
 import React, { Fragment } from 'react';
 
+import { CardStatType } from '../types/stats';
 import CardStat from './CardStat';
 import StatsCard from './index';
 

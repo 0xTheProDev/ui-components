@@ -1,6 +1,7 @@
 import cn from 'classnames';
 import React, { Component, ReactNode } from 'react';
 
+import { CardStatType } from '../types/stats';
 import Styles from './StatsCard.module.scss';
 
 export interface CardStatProps {
