@@ -349,6 +349,23 @@ createableStories.add('Multi-select text input', () => (
   </div>
 ));
 
+createableStories.add('Multi-select text input with errors', () => (
+  <div className="input-select-wrap">
+    <Createable
+      components={{ DropdownIndicator: null }}
+      isMulti
+      menuIsOpen={false}
+      info={'Please enter valid powerups'}
+      error
+      value={[
+        powerups[0],
+        powerups[1],
+        { error: true, label: 'row', value: 'row' },
+      ]}
+    />
+  </div>
+));
+
 createableStories.add('Tagging', () => (
   <div className="input-select-wrap">
     <Createable

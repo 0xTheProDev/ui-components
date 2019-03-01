@@ -23,12 +23,22 @@ const multiValueBaseStyles = {
   color: SassVars.white,
   fontSize: 12,
 };
+const errorLabel = (error: boolean) =>
+  error
+    ? {
+        backgroundColor: SassVars['ron-burgundy'],
+      }
+    : {};
 const disabledLabel = (disabled: boolean) =>
   disabled
     ? {
         backgroundColor: SassVars['select-disabled-color'],
       }
     : {};
+const hoverMultiValueRemove = (error: boolean) => ({
+  backgroundColor: error ? SassVars['ron-burgundy'] : SassVars['sg-blue'],
+  cursor: 'pointer',
+});
 
 const DropdownIndicatorStyles = (base: object) => {
   const dropdownIndicator = {
@@ -158,6 +168,7 @@ const SelectStyles = {
     return {
       ...base,
       ...multiValueBaseStyles,
+      ...errorLabel(state.data.error),
       ...disabledLabel(state.selectProps.disabled),
     };
   },
@@ -170,6 +181,7 @@ const SelectStyles = {
         paddingLeft: 6,
         paddingTop: 4,
       },
+      ...errorLabel(state.data.error),
       ...disabledLabel(state.selectProps.disabled),
     };
   },
@@ -178,12 +190,10 @@ const SelectStyles = {
       ...base,
       ...{
         ...multiValueBaseStyles,
-        ':hover': {
-          backgroundColor: SassVars['sg-blue'],
-          cursor: 'pointer',
-        },
+        ':hover': hoverMultiValueRemove(state.data.error),
         paddingLeft: 0,
       },
+      ...errorLabel(state.data.error),
       ...disabledLabel(state.selectProps.disabled),
     };
   },
