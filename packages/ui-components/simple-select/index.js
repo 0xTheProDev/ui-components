@@ -4,6 +4,24 @@ import cn from '../utilities/classnames';
 import Styles from './simple-select.module.scss';
 import SimpleSelectOption from './SimpleSelectOption';
 class SimpleSelect extends Component {
+    constructor() {
+        super(...arguments);
+        this.getSelectedValue = () => {
+            const { value, placeholder, defaultValue } = this.props;
+            let selectedValue;
+            // instead of just short circuit returning within these, we still have to check against empty string labels
+            if (value) {
+                selectedValue = value.iconType ? (React.createElement(Icon, { type: value.iconType, size: 24 })) : (value.label);
+            }
+            if (!selectedValue && defaultValue) {
+                selectedValue = defaultValue.iconType ? (React.createElement(Icon, { type: defaultValue.iconType, size: 24 })) : (defaultValue.label);
+            }
+            if (!selectedValue) {
+                selectedValue = placeholder || 'Select...';
+            }
+            return selectedValue;
+        };
+    }
     render() {
         const { defaultValue, disabled, error, info, isActive, isOpen, label, onToggle, options, onOptionSelect, placeholder, required, value, } = this.props;
         return (React.createElement("div", { className: cn('simple-select-wrap', Styles['simple-select-wrap'], {
@@ -21,10 +39,7 @@ class SimpleSelect extends Component {
                         'is-active': isActive,
                         [Styles['is-disabled']]: disabled,
                         'is-disabled': disabled,
-                    }) }, (value.iconType ? (React.createElement(Icon, { type: value.iconType, size: 24 })) : (value.label)) ||
-                    (defaultValue.iconType ? (React.createElement(Icon, { type: defaultValue.iconType, size: 24 })) : (defaultValue.label)) ||
-                    placeholder ||
-                    'Select...'),
+                    }) }, this.getSelectedValue()),
                 isOpen && (React.createElement("div", { className: cn('simple-select-options', Styles['simple-select-options']) }, options.map((o, i) => (React.createElement(SimpleSelectOption, { key: `${i + o.value}`, data: o, iconType: o.iconType, onOptionSelect: onOptionSelect, selectedValue: value.value })))))),
             info && (React.createElement("span", { className: cn('input-info', Styles['input-info'], {
                     danger: error,

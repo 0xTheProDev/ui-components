@@ -25,6 +25,7 @@ export interface SimpleSelectProps {
 declare class SimpleSelect extends Component<SimpleSelectProps> {
     static defaultProps: Partial<SimpleSelectProps>;
     render(): JSX.Element;
+    private getSelectedValue;
 }
 export default SimpleSelect;
 export { SimpleSelect };
