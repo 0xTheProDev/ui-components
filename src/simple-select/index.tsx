@@ -84,18 +84,7 @@ class SimpleSelect extends Component<SimpleSelectProps> {
               }
             )}
           >
-            {(value.iconType ? (
-              <Icon type={value.iconType} size={24} />
-            ) : (
-              value.label
-            )) ||
-              (defaultValue.iconType ? (
-                <Icon type={defaultValue.iconType} size={24} />
-              ) : (
-                defaultValue.label
-              )) ||
-              placeholder ||
-              'Select...'}
+            {this.getSelectedValue()}
           </div>
 
           {isOpen && (
@@ -133,6 +122,29 @@ class SimpleSelect extends Component<SimpleSelectProps> {
       </div>
     );
   }
+  private getSelectedValue = () => {
+    const { value, placeholder, defaultValue } = this.props;
+    let selectedValue;
+    // instead of just short circuit returning within these, we still have to check against empty string labels
+    if (value) {
+      selectedValue = value.iconType ? (
+        <Icon type={value.iconType} size={24} />
+      ) : (
+        value.label
+      );
+    }
+    if (!selectedValue && defaultValue) {
+      selectedValue = defaultValue.iconType ? (
+        <Icon type={defaultValue.iconType} size={24} />
+      ) : (
+        defaultValue.label
+      );
+    }
+    if (!selectedValue) {
+      selectedValue = placeholder || 'Select...';
+    }
+    return selectedValue;
+  };
 }
 
 export default SimpleSelect;
