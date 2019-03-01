@@ -45,6 +45,9 @@ $slate-10: #e9ecef;
 $slate-05: #f4f6f7;
 $slate-02: #fbfbfc;
 
+// colors - primary darkend
+$slate-dark-05: darken($slate, 5%);
+
 // colors - logo accents
 $logo-accent-light: #99e1f4;
 $logo-accent-medium: #00b3e3;
@@ -155,6 +158,10 @@ $btn-selectable-border: $slate-20;
 $btn-selectable-border-hover: $sg-blue-40;
 $btn-selectable-border-active: $sg-blue;
 $btn-selectable-color: $slate-80;
+
+// header tabs
+$header-tabs-border-color: rgba($black, 0.2);
+$header-tabs-hover: #394f64;
 
 // center modals
 $center-modal-bg: $white;
@@ -305,6 +312,9 @@ $stats-clicks: $crown;
 $stats-unique-clicks: $screample;
 $stats-unsubscribes: $sangria;
 $stats-spam-reports: $ron-burgundy;
+$stats-validation-valid: $grass-stain;
+$stats-validation-risky: $carrot;
+$stats-validation-invalid: $ron-burgundy;
 
 // tables
 $compare-border-color: $slate-10;

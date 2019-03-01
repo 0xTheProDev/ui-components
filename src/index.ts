@@ -63,3 +63,5 @@ export { ToggleButtons } from './toggle-buttons';
 export { Tooltip, HTMLTooltip } from './tooltip';
 export { TruncatedList } from './truncated-list';
 export { UploadProgress } from './upload-progress';
+export { StatsCard } from './stats-card/';
+export { CardStat } from './stats-card/CardStat';

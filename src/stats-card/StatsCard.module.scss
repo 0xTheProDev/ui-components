@@ -1,0 +1,103 @@
+@import '../styles/global/variables.scss';
+
+// .email-card-stats has been genericized as .stats-card.
+// This class should be deprecated after markup changes have been made to UIComponents.
+.stats-card,
+.email-card-stats {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-around;
+  width: 100%;
+  padding: $scale-base-up-06;
+  border: 1px solid $slate-20;
+  border-radius: $border-radius;
+
+  // .email-stat has been genericized as .card-stat.
+  // This class should be deprecated after markup changes have been made to UIComponents.
+  .card-stat,
+  .email-stat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .label {
+    margin-left: 0;
+    font-size: $scale-base;
+    font-weight: 600;
+    line-height: $scale-base-up-02;
+    color: $slate;
+    text-transform: uppercase;
+  }
+
+  .stat {
+    padding-bottom: 7px;
+    font-size: $scale-base-up-04;
+    font-weight: 600;
+    line-height: $scale-base-up-06;
+    letter-spacing: -0.5px;
+    color: $slate;
+  }
+
+  .stat,
+  .label {
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  &.secondary {
+    padding: 24px $scale-base-up-06;
+
+    .stat {
+      font-size: 22px;
+      line-height: $scale-base-up-04;
+    }
+
+    .stat.small-stat {
+      font-size: $scale-base-up-02;
+      font-weight: 400;
+      line-height: 14px;
+    }
+  }
+
+  .delivered {
+    color: $stats-delivered;
+  }
+
+  .opens {
+    color: $stats-opens;
+  }
+
+  .unique-opens {
+    color: $stats-unique-opens;
+  }
+
+  .clicks {
+    color: $stats-clicks;
+  }
+
+  .unique-clicks {
+    color: $stats-unique-clicks;
+  }
+
+  .unsubscribes {
+    color: $stats-unsubscribes;
+  }
+
+  .spam-reports {
+    color: $stats-spam-reports;
+  }
+
+  .valid {
+    color: $stats-validation-valid;
+  }
+
+  .risky {
+    color: $stats-validation-risky;
+  }
+
+  .invalid {
+    color: $stats-validation-invalid;
+  }
+}
