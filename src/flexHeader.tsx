@@ -1,7 +1,4 @@
-import React, { Component, Fragment, PureComponent, SFC } from 'react';
-import ReactDOM from 'react-dom';
-import { Button } from './button';
-import { ButtonList } from './button-list';
+import React, { Component } from 'react';
 import Counter from './counter';
 import { Icon } from './icon';
 
@@ -36,14 +33,21 @@ export class FlexHeader extends Component<FlexHeaderProps> {
     } = this.props;
 
     return (
-      <header className={Styles['flex-header']}>
+      <header
+        className={cn(Styles['flex-header'], 'flex-header', {
+          [className]: !!className,
+        })}
+      >
         <div>
           {onClose && (
-            <a className={Styles['flex-header-action']} onClick={onClose}>
+            <a
+              className={cn(Styles['flex-header-action'], 'flex-header-action')}
+              onClick={onClose}
+            >
               <Icon type="x" />
             </a>
           )}
-          <div className={Styles['flex-header-title']}>
+          <div className={cn(Styles['flex-header-title'], 'flex-header-title')}>
             <h3>
               {title}
               {typeof tooltipText === 'string' ? (
@@ -70,7 +74,7 @@ export class FlexHeader extends Component<FlexHeaderProps> {
           </div>
           {headerTabs}
         </div>
-        <div className={Styles['flex-header-right']}>
+        <div className={cn(Styles['flex-header-right'], 'flex-header-right')}>
           {typeof creditsCount !== 'undefined' ? (
             <Counter text="Credits" count={creditsCount} />
           ) : (
@@ -86,7 +90,11 @@ export class FlexHeader extends Component<FlexHeaderProps> {
 export default FlexHeader;
 
 export const FlexHeaderTabs: React.SFC<{}> = props => {
-  return <div className={Styles['flex-header-tabs']}>{props.children}</div>;
+  return (
+    <div className={cn(Styles['flex-header-tabs'], 'flex-header-tabs')}>
+      {props.children}
+    </div>
+  );
 };
 
 export interface FlexHeaderTabProps {
@@ -99,7 +107,7 @@ export const FlexHeaderTab: React.SFC<FlexHeaderTabProps> = props => {
   return (
     <div
       onClick={props.onClick}
-      className={cn(Styles['flex-header-tab'], {
+      className={cn(Styles['flex-header-tab'], 'flex-header-tab', {
         [Styles['is-active']]: !!props.isActive,
       })}
     >
