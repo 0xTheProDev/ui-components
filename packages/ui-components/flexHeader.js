@@ -16,27 +16,29 @@ import cn from './utilities/classnames';
 export class FlexHeader extends Component {
     render() {
         const _a = this.props, { className, creditsCount, onClose, headerActions, headerTabs, title, tooltipText, tooltipLength: tooltipSize } = _a, attributes = __rest(_a, ["className", "creditsCount", "onClose", "headerActions", "headerTabs", "title", "tooltipText", "tooltipLength"]);
-        return (React.createElement("header", { className: Styles['flex-header'] },
+        return (React.createElement("header", { className: cn(Styles['flex-header'], 'flex-header', {
+                [className]: !!className,
+            }) },
             React.createElement("div", null,
-                onClose && (React.createElement("a", { className: Styles['flex-header-action'], onClick: onClose },
+                onClose && (React.createElement("a", { className: cn(Styles['flex-header-action'], 'flex-header-action'), onClick: onClose },
                     React.createElement(Icon, { type: "x" }))),
-                React.createElement("div", { className: Styles['flex-header-title'] },
+                React.createElement("div", { className: cn(Styles['flex-header-title'], 'flex-header-title') },
                     React.createElement("h3", null,
                         title,
                         typeof tooltipText === 'string' ? (React.createElement(Tooltip, { content: tooltipText, length: tooltipSize, direction: "down" },
                             React.createElement(Icon, { type: "info-circle" }))) : (tooltipText && (React.createElement(HTMLTooltip, { style: { display: 'inline-block' }, direction: "right", length: tooltipSize, hoverTarget: React.createElement(Icon, { type: "info-circle" }) }, tooltipText))))),
                 headerTabs),
-            React.createElement("div", { className: Styles['flex-header-right'] },
+            React.createElement("div", { className: cn(Styles['flex-header-right'], 'flex-header-right') },
                 typeof creditsCount !== 'undefined' ? (React.createElement(Counter, { text: "Credits", count: creditsCount })) : (''),
                 headerActions)));
     }
 }
 export default FlexHeader;
 export const FlexHeaderTabs = props => {
-    return React.createElement("div", { className: Styles['flex-header-tabs'] }, props.children);
+    return (React.createElement("div", { className: cn(Styles['flex-header-tabs'], 'flex-header-tabs') }, props.children));
 };
 export const FlexHeaderTab = props => {
-    return (React.createElement("div", { onClick: props.onClick, className: cn(Styles['flex-header-tab'], {
+    return (React.createElement("div", { onClick: props.onClick, className: cn(Styles['flex-header-tab'], 'flex-header-tab', {
             [Styles['is-active']]: !!props.isActive,
         }) },
         props.iconType && React.createElement(Icon, { type: props.iconType }),
