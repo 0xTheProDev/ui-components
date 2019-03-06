@@ -11,5 +11,5 @@ export interface ColorPaletteProps {
     top?: number;
     left?: number;
 }
-declare const _default: React.ComponentClass<ColorPaletteProps & ExportedColorProps>;
+declare const _default: React.ComponentClass<ColorPaletteProps & ExportedColorProps, any>;
 export default _default;

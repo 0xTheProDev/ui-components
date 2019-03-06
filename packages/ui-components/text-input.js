@@ -119,6 +119,8 @@ TextInput.defaultProps = {
 const initState = (props) => {
     return props.value;
 };
+// In the future we move this component to the stories file or re-write it with some crazy hooks shenanigans
+// The component managing it's own state like this seems like an antipattern and only really useful in storybook
 export class StatefulTextInput extends React.Component {
     constructor() {
         super(...arguments);

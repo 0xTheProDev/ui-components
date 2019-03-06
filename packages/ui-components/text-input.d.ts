@@ -64,11 +64,11 @@ export declare class TextInput extends React.Component<TextInputProps & HTMLInpu
     render(): JSX.Element;
 }
 export declare type BaseProps = TextInputProps & HTMLInputElementProps;
-export declare class StatefulTextInput<ExcludedProps extends keyof BaseProps = never> extends React.Component<Omit<BaseProps, ExcludedProps>> {
+export declare class StatefulTextInput<ExcludedProps extends keyof BaseProps = never> extends React.Component<Exclude<BaseProps, ExcludedProps>> {
     static defaultProps: Partial<TextInputProps>;
     readonly state: {
         value: string | number;
     };
-    onValueChange: (event: React.KeyboardEvent<HTMLInputElement> | React.MouseEvent<HTMLElement>) => void;
+    onValueChange: (event: React.KeyboardEvent<HTMLInputElement> | React.MouseEvent<HTMLElement, MouseEvent>) => void;
     render(): JSX.Element;
 }

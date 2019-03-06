@@ -27,11 +27,14 @@ const EmailCardDetails = (_a) => {
     var { details, className } = _a, attributes = __rest(_a, ["details", "className"]);
     return (React.createElement("div", { className: cn('email-card-details', Styles['email-card-details']) },
         React.createElement("table", null,
-            React.createElement("tbody", null, details && details.map(detail => (React.createElement("tr", { key: detail.label },
-                React.createElement("td", { className: cn('label', Styles.label, { [Styles.required]: detail.required }) }, detail.label),
-                React.createElement("td", null, (detail.renderEditDetailLink &&
-                    detail.renderEditDetailLink(detail.value)) ||
-                    detail.value))))))));
+            React.createElement("tbody", null, details &&
+                details.map(detail => (React.createElement("tr", { key: detail.label },
+                    React.createElement("td", { className: cn('label', Styles.label, {
+                            [Styles.required]: detail.required,
+                        }) }, detail.label),
+                    React.createElement("td", null, (detail.renderEditDetailLink &&
+                        detail.renderEditDetailLink(detail.value)) ||
+                        detail.value))))))));
 };
 const EmailCardContent = (_a) => {
     var { onContentEditClick, hasContent, invalid, className } = _a, attributes = __rest(_a, ["onContentEditClick", "hasContent", "invalid", "className"]);
