@@ -26,3 +26,10 @@ loaderStories.add('Loader on Dark', () => (
 ));
 
 loaderStories.add('Fragment Loader', () => <FragmentLoader />);
+loaderStories.add('Large Fragment Loader', () => <FragmentLoader large />);
+loaderStories.add('Small Fragment Loader', () => <FragmentLoader small />);
+loaderStories.add('Centered Fragment Loader', () => (
+  <div style={{ height: '100vh' }}>
+    <FragmentLoader large centered />
+  </div>
+));

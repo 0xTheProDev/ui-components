@@ -10489,6 +10489,36 @@ Array [
 ]
 `;
 
+exports[`Storyshots Loaders Centered Fragment Loader 1`] = `
+<div
+  style={
+    Object {
+      "height": "100vh",
+    }
+  }
+>
+  <svg
+    className="fragment-loader is-centered is-large"
+  >
+    <rect
+      className="fragment-square left"
+      height={20}
+      width={20}
+    />
+    <rect
+      className="fragment-square middle"
+      height={20}
+      width={20}
+    />
+    <rect
+      className="fragment-square right"
+      height={20}
+      width={20}
+    />
+  </svg>
+</div>
+`;
+
 exports[`Storyshots Loaders Centered Loader 1`] = `
 <div
   style={
@@ -10545,18 +10575,40 @@ exports[`Storyshots Loaders Fragment Loader 1`] = `
 >
   <rect
     className="fragment-square left"
-    height="10"
-    width="10"
+    height={10}
+    width={10}
   />
   <rect
     className="fragment-square middle"
-    height="10"
-    width="10"
+    height={10}
+    width={10}
   />
   <rect
     className="fragment-square right"
-    height="10"
-    width="10"
+    height={10}
+    width={10}
+  />
+</svg>
+`;
+
+exports[`Storyshots Loaders Large Fragment Loader 1`] = `
+<svg
+  className="fragment-loader is-large"
+>
+  <rect
+    className="fragment-square left"
+    height={20}
+    width={20}
+  />
+  <rect
+    className="fragment-square middle"
+    height={20}
+    width={20}
+  />
+  <rect
+    className="fragment-square right"
+    height={20}
+    width={20}
   />
 </svg>
 `;
@@ -10652,6 +10704,28 @@ exports[`Storyshots Loaders Loader on Dark 1`] = `
     />
   </svg>
 </div>
+`;
+
+exports[`Storyshots Loaders Small Fragment Loader 1`] = `
+<svg
+  className="fragment-loader is-small"
+>
+  <rect
+    className="fragment-square left"
+    height={5}
+    width={5}
+  />
+  <rect
+    className="fragment-square middle"
+    height={5}
+    width={5}
+  />
+  <rect
+    className="fragment-square right"
+    height={5}
+    width={5}
+  />
+</svg>
 `;
 
 exports[`Storyshots Loaders Small Loader 1`] = `
