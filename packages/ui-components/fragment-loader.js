@@ -11,10 +11,24 @@ import React from 'react';
 import Styles from './styles/loader.module.scss';
 import cn from './utilities/classnames';
 export const FragmentLoader = (_a) => {
-    var { className } = _a, attributes = __rest(_a, ["className"]);
-    return (React.createElement("svg", Object.assign({ className: cn('fragment-loader', Styles['fragment-loader'], className) }, attributes),
-        React.createElement("rect", { className: cn('fragment-square', Styles['fragment-square'], 'left', Styles.left), width: "10", height: "10" }),
-        React.createElement("rect", { className: cn('fragment-square', Styles['fragment-square'], 'middle', Styles.middle), width: "10", height: "10" }),
-        React.createElement("rect", { className: cn('fragment-square', Styles['fragment-square'], 'right', Styles.right), width: "10", height: "10" })));
+    var { className, centered, large, small } = _a, attributes = __rest(_a, ["className", "centered", "large", "small"]);
+    let size = 10;
+    if (large) {
+        size *= 2;
+    }
+    else if (small) {
+        size /= 2;
+    }
+    return (React.createElement("svg", Object.assign({ className: cn('fragment-loader', Styles['fragment-loader'], className, {
+            [Styles['is-centered']]: centered,
+            'is-centered': centered,
+            [Styles['is-large']]: large,
+            'is-large': large,
+            [Styles['is-small']]: small,
+            'is-small': small,
+        }) }, attributes),
+        React.createElement("rect", { className: cn('fragment-square', Styles['fragment-square'], 'left', Styles.left), width: size, height: size }),
+        React.createElement("rect", { className: cn('fragment-square', Styles['fragment-square'], 'middle', Styles.middle), width: size, height: size }),
+        React.createElement("rect", { className: cn('fragment-square', Styles['fragment-square'], 'right', Styles.right), width: size, height: size })));
 };
 export default FragmentLoader;
