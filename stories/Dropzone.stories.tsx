@@ -39,13 +39,18 @@ stories.add('Dropzone (with JSX Content)', () => (
 ));
 
 stories.add('Dropzone (with String Content and Alert)', () => (
-  <Dropzone alert={alert}>This currently doesn't look great and I am well aware of that.</Dropzone>
+  <Dropzone alert={alert}>
+    This currently doesn't look great and I am well aware of that.
+  </Dropzone>
 ));
 
 stories.add('Dropzone (with JSX Content and Alert)', () => (
   <Dropzone alert={alert}>
     <span>
-      <a href="https://github.com/sendgrid/style-guide/issues/198">Here is the Style Guide issue</a> where we're going to fix this.
+      <a href="https://github.com/sendgrid/style-guide/issues/198">
+        Here is the Style Guide issue
+      </a>{' '}
+      where we're going to fix this.
     </span>
   </Dropzone>
 ));

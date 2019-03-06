@@ -24,7 +24,7 @@ class CardWithCheckboxExample extends Component<any, any> {
       <Card
         inline
         thin
-        title={(
+        title={
           <Checkbox
             id="checkbox-1"
             onChange={this.onChange}
@@ -32,7 +32,7 @@ class CardWithCheckboxExample extends Component<any, any> {
             label={cardCheckboxTitle}
             disabled={cardCheckboxDisabled}
           />
-        )}
+        }
       >
         {children}
       </Card>
@@ -103,7 +103,7 @@ stories.add(
         </Card>
       </div>
     </div>
-  ),
+  )
 );
 
 stories.add('Card with Badge', () => (
@@ -140,10 +140,13 @@ stories.add('Card with Badge (Centered)', () => (
 stories.add('Card with Checkbox (Inline)', () => (
   <div className="row">
     <div className="col-4" style={{ width: '300px' }}>
-      <CardWithCheckboxExample
-        cardCheckboxTitle="SMTP Relay"
-      >
-        <span className="small" style={{ display: 'flex', alignItems: 'center', color: '#9e9e9e' }}>5 credits</span>
+      <CardWithCheckboxExample cardCheckboxTitle="SMTP Relay">
+        <span
+          className="small"
+          style={{ display: 'flex', alignItems: 'center', color: '#9e9e9e' }}
+        >
+          5 credits
+        </span>
       </CardWithCheckboxExample>
     </div>
   </div>
@@ -156,7 +159,12 @@ stories.add('Card with Disabled Checkbox (Inline)', () => (
         cardCheckboxTitle="SMTP Relay"
         cardCheckboxDisabled={true}
       >
-        <span className="small" style={{ display: 'flex', alignItems: 'center', color: '#9e9e9e' }}>5 credits</span>
+        <span
+          className="small"
+          style={{ display: 'flex', alignItems: 'center', color: '#9e9e9e' }}
+        >
+          5 credits
+        </span>
       </CardWithCheckboxExample>
     </div>
   </div>
@@ -215,7 +223,7 @@ stories.add('Card with falsy actions and link actions', () => (
         centered
       >
         <Actions vertical>
-          { /* imagine this a tag is a react-router link or some other useful component. */ }
+          {/* imagine this a tag is a react-router link or some other useful component. */}
           <a href="javascript: void 0">
             <Action
               title="Edit"
@@ -223,7 +231,7 @@ stories.add('Card with falsy actions and link actions', () => (
               onClick={action('Edit Action Clicked')}
             />
           </a>
-          {false /*sometimes conditionals should eval to false as children*/ }
+          {false /*sometimes conditionals should eval to false as children*/}
           {null}
         </Actions>
       </Card>
@@ -247,14 +255,10 @@ stories.add('Card (Large)', () => (
   </div>
 ));
 
-
 stories.add('Card (Inline)', () => (
   <div className="row">
     <div className="col-4" style={{ width: '300px' }}>
-      <Card
-        title="Node.js"
-        inline
-      >
+      <Card title="Node.js" inline>
         <Button type="secondary">Choose</Button>
       </Card>
     </div>
@@ -264,12 +268,10 @@ stories.add('Card (Inline)', () => (
 stories.add('Card (Inline, Thin)', () => (
   <div className="row">
     <div className="col-4" style={{ width: '300px' }}>
-      <Card
-        title="Node.js"
-        inline
-        thin
-      >
-        <Button small type="secondary">Choose</Button>
+      <Card title="Node.js" inline thin>
+        <Button small type="secondary">
+          Choose
+        </Button>
       </Card>
     </div>
   </div>

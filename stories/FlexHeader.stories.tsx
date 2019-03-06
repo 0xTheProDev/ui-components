@@ -12,33 +12,35 @@ const loaderStories = storiesOf('Flex Header', module);
 
 const renderActions = (
   <ButtonList>
-    <Button type="tertiary">
-      Cancel
-    </Button>
-    <Button className="btn btn-primary">
-      Update
-    </Button>
+    <Button type="tertiary">Cancel</Button>
+    <Button className="btn btn-primary">Update</Button>
   </ButtonList>
 );
 
 const renderTabs = (num?: number, secondActive?: boolean) => {
   return (
     <FlexHeaderTabs>
-      <FlexHeaderTab text="Run New Test" iconType="mail" isActive={!secondActive} />
-      { 
-        num > 1 && <FlexHeaderTab text="View Test Results" iconType="mail" isActive={!!secondActive} />
-      }
+      <FlexHeaderTab
+        text="Run New Test"
+        iconType="mail"
+        isActive={!secondActive}
+      />
+      {num > 1 && (
+        <FlexHeaderTab
+          text="View Test Results"
+          iconType="mail"
+          isActive={!!secondActive}
+        />
+      )}
     </FlexHeaderTabs>
   );
-}
+};
 
 const buyCredits = (
   <ButtonList>
-    <Button type="tertiary">
-      Buy Credits
-    </Button>
+    <Button type="tertiary">Buy Credits</Button>
   </ButtonList>
-  );
+);
 
 const edit = (
   <ButtonList>
@@ -48,31 +50,71 @@ const edit = (
   </ButtonList>
 );
 
+loaderStories.add('KANPE [skip]', () => (
+  <FlexHeader
+    title="Title Goes Here"
+    onClose={() => {}}
+    creditsCount="26"
+    headerTabs={renderTabs(2)}
+    headerActions={buyCredits}
+  />
+));
 
-loaderStories.add('KANPE', () =>
-  <FlexHeader title="Title Goes Here" onClose={()=>{}} creditsCount="26" headerTabs={renderTabs(2)} headerActions={buyCredits} />);
+loaderStories.add('KANPE - Second Tab Active [skip]', () => (
+  <FlexHeader
+    title="Title Goes Here"
+    onClose={() => {}}
+    creditsCount="26"
+    headerTabs={renderTabs(2, true)}
+    headerActions={buyCredits}
+  />
+));
 
-loaderStories.add('KANPE - Second Tab Active', () => 
-  <FlexHeader title="Title Goes Here" onClose={()=>{}} creditsCount="26" headerTabs={renderTabs(2, true)} headerActions={buyCredits} />);
+loaderStories.add('KANPE - No Credits [skip]', () => (
+  <FlexHeader
+    title="Title Goes Here"
+    onClose={() => {}}
+    headerTabs={renderTabs(2)}
+  />
+));
 
-loaderStories.add('KANPE - No Credits [skip]', () =>
-  <FlexHeader title="Title Goes Here" onClose={()=>{}} headerTabs={renderTabs(2)} />);
+loaderStories.add('KANPE - Only one Tab. No secondary', () => (
+  <FlexHeader
+    title="Title Goes Here"
+    onClose={() => {}}
+    headerTabs={renderTabs(1)}
+    creditsCount="26"
+  />
+));
 
-loaderStories.add('KANPE - Only one Tab. No secondary', () =>
-  <FlexHeader title="Title Goes Here" onClose={()=>{}} headerTabs={renderTabs(1)} creditsCount="26" />);
+loaderStories.add('Image Library', () => (
+  <FlexHeader title="Image Library" onClose={() => {}} />
+));
 
-loaderStories.add('Image Library', () =>
-  <FlexHeader title="Image Library" onClose={()=>{}} />);
+loaderStories.add('Email Preview', () => (
+  <FlexHeader title="Title Goes Here" onClose={() => {}} headerActions={edit} />
+));
 
-loaderStories.add('Email Preview', () =>
-  <FlexHeader title="Title Goes Here" onClose={()=>{}} headerActions={edit} />);
+loaderStories.add('Edit Code - with a large tooltip', () => (
+  <FlexHeader
+    title="Email Code Module"
+    onClose={() => {}}
+    tooltipText={'Edit Code Module '.repeat(10)}
+    tooltipLength="large"
+    headerActions={renderActions}
+  />
+));
 
-loaderStories.add('Edit Code - with a large tooltip', () =>
-  <FlexHeader title="Email Code Module" onClose={()=>{}} tooltipText={'Edit Code Module '.repeat(10)} tooltipLength="large" headerActions={renderActions} />);
-
-loaderStories.add('Import HTML - with html tooltip', () =>
-  <FlexHeader title="Import Drag & Drop HTML" onClose={()=>{}} tooltipText={
-    <div>
-      This is an HTML tooltip with a link. <a href="#">Learn More</a>
-    </div>
-  } tooltipLength="large" headerActions={renderActions} />);
+loaderStories.add('Import HTML - with html tooltip', () => (
+  <FlexHeader
+    title="Import Drag & Drop HTML"
+    onClose={() => {}}
+    tooltipText={
+      <div>
+        This is an HTML tooltip with a link. <a href="#">Learn More</a>
+      </div>
+    }
+    tooltipLength="large"
+    headerActions={renderActions}
+  />
+));

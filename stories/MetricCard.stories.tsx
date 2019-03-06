@@ -6,7 +6,9 @@ import MetricCard from '../src/metric-card';
 
 const stories = storiesOf('Metric Card', module);
 
-stories.add('Standard', () => <MetricCard title="Last Updated" body="12/21/18" />);
+stories.add('Standard', () => (
+  <MetricCard title="Last Updated" body="12/21/18" />
+));
 
 stories.add('Standard (with Custom Children)', () => (
   <MetricCard title="Clicks" body="200">

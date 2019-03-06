@@ -13,7 +13,10 @@ type RenderProp = (
   handleChange: InputChangeEventHandler
 ) => React.ReactNode;
 
-class TextAreaContainer extends Component<{ children: RenderProp, initialValue?: string }, any> {
+class TextAreaContainer extends Component<
+  { children: RenderProp; initialValue?: string },
+  any
+> {
   public static defaultProps = { initialValue: '' };
   public state = { value: this.props.initialValue, ready: false };
 
@@ -33,7 +36,7 @@ class TextAreaContainer extends Component<{ children: RenderProp, initialValue?:
     const { children } = this.props;
     const { value, ready } = this.state;
 
-    return ready ? children(value, this.handleChange): null;
+    return ready ? children(value, this.handleChange) : null;
   }
 }
 
@@ -161,8 +164,8 @@ stories.add('With HTML Tooltip', () => (
         onChange={handleChange}
         tooltip={
           <p>
-            The <a href="#">CCV number</a> is a 3 or 4 digit security code printed
-            on the front or back of your card.
+            The <a href="#">CCV number</a> is a 3 or 4 digit security code
+            printed on the front or back of your card.
           </p>
         }
         tooltipDirection="left"

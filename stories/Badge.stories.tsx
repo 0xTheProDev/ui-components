@@ -22,7 +22,5 @@ stories.add('All Badges', () => (
 ));
 
 stories.add('Badge with custom classname', () => (
-  <Badge className="custom-class">
-    custom
-  </Badge>
+  <Badge className="custom-class">custom</Badge>
 ));

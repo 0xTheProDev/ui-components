@@ -7,31 +7,31 @@ import PercentInput from '../src/percent-input';
 
 const stories = storiesOf('Percent Input', module);
 
-
-
 class StatefulWrapper extends React.Component<any> {
   public state = {
-    value: undefined as any
-  }
+    value: undefined as any,
+  };
   public onChange = (e: any, value: any) => {
     this.setState({
-      value
+      value,
     });
-  }
-  public render(){
-    return <PercentInput
-      {...this.props}
-      value={this.state.value}
-      id="test-percentage"
-      onChange={this.onChange}
-    />
+  };
+  public render() {
+    return (
+      <PercentInput
+        {...this.props}
+        value={this.state.value}
+        id="test-percentage"
+        onChange={this.onChange}
+      />
+    );
   }
 }
 
 stories.add('Basic', () => (
   <Row>
-  <Column width={1}>
-    <StatefulWrapper />
-  </Column>
-</Row>
+    <Column width={1}>
+      <StatefulWrapper />
+    </Column>
+  </Row>
 ));

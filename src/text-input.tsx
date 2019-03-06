@@ -247,9 +247,11 @@ const initState = (props: TextInputProps) => {
 
 export type BaseProps = TextInputProps & HTMLInputElementProps;
 
+// In the future we move this component to the stories file or re-write it with some crazy hooks shenanigans
+// The component managing it's own state like this seems like an antipattern and only really useful in storybook
 export class StatefulTextInput<
   ExcludedProps extends keyof BaseProps = never
-> extends React.Component<Omit<BaseProps, ExcludedProps>> {
+> extends React.Component<Exclude<BaseProps, ExcludedProps>> {
   public static defaultProps: Partial<TextInputProps> = {
     value: '',
   };

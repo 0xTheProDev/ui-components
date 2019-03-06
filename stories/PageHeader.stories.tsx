@@ -7,7 +7,7 @@ import { Button } from '../src/button';
 import { PageHeader, PageHeading } from '../src/page-header';
 
 const stories = storiesOf('PageHeader', module);
-const breadcrumbs = [{to: 'Aaa', href: '#'}, {to: 'Bbb', href: '#'}];
+const breadcrumbs = [{ to: 'Aaa', href: '#' }, { to: 'Bbb', href: '#' }];
 
 stories.add('Page Header containing: Breadcrumbs and a Page Heading', () => (
   <PageHeader>
@@ -16,7 +16,9 @@ stories.add('Page Header containing: Breadcrumbs and a Page Heading', () => (
       <a href="#">Upload CSV</a>
     </Breadcrumb>
     <PageHeading title="Page Title">
-      <Button type="primary" onClick={action('Button Clicked')}>Create Campaign</Button>
+      <Button type="primary" onClick={action('Button Clicked')}>
+        Create Campaign
+      </Button>
     </PageHeading>
   </PageHeader>
 ));

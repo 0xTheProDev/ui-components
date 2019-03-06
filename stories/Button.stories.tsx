@@ -7,7 +7,11 @@ import Button from '../src/button';
 const stories = storiesOf('Button', module);
 
 stories.add('Primary Button', () => (
-  <Button type="primary" onClick={action('Button Clicked')} id="stui-test-locator-abc">
+  <Button
+    type="primary"
+    onClick={action('Button Clicked')}
+    id="stui-test-locator-abc"
+  >
     Primary
   </Button>
 ));
@@ -31,13 +35,23 @@ stories.add('Primary Button with Icon', () => (
 ));
 
 stories.add('Secondary Submit Button with Icon', () => (
-  <Button isSubmit={true} type="secondary" icon="copy" onClick={action('Button Clicked')}>
+  <Button
+    isSubmit={true}
+    type="secondary"
+    icon="copy"
+    onClick={action('Button Clicked')}
+  >
     Secondary
   </Button>
 ));
 
 stories.add('Danger Button with Icon and Data Attr', () => (
-  <Button type="danger" icon="trash" onClick={action('Button Clicked')} data-role="test-role">
+  <Button
+    type="danger"
+    icon="trash"
+    onClick={action('Button Clicked')}
+    data-role="test-role"
+  >
     Danger
   </Button>
 ));

@@ -11,7 +11,7 @@ import { TextInput } from '../src/text-input';
 const stories = storiesOf('FilterableList', module);
 
 const renderItems = (items: any[]) => (
-  <Fragment>{items.map((item) => <Item key={item.title} {...item} />)}</Fragment>
+  <Fragment>{items.map(item => <Item key={item.title} {...item} />)}</Fragment>
 );
 
 interface Item {
@@ -91,7 +91,7 @@ stories.add(
       filterTypes={['name', 'type']}
       onFilter={(items, filters: { [key: string]: string }) => {
         const { name, type } = filters;
-        return items.filter((item) => {
+        return items.filter(item => {
           if (!item.name.toLowerCase().includes(name.toLowerCase())) {
             return false;
           }
@@ -128,7 +128,7 @@ stories.add(
       )}
       renderItems={renderItems}
     />
-  ),
+  )
 );
 
 stories.add('FilterableList with Clear Button in Header', () => (
@@ -156,7 +156,13 @@ stories.add('FilterableList as a Container Component', () => {
   const title = 'Filter Container';
   const items = mockItems;
 
-  const renderControls = ({ value, handleFilterChange }: { value: string, handleFilterChange: any }) => (
+  const renderControls = ({
+    value,
+    handleFilterChange,
+  }: {
+    value: string;
+    handleFilterChange: any;
+  }) => (
     <TextInput
       type="text"
       fullWidth

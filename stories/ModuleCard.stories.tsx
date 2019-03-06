@@ -28,43 +28,22 @@ stories.add('All', () => (
   </div>
 ));
 
+stories.add('Button Module', () => <ModuleCard type="button" />);
 
-stories.add('Button Module', () => (
-  <ModuleCard type="button" />
-));
+stories.add('Code Module', () => <ModuleCard type="code" />);
 
-stories.add('Code Module', () => (
-  <ModuleCard type="code" />
-));
+stories.add('Columns Module', () => <ModuleCard type="columns" />);
 
-stories.add('Columns Module', () => (
-  <ModuleCard type="columns" />
-));
+stories.add('Divider Module', () => <ModuleCard type="divider" />);
 
-stories.add('Divider Module', () => (
-  <ModuleCard type="divider" />
-));
+stories.add('Image Module', () => <ModuleCard type="image" />);
 
-stories.add('Image Module', () => (
-  <ModuleCard type="image" />
-));
+stories.add('Image & Text Module', () => <ModuleCard type="image-text" />);
 
-stories.add('Image & Text Module', () => (
-  <ModuleCard type="image-text" />
-));
+stories.add('Social Module', () => <ModuleCard type="social" />);
 
-stories.add('Social Module', () => (
-  <ModuleCard type="social" />
-));
+stories.add('Spacer Module', () => <ModuleCard type="spacer" />);
 
-stories.add('Spacer Module', () => (
-  <ModuleCard type="spacer" />
-));
+stories.add('Text Module', () => <ModuleCard type="text" />);
 
-stories.add('Text Module', () => (
-  <ModuleCard type="text" />
-));
-
-stories.add('Unsubscribe Module', () => (
-  <ModuleCard type="unsubscribe" />
-));
+stories.add('Unsubscribe Module', () => <ModuleCard type="unsubscribe" />);

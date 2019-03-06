@@ -5,7 +5,14 @@ import React from 'react';
 import { Action, ActionsCell } from '../src/actions';
 import { DropdownButton } from '../src/dropdown-button';
 import { Label } from '../src/label';
-import { HeaderCell, Table, TableBody, TableCell, TableHeader, TableRow } from '../src/table/table';
+import {
+  HeaderCell,
+  Table,
+  TableBody,
+  TableCell,
+  TableHeader,
+  TableRow,
+} from '../src/table/table';
 
 const stories = storiesOf('Table', module);
 
@@ -22,39 +29,93 @@ stories.add('Standard', () => (
     </TableHeader>
     <TableBody>
       <TableRow>
-        <TableCell className="contact"><a href="#">todd.moy@sendgrid.com</a></TableCell>
+        <TableCell className="contact">
+          <a href="#">todd.moy@sendgrid.com</a>
+        </TableCell>
         <TableCell className="stats">02/02/2015</TableCell>
         <TableCell className="stats">02/10/2016</TableCell>
         <TableCell className="stats">02/08/2016</TableCell>
         <ActionsCell>
-          <Action title="View" icon="view" onClick={action('View Action Clicked')} />
-          <Action title="Edit" icon="pencil" onClick={action('Edit Action Clicked')} />
-          <Action title="Copy" icon="copy" onClick={action('Copy Action Clicked')} />
-          <Action title="Delete" icon="trash" onClick={action('Delete Action Clicked')} />
+          <Action
+            title="View"
+            icon="view"
+            onClick={action('View Action Clicked')}
+          />
+          <Action
+            title="Edit"
+            icon="pencil"
+            onClick={action('Edit Action Clicked')}
+          />
+          <Action
+            title="Copy"
+            icon="copy"
+            onClick={action('Copy Action Clicked')}
+          />
+          <Action
+            title="Delete"
+            icon="trash"
+            onClick={action('Delete Action Clicked')}
+          />
         </ActionsCell>
       </TableRow>
       <TableRow>
-        <TableCell className="contact"><a href="#">eric.tjossem@sendgrid.com</a></TableCell>
+        <TableCell className="contact">
+          <a href="#">eric.tjossem@sendgrid.com</a>
+        </TableCell>
         <TableCell className="stats">03/03/2015</TableCell>
         <TableCell className="stats">04/10/2016</TableCell>
         <TableCell className="stats">04/08/2016</TableCell>
         <ActionsCell>
-          <Action title="View" icon="view" onClick={action('View Action Clicked')} />
-          <Action title="Edit" icon="pencil" onClick={action('Edit Action Clicked')} />
-          <Action title="Copy" icon="copy" onClick={action('Copy Action Clicked')} />
-          <Action title="Delete" icon="trash" onClick={action('Delete Action Clicked')} />
+          <Action
+            title="View"
+            icon="view"
+            onClick={action('View Action Clicked')}
+          />
+          <Action
+            title="Edit"
+            icon="pencil"
+            onClick={action('Edit Action Clicked')}
+          />
+          <Action
+            title="Copy"
+            icon="copy"
+            onClick={action('Copy Action Clicked')}
+          />
+          <Action
+            title="Delete"
+            icon="trash"
+            onClick={action('Delete Action Clicked')}
+          />
         </ActionsCell>
       </TableRow>
       <TableRow>
-        <TableCell className="contact"><a href="#">alex.thomsen@sendgrid.com</a></TableCell>
+        <TableCell className="contact">
+          <a href="#">alex.thomsen@sendgrid.com</a>
+        </TableCell>
         <TableCell className="stats">05/02/2015</TableCell>
         <TableCell className="stats">06/10/2016</TableCell>
         <TableCell className="stats">07/08/2016</TableCell>
         <ActionsCell>
-          <Action title="View" icon="view" onClick={action('View Action Clicked')} />
-          <Action title="Edit" icon="pencil" onClick={action('Edit Action Clicked')} />
-          <Action title="Copy" icon="copy" onClick={action('Copy Action Clicked')} />
-          <Action title="Delete" icon="trash" onClick={action('Delete Action Clicked')} />
+          <Action
+            title="View"
+            icon="view"
+            onClick={action('View Action Clicked')}
+          />
+          <Action
+            title="Edit"
+            icon="pencil"
+            onClick={action('Edit Action Clicked')}
+          />
+          <Action
+            title="Copy"
+            icon="copy"
+            onClick={action('Copy Action Clicked')}
+          />
+          <Action
+            title="Delete"
+            icon="trash"
+            onClick={action('Delete Action Clicked')}
+          />
         </ActionsCell>
       </TableRow>
     </TableBody>
@@ -81,7 +142,9 @@ stories.add('With dropdown menu', () => (
     </TableHeader>
     <TableBody>
       <TableRow>
-        <TableCell className="cell-label"><Label type="draft" text="Draft" /></TableCell>
+        <TableCell className="cell-label">
+          <Label type="draft" text="Draft" />
+        </TableCell>
         <TableCell className="campaign-name">
           <a href="javascript: void 0">Fall Into Action</a>
         </TableCell>
@@ -91,11 +154,31 @@ stories.add('With dropdown menu', () => (
         <TableCell className="stats-unsubscribes">—</TableCell>
         <ActionsCell>
           <Action title="Edit" icon="pencil" onClick={action('Edit clicked')} />
-          <Action title="Duplicate" icon="copy" onClick={action('Duplicate clicked')} />
-          <Action title="Create template" icon="create" onClick={action('Create template clicked')} />
-          <Action title="Export HTML" icon="export" onClick={action('Export HTML clicked')} />
-          <Action title="Preview" icon="view" onClick={action('Preview clicked')} />
-          <Action title="Delete" icon="trash" onClick={action('Delete clicked')} />
+          <Action
+            title="Duplicate"
+            icon="copy"
+            onClick={action('Duplicate clicked')}
+          />
+          <Action
+            title="Create template"
+            icon="create"
+            onClick={action('Create template clicked')}
+          />
+          <Action
+            title="Export HTML"
+            icon="export"
+            onClick={action('Export HTML clicked')}
+          />
+          <Action
+            title="Preview"
+            icon="view"
+            onClick={action('Preview clicked')}
+          />
+          <Action
+            title="Delete"
+            icon="trash"
+            onClick={action('Delete clicked')}
+          />
         </ActionsCell>
       </TableRow>
     </TableBody>

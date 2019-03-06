@@ -19,9 +19,6 @@ stories.add('Need Help Footer Simple', () => (
 
 stories.add('Need Help Footer with Link', () => (
   <Footer icon="help" header="Need help?">
-    <a href="#">
-      Get more info
-    </a>{' '}
-    on adding and updating contacts.
+    <a href="#">Get more info</a> on adding and updating contacts.
   </Footer>
 ));

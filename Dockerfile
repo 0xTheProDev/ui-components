@@ -1,4 +1,4 @@
-FROM node:8.11.3-jessie
+FROM node:8.15.1-jessie
 
 # See https://crbug.com/795759
 
@@ -60,11 +60,11 @@ RUN mkdir -p /opt/sendgrid/ui-components/
 WORKDIR /opt/sendgrid/ui-components/
 
 COPY package.json /opt/sendgrid/ui-components/
-COPY yarn.lock /opt/sendgrid/ui-components/
+COPY package-lock.json /opt/sendgrid/ui-components/
 
-RUN yarn install
+RUN npm ci
 
 ADD ./ /opt/sendgrid/ui-components/
 
 EXPOSE 6006:6006
-CMD ["yarn", "storybook"]
+CMD ["npm", "run", "storybook"]

@@ -8,8 +8,11 @@ const stories = storiesOf('Upload Progress', module);
 stories.addDecorator(withKnobs);
 
 stories.add('Upload Progress', () => {
-  const title = text('Title', 'We\'re uploading your CSV file');
-  const body = text('Body', 'This may take a few moments, so please don\'t leave this page.');
+  const title = text('Title', "We're uploading your CSV file");
+  const body = text(
+    'Body',
+    "This may take a few moments, so please don't leave this page."
+  );
   const percent = number('Percent', 67, {
     max: 100,
     min: 0,

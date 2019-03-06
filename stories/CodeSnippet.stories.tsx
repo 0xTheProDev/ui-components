@@ -22,10 +22,6 @@ stories.add('Code Snippets', () => (
 
 stories.add('Code Snippets (Multiline)', () => (
   <React.Fragment>
-    <CodeSnippet
-      text={code}
-      width="500px"
-      height="300px"
-    />
+    <CodeSnippet text={code} width="500px" height="300px" />
   </React.Fragment>
 ));

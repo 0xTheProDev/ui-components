@@ -2,7 +2,7 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
-module.exports = function(config, env, storybookBaseConfig) {
+module.exports = ({ config, mode }) => {
   // console.log(storybookBaseConfig);
   // config = storybookBaseConfig(config, env);
 
@@ -29,11 +29,6 @@ module.exports = function(config, env, storybookBaseConfig) {
   });
 
   config.module.rules.push({
-    test: /\.css$/,
-    loader: 'css-loader',
-  });
-
-  config.module.rules.push({
     test: /\.scss$/,
     exclude: [/\.module.scss$/],
     use: [
@@ -55,24 +50,6 @@ module.exports = function(config, env, storybookBaseConfig) {
         },
       },
     ],
-  });
-
-  config.module.rules.push({
-    exclude: [
-      /\.html$/,
-      /\.(js|jsx|ts|tsx)$/,
-      /\.css$/,
-      /\.scss$/,
-      /\.json$/,
-      /\.hbs$/,
-      // EJS needed for storybook ¯\_(ツ)_/¯
-      /\.ejs$/,
-    ],
-    loader: 'file-loader',
-    query: {
-      name: 'static/media/[name].[hash:8].[ext]',
-      outputPath: 'dist/',
-    },
   });
 
   // Now that we're in Webpack 4 land we should probably use the newer css loader and drop style-loader and extract text

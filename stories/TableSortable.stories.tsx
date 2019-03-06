@@ -75,7 +75,10 @@ const columnWithSort = [
   },
 ];
 
-interface ColumnData { name: string; date: string; }
+interface ColumnData {
+  name: string;
+  date: string;
+}
 
 const RowRenderer = ({ columns }: { columns: ColumnData }) => (
   <TableRow>

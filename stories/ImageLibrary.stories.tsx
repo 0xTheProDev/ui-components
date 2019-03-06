@@ -47,9 +47,9 @@ class ExampleContainer extends Component<any, ExampleContainerState> {
     uploadingImage: null,
   };
 
-  public componentDidMount () {
+  public componentDidMount() {
     fileReader.onload = (e: any) => {
-      this.setState((prevState) => {
+      this.setState(prevState => {
         const { uploadingImage } = prevState;
         const { result } = e.target;
         return {
@@ -59,31 +59,26 @@ class ExampleContainer extends Component<any, ExampleContainerState> {
             originalUrl: result,
             width: 999, // can't easily get width or height from filereader result
             height: 888,
-          }
+          },
         };
       });
     };
   }
 
-  public render () {
+  public render() {
     const images = this.getImages();
 
     return (
-      <FullscreenModal
-        hasPadding={false}
-        isOpen
-        title="Image Library"
-      >
+      <FullscreenModal hasPadding={false} isOpen title="Image Library">
         <ImageLibrary
-          dateFormatter={(millis) => new Date(millis).toString()}
+          dateFormatter={millis => new Date(millis).toString()}
           detailsAlert={this.getDetailsAlert()}
           maximumImageBytes={4 * (1 << 20) /* 4 MB */}
           onUpload={this.handleUpload}
           onUploadFailure={action('invalid upload')}
           {...this.props}
-
           images={images}
-          renderImageDetailsActions={(image) => (
+          renderImageDetailsActions={image => (
             <ButtonList>
               <Button type="secondary" onClick={() => {}}>
                 Delete
@@ -102,10 +97,12 @@ class ExampleContainer extends Component<any, ExampleContainerState> {
     // i don't want to use real transition group code here to avoid bloating the pkg.json
     this.setState({ showDetailsSuccess: true });
     setTimeout(() => this.setState({ showDetailsSuccess: false }), 3500);
-  }
+  };
 
   private getDetailsAlert = () => {
-    if (!this.state.showDetailsSuccess) { return null; }
+    if (!this.state.showDetailsSuccess) {
+      return null;
+    }
 
     // consumer will use "real" transition group code.
     // wrapped in a div to prove we don't type check that the alert has "AlertProps".
@@ -116,7 +113,7 @@ class ExampleContainer extends Component<any, ExampleContainerState> {
         </Alert>
       </div>
     );
-  }
+  };
 
   private getImages = () => {
     const { uploadingImage } = this.state;
@@ -148,16 +145,18 @@ class ExampleContainer extends Component<any, ExampleContainerState> {
     };
 
     setTimeout(uploadIllusion, 18);
-    this.setState({ uploadingImage: {
-      id: file.name,
-      name: file.name,
-      uploadPercent: 0,
-      created: (new Date() as any) - 0, // date math is valid but ts complains
-    }});
+    this.setState({
+      uploadingImage: {
+        id: file.name,
+        name: file.name,
+        uploadPercent: 0,
+        created: (new Date() as any) - 0, // date math is valid but ts complains
+      },
+    });
   };
 
   private handleUploadComplete = () => {
-    this.setState((prevState) => {
+    this.setState(prevState => {
       const { images, uploadingImage } = prevState;
       return {
         images: [uploadingImage].concat(images),
@@ -168,9 +167,7 @@ class ExampleContainer extends Component<any, ExampleContainerState> {
 }
 
 stories.add('without upload alert, with images', () => (
-  <ExampleContainer
-    images={images}
-  />
+  <ExampleContainer images={images} />
 ));
 
 stories.add('with initial image that does not exist in the library', () => (

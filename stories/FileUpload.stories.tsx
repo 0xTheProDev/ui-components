@@ -23,7 +23,8 @@ stories.add('Basic File Upload with JSX Content', () => (
         ) : (
           <FileSelect>
             <Fragment>
-              Drag and drop your CSV file here or <FileSelectLink>select a CSV file to upload</FileSelectLink>.
+              Drag and drop your CSV file here or{' '}
+              <FileSelectLink>select a CSV file to upload</FileSelectLink>.
             </Fragment>
           </FileSelect>
         )}

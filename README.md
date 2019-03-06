@@ -6,7 +6,6 @@
 [![GitHub contributors](https://img.shields.io/github/contributors/sendgrid/docs.svg)](https://github.com/sendgrid/ui-components/graphs/contributors)
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 
-
 Re-useable React components based on the SendGrid Style Guide.
 [Hosted StoryBook](https://sendgrid.github.io/ui-components)
 
@@ -15,13 +14,15 @@ Re-useable React components based on the SendGrid Style Guide.
 Make sure your project has all required dependencies and development dependencies installed.
 
 Install devDependencies with:
+
 ```
-yarn add node-sass -D
+npm i --save-dev node-sass
 ```
 
 Install dependencies with:
+
 ```
-yarn add lodash raf react react-animate-height react-color react-dom react-select @sendgrid/ui-components
+npm install --save-dev lodash raf react react-animate-height react-color react-dom react-select @sendgrid/ui-components
 ```
 
 ### Using your local UI-components in your project
@@ -59,7 +60,7 @@ import Badge from '@sendgrid/ui-components/badge';
 
 ### Getting Styles to Work
 
-UI-Components uses a mix of module styles and global styles to insert style guide. To use module styles for each individual component, you'll need to update your webpack config to parse module styles from files with the naming convention ```.module.scss```.
+UI-Components uses a mix of module styles and global styles to insert style guide. To use module styles for each individual component, you'll need to update your webpack config to parse module styles from files with the naming convention `.module.scss`.
 
 ```js
 config.module.rules.push({
@@ -113,8 +114,9 @@ State is hard and all of the UI components should be purely presentational. But,
 See [CONTRIBUTING.md](https://github.com/sendgrid/ui-components/blob/master/CONTRIBUTING.md)
 
 Install project dependencies with:
+
 ```
-yarn
+npm ci
 ```
 
 ## Semver Versioning
@@ -128,23 +130,23 @@ More information: https://semver.org/
 
 ## Available Commands
 
-- `yarn start`: This is an alias for `yarn run storybook`
-- `yarn storybook`: Start Storybook on port 6006.
-- `yarn build`: Builds the assets for deployment.
-- `yarn lint`: Runs the linter.
-- `yarn lint-fix`: Runs the linter and auto-fixes the errors it can auto-fix.
-- `yarn test`: Run the unit tests.
-- `yarn snapshot`: Update snapshot tests. Make sure you run the tests first and you're not overwriting snapshots by accident.
-- `yarn lint-snapshot`: A combination of `yarn run lint` and `yarn run snapshot`.
-- `yarn ci-test`: Test used for the CI build (doesn't use interactive mode).
-- `yarn build-storybook`: Build a deployable version of the Storybook.
-- `yarn prepare`: Used by npm to build the assets before publishing.
-- `yarn run image-snapshots`: Builds a static index.html file and runs image snapshot tests.
-- `yarn update-icon-types`: Pull latest styleguide css and update the types of icon to match all found instances of sg-icon-${type}
+- `npm run start`: This is an alias for `npm run storybook`
+- `npm run storybook`: Start Storybook on port 6006.
+- `npm run build`: Builds the assets for deployment.
+- `npm run lint`: Runs the linter.
+- `npm run lint-fix`: Runs the linter and auto-fixes the errors it can auto-fix.
+- `npm run test`: Run the unit tests.
+- `npm run snapshot`: Update snapshot tests. Make sure you run the tests first and you're not overwriting snapshots by accident.
+- `npm run lint-snapshot`: A combination of `npm run lint` and `npm run snapshot`.
+- `npm run ci-test`: Test used for the CI build (doesn't use interactive mode).
+- `npm run build-storybook`: Build a deployable version of the Storybook.
+- `npm run prepare`: Used by npm to build the assets before publishing.
+- `npm run run image-snapshots`: Builds a static index.html file and runs image snapshot tests.
+- `npm run update-icon-types`: Pull latest styleguide css and update the types of icon to match all found instances of sg-icon-${type}
 
 ## Testing
 
-To make sure your additions don't break `ui-components`, run `npm run test`, which will test all of your changed `*.test.*` files and show a coverage report. To check image snapshots run `npm run image-snapshots` updating and other commands can be passed through to jest like `npm run image-snapshots -u`.
+To make sure your additions don't break `ui-components`, run `npm run test`, which will test all of your changed `*.test.*` files and show a coverage report. To check image snapshots run `npm run image-snapshots` updating and other commands can be passed through to jest like `npm run image-snapshots -- -u`.
 
 **Image Snapshots & Docker**:
 
@@ -159,5 +161,7 @@ To make sure your additions don't break `ui-components`, run `npm run test`, whi
 Visit the [Buildkite Master Branch](https://buildkite.com/sendgrid/ui-components/builds?branch=master) and select the SemVer appropriate to your deployment and you should be off and away. Make sure to post in FE Guild that a new version is going out.
 
 <a name="license"></a>
+
 # License
+
 [The MIT License (MIT)](LICENSE)

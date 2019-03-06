@@ -56,18 +56,23 @@ const EmailCardDetails: React.SFC<{
   <div className={cn('email-card-details', Styles['email-card-details'])}>
     <table>
       <tbody>
-        {details && details.map(detail => (
-          <tr key={detail.label}>
-            <td className={cn('label', Styles.label, { [Styles.required]: detail.required })}>
-              {detail.label}
-            </td>
-            <td>
-              {(detail.renderEditDetailLink &&
-                detail.renderEditDetailLink(detail.value)) ||
-                detail.value}
-            </td>
-          </tr>
-        ))}
+        {details &&
+          details.map(detail => (
+            <tr key={detail.label}>
+              <td
+                className={cn('label', Styles.label, {
+                  [Styles.required]: detail.required,
+                })}
+              >
+                {detail.label}
+              </td>
+              <td>
+                {(detail.renderEditDetailLink &&
+                  detail.renderEditDetailLink(detail.value)) ||
+                  detail.value}
+              </td>
+            </tr>
+          ))}
       </tbody>
     </table>
   </div>

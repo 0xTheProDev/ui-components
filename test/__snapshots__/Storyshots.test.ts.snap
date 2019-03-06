@@ -4818,7 +4818,8 @@ exports[`Storyshots Dropzone Dropzone (with JSX Content and Alert) 1`] = `
       >
         Here is the Style Guide issue
       </a>
-       where we're going to fix this.
+       
+      where we're going to fix this.
     </span>
   </div>
   <div
@@ -7797,7 +7798,8 @@ exports[`Storyshots EmailCard Email Card with validation errors 1`] = `
           subject
         </a>
       </strong>
-       and
+       
+      and
        
       <strong>
         <a
@@ -7815,7 +7817,8 @@ exports[`Storyshots EmailCard Email Card with validation errors 1`] = `
           content
         </a>
       </strong>
-       to this email.
+       
+      to this email.
     </p>
   </div>
 </div>
@@ -8086,7 +8089,7 @@ exports[`Storyshots Empty State Empty State With Buttons 1`] = `
     Get started adding contacts
   </h2>
   <p>
-    Add and update your contacts via CSV upload or manually add them one at a time, then create static lists or dynamic segments for better targeting.  Use the Add List or Segment button above to get started.
+    Add and update your contacts via CSV upload or manually add them one at a time, then create static lists or dynamic segments for better targeting. Use the Add List or Segment button above to get started.
   </p>
   <div
     className="btn-list"
@@ -8127,7 +8130,7 @@ exports[`Storyshots Empty State Empty State With Everything 1`] = `
       Get started adding contacts
     </h2>
     <p>
-      Add and update your contacts via CSV upload or manually add them one at a time, then create static lists or dynamic segments for better targeting.  Use the Add List or Segment button above to get started.
+      Add and update your contacts via CSV upload or manually add them one at a time, then create static lists or dynamic segments for better targeting. Use the Add List or Segment button above to get started.
     </p>
     <div
       className="btn-list"
@@ -8171,8 +8174,7 @@ exports[`Storyshots Empty State Empty State With Everything 1`] = `
     >
       Get more info
     </a>
-     
-    on adding and updating contacts.
+     on adding and updating contacts.
   </p>
 </div>
 `;
@@ -8190,7 +8192,7 @@ exports[`Storyshots Empty State Empty State With Icon 1`] = `
     Get started adding contacts
   </h2>
   <p>
-    Add and update your contacts via CSV upload or manually add them one at a time, then create static lists or dynamic segments for better targeting.  Use the Add List or Segment button above to get started.
+    Add and update your contacts via CSV upload or manually add them one at a time, then create static lists or dynamic segments for better targeting. Use the Add List or Segment button above to get started.
   </p>
 </div>
 `;
@@ -8275,7 +8277,8 @@ exports[`Storyshots File Upload Basic File Upload with JSX Content 1`] = `
           }
         />
         <span>
-          Drag and drop your CSV file here or 
+          Drag and drop your CSV file here or
+           
           <a
             href="#"
             onClick={[Function]}
@@ -9236,6 +9239,85 @@ exports[`Storyshots Flex Header Import HTML - with html tooltip 1`] = `
 </header>
 `;
 
+exports[`Storyshots Flex Header KANPE [skip] 1`] = `
+<header
+  className="flex-header"
+>
+  <div>
+    <a
+      className="flex-header-action"
+      onClick={[Function]}
+    >
+      <i
+        className="sg-icon sg-icon-x"
+        onClick={undefined}
+        style={null}
+      />
+    </a>
+    <div
+      className="flex-header-title"
+    >
+      <h3>
+        Title Goes Here
+      </h3>
+    </div>
+    <div
+      className="flex-header-tabs"
+    >
+      <div
+        className="flex-header-tab is-active"
+        onClick={undefined}
+      >
+        <i
+          className="sg-icon sg-icon-mail"
+          onClick={undefined}
+          style={null}
+        />
+        Run New Test
+      </div>
+      <div
+        className="flex-header-tab"
+        onClick={undefined}
+      >
+        <i
+          className="sg-icon sg-icon-mail"
+          onClick={undefined}
+          style={null}
+        />
+        View Test Results
+      </div>
+    </div>
+  </div>
+  <div
+    className="flex-header-right"
+  >
+    <div
+      className="counter"
+    >
+      Credits
+      <span
+        className="counter-bubble"
+      >
+        26
+      </span>
+    </div>
+    <div
+      className="btn-list"
+    >
+      <button
+        className="btn btn-tertiary"
+        disabled={false}
+        id={undefined}
+        onClick={[Function]}
+        type="button"
+      >
+        Buy Credits
+      </button>
+    </div>
+  </div>
+</header>
+`;
+
 exports[`Storyshots Flex Header KANPE - No Credits [skip] 1`] = `
 <header
   className="flex-header"
@@ -9348,7 +9430,7 @@ exports[`Storyshots Flex Header KANPE - Only one Tab. No secondary 1`] = `
 </header>
 `;
 
-exports[`Storyshots Flex Header KANPE - Second Tab Active 1`] = `
+exports[`Storyshots Flex Header KANPE - Second Tab Active [skip] 1`] = `
 <header
   className="flex-header"
 >
@@ -9386,85 +9468,6 @@ exports[`Storyshots Flex Header KANPE - Second Tab Active 1`] = `
       </div>
       <div
         className="flex-header-tab is-active"
-        onClick={undefined}
-      >
-        <i
-          className="sg-icon sg-icon-mail"
-          onClick={undefined}
-          style={null}
-        />
-        View Test Results
-      </div>
-    </div>
-  </div>
-  <div
-    className="flex-header-right"
-  >
-    <div
-      className="counter"
-    >
-      Credits
-      <span
-        className="counter-bubble"
-      >
-        26
-      </span>
-    </div>
-    <div
-      className="btn-list"
-    >
-      <button
-        className="btn btn-tertiary"
-        disabled={false}
-        id={undefined}
-        onClick={[Function]}
-        type="button"
-      >
-        Buy Credits
-      </button>
-    </div>
-  </div>
-</header>
-`;
-
-exports[`Storyshots Flex Header KANPE 1`] = `
-<header
-  className="flex-header"
->
-  <div>
-    <a
-      className="flex-header-action"
-      onClick={[Function]}
-    >
-      <i
-        className="sg-icon sg-icon-x"
-        onClick={undefined}
-        style={null}
-      />
-    </a>
-    <div
-      className="flex-header-title"
-    >
-      <h3>
-        Title Goes Here
-      </h3>
-    </div>
-    <div
-      className="flex-header-tabs"
-    >
-      <div
-        className="flex-header-tab is-active"
-        onClick={undefined}
-      >
-        <i
-          className="sg-icon sg-icon-mail"
-          onClick={undefined}
-          style={null}
-        />
-        Run New Test
-      </div>
-      <div
-        className="flex-header-tab"
         onClick={undefined}
       >
         <i
@@ -14018,7 +14021,6 @@ exports[`Storyshots Select Multi select - open 1`] = `
             onClick={[Function]}
             onMouseMove={[Function]}
             onMouseOver={[Function]}
-            role="option"
             tabIndex={-1}
           >
             Star
@@ -14029,7 +14031,6 @@ exports[`Storyshots Select Multi select - open 1`] = `
             onClick={[Function]}
             onMouseMove={[Function]}
             onMouseOver={[Function]}
-            role="option"
             tabIndex={-1}
           >
             Feather
@@ -14040,7 +14041,6 @@ exports[`Storyshots Select Multi select - open 1`] = `
             onClick={[Function]}
             onMouseMove={[Function]}
             onMouseOver={[Function]}
-            role="option"
             tabIndex={-1}
           >
             Frog
@@ -14051,7 +14051,6 @@ exports[`Storyshots Select Multi select - open 1`] = `
             onClick={[Function]}
             onMouseMove={[Function]}
             onMouseOver={[Function]}
-            role="option"
             tabIndex={-1}
           >
             Tanooki
@@ -14062,7 +14061,6 @@ exports[`Storyshots Select Multi select - open 1`] = `
             onClick={[Function]}
             onMouseMove={[Function]}
             onMouseOver={[Function]}
-            role="option"
             tabIndex={-1}
           >
             1-up
@@ -14378,7 +14376,6 @@ exports[`Storyshots Select Option groups - open 1`] = `
                 onClick={[Function]}
                 onMouseMove={[Function]}
                 onMouseOver={[Function]}
-                role="option"
                 tabIndex={-1}
               >
                 Double plus ungood
@@ -14389,7 +14386,6 @@ exports[`Storyshots Select Option groups - open 1`] = `
                 onClick={[Function]}
                 onMouseMove={[Function]}
                 onMouseOver={[Function]}
-                role="option"
                 tabIndex={-1}
               >
                 Good
@@ -14400,7 +14396,6 @@ exports[`Storyshots Select Option groups - open 1`] = `
                 onClick={[Function]}
                 onMouseMove={[Function]}
                 onMouseOver={[Function]}
-                role="option"
                 tabIndex={-1}
               >
                 Great
@@ -14411,7 +14406,6 @@ exports[`Storyshots Select Option groups - open 1`] = `
                 onClick={[Function]}
                 onMouseMove={[Function]}
                 onMouseOver={[Function]}
-                role="option"
                 tabIndex={-1}
               >
                 Grand
@@ -14422,7 +14416,6 @@ exports[`Storyshots Select Option groups - open 1`] = `
                 onClick={[Function]}
                 onMouseMove={[Function]}
                 onMouseOver={[Function]}
-                role="option"
                 tabIndex={-1}
               >
                 Fantastic
@@ -14433,7 +14426,6 @@ exports[`Storyshots Select Option groups - open 1`] = `
                 onClick={[Function]}
                 onMouseMove={[Function]}
                 onMouseOver={[Function]}
-                role="option"
                 tabIndex={-1}
               >
                 Superb
@@ -14444,7 +14436,6 @@ exports[`Storyshots Select Option groups - open 1`] = `
                 onClick={[Function]}
                 onMouseMove={[Function]}
                 onMouseOver={[Function]}
-                role="option"
                 tabIndex={-1}
               >
                 Stupendous
@@ -14455,7 +14446,6 @@ exports[`Storyshots Select Option groups - open 1`] = `
                 onClick={[Function]}
                 onMouseMove={[Function]}
                 onMouseOver={[Function]}
-                role="option"
                 tabIndex={-1}
               >
                 Extraordinary
@@ -14478,7 +14468,6 @@ exports[`Storyshots Select Option groups - open 1`] = `
                 onClick={[Function]}
                 onMouseMove={[Function]}
                 onMouseOver={[Function]}
-                role="option"
                 tabIndex={-1}
               >
                 Mushroom
@@ -14489,7 +14478,6 @@ exports[`Storyshots Select Option groups - open 1`] = `
                 onClick={[Function]}
                 onMouseMove={[Function]}
                 onMouseOver={[Function]}
-                role="option"
                 tabIndex={-1}
               >
                 Fire flower
@@ -14500,7 +14488,6 @@ exports[`Storyshots Select Option groups - open 1`] = `
                 onClick={[Function]}
                 onMouseMove={[Function]}
                 onMouseOver={[Function]}
-                role="option"
                 tabIndex={-1}
               >
                 Star
@@ -14511,7 +14498,6 @@ exports[`Storyshots Select Option groups - open 1`] = `
                 onClick={[Function]}
                 onMouseMove={[Function]}
                 onMouseOver={[Function]}
-                role="option"
                 tabIndex={-1}
               >
                 Feather
@@ -14522,7 +14508,6 @@ exports[`Storyshots Select Option groups - open 1`] = `
                 onClick={[Function]}
                 onMouseMove={[Function]}
                 onMouseOver={[Function]}
-                role="option"
                 tabIndex={-1}
               >
                 Frog
@@ -14533,7 +14518,6 @@ exports[`Storyshots Select Option groups - open 1`] = `
                 onClick={[Function]}
                 onMouseMove={[Function]}
                 onMouseOver={[Function]}
-                role="option"
                 tabIndex={-1}
               >
                 Tanooki
@@ -14544,7 +14528,6 @@ exports[`Storyshots Select Option groups - open 1`] = `
                 onClick={[Function]}
                 onMouseMove={[Function]}
                 onMouseOver={[Function]}
-                role="option"
                 tabIndex={-1}
               >
                 1-up
@@ -15050,7 +15033,6 @@ exports[`Storyshots Select Standard open 1`] = `
             onClick={[Function]}
             onMouseMove={[Function]}
             onMouseOver={[Function]}
-            role="option"
             tabIndex={-1}
           >
             Double plus ungood
@@ -15061,7 +15043,6 @@ exports[`Storyshots Select Standard open 1`] = `
             onClick={[Function]}
             onMouseMove={[Function]}
             onMouseOver={[Function]}
-            role="option"
             tabIndex={-1}
           >
             Good
@@ -15072,7 +15053,6 @@ exports[`Storyshots Select Standard open 1`] = `
             onClick={[Function]}
             onMouseMove={[Function]}
             onMouseOver={[Function]}
-            role="option"
             tabIndex={-1}
           >
             Great
@@ -15083,7 +15063,6 @@ exports[`Storyshots Select Standard open 1`] = `
             onClick={[Function]}
             onMouseMove={[Function]}
             onMouseOver={[Function]}
-            role="option"
             tabIndex={-1}
           >
             Grand
@@ -15094,7 +15073,6 @@ exports[`Storyshots Select Standard open 1`] = `
             onClick={[Function]}
             onMouseMove={[Function]}
             onMouseOver={[Function]}
-            role="option"
             tabIndex={-1}
           >
             Fantastic
@@ -15105,7 +15083,6 @@ exports[`Storyshots Select Standard open 1`] = `
             onClick={[Function]}
             onMouseMove={[Function]}
             onMouseOver={[Function]}
-            role="option"
             tabIndex={-1}
           >
             Superb
@@ -15116,7 +15093,6 @@ exports[`Storyshots Select Standard open 1`] = `
             onClick={[Function]}
             onMouseMove={[Function]}
             onMouseOver={[Function]}
-            role="option"
             tabIndex={-1}
           >
             Stupendous
@@ -15127,7 +15103,6 @@ exports[`Storyshots Select Standard open 1`] = `
             onClick={[Function]}
             onMouseMove={[Function]}
             onMouseOver={[Function]}
-            role="option"
             tabIndex={-1}
           >
             Extraordinary
@@ -16994,7 +16969,6 @@ exports[`Storyshots Select/Createable Tagging - open 1`] = `
             onClick={[Function]}
             onMouseMove={[Function]}
             onMouseOver={[Function]}
-            role="option"
             tabIndex={-1}
           >
             Star
@@ -17005,7 +16979,6 @@ exports[`Storyshots Select/Createable Tagging - open 1`] = `
             onClick={[Function]}
             onMouseMove={[Function]}
             onMouseOver={[Function]}
-            role="option"
             tabIndex={-1}
           >
             Feather
@@ -17016,7 +16989,6 @@ exports[`Storyshots Select/Createable Tagging - open 1`] = `
             onClick={[Function]}
             onMouseMove={[Function]}
             onMouseOver={[Function]}
-            role="option"
             tabIndex={-1}
           >
             Frog
@@ -17027,7 +16999,6 @@ exports[`Storyshots Select/Createable Tagging - open 1`] = `
             onClick={[Function]}
             onMouseMove={[Function]}
             onMouseOver={[Function]}
-            role="option"
             tabIndex={-1}
           >
             Tanooki
@@ -17038,7 +17009,6 @@ exports[`Storyshots Select/Createable Tagging - open 1`] = `
             onClick={[Function]}
             onMouseMove={[Function]}
             onMouseOver={[Function]}
-            role="option"
             tabIndex={-1}
           >
             1-up
@@ -18730,8 +18700,7 @@ exports[`Storyshots Small Footer Need Help Footer with Link 1`] = `
   >
     Get more info
   </a>
-   
-  on adding and updating contacts.
+   on adding and updating contacts.
 </p>
 `;
 

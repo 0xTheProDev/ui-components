@@ -10,7 +10,7 @@ interface ExampleProps {
   disabled?: boolean;
   id: string;
   info?: string;
-  label: string
+  label: string;
 }
 
 class Example extends Component<ExampleProps> {

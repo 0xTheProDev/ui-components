@@ -22,10 +22,10 @@ class ExampleContainer extends Component<any, { isOpen: boolean }> {
         <Button type="primary" onClick={this.open}>
           Open Modal
         </Button>
-        { this.props.render({
+        {this.props.render({
           isOpen: this.state.isOpen,
           onClose: this.close,
-        }) }
+        })}
       </div>
     );
   }
@@ -33,7 +33,7 @@ class ExampleContainer extends Component<any, { isOpen: boolean }> {
 
 stories.add('Fullscreen Modal', () => (
   <ExampleContainer
-    render={({isOpen, onClose}: any) => (
+    render={({ isOpen, onClose }: any) => (
       <FullscreenModal
         isOpen={isOpen}
         title="Fullscreen Modal"
@@ -47,18 +47,16 @@ stories.add('Fullscreen Modal', () => (
 
 stories.add('Fullscreen Modal with renderProps', () => (
   <ExampleContainer
-    render={({isOpen, onClose}: any) => (
+    render={({ isOpen, onClose }: any) => (
       <FullscreenModal
         isOpen={isOpen}
         onClose={onClose}
         title="With Render Props"
         tooltipText={'here is a tooltip '.repeat(10)}
-        tooltipLength='large'
+        tooltipLength="large"
         renderHeaderActions={() => (
           <ButtonList onDark>
-            <Button>
-              Confirm
-            </Button>
+            <Button>Confirm</Button>
             <Button type="secondary" onClick={onClose}>
               Cancel
             </Button>
