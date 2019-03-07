@@ -53,13 +53,9 @@ Tooltip.defaultProps = {
   direction: 'up',
 };
 
-export type HtmlTooltipDirection = 'left' | 'right';
-
-export type HtmlTooltipLength = 'small' | 'medium' | 'large' | 'xlarge';
-
 export interface HTMLTooltipProps {
-  direction?: HtmlTooltipDirection;
-  length?: HtmlTooltipLength;
+  direction?: TooltipDirection;
+  length?: TooltipLength;
   className?: string;
   children?: React.ReactElement<any>;
   hoverTarget?: React.ReactElement<any>;
@@ -70,6 +66,7 @@ export interface HTMLTooltipProps {
 export interface HTMLTooltipState {
   hovered: boolean;
   tooltipHeight: number;
+  tooltipWidth: number;
   opened: boolean;
 }
 
@@ -87,22 +84,10 @@ export class HTMLTooltip extends React.Component<
     hovered: false,
     opened: false,
     tooltipHeight: 0,
+    tooltipWidth: 0,
   };
 
   private tooltipRef: HTMLDivElement;
-
-  constructor(props: HTMLTooltipProps) {
-    super(props);
-
-    this.state = {
-      hovered: false,
-      opened: false,
-      tooltipHeight: 0,
-    };
-
-    this.handleHoverIn = this.handleHoverIn.bind(this);
-    this.handleHoverOut = this.handleHoverOut.bind(this);
-  }
 
   public shouldComponentUpdate(nextProps?: any, nextState?: any) {
     if (this.state.opened === nextState.opened) {
@@ -116,6 +101,7 @@ export class HTMLTooltip extends React.Component<
       hovered: true,
       opened: true,
       tooltipHeight: this.tooltipRef.offsetHeight,
+      tooltipWidth: this.tooltipRef.clientWidth,
     });
   };
 
@@ -158,13 +144,17 @@ export class HTMLTooltip extends React.Component<
             Styles['tooltip-js-content'],
             className,
             {
+              [Styles['is-down']]: direction === 'down',
+              'is-down': direction === 'down',
               [Styles['is-left']]: direction === 'left',
               'is-left': direction === 'left',
+              [Styles['is-up']]: direction === 'up',
+              'is-up': direction === 'up',
               [Styles['is-visible']]: this.state.opened,
               'is-visible': this.state.opened,
             }
           )}
-          style={{ top: -(this.state.tooltipHeight / 2) + 8 }}
+          style={this.styleForTooltipContent(direction)}
           data-tooltip-length={this.props.length}
           ref={input => {
             this.tooltipRef = input;
@@ -177,6 +167,57 @@ export class HTMLTooltip extends React.Component<
       </div>
     );
   }
+
+  /**
+   * determines vertical & horizontal positioning for the tooltip content.
+   * NOTE: this does NOT determine positioning for the ::after pseudoelement, i.e. the caret/arrow of the tooltip
+   *
+   * 'tooltip-js-content' always exists in the DOM for each tooltip. It's displayed/hidden via CSS opacity.
+   * This is because we want the tooltip content to animate in when a user triggers it.
+   * We move the tooltip content well off the screen, because we don't want it to block users' interactions
+   * with other elements on the page. If we didn't do this,
+   * a user could trigger a tooltip by hovering over its invisible content.
+   *
+   * @param direction TooltipDirection - which direction the tooltip will display
+   * @returns React.CSSProperties
+   */
+  private styleForTooltipContent = (
+    direction: TooltipDirection
+  ): React.CSSProperties => {
+    const { opened: isVisible, tooltipHeight, tooltipWidth } = this.state;
+
+    const hiddenTooltipStyles = { left: -10000 };
+    let styles;
+
+    switch (direction) {
+      case 'left': {
+        styles = { top: -(tooltipHeight / 2) + 8, right: 17, left: 'auto' };
+
+        return isVisible ? styles : { ...styles, ...hiddenTooltipStyles };
+      }
+
+      case 'right': {
+        styles = { top: -(tooltipHeight / 2) + 8, left: '100%' };
+
+        return isVisible ? styles : { ...styles, ...hiddenTooltipStyles };
+      }
+
+      case 'up': {
+        styles = { top: -tooltipHeight - 5 };
+
+        return isVisible
+          ? { ...styles, left: -tooltipWidth / 2 }
+          : { ...styles, ...hiddenTooltipStyles };
+      }
+
+      case 'down': {
+        styles = { top: 21 };
+        return isVisible
+          ? { ...styles, left: -tooltipWidth / 2 }
+          : { ...styles, ...hiddenTooltipStyles };
+      }
+    }
+  };
 }
 
 export default Tooltip;

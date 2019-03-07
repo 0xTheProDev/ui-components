@@ -9192,6 +9192,7 @@ exports[`Storyshots Flex Header Import HTML - with html tooltip 1`] = `
             onMouseLeave={[Function]}
             style={
               Object {
+                "left": -10000,
                 "top": 8,
               }
             }
@@ -15313,6 +15314,8 @@ exports[`Storyshots Select With HTML tooltip 1`] = `
                 onMouseLeave={[Function]}
                 style={
                   Object {
+                    "left": -10000,
+                    "right": 17,
                     "top": 8,
                   }
                 }
@@ -20969,6 +20972,8 @@ exports[`Storyshots Text Input Stateless Text Input With HTML Tooltip 1`] = `
         onMouseLeave={[Function]}
         style={
           Object {
+            "left": -10000,
+            "right": 17,
             "top": 8,
           }
         }
@@ -21633,6 +21638,7 @@ exports[`Storyshots Tooltip HTML Content 1`] = `
             onMouseLeave={[Function]}
             style={
               Object {
+                "left": -10000,
                 "top": 8,
               }
             }
@@ -21709,6 +21715,7 @@ exports[`Storyshots Tooltip HTML Content 1`] = `
             onMouseLeave={[Function]}
             style={
               Object {
+                "left": -10000,
                 "top": 8,
               }
             }
@@ -21786,6 +21793,8 @@ exports[`Storyshots Tooltip HTML Content 1`] = `
             onMouseLeave={[Function]}
             style={
               Object {
+                "left": -10000,
+                "right": 17,
                 "top": 8,
               }
             }
@@ -21858,7 +21867,154 @@ exports[`Storyshots Tooltip HTML Content 1`] = `
             onMouseLeave={[Function]}
             style={
               Object {
+                "left": -10000,
                 "top": 8,
+              }
+            }
+          >
+            <p>
+              <a
+                href="#"
+              >
+                Click
+              </a>
+              .
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="input-text-wrap"
+  >
+    <div
+      className="input-text-wrap"
+      style={Object {}}
+    >
+      <label
+        className="input-text-label"
+        htmlFor="input-text-example-ccv"
+      >
+        Up
+      </label>
+      <input
+        aria-describedby=""
+        id="input-text-example-ccv"
+        name={undefined}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        step={null}
+        type="text"
+        value=""
+      />
+      
+      <div
+        className="input-info-tooltip"
+      >
+        <div
+          className="html-tooltip"
+          length="small"
+          style={
+            Object {
+              "position": "relative",
+            }
+          }
+        >
+          <div
+            className="tooltip-js-parent"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+          >
+            <i
+              className="sg-icon sg-icon-info-circle"
+              onClick={undefined}
+              style={null}
+            />
+          </div>
+          <div
+            className="tooltip-js-content is-up"
+            data-tooltip-length="small"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={
+              Object {
+                "left": -10000,
+                "top": -5,
+              }
+            }
+          >
+            <p>
+              <a
+                href="#"
+              >
+                Click
+              </a>
+              .
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="input-text-wrap"
+  >
+    <div
+      className="input-text-wrap"
+      style={Object {}}
+    >
+      <label
+        className="input-text-label"
+        htmlFor="input-text-example-ccv"
+      >
+        Down
+      </label>
+      <input
+        aria-describedby=""
+        id="input-text-example-ccv"
+        name={undefined}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        step={null}
+        type="text"
+        value=""
+      />
+      
+      <div
+        className="input-info-tooltip"
+      >
+        <div
+          className="html-tooltip"
+          length="small"
+          style={
+            Object {
+              "position": "relative",
+            }
+          }
+        >
+          <div
+            className="tooltip-js-parent"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+          >
+            <i
+              className="sg-icon sg-icon-info-circle"
+              onClick={undefined}
+              style={null}
+            />
+          </div>
+          <div
+            className="tooltip-js-content is-down"
+            data-tooltip-length="small"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={
+              Object {
+                "left": -10000,
+                "top": 21,
               }
             }
           >
@@ -21934,6 +22090,8 @@ exports[`Storyshots Tooltip HTML Content 1`] = `
             onMouseLeave={[Function]}
             style={
               Object {
+                "left": -10000,
+                "right": 17,
                 "top": 8,
               }
             }
@@ -22007,7 +22165,156 @@ exports[`Storyshots Tooltip HTML Content 1`] = `
             onMouseLeave={[Function]}
             style={
               Object {
+                "left": -10000,
                 "top": 8,
+              }
+            }
+          >
+            <p>
+              This is a 
+              <a
+                href="#"
+              >
+                decent-sized
+              </a>
+               blurb.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="input-text-wrap"
+  >
+    <div
+      className="input-text-wrap"
+      style={Object {}}
+    >
+      <label
+        className="input-text-label"
+        htmlFor="input-text-example-ccv"
+      >
+        Up
+      </label>
+      <input
+        aria-describedby=""
+        id="input-text-example-ccv"
+        name={undefined}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        step={null}
+        type="text"
+        value=""
+      />
+      
+      <div
+        className="input-info-tooltip"
+      >
+        <div
+          className="html-tooltip"
+          length="medium"
+          style={
+            Object {
+              "position": "relative",
+            }
+          }
+        >
+          <div
+            className="tooltip-js-parent"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+          >
+            <i
+              className="sg-icon sg-icon-info-circle"
+              onClick={undefined}
+              style={null}
+            />
+          </div>
+          <div
+            className="tooltip-js-content is-up"
+            data-tooltip-length="medium"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={
+              Object {
+                "left": -10000,
+                "top": -5,
+              }
+            }
+          >
+            <p>
+              This is a 
+              <a
+                href="#"
+              >
+                decent-sized
+              </a>
+               blurb.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="input-text-wrap"
+  >
+    <div
+      className="input-text-wrap"
+      style={Object {}}
+    >
+      <label
+        className="input-text-label"
+        htmlFor="input-text-example-ccv"
+      >
+        Down
+      </label>
+      <input
+        aria-describedby=""
+        id="input-text-example-ccv"
+        name={undefined}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        step={null}
+        type="text"
+        value=""
+      />
+      
+      <div
+        className="input-info-tooltip"
+      >
+        <div
+          className="html-tooltip"
+          length="medium"
+          style={
+            Object {
+              "position": "relative",
+            }
+          }
+        >
+          <div
+            className="tooltip-js-parent"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+          >
+            <i
+              className="sg-icon sg-icon-info-circle"
+              onClick={undefined}
+              style={null}
+            />
+          </div>
+          <div
+            className="tooltip-js-content is-down"
+            data-tooltip-length="medium"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={
+              Object {
+                "left": -10000,
+                "top": 21,
               }
             }
           >
@@ -22084,6 +22391,8 @@ exports[`Storyshots Tooltip HTML Content 1`] = `
             onMouseLeave={[Function]}
             style={
               Object {
+                "left": -10000,
+                "right": 17,
                 "top": 8,
               }
             }
@@ -22157,7 +22466,156 @@ exports[`Storyshots Tooltip HTML Content 1`] = `
             onMouseLeave={[Function]}
             style={
               Object {
+                "left": -10000,
                 "top": 8,
+              }
+            }
+          >
+            <p>
+              Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Etiam porta sem malesuada magna mollis euismod. 
+              <a
+                href="#"
+              >
+                Lorem
+              </a>
+               ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="input-text-wrap"
+  >
+    <div
+      className="input-text-wrap"
+      style={Object {}}
+    >
+      <label
+        className="input-text-label"
+        htmlFor="input-text-example-ccv"
+      >
+        Up
+      </label>
+      <input
+        aria-describedby=""
+        id="input-text-example-ccv"
+        name={undefined}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        step={null}
+        type="text"
+        value=""
+      />
+      
+      <div
+        className="input-info-tooltip"
+      >
+        <div
+          className="html-tooltip"
+          length="large"
+          style={
+            Object {
+              "position": "relative",
+            }
+          }
+        >
+          <div
+            className="tooltip-js-parent"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+          >
+            <i
+              className="sg-icon sg-icon-info-circle"
+              onClick={undefined}
+              style={null}
+            />
+          </div>
+          <div
+            className="tooltip-js-content is-up"
+            data-tooltip-length="large"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={
+              Object {
+                "left": -10000,
+                "top": -5,
+              }
+            }
+          >
+            <p>
+              Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Etiam porta sem malesuada magna mollis euismod. 
+              <a
+                href="#"
+              >
+                Lorem
+              </a>
+               ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="input-text-wrap"
+  >
+    <div
+      className="input-text-wrap"
+      style={Object {}}
+    >
+      <label
+        className="input-text-label"
+        htmlFor="input-text-example-ccv"
+      >
+        Down
+      </label>
+      <input
+        aria-describedby=""
+        id="input-text-example-ccv"
+        name={undefined}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        step={null}
+        type="text"
+        value=""
+      />
+      
+      <div
+        className="input-info-tooltip"
+      >
+        <div
+          className="html-tooltip"
+          length="large"
+          style={
+            Object {
+              "position": "relative",
+            }
+          }
+        >
+          <div
+            className="tooltip-js-parent"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+          >
+            <i
+              className="sg-icon sg-icon-info-circle"
+              onClick={undefined}
+              style={null}
+            />
+          </div>
+          <div
+            className="tooltip-js-content is-down"
+            data-tooltip-length="large"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={
+              Object {
+                "left": -10000,
+                "top": 21,
               }
             }
           >
@@ -22587,11 +23045,7 @@ exports[`Storyshots Tooltip Standard 1`] = `
         data-tooltip-length={undefined}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
-        style={
-          Object {
-            "top": 8,
-          }
-        }
+        style={undefined}
       >
         <p>
           The 
@@ -22635,6 +23089,8 @@ exports[`Storyshots Tooltip Standard 1`] = `
         onMouseLeave={[Function]}
         style={
           Object {
+            "left": -10000,
+            "right": 17,
             "top": 8,
           }
         }

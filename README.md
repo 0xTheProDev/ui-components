@@ -141,7 +141,7 @@ More information: https://semver.org/
 - `npm run ci-test`: Test used for the CI build (doesn't use interactive mode).
 - `npm run build-storybook`: Build a deployable version of the Storybook.
 - `npm run prepare`: Used by npm to build the assets before publishing.
-- `npm run run image-snapshots`: Builds a static index.html file and runs image snapshot tests.
+- `npm run image-snapshots`: Builds a static index.html file and runs image snapshot tests.
 - `npm run update-icon-types`: Pull latest styleguide css and update the types of icon to match all found instances of sg-icon-${type}
 
 ## Testing
