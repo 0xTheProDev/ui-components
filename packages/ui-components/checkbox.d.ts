@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 export interface CheckboxProps {
     checked: boolean;
     disabled?: boolean;
     id: string;
     info?: string;
-    label?: string;
+    label?: ReactNode;
     children?: any;
     onChange: (event: any) => void;
     value?: string;
