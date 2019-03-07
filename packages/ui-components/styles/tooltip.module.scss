@@ -227,7 +227,6 @@
 
 .tooltip-js-content {
   position: absolute;
-  left: -10000px;
   z-index: $info-popup-z-index;
   width: 240px;
   padding: 12px;
@@ -242,6 +241,15 @@
   opacity: 0;
   transition: 0.3s opacity, 0s left 0.3s;
 
+  &.is-visible {
+    overflow: visible;
+    opacity: 1;
+    transition: 0.5s opacity;
+  }
+
+  /**
+    Tooltip Caret/Arrow styles, (points back at the tooltip trigger)
+  */
   &::after {
     position: absolute;
     top: 50%;
@@ -255,22 +263,26 @@
     transform: rotate(45deg);
   }
 
-  &.is-visible {
-    left: 100%;
-    overflow: visible;
-    opacity: 1;
-    transition: 0.5s opacity;
-  }
-
   &.is-left {
-    &.is-visible {
-      right: 22px;
-      left: auto;
-    }
-
     &::after {
       right: -3px;
       left: auto;
+    }
+  }
+
+  &.is-up {
+    &::after {
+      top: 100%;
+      left: 50%;
+      margin-top: -5px;
+    }
+  }
+
+  &.is-down {
+    &::after {
+      top: 0px;
+      left: 50%;
+      margin-top: -3px;
     }
   }
 

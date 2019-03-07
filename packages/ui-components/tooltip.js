@@ -18,18 +18,20 @@ Tooltip.defaultProps = {
     direction: 'up',
 };
 export class HTMLTooltip extends React.Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super(...arguments);
         this.state = {
             hovered: false,
             opened: false,
             tooltipHeight: 0,
+            tooltipWidth: 0,
         };
         this.handleHoverIn = () => {
             this.setState({
                 hovered: true,
                 opened: true,
                 tooltipHeight: this.tooltipRef.offsetHeight,
+                tooltipWidth: this.tooltipRef.clientWidth,
             });
         };
         this.handleHoverOut = () => {
@@ -40,13 +42,44 @@ export class HTMLTooltip extends React.Component {
                 }
             }, this.props.debounce);
         };
-        this.state = {
-            hovered: false,
-            opened: false,
-            tooltipHeight: 0,
+        /**
+         * determines vertical & horizontal positioning for the tooltip content.
+         * NOTE: this does NOT determine positioning for the ::after pseudoelement, i.e. the caret/arrow of the tooltip
+         *
+         * 'tooltip-js-content' always exists in the DOM for each tooltip. It's displayed/hidden via CSS opacity.
+         * This is because we want the tooltip content to animate in when a user triggers it.
+         * We move the tooltip content well off the screen, because we don't want it to block users' interactions
+         * with other elements on the page. If we didn't do this,
+         * a user could trigger a tooltip by hovering over its invisible content.
+         *
+         * @param direction TooltipDirection - which direction the tooltip will display
+         * @returns React.CSSProperties
+         */
+        this.styleForTooltipContent = (direction) => {
+            const { opened: isVisible, tooltipHeight, tooltipWidth } = this.state;
+            const hiddenTooltipStyles = { left: -10000 };
+            let styles;
+            switch (direction) {
+                case 'left': {
+                    styles = { top: -(tooltipHeight / 2) + 8, right: 17, left: 'auto' };
+                    return isVisible ? styles : Object.assign({}, styles, hiddenTooltipStyles);
+                }
+                case 'right': {
+                    styles = { top: -(tooltipHeight / 2) + 8, left: '100%' };
+                    return isVisible ? styles : Object.assign({}, styles, hiddenTooltipStyles);
+                }
+                case 'up': {
+                    styles = { top: -tooltipHeight - 5 };
+                    return isVisible
+                        ? Object.assign({}, styles, { left: -tooltipWidth / 2 }) : Object.assign({}, styles, hiddenTooltipStyles);
+                }
+                case 'down': {
+                    styles = { top: 21 };
+                    return isVisible
+                        ? Object.assign({}, styles, { left: -tooltipWidth / 2 }) : Object.assign({}, styles, hiddenTooltipStyles);
+                }
+            }
         };
-        this.handleHoverIn = this.handleHoverIn.bind(this);
-        this.handleHoverOut = this.handleHoverOut.bind(this);
     }
     shouldComponentUpdate(nextProps, nextState) {
         if (this.state.opened === nextState.opened) {
@@ -59,11 +92,15 @@ export class HTMLTooltip extends React.Component {
         return (React.createElement("div", Object.assign({ className: "html-tooltip", style: Object.assign({ position: 'relative' }, style) }, attributes),
             React.createElement("div", { className: cn('tooltip-js-parent', Styles['tooltip-js-parent']), onMouseEnter: this.handleHoverIn, onMouseLeave: this.handleHoverOut }, hoverTarget),
             React.createElement("div", { className: cn('tooltip-js-content', Styles['tooltip-js-content'], className, {
+                    [Styles['is-down']]: direction === 'down',
+                    'is-down': direction === 'down',
                     [Styles['is-left']]: direction === 'left',
                     'is-left': direction === 'left',
+                    [Styles['is-up']]: direction === 'up',
+                    'is-up': direction === 'up',
                     [Styles['is-visible']]: this.state.opened,
                     'is-visible': this.state.opened,
-                }), style: { top: -(this.state.tooltipHeight / 2) + 8 }, "data-tooltip-length": this.props.length, ref: input => {
+                }), style: this.styleForTooltipContent(direction), "data-tooltip-length": this.props.length, ref: input => {
                     this.tooltipRef = input;
                 }, onMouseEnter: this.handleHoverIn, onMouseLeave: this.handleHoverOut }, children)));
     }
