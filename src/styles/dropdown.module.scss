@@ -35,7 +35,7 @@
   left: 0;
   display: inline-block; // only needed to override client css
   min-width: 180px;
-  padding: 10px 0;
+  padding: $scale-base-down-01 0;
   margin: 1px -1px;
   overflow: hidden;
   cursor: default;
@@ -59,11 +59,37 @@
   left: inherit;
 }
 
+.dropdown-menu {
+  .input-checkbox-wrap, :global(.input-checkbox-wrap) {
+    padding-left: $scale-base;
+    margin-bottom: $scale-base;
+    text-align: left;
+
+    &:first-child {
+      span {
+        margin-left: 3px;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.dropdown-menu .input-checkbox-label:before {
+  vertical-align: sub;
+}
+
+.dropdown-menu .label {
+  margin-left: $scale-base-down-03;
+}
+
 .dropdown-link {
   display: block;
-  padding: 10px 18px 7px;
-  font-size: 13px;
-  line-height: 18px;
+  padding: $scale-base-down-01 $scale-base-up-03;
+  font-size: $scale-base-up-01;
+  line-height: $scale-base-up-03;
   color: $slate-80;
   text-align: left;
   text-decoration: none;
@@ -75,28 +101,29 @@
     background: $slate-10;
   }
 
-  :global {
-    .sg-icon {
-      margin-right: 12px;
-    }
+  :global .sg-icon {
+    margin-right: $scale-base;
+  }
+  .sg-icon {
+    margin-right: $scale-base;
   }
 }
 
 .dropdown-text {
   display: block;
-  padding: 10px 30px 7px;
-  font-size: 13px;
-  line-height: 18px;
+  padding: $scale-base-down-01 $scale-base-up-06;
+  font-size: $scale-base-up-01;
+  line-height: $scale-base-up-03;
   text-align: left;
   white-space: nowrap;
 }
 
 .dropdown-item {
-  margin: 5px 25px;
+  margin: $scale-base-down-02 $scale-base-up-05;
 }
 
 .dropdown-input {
   width: 100%;
-  padding: 3px 5px;
+  padding: $scale-base-down-03 $scale-base-down-02;
   box-sizing: border-box;
 }

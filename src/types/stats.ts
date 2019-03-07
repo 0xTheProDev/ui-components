@@ -18,3 +18,28 @@ export interface CardStatType {
   type?: StatType;
   value: number | string;
 }
+
+export type CampaignStatType =
+  | 'blocks'
+  | 'bounce-drops'
+  | 'bounces'
+  | 'clicks'
+  | 'deferred'
+  | 'delivered'
+  | 'invalid-emails'
+  | 'opens'
+  | 'processed'
+  | 'requests'
+  | 'spam-report-drops'
+  | 'spam-reports'
+  | 'unique-clicks'
+  | 'unique-opens'
+  | 'unsubscribe-drops'
+  | 'unsubscribes';
+
+export interface FilterDropdownOptionType {
+  type?: CampaignStatType;
+  label: React.ReactNode;
+  value: string;
+  checked: boolean;
+}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import Styles from './styles/checkbox-radio.module.scss';
 import cn from './utilities/classnames';
 export interface CheckboxProps {
@@ -6,7 +6,7 @@ export interface CheckboxProps {
   disabled?: boolean;
   id: string;
   info?: string;
-  label?: string;
+  label?: ReactNode;
   children?: any;
   onChange: (event: any) => void;
   value?: string;

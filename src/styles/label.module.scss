@@ -78,3 +78,54 @@
     content: none;
   }
 }
+
+.filter-option.label {
+  &-blocks {
+    @include label($sangria);
+  }
+  &-bounce-drops {
+    @include label($carrot);
+  }
+  &-bounces {
+    @include label($ron-burgundy);
+  }
+  &-clicks {
+    @include label($mantis);
+  }
+  &-deferred {
+    @include label($lavender);
+  }
+  &-delivered {
+    @include label($sg-blue);
+  }
+  &-invalid-emails {
+    @include label($seafoam);
+  }
+  &-opens {
+    @include label($lime);
+  }
+  &-processed {
+    @include label($steel);
+  }
+  &-requests {
+    @include label($spruce);
+  }
+  &-spam-report-drops {
+    @include label($cobalt);
+  }
+  &-spam-reports {
+    @include label($wild-strawberry);
+  }
+  &-unique-clicks {
+    @include label($crown);
+  }
+  &-unique-opens {
+    @include label($screample);
+  }
+  &-unsubscribe-drops {
+    @include label($mango);
+  }
+  &-unsubscribes {
+    @include label($burnt-orange);
+  }
+}
