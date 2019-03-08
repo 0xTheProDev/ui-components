@@ -16,6 +16,7 @@ export interface FlexHeaderProps {
   tooltipText?: string;
   tooltipLength?: TooltipLength;
   onClose?: (event: any) => void;
+  iconType?: 'x' | 'mc-return';
 }
 
 export class FlexHeader extends Component<FlexHeaderProps> {
@@ -29,6 +30,7 @@ export class FlexHeader extends Component<FlexHeaderProps> {
       title,
       tooltipText,
       tooltipLength: tooltipSize,
+      iconType = 'x',
       ...attributes
     } = this.props;
 
@@ -44,7 +46,7 @@ export class FlexHeader extends Component<FlexHeaderProps> {
               className={cn(Styles['flex-header-action'], 'flex-header-action')}
               onClick={onClose}
             >
-              <Icon type="x" />
+              <Icon type={iconType} />
             </a>
           )}
           <div className={cn(Styles['flex-header-title'], 'flex-header-title')}>
