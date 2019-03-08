@@ -41,6 +41,7 @@ export { Progress, ProgressStage } from './progress';
 export { PageHeader, PageHeading } from './page-header';
 export { Radio, RadioGroup } from './radio';
 export { Row } from './grid/row';
+export { ScrollToTopButton } from './scroll-to-top';
 export { SideModal } from './side-modal';
 export { Slider } from './slider';
 export { SplitCard, SplitCardSeparator } from './split-card';

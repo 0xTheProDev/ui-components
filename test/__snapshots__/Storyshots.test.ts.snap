@@ -12755,6 +12755,42 @@ exports[`Storyshots Save Button With icon on dark 1`] = `
 </div>
 `;
 
+exports[`Storyshots Scroll to Top Scroll to Top [skip] 1`] = `
+<div>
+  <div
+    style={
+      Object {
+        "height": "400px",
+        "overflow": "auto",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "backgroundImage": "linear-gradient(red, yellow)",
+          "height": "4000px",
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+  <button
+    className="btn btn-secondary scroll-button scroll-button btn-small"
+    disabled={false}
+    id={undefined}
+    onClick={[Function]}
+    type="button"
+  >
+    <i
+      className="sg-icon sg-icon-sort-asc"
+      onClick={undefined}
+      style={null}
+    />
+  </button>
+</div>
+`;
+
 exports[`Storyshots Segment Term Segment term which cannot be edited 1`] = `
 <div
   className="segment-term-wrap"
