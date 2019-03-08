@@ -356,6 +356,12 @@
   }
 }
 
+.sg-icon-mc-return {
+  &::before {
+    content: $icon-mc-return;
+  }
+}
+
 .sg-icon-mobile-view {
   &::before {
     content: $icon-mobile-view;

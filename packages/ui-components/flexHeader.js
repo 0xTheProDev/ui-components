@@ -15,13 +15,13 @@ import { HTMLTooltip, Tooltip } from './tooltip';
 import cn from './utilities/classnames';
 export class FlexHeader extends Component {
     render() {
-        const _a = this.props, { className, creditsCount, onClose, headerActions, headerTabs, title, tooltipText, tooltipLength: tooltipSize } = _a, attributes = __rest(_a, ["className", "creditsCount", "onClose", "headerActions", "headerTabs", "title", "tooltipText", "tooltipLength"]);
+        const _a = this.props, { className, creditsCount, onClose, headerActions, headerTabs, title, tooltipText, tooltipLength: tooltipSize, iconType = 'x' } = _a, attributes = __rest(_a, ["className", "creditsCount", "onClose", "headerActions", "headerTabs", "title", "tooltipText", "tooltipLength", "iconType"]);
         return (React.createElement("header", { className: cn(Styles['flex-header'], 'flex-header', {
                 [className]: !!className,
             }) },
             React.createElement("div", null,
                 onClose && (React.createElement("a", { className: cn(Styles['flex-header-action'], 'flex-header-action'), onClick: onClose },
-                    React.createElement(Icon, { type: "x" }))),
+                    React.createElement(Icon, { type: iconType }))),
                 React.createElement("div", { className: cn(Styles['flex-header-title'], 'flex-header-title') },
                     React.createElement("h3", null,
                         title,
