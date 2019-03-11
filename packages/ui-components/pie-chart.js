@@ -2,68 +2,60 @@ import React from 'react';
 import Card from './card';
 import Styles from './styles/pie-chart.module.scss';
 import cn from './utilities/classnames';
-export class PieChart extends React.Component {
+const renderSegments = (segments, percentages) => {
+    let cumulativePercentage = 0;
+    return segments
+        .reduce((returnArray, current) => {
+        returnArray.push(React.createElement("circle", { key: `segment-${current.label}`, className: "donut-segment", cx: "21", cy: "21", r: "15.91549430918954", fill: "transparent", stroke: current.color, strokeWidth: "2", strokeDasharray: `${percentages[current.label]} ${100 -
+                percentages[current.label]}`, strokeDashoffset: `${125 - (cumulativePercentage || 100)}` }));
+        cumulativePercentage += percentages[current.label];
+        return returnArray;
+    }, [])
+        .reverse();
+};
+export const PieChart = ({ segments, percentages, mainSegment, }) => (React.createElement("div", { className: Styles['pie-chart-svg'] },
+    React.createElement("svg", { width: "100%", height: "100%", viewBox: "0 0 42 42", className: "donut" }, renderSegments(segments, percentages)),
+    React.createElement("span", { className: cn(Styles['pie-chart-number'], 'is-size-h2') }, !isNaN(percentages[mainSegment]) && `${percentages[mainSegment]}%`)));
+export const PieChartLegend = ({ segments, percentages }) => (React.createElement("ul", { className: Styles['pie-chart-legend'] }, segments.map((segment) => {
+    return (React.createElement("li", { key: segment.label },
+        React.createElement("span", { className: cn('label', segment.legendClass) }, `${percentages[segment.label] || 0}% ${segment.label}`)));
+})));
+export class PieChartCard extends React.Component {
     constructor() {
         super(...arguments);
-        this.calculatePercentages = (passed, failed, notRecieved) => {
-            const total = passed + failed + notRecieved;
-            return {
-                failed: Math.round((failed / total) * 100),
-                notRecieved: Math.round((notRecieved / total) * 100),
-                passed: Math.round((passed / total) * 100),
-            };
+        this.calculatePercentages = (segments) => {
+            const total = segments.reduce((sum, curr) => sum + curr.count, 0);
+            const percents = segments.reduce((memo, curr) => {
+                memo[curr.label] = Math.round((curr.count / total) * 100);
+                return memo;
+            }, {});
+            return percents;
         };
-        this.getBadgeText = (percentages) => {
-            if (percentages.passed >= this.props.cutoffGood) {
-                return {
-                    color: 'mantis',
-                    content: 'Good',
-                };
+        this.getBadge = (badgeRanges, percent) => {
+            let selectedRange = { percent: 0 };
+            for (const range of badgeRanges) {
+                if (percent >= range.percent && range.percent >= selectedRange.percent) {
+                    selectedRange = range;
+                }
             }
-            else if (percentages.passed >= this.props.cutoffBad) {
-                return {
-                    color: 'carrot',
-                    content: 'Average',
-                };
-            }
-            else {
-                return {
-                    color: 'ron-burgundy',
-                    content: 'Poor',
-                };
-            }
+            return {
+                color: selectedRange.color,
+                content: selectedRange.content,
+            };
         };
     }
     render() {
-        const { passed, failed, notRecieved, title, tooltip } = this.props;
-        const percentages = this.calculatePercentages(passed, failed, notRecieved);
-        const badge = this.getBadgeText(percentages);
+        const { title, segments, mainSegment, badgeRanges, hasLegend } = this.props;
+        const percentages = this.calculatePercentages(segments);
+        const badge = badgeRanges && this.getBadge(badgeRanges, percentages[mainSegment]);
         return (React.createElement(Card, { centered: true, className: "pie-chart-card", badge: badge },
             React.createElement("div", { className: Styles['pie-chart'] },
-                React.createElement("div", { className: Styles['pie-chart-svg'] },
-                    React.createElement("svg", { width: "100%", height: "100%", viewBox: "0 0 42 42", className: "donut" },
-                        React.createElement("circle", { className: "donut-hole", cx: "21", cy: "21", r: "15.91549430918954", fill: "#fff" }),
-                        React.createElement("circle", { className: "donut-ring", cx: "21", cy: "21", r: "15.91549430918954", fill: "transparent", stroke: "#9e9e9e", strokeWidth: "2" }),
-                        React.createElement("circle", { className: "donut-segment", cx: "21", cy: "21", r: "15.91549430918954", fill: "transparent", stroke: "#9e9e9e", strokeWidth: "2", strokeDasharray: `${percentages.notRecieved} ${100 -
-                                percentages.notRecieved}`, strokeDashoffset: `${125 -
-                                percentages.passed -
-                                percentages.failed}` }),
-                        React.createElement("circle", { className: "donut-segment", cx: "21", cy: "21", r: "15.91549430918954", fill: "transparent", stroke: "#b71c1c", strokeWidth: "2", strokeDasharray: `${percentages.failed} ${100 -
-                                percentages.failed}`, strokeDashoffset: `${125 - percentages.passed}` }),
-                        React.createElement("circle", { className: "donut-segment", cx: "21", cy: "21", r: "15.91549430918954", fill: "transparent", stroke: "#18c96e", strokeWidth: "2", strokeDasharray: `${percentages.passed} ${100 -
-                                percentages.passed}`, strokeDashoffset: "25" })),
-                    React.createElement("span", { className: cn(Styles['pie-chart-number'], 'is-size-h2') }, !isNaN(percentages.passed) && `${percentages.passed}%`)),
-                React.createElement("ul", { className: Styles['pie-chart-legend'] },
-                    React.createElement("li", null,
-                        React.createElement("span", { className: "label label-delivered" }, `${percentages.passed ||
-                            0}% passed`)),
-                    React.createElement("li", null,
-                        React.createElement("span", { className: "label label-error" }, `${percentages.failed ||
-                            0}% failed`)),
-                    React.createElement("li", null,
-                        React.createElement("span", { className: "label label-draft" }, `${percentages.notRecieved ||
-                            0}% not received`)))),
-            React.createElement("span", { className: "has-underline is-size-h2", "data-tooltip": tooltip, "data-tooltip-pos": "down" }, title)));
+                React.createElement(PieChart, { segments: segments, percentages: percentages, mainSegment: mainSegment }),
+                hasLegend && (React.createElement(PieChartLegend, { segments: segments, percentages: percentages }))),
+            title));
     }
 }
-export default PieChart;
+PieChartCard.defaultProps = {
+    hasLegend: true,
+};
+export default PieChartCard;
