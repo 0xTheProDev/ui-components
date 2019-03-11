@@ -1,13 +1,13 @@
 .scroll-button {
-  bottom: 30px;
   display: flex;
   float: right;
   height: 30px;
   justify-content: center;
-  right: 30px;
   opacity: 0;
   padding: 0;
   position: fixed;
+  right: 30px;
+  top: 30px;
   -webkit-transition: opacity 300ms ease-in-out;
   width: 50px;
 
