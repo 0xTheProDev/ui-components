@@ -27,7 +27,7 @@ export function getPalettePosition(
 
   return { top: newTop, left: newLeft };
 }
-
+export type ColorResult = ColorResult;
 export interface ColorPickerPropsTypes {
   labelText?: string;
   name: string;
@@ -36,6 +36,7 @@ export interface ColorPickerPropsTypes {
   initialValue: string; // the actual value selected
   textDisabled?: boolean;
   onChange: (event: React.SyntheticEvent<any>, value: string) => void; // callback for what happens on change
+  onClose?: (event: React.SyntheticEvent<any>, value: ColorResult) => void;
 }
 
 export interface ColorPickerState {
@@ -155,7 +156,7 @@ export class ColorPicker extends React.Component<
     this.props.onChange(null, color.hex);
   };
 
-  private toggleColorPalette = () => {
+  private toggleColorPalette = (e: React.SyntheticEvent<any>) => {
     const displayColorPalette = !this.state.displayColorPalette;
 
     // not in didMount so we can only compute this if we need it
@@ -165,6 +166,9 @@ export class ColorPicker extends React.Component<
       this.paletteTriggerRect.left + this.paletteTriggerRect.width / 2;
 
     this.setState({ displayColorPalette, top: initialTop, left: initialLeft });
+    if (!displayColorPalette && this.props.onClose) {
+      this.props.onClose(e, this.state.colorValue);
+    }
   };
 
   // Need to do some calculations to determine if this is being clipped by the window edge
