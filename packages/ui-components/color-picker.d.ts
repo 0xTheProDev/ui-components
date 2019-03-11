@@ -5,6 +5,7 @@ export declare function getPalettePosition(clientHeight: number, paletteTriggerR
     top: number;
     left: number;
 };
+export declare type ColorResult = ColorResult;
 export interface ColorPickerPropsTypes {
     labelText?: string;
     name: string;
@@ -13,6 +14,7 @@ export interface ColorPickerPropsTypes {
     initialValue: string;
     textDisabled?: boolean;
     onChange: (event: React.SyntheticEvent<any>, value: string) => void;
+    onClose?: (event: React.SyntheticEvent<any>, value: ColorResult) => void;
 }
 export interface ColorPickerState {
     displayColorPalette: boolean;

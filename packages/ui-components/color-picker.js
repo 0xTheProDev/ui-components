@@ -58,13 +58,16 @@ export class ColorPicker extends React.Component {
             this.setState({ colorValue: color });
             this.props.onChange(null, color.hex);
         };
-        this.toggleColorPalette = () => {
+        this.toggleColorPalette = (e) => {
             const displayColorPalette = !this.state.displayColorPalette;
             // not in didMount so we can only compute this if we need it
             this.paletteTriggerRect = this.colorPaletteButton.getBoundingClientRect();
             const initialTop = this.paletteTriggerRect.top;
             const initialLeft = this.paletteTriggerRect.left + this.paletteTriggerRect.width / 2;
             this.setState({ displayColorPalette, top: initialTop, left: initialLeft });
+            if (!displayColorPalette && this.props.onClose) {
+                this.props.onClose(e, this.state.colorValue);
+            }
         };
         // Need to do some calculations to determine if this is being clipped by the window edge
         // Also scoot it left by half its width to center it on the "bubble"
