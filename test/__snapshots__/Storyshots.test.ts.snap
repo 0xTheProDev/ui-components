@@ -11647,449 +11647,698 @@ exports[`Storyshots Percent Input Basic 1`] = `
 </div>
 `;
 
-exports[`Storyshots Pie Chart Basic 1`] = `
-Array [
+exports[`Storyshots Pie Chart Card Pie Chart Card 1`] = `
+<div
+  className="card pie-chart-card is-centered"
+>
   <div
-    className="card pie-chart-card is-centered"
+    className="pie-chart"
+  >
+    <div
+      className="pie-chart-svg"
+    >
+      <svg
+        className="donut"
+        height="100%"
+        viewBox="0 0 42 42"
+        width="100%"
+      >
+        <circle
+          className="donut-segment"
+          cx="21"
+          cy="21"
+          fill="transparent"
+          r="15.91549430918954"
+          stroke="#9e9e9e"
+          strokeDasharray="2 98"
+          strokeDashoffset="27"
+          strokeWidth="2"
+        />
+        <circle
+          className="donut-segment"
+          cx="21"
+          cy="21"
+          fill="transparent"
+          r="15.91549430918954"
+          stroke="#b71c1c"
+          strokeDasharray="20 80"
+          strokeDashoffset="47"
+          strokeWidth="2"
+        />
+        <circle
+          className="donut-segment"
+          cx="21"
+          cy="21"
+          fill="transparent"
+          r="15.91549430918954"
+          stroke="#18c96e"
+          strokeDasharray="78 22"
+          strokeDashoffset="25"
+          strokeWidth="2"
+        />
+      </svg>
+      <span
+        className="pie-chart-number is-size-h2"
+      >
+        78%
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Pie Chart Card with everything and multi-sections 1`] = `
+<div
+  className="card pie-chart-card is-centered"
+>
+  <span
+    className="badge ron-burgundy"
+  >
+    Poor
+  </span>
+  <div
+    className="pie-chart"
+  >
+    <div
+      className="pie-chart-svg"
+    >
+      <svg
+        className="donut"
+        height="100%"
+        viewBox="0 0 42 42"
+        width="100%"
+      >
+        <circle
+          className="donut-segment"
+          cx="21"
+          cy="21"
+          fill="transparent"
+          r="15.91549430918954"
+          stroke="#19996e"
+          strokeDasharray="10 90"
+          strokeDashoffset="35"
+          strokeWidth="2"
+        />
+        <circle
+          className="donut-segment"
+          cx="21"
+          cy="21"
+          fill="transparent"
+          r="15.91549430918954"
+          stroke="#18c43e"
+          strokeDasharray="10 90"
+          strokeDashoffset="45"
+          strokeWidth="2"
+        />
+        <circle
+          className="donut-segment"
+          cx="21"
+          cy="21"
+          fill="transparent"
+          r="15.91549430918954"
+          stroke="#12396e"
+          strokeDasharray="10 90"
+          strokeDashoffset="55"
+          strokeWidth="2"
+        />
+        <circle
+          className="donut-segment"
+          cx="21"
+          cy="21"
+          fill="transparent"
+          r="15.91549430918954"
+          stroke="#11236e"
+          strokeDasharray="10 90"
+          strokeDashoffset="65"
+          strokeWidth="2"
+        />
+        <circle
+          className="donut-segment"
+          cx="21"
+          cy="21"
+          fill="transparent"
+          r="15.91549430918954"
+          stroke="#18996e"
+          strokeDasharray="10 90"
+          strokeDashoffset="75"
+          strokeWidth="2"
+        />
+        <circle
+          className="donut-segment"
+          cx="21"
+          cy="21"
+          fill="transparent"
+          r="15.91549430918954"
+          stroke="#17546e"
+          strokeDasharray="10 90"
+          strokeDashoffset="85"
+          strokeWidth="2"
+        />
+        <circle
+          className="donut-segment"
+          cx="21"
+          cy="21"
+          fill="transparent"
+          r="15.91549430918954"
+          stroke="#18c96e"
+          strokeDasharray="10 90"
+          strokeDashoffset="95"
+          strokeWidth="2"
+        />
+        <circle
+          className="donut-segment"
+          cx="21"
+          cy="21"
+          fill="transparent"
+          r="15.91549430918954"
+          stroke="#9e9e9e"
+          strokeDasharray="10 90"
+          strokeDashoffset="105"
+          strokeWidth="2"
+        />
+        <circle
+          className="donut-segment"
+          cx="21"
+          cy="21"
+          fill="transparent"
+          r="15.91549430918954"
+          stroke="#b71c1c"
+          strokeDasharray="10 90"
+          strokeDashoffset="115"
+          strokeWidth="2"
+        />
+        <circle
+          className="donut-segment"
+          cx="21"
+          cy="21"
+          fill="transparent"
+          r="15.91549430918954"
+          stroke="#18c96e"
+          strokeDasharray="10 90"
+          strokeDashoffset="25"
+          strokeWidth="2"
+        />
+      </svg>
+      <span
+        className="pie-chart-number is-size-h2"
+      >
+        10%
+      </span>
+    </div>
+    <ul
+      className="pie-chart-legend"
+    >
+      <li>
+        <span
+          className="label mantis"
+        >
+          10% A
+        </span>
+      </li>
+      <li>
+        <span
+          className="label ron-burgundy"
+        >
+          10% B
+        </span>
+      </li>
+      <li>
+        <span
+          className="label"
+        >
+          10% C
+        </span>
+      </li>
+      <li>
+        <span
+          className="label wild-strawberry"
+        >
+          10% D
+        </span>
+      </li>
+      <li>
+        <span
+          className="label sangria"
+        >
+          10% E
+        </span>
+      </li>
+      <li>
+        <span
+          className="label caribbean"
+        >
+          10% F
+        </span>
+      </li>
+      <li>
+        <span
+          className="label grass-stain"
+        >
+          10% G
+        </span>
+      </li>
+      <li>
+        <span
+          className="label screample"
+        >
+          10% H
+        </span>
+      </li>
+      <li>
+        <span
+          className="label cobalt"
+        >
+          10% I
+        </span>
+      </li>
+      <li>
+        <span
+          className="label mango"
+        >
+          10% J
+        </span>
+      </li>
+    </ul>
+  </div>
+  <div
+    className="html-tooltip"
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+  >
+    <div
+      className="tooltip-js-parent"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      <span>
+        Including Everything
+      </span>
+    </div>
+    <div
+      className="tooltip-js-content"
+      data-tooltip-length={undefined}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      style={
+        Object {
+          "left": -10000,
+          "top": 8,
+        }
+      }
+    >
+      <span>
+        Check link.
+        <a
+          href="#"
+        >
+           Learn More
+        </a>
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Pie Chart Card with legend 1`] = `
+<div
+  className="card pie-chart-card is-centered"
+>
+  <div
+    className="pie-chart"
+  >
+    <div
+      className="pie-chart-svg"
+    >
+      <svg
+        className="donut"
+        height="100%"
+        viewBox="0 0 42 42"
+        width="100%"
+      >
+        <circle
+          className="donut-segment"
+          cx="21"
+          cy="21"
+          fill="transparent"
+          r="15.91549430918954"
+          stroke="#9e9e9e"
+          strokeDasharray="2 98"
+          strokeDashoffset="27"
+          strokeWidth="2"
+        />
+        <circle
+          className="donut-segment"
+          cx="21"
+          cy="21"
+          fill="transparent"
+          r="15.91549430918954"
+          stroke="#b71c1c"
+          strokeDasharray="20 80"
+          strokeDashoffset="47"
+          strokeWidth="2"
+        />
+        <circle
+          className="donut-segment"
+          cx="21"
+          cy="21"
+          fill="transparent"
+          r="15.91549430918954"
+          stroke="#18c96e"
+          strokeDasharray="78 22"
+          strokeDashoffset="25"
+          strokeWidth="2"
+        />
+      </svg>
+      <span
+        className="pie-chart-number is-size-h2"
+      >
+        78%
+      </span>
+    </div>
+    <ul
+      className="pie-chart-legend"
+    >
+      <li>
+        <span
+          className="label label-delivered"
+        >
+          78% passed
+        </span>
+      </li>
+      <li>
+        <span
+          className="label label-error"
+        >
+          20% failed
+        </span>
+      </li>
+      <li>
+        <span
+          className="label"
+        >
+          2% not received
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Pie Chart Card with legend and badge 1`] = `
+<div
+  className="card pie-chart-card is-centered"
+>
+  <span
+    className="badge mantis"
+  >
+    Good
+  </span>
+  <div
+    className="pie-chart"
+  >
+    <div
+      className="pie-chart-svg"
+    >
+      <svg
+        className="donut"
+        height="100%"
+        viewBox="0 0 42 42"
+        width="100%"
+      >
+        <circle
+          className="donut-segment"
+          cx="21"
+          cy="21"
+          fill="transparent"
+          r="15.91549430918954"
+          stroke="#9e9e9e"
+          strokeDasharray="2 98"
+          strokeDashoffset="27"
+          strokeWidth="2"
+        />
+        <circle
+          className="donut-segment"
+          cx="21"
+          cy="21"
+          fill="transparent"
+          r="15.91549430918954"
+          stroke="#b71c1c"
+          strokeDasharray="20 80"
+          strokeDashoffset="47"
+          strokeWidth="2"
+        />
+        <circle
+          className="donut-segment"
+          cx="21"
+          cy="21"
+          fill="transparent"
+          r="15.91549430918954"
+          stroke="#18c96e"
+          strokeDasharray="78 22"
+          strokeDashoffset="25"
+          strokeWidth="2"
+        />
+      </svg>
+      <span
+        className="pie-chart-number is-size-h2"
+      >
+        78%
+      </span>
+    </div>
+    <ul
+      className="pie-chart-legend"
+    >
+      <li>
+        <span
+          className="label label-delivered"
+        >
+          78% passed
+        </span>
+      </li>
+      <li>
+        <span
+          className="label label-error"
+        >
+          20% failed
+        </span>
+      </li>
+      <li>
+        <span
+          className="label"
+        >
+          2% not received
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Pie Chart Card with legend, badge, and title 1`] = `
+<div
+  className="card pie-chart-card is-centered"
+>
+  <span
+    className="badge mantis"
+  >
+    Good
+  </span>
+  <div
+    className="pie-chart"
+  >
+    <div
+      className="pie-chart-svg"
+    >
+      <svg
+        className="donut"
+        height="100%"
+        viewBox="0 0 42 42"
+        width="100%"
+      >
+        <circle
+          className="donut-segment"
+          cx="21"
+          cy="21"
+          fill="transparent"
+          r="15.91549430918954"
+          stroke="#9e9e9e"
+          strokeDasharray="2 98"
+          strokeDashoffset="27"
+          strokeWidth="2"
+        />
+        <circle
+          className="donut-segment"
+          cx="21"
+          cy="21"
+          fill="transparent"
+          r="15.91549430918954"
+          stroke="#b71c1c"
+          strokeDasharray="20 80"
+          strokeDashoffset="47"
+          strokeWidth="2"
+        />
+        <circle
+          className="donut-segment"
+          cx="21"
+          cy="21"
+          fill="transparent"
+          r="15.91549430918954"
+          stroke="#18c96e"
+          strokeDasharray="78 22"
+          strokeDashoffset="25"
+          strokeWidth="2"
+        />
+      </svg>
+      <span
+        className="pie-chart-number is-size-h2"
+      >
+        78%
+      </span>
+    </div>
+    <ul
+      className="pie-chart-legend"
+    >
+      <li>
+        <span
+          className="label label-delivered"
+        >
+          78% passed
+        </span>
+      </li>
+      <li>
+        <span
+          className="label label-error"
+        >
+          20% failed
+        </span>
+      </li>
+      <li>
+        <span
+          className="label"
+        >
+          2% not received
+        </span>
+      </li>
+    </ul>
+  </div>
+  <span
+    className="has-underline"
+    data-tooltip="Including Everything"
+    data-tooltip-length={undefined}
+    data-tooltip-pos="up"
   >
     <span
-      className="badge carrot"
-    >
-      Average
-    </span>
-    <div
-      className="pie-chart"
-    >
-      <div
-        className="pie-chart-svg"
-      >
-        <svg
-          className="donut"
-          height="100%"
-          viewBox="0 0 42 42"
-          width="100%"
-        >
-          <circle
-            className="donut-hole"
-            cx="21"
-            cy="21"
-            fill="#fff"
-            r="15.91549430918954"
-          />
-          <circle
-            className="donut-ring"
-            cx="21"
-            cy="21"
-            fill="transparent"
-            r="15.91549430918954"
-            stroke="#9e9e9e"
-            strokeWidth="2"
-          />
-          <circle
-            className="donut-segment"
-            cx="21"
-            cy="21"
-            fill="transparent"
-            r="15.91549430918954"
-            stroke="#9e9e9e"
-            strokeDasharray="18 82"
-            strokeDashoffset="43"
-            strokeWidth="2"
-          />
-          <circle
-            className="donut-segment"
-            cx="21"
-            cy="21"
-            fill="transparent"
-            r="15.91549430918954"
-            stroke="#b71c1c"
-            strokeDasharray="23 77"
-            strokeDashoffset="66"
-            strokeWidth="2"
-          />
-          <circle
-            className="donut-segment"
-            cx="21"
-            cy="21"
-            fill="transparent"
-            r="15.91549430918954"
-            stroke="#18c96e"
-            strokeDasharray="59 41"
-            strokeDashoffset="25"
-            strokeWidth="2"
-          />
-        </svg>
-        <span
-          className="pie-chart-number is-size-h2"
-        >
-          59%
-        </span>
-      </div>
-      <ul
-        className="pie-chart-legend"
-      >
-        <li>
-          <span
-            className="label label-delivered"
-          >
-            59% passed
-          </span>
-        </li>
-        <li>
-          <span
-            className="label label-error"
-          >
-            23% failed
-          </span>
-        </li>
-        <li>
-          <span
-            className="label label-draft"
-          >
-            18% not received
-          </span>
-        </li>
-      </ul>
-    </div>
-    <span
-      className="has-underline is-size-h2"
-      data-tooltip="Including everything"
-      data-tooltip-pos="down"
+      className="is-size-h2"
     >
       Overall Deliverability
     </span>
-  </div>,
-  <div
-    className="card pie-chart-card is-centered"
+  </span>
+</div>
+`;
+
+exports[`Storyshots Pie Chart Pie Chart 1`] = `
+<div
+  className="pie-chart-svg"
+>
+  <svg
+    className="donut"
+    height="100%"
+    viewBox="0 0 42 42"
+    width="100%"
   >
-    <span
-      className="badge mantis"
-    >
-      Good
-    </span>
-    <div
-      className="pie-chart"
-    >
-      <div
-        className="pie-chart-svg"
-      >
-        <svg
-          className="donut"
-          height="100%"
-          viewBox="0 0 42 42"
-          width="100%"
-        >
-          <circle
-            className="donut-hole"
-            cx="21"
-            cy="21"
-            fill="#fff"
-            r="15.91549430918954"
-          />
-          <circle
-            className="donut-ring"
-            cx="21"
-            cy="21"
-            fill="transparent"
-            r="15.91549430918954"
-            stroke="#9e9e9e"
-            strokeWidth="2"
-          />
-          <circle
-            className="donut-segment"
-            cx="21"
-            cy="21"
-            fill="transparent"
-            r="15.91549430918954"
-            stroke="#9e9e9e"
-            strokeDasharray="0 100"
-            strokeDashoffset="25"
-            strokeWidth="2"
-          />
-          <circle
-            className="donut-segment"
-            cx="21"
-            cy="21"
-            fill="transparent"
-            r="15.91549430918954"
-            stroke="#b71c1c"
-            strokeDasharray="12 88"
-            strokeDashoffset="37"
-            strokeWidth="2"
-          />
-          <circle
-            className="donut-segment"
-            cx="21"
-            cy="21"
-            fill="transparent"
-            r="15.91549430918954"
-            stroke="#18c96e"
-            strokeDasharray="88 12"
-            strokeDashoffset="25"
-            strokeWidth="2"
-          />
-        </svg>
-        <span
-          className="pie-chart-number is-size-h2"
-        >
-          88%
-        </span>
-      </div>
-      <ul
-        className="pie-chart-legend"
-      >
-        <li>
-          <span
-            className="label label-delivered"
-          >
-            88% passed
-          </span>
-        </li>
-        <li>
-          <span
-            className="label label-error"
-          >
-            12% failed
-          </span>
-        </li>
-        <li>
-          <span
-            className="label label-draft"
-          >
-            0% not received
-          </span>
-        </li>
-      </ul>
-    </div>
-    <span
-      className="has-underline is-size-h2"
-      data-tooltip="Including everything"
-      data-tooltip-pos="down"
-    >
-      B2B Deliverability
-    </span>
-  </div>,
-  <div
-    className="card pie-chart-card is-centered"
+    <circle
+      className="donut-segment"
+      cx="21"
+      cy="21"
+      fill="transparent"
+      r="15.91549430918954"
+      stroke="#9e9e9e"
+      strokeDasharray="5 95"
+      strokeDashoffset="30"
+      strokeWidth="2"
+    />
+    <circle
+      className="donut-segment"
+      cx="21"
+      cy="21"
+      fill="transparent"
+      r="15.91549430918954"
+      stroke="#b71c1c"
+      strokeDasharray="30 70"
+      strokeDashoffset="60"
+      strokeWidth="2"
+    />
+    <circle
+      className="donut-segment"
+      cx="21"
+      cy="21"
+      fill="transparent"
+      r="15.91549430918954"
+      stroke="#18c96e"
+      strokeDasharray="65 35"
+      strokeDashoffset="25"
+      strokeWidth="2"
+    />
+  </svg>
+  <span
+    className="pie-chart-number is-size-h2"
+  />
+</div>
+`;
+
+exports[`Storyshots Pie Chart Pie Chart with center number 1`] = `
+<div
+  className="pie-chart-svg"
+>
+  <svg
+    className="donut"
+    height="100%"
+    viewBox="0 0 42 42"
+    width="100%"
   >
-    <span
-      className="badge ron-burgundy"
-    >
-      Poor
-    </span>
-    <div
-      className="pie-chart"
-    >
-      <div
-        className="pie-chart-svg"
-      >
-        <svg
-          className="donut"
-          height="100%"
-          viewBox="0 0 42 42"
-          width="100%"
-        >
-          <circle
-            className="donut-hole"
-            cx="21"
-            cy="21"
-            fill="#fff"
-            r="15.91549430918954"
-          />
-          <circle
-            className="donut-ring"
-            cx="21"
-            cy="21"
-            fill="transparent"
-            r="15.91549430918954"
-            stroke="#9e9e9e"
-            strokeWidth="2"
-          />
-          <circle
-            className="donut-segment"
-            cx="21"
-            cy="21"
-            fill="transparent"
-            r="15.91549430918954"
-            stroke="#9e9e9e"
-            strokeDasharray="7 93"
-            strokeDashoffset="32"
-            strokeWidth="2"
-          />
-          <circle
-            className="donut-segment"
-            cx="21"
-            cy="21"
-            fill="transparent"
-            r="15.91549430918954"
-            stroke="#b71c1c"
-            strokeDasharray="93 7"
-            strokeDashoffset="125"
-            strokeWidth="2"
-          />
-          <circle
-            className="donut-segment"
-            cx="21"
-            cy="21"
-            fill="transparent"
-            r="15.91549430918954"
-            stroke="#18c96e"
-            strokeDasharray="0 100"
-            strokeDashoffset="25"
-            strokeWidth="2"
-          />
-        </svg>
-        <span
-          className="pie-chart-number is-size-h2"
-        >
-          0%
-        </span>
-      </div>
-      <ul
-        className="pie-chart-legend"
-      >
-        <li>
-          <span
-            className="label label-delivered"
-          >
-            0% passed
-          </span>
-        </li>
-        <li>
-          <span
-            className="label label-error"
-          >
-            93% failed
-          </span>
-        </li>
-        <li>
-          <span
-            className="label label-draft"
-          >
-            7% not received
-          </span>
-        </li>
-      </ul>
-    </div>
-    <span
-      className="has-underline is-size-h2"
-      data-tooltip="Including everything"
-      data-tooltip-pos="down"
-    >
-      B2C Deliverability
-    </span>
-  </div>,
-  <div
-    className="card pie-chart-card is-centered"
+    <circle
+      className="donut-segment"
+      cx="21"
+      cy="21"
+      fill="transparent"
+      r="15.91549430918954"
+      stroke="#9e9e9e"
+      strokeDasharray="5 95"
+      strokeDashoffset="30"
+      strokeWidth="2"
+    />
+    <circle
+      className="donut-segment"
+      cx="21"
+      cy="21"
+      fill="transparent"
+      r="15.91549430918954"
+      stroke="#b71c1c"
+      strokeDasharray="30 70"
+      strokeDashoffset="60"
+      strokeWidth="2"
+    />
+    <circle
+      className="donut-segment"
+      cx="21"
+      cy="21"
+      fill="transparent"
+      r="15.91549430918954"
+      stroke="#18c96e"
+      strokeDasharray="65 35"
+      strokeDashoffset="25"
+      strokeWidth="2"
+    />
+  </svg>
+  <span
+    className="pie-chart-number is-size-h2"
   >
-    <span
-      className="badge carrot"
-    >
-      Average
-    </span>
-    <div
-      className="pie-chart"
-    >
-      <div
-        className="pie-chart-svg"
-      >
-        <svg
-          className="donut"
-          height="100%"
-          viewBox="0 0 42 42"
-          width="100%"
-        >
-          <circle
-            className="donut-hole"
-            cx="21"
-            cy="21"
-            fill="#fff"
-            r="15.91549430918954"
-          />
-          <circle
-            className="donut-ring"
-            cx="21"
-            cy="21"
-            fill="transparent"
-            r="15.91549430918954"
-            stroke="#9e9e9e"
-            strokeWidth="2"
-          />
-          <circle
-            className="donut-segment"
-            cx="21"
-            cy="21"
-            fill="transparent"
-            r="15.91549430918954"
-            stroke="#9e9e9e"
-            strokeDasharray="4 96"
-            strokeDashoffset="28"
-            strokeWidth="2"
-          />
-          <circle
-            className="donut-segment"
-            cx="21"
-            cy="21"
-            fill="transparent"
-            r="15.91549430918954"
-            stroke="#b71c1c"
-            strokeDasharray="46 54"
-            strokeDashoffset="74"
-            strokeWidth="2"
-          />
-          <circle
-            className="donut-segment"
-            cx="21"
-            cy="21"
-            fill="transparent"
-            r="15.91549430918954"
-            stroke="#18c96e"
-            strokeDasharray="51 49"
-            strokeDashoffset="25"
-            strokeWidth="2"
-          />
-        </svg>
-        <span
-          className="pie-chart-number is-size-h2"
-        >
-          51%
-        </span>
-      </div>
-      <ul
-        className="pie-chart-legend"
-      >
-        <li>
-          <span
-            className="label label-delivered"
-          >
-            51% passed
-          </span>
-        </li>
-        <li>
-          <span
-            className="label label-error"
-          >
-            46% failed
-          </span>
-        </li>
-        <li>
-          <span
-            className="label label-draft"
-          >
-            4% not received
-          </span>
-        </li>
-      </ul>
-    </div>
-    <span
-      className="has-underline is-size-h2"
-      data-tooltip="Including everything"
-      data-tooltip-pos="down"
-    >
-      Overall Deliverability
-    </span>
-  </div>,
-]
+    65%
+  </span>
+</div>
 `;
 
 exports[`Storyshots Progress Horizontal Progress 1`] = `

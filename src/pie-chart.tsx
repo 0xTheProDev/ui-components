@@ -5,145 +5,143 @@ import Styles from './styles/pie-chart.module.scss';
 import { color as ValidColor } from './types/color';
 import cn from './utilities/classnames';
 
-export interface PieChartProps {
-  passed: number;
-  failed: number;
-  notRecieved: number;
-  cutoffGood: number;
-  cutoffBad: number;
-  title: React.ReactNode;
-  tooltip: React.ReactNode;
+export interface BasicSegment {
+  label: string;
+  color: string;
 }
-export class PieChart extends React.Component<PieChartProps> {
+export interface DonutSegment extends BasicSegment {
+  count: number;
+  legendClass?: string;
+}
+export interface BadgeRange {
+  percent: number;
+  content: string;
+  color: ValidColor;
+}
+export interface PieChartCardProps {
+  title?: React.ReactNode;
+  segments: Array<DonutSegment>;
+  mainSegment: string;
+  badgeRanges?: Array<BadgeRange>;
+  hasLegend?: boolean;
+}
+
+const renderSegments = (
+  segments: Array<BasicSegment | DonutSegment>,
+  percentages: Record<string, number>
+) => {
+  let cumulativePercentage = 0;
+  return segments
+    .reduce((returnArray, current) => {
+      returnArray.push(
+        <circle
+          key={`segment-${current.label}`}
+          className="donut-segment"
+          cx="21"
+          cy="21"
+          r="15.91549430918954"
+          fill="transparent"
+          stroke={current.color}
+          strokeWidth="2"
+          strokeDasharray={`${percentages[current.label]} ${100 -
+            percentages[current.label]}`}
+          strokeDashoffset={`${125 - (cumulativePercentage || 100)}`}
+        />
+      );
+      cumulativePercentage += percentages[current.label];
+      return returnArray;
+    }, [])
+    .reverse();
+};
+
+export interface PieChartProps {
+  segments: Array<BasicSegment | DonutSegment>;
+  percentages: { [key: string]: number };
+  mainSegment?: string;
+}
+export const PieChart = ({
+  segments,
+  percentages,
+  mainSegment,
+}: PieChartProps) => (
+  <div className={Styles['pie-chart-svg']}>
+    <svg width="100%" height="100%" viewBox="0 0 42 42" className="donut">
+      {renderSegments(segments, percentages)}
+    </svg>
+    <span className={cn(Styles['pie-chart-number'], 'is-size-h2')}>
+      {!isNaN(percentages[mainSegment]) && `${percentages[mainSegment]}%`}
+    </span>
+  </div>
+);
+
+export const PieChartLegend = ({ segments, percentages }: PieChartProps) => (
+  <ul className={Styles['pie-chart-legend']}>
+    {segments.map((segment: DonutSegment) => {
+      return (
+        <li key={segment.label}>
+          <span className={cn('label', segment.legendClass)}>
+            {`${percentages[segment.label] || 0}% ${segment.label}`}
+          </span>
+        </li>
+      );
+    })}
+  </ul>
+);
+export class PieChartCard extends React.Component<PieChartCardProps> {
+  public static defaultProps = {
+    hasLegend: true,
+  };
   public render() {
-    const { passed, failed, notRecieved, title, tooltip } = this.props;
-    const percentages = this.calculatePercentages(passed, failed, notRecieved);
-    const badge = this.getBadgeText(percentages);
+    const { title, segments, mainSegment, badgeRanges, hasLegend } = this.props;
+    const percentages = this.calculatePercentages(segments);
+    const badge =
+      badgeRanges && this.getBadge(badgeRanges, percentages[mainSegment]);
     return (
       <Card centered className="pie-chart-card" badge={badge}>
         <div className={Styles['pie-chart']}>
-          <div className={Styles['pie-chart-svg']}>
-            <svg
-              width="100%"
-              height="100%"
-              viewBox="0 0 42 42"
-              className="donut"
-            >
-              <circle
-                className="donut-hole"
-                cx="21"
-                cy="21"
-                r="15.91549430918954"
-                fill="#fff"
-              />
-              <circle
-                className="donut-ring"
-                cx="21"
-                cy="21"
-                r="15.91549430918954"
-                fill="transparent"
-                stroke="#9e9e9e"
-                strokeWidth="2"
-              />
-              <circle
-                className="donut-segment"
-                cx="21"
-                cy="21"
-                r="15.91549430918954"
-                fill="transparent"
-                stroke="#9e9e9e"
-                strokeWidth="2"
-                strokeDasharray={`${percentages.notRecieved} ${100 -
-                  percentages.notRecieved}`}
-                strokeDashoffset={`${125 -
-                  percentages.passed -
-                  percentages.failed}`}
-              />
-              <circle
-                className="donut-segment"
-                cx="21"
-                cy="21"
-                r="15.91549430918954"
-                fill="transparent"
-                stroke="#b71c1c"
-                strokeWidth="2"
-                strokeDasharray={`${percentages.failed} ${100 -
-                  percentages.failed}`}
-                strokeDashoffset={`${125 - percentages.passed}`}
-              />
-              <circle
-                className="donut-segment"
-                cx="21"
-                cy="21"
-                r="15.91549430918954"
-                fill="transparent"
-                stroke="#18c96e"
-                strokeWidth="2"
-                strokeDasharray={`${percentages.passed} ${100 -
-                  percentages.passed}`}
-                strokeDashoffset="25"
-              />
-            </svg>
-            <span className={cn(Styles['pie-chart-number'], 'is-size-h2')}>
-              {!isNaN(percentages.passed) && `${percentages.passed}%`}
-            </span>
-          </div>
-          <ul className={Styles['pie-chart-legend']}>
-            <li>
-              <span className="label label-delivered">{`${percentages.passed ||
-                0}% passed`}</span>
-            </li>
-            <li>
-              <span className="label label-error">{`${percentages.failed ||
-                0}% failed`}</span>
-            </li>
-            <li>
-              <span className="label label-draft">{`${percentages.notRecieved ||
-                0}% not received`}</span>
-            </li>
-          </ul>
+          <PieChart
+            segments={segments}
+            percentages={percentages}
+            mainSegment={mainSegment}
+          />
+          {hasLegend && (
+            <PieChartLegend segments={segments} percentages={percentages} />
+          )}
         </div>
-        <span
-          className="has-underline is-size-h2"
-          data-tooltip={tooltip}
-          data-tooltip-pos="down"
-        >
-          {title}
-        </span>
+        {title}
       </Card>
     );
   }
+
   private calculatePercentages = (
-    passed: number,
-    failed: number,
-    notRecieved: number
+    segments: Array<BasicSegment | DonutSegment>
   ) => {
-    const total = passed + failed + notRecieved;
-    return {
-      failed: Math.round((failed / total) * 100),
-      notRecieved: Math.round((notRecieved / total) * 100),
-      passed: Math.round((passed / total) * 100),
-    };
+    const total = segments.reduce(
+      (sum: number, curr: DonutSegment) => sum + curr.count,
+      0
+    );
+    const percents = segments.reduce(
+      (memo: Record<string, number>, curr: DonutSegment) => {
+        memo[curr.label] = Math.round((curr.count / total) * 100);
+        return memo;
+      },
+      {}
+    );
+    return percents;
   };
 
-  private getBadgeText = (percentages: { [key: string]: number }) => {
-    if (percentages.passed >= this.props.cutoffGood) {
-      return {
-        color: 'mantis' as ValidColor,
-        content: 'Good',
-      };
-    } else if (percentages.passed >= this.props.cutoffBad) {
-      return {
-        color: 'carrot' as ValidColor,
-        content: 'Average',
-      };
-    } else {
-      return {
-        color: 'ron-burgundy' as ValidColor,
-        content: 'Poor',
-      };
+  private getBadge = (badgeRanges: Array<BadgeRange>, percent: number) => {
+    let selectedRange = { percent: 0 } as BadgeRange;
+    for (const range of badgeRanges) {
+      if (percent >= range.percent && range.percent >= selectedRange.percent) {
+        selectedRange = range;
+      }
     }
+    return {
+      color: selectedRange.color,
+      content: selectedRange.content,
+    };
   };
 }
 
-export default PieChart;
+export default PieChartCard;
