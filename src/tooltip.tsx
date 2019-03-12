@@ -90,7 +90,10 @@ export class HTMLTooltip extends React.Component<
   private tooltipRef: HTMLDivElement;
 
   public shouldComponentUpdate(nextProps?: any, nextState?: any) {
-    if (this.state.opened === nextState.opened) {
+    if (
+      nextProps.hoverTarget === this.props.hoverTarget &&
+      this.state.opened === nextState.opened
+    ) {
       return false;
     }
     return true;
