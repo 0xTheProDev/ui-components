@@ -82,7 +82,8 @@ export class HTMLTooltip extends React.Component {
         };
     }
     shouldComponentUpdate(nextProps, nextState) {
-        if (this.state.opened === nextState.opened) {
+        if (nextProps.hoverTarget === this.props.hoverTarget &&
+            this.state.opened === nextState.opened) {
             return false;
         }
         return true;
