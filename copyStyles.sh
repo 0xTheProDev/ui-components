@@ -5,6 +5,7 @@ cd $(dirname ${0})
 mkdir -p packages/
 cd src
 
+rsync --relative -r --include="*/" --include="*.css" --exclude="*" ./ ../packages/ui-components/
 rsync --relative -r --include="*/" --include="*.scss" --exclude="*" ./ ../packages/ui-components/
 rsync --relative -r --include="*/" --include="*.ttf" --exclude="*" ./ ../packages/ui-components/
 rsync --relative -r --include="*/" --include="*.woff" --exclude="*" ./ ../packages/ui-components/
