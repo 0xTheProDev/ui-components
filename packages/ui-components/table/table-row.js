@@ -9,7 +9,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import React from 'react';
 export const TableRow = (_a) => {
-    var { children, className } = _a, attributes = __rest(_a, ["children", "className"]);
-    return (React.createElement("tr", Object.assign({ className: className }, attributes), children));
+    var { children, className, attributes } = _a, rest = __rest(_a, ["children", "className", "attributes"]);
+    return (React.createElement("tr", Object.assign({ className: className }, attributes, rest), children));
 };
 export default TableRow;

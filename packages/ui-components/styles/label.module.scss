@@ -55,16 +55,25 @@
     @include label($seafoam);
   }
 
+  &-valid {
+    @include label($spruce);
+  }
+
   &-bounced,
   &-canceled,
   &-paused,
   &-disabled,
-  &-error {
+  &-error,
+  &-invalid {
     @include label($ron-burgundy);
   }
 
   &-optimized {
     @include label($burnt-orange);
+  }
+
+  &-risky {
+    @include label($carrot);
   }
 
   &-ab-test {
