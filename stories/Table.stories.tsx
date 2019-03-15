@@ -28,7 +28,7 @@ stories.add('Standard', () => (
       </TableRow>
     </TableHeader>
     <TableBody>
-      <TableRow>
+      <TableRow attributes={{ onClick: e => console.log('Clicked this row!') }}>
         <TableCell className="contact">
           <a href="#">todd.moy@sendgrid.com</a>
         </TableCell>
@@ -58,7 +58,7 @@ stories.add('Standard', () => (
           />
         </ActionsCell>
       </TableRow>
-      <TableRow>
+      <TableRow data-test="someHook">
         <TableCell className="contact">
           <a href="#">eric.tjossem@sendgrid.com</a>
         </TableCell>

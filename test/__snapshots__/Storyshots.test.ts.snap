@@ -11143,6 +11143,23 @@ Array [
     Optimized
   </span>,
   <br />,
+  <span
+    className="label label-valid"
+  >
+    Valid
+  </span>,
+  <br />,
+  <span
+    className="label label-invalid"
+  >
+    Invalid
+  </span>,
+  <br />,
+  <span
+    className="label label-risky"
+  >
+    Risky
+  </span>,
 ]
 `;
 
@@ -20677,6 +20694,7 @@ exports[`Storyshots Table Standard 1`] = `
   >
     <tr
       className={undefined}
+      onClick={[Function]}
     >
       <td
         className="contact"
@@ -20762,6 +20780,7 @@ exports[`Storyshots Table Standard 1`] = `
     </tr>
     <tr
       className={undefined}
+      data-test="someHook"
     >
       <td
         className="contact"

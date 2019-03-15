@@ -39,5 +39,10 @@ stories.add('Labels', () => (
     <br />
     <Label text="Optimized" type="optimized" />
     <br />
+    <Label text="Valid" type="valid" />
+    <br />
+    <Label text="Invalid" type="invalid" />
+    <br />
+    <Label text="Risky" type="risky" />
   </Fragment>
 ));

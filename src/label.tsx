@@ -21,7 +21,10 @@ export interface LabelProps {
     | 'disabled'
     | 'paused'
     | 'error'
-    | 'optimized';
+    | 'optimized'
+    | 'valid'
+    | 'risky'
+    | 'invalid';
 }
 
 export const Label: React.SFC<LabelProps> = ({ className, text, type }) => (
