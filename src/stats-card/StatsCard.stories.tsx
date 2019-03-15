@@ -1,9 +1,16 @@
 import { storiesOf } from '@storybook/react';
+import cn from 'classnames';
 import React, { Fragment } from 'react';
 
 import { CardStatType } from '../types/stats';
-import CardStat from './CardStat';
-import StatsCard from './index';
+import PreBuiltCardStat, {
+  CardStat,
+  CardStatLabel,
+  PrimaryStat,
+  SecondaryStat,
+} from './CardStat';
+import StatsCard, { ComposableStatsCard, StatsCardSecondary } from './index';
+import Styles from './StatsCard.module.scss';
 
 const stories = storiesOf('Stats Card', module);
 
@@ -65,6 +72,31 @@ const statsWithTypes: Array<CardStatType> = [
   },
 ];
 
+const statsWithSecondaryValue: Array<CardStatType> = [
+  {
+    label: 'total',
+    value: 1000,
+  },
+  {
+    label: 'valid',
+    secondaryValue: '50%',
+    type: 'valid',
+    value: 500,
+  },
+  {
+    label: 'risky',
+    secondaryValue: '20%',
+    type: 'risky',
+    value: 200,
+  },
+  {
+    label: 'invalid',
+    secondaryValue: '30%',
+    type: 'invalid',
+    value: 300,
+  },
+];
+
 stories.add('StatsCard with stats prop', () => (
   <Fragment>
     <StatsCard stats={statsWithoutTypes} />
@@ -76,8 +108,30 @@ stories.add('StatsCard with stats prop', () => (
 stories.add('StatsCard via composition', () => (
   <Fragment>
     <StatsCard>
-      <CardStat {...statsWithoutTypes[0]} />
-      <CardStat {...statsWithTypes[2]} />
+      <PreBuiltCardStat {...statsWithoutTypes[0]} />
+      <PreBuiltCardStat {...statsWithTypes[2]} />
     </StatsCard>
+  </Fragment>
+));
+
+stories.add('ComposableStatsCard with secondary stats', () => (
+  <Fragment>
+    <ComposableStatsCard className={cn(Styles.secondary, 'secondary')}>
+      {statsWithSecondaryValue &&
+        statsWithSecondaryValue.map(stat => (
+          <CardStat>
+            {stat.secondaryValue && (
+              <SecondaryStat type={stat.type}>
+                {stat.secondaryValue}
+              </SecondaryStat>
+            )}
+            <PrimaryStat type={stat.type}>{stat.value}</PrimaryStat>
+            <CardStatLabel>{stat.label}</CardStatLabel>
+          </CardStat>
+        ))}
+    </ComposableStatsCard>
+    <br />
+    <p>This can also be imported as StatsCardSecondary:</p>
+    <StatsCardSecondary stats={statsWithSecondaryValue} />
   </Fragment>
 ));

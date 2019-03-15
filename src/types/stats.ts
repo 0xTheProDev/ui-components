@@ -17,6 +17,7 @@ export interface CardStatType {
   label: string;
   type?: StatType;
   value: number | string;
+  secondaryValue?: number | string;
 }
 
 export type CampaignStatType =

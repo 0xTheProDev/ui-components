@@ -1,29 +1,89 @@
 import cn from 'classnames';
-import React, { Component } from 'react';
+import React from 'react';
 
 import { CardStatType } from '../types/stats';
-import CardStat from './CardStat';
+import PreBuiltCardStat, {
+  CardStat,
+  CardStatLabel,
+  PreBuiltCardStatSecondary,
+  PrimaryStat,
+  SecondaryStat,
+  StatValue,
+} from './CardStat';
 import Styles from './StatsCard.module.scss';
 
 export interface StatsCardProps {
+  children?: React.ReactNode;
   className?: string;
   stats?: Array<CardStatType>;
 }
 
-export class StatsCard extends Component<StatsCardProps> {
-  public render() {
-    const { className, stats, children, ...attributes } = this.props;
+const StatsCard = ({
+  children,
+  className,
+  stats,
+  ...attributes
+}: StatsCardProps) => {
+  return (
+    <div
+      className={cn(Styles['stats-card'], 'stats-card', className)}
+      {...attributes}
+    >
+      {stats &&
+        stats.map(stat => <PreBuiltCardStat key={stat.label} {...stat} />)}
+      {children}
+    </div>
+  );
+};
 
-    return (
-      <div
-        className={cn(Styles['stats-card'], 'stats-card', className)}
-        {...attributes}
-      >
-        {stats && stats.map(stat => <CardStat key={stat.label} {...stat} />)}
-        {children}
-      </div>
-    );
-  }
-}
+const StatsCardSecondary = ({
+  children,
+  className,
+  stats,
+  ...attributes
+}: StatsCardProps) => {
+  return (
+    <ComposableStatsCard
+      className={cn(Styles.secondary, 'secondary')}
+      {...attributes}
+    >
+      {stats &&
+        stats.map(stat => (
+          <PreBuiltCardStatSecondary key={stat.label} {...stat} />
+        ))}
+    </ComposableStatsCard>
+  );
+};
+
+const ComposableStatsCard = ({
+  children,
+  className,
+  ...attributes
+}: {
+  children?: React.ReactNode;
+  className?: string;
+}) => {
+  return (
+    <div
+      className={cn(Styles['stats-card'], 'stats-card', className)}
+      {...attributes}
+    >
+      {children}
+    </div>
+  );
+};
+
+export {
+  ComposableStatsCard,
+  StatsCard,
+  StatsCardSecondary,
+  CardStat,
+  PreBuiltCardStat,
+  PreBuiltCardStatSecondary,
+  PrimaryStat,
+  SecondaryStat,
+  StatValue,
+  CardStatLabel,
+};
 
 export default StatsCard;

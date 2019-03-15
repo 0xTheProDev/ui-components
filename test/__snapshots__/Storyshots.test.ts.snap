@@ -19806,6 +19806,165 @@ exports[`Storyshots Split Card Split Card (w/ unlabeled separator) 1`] = `
 </div>
 `;
 
+exports[`Storyshots Stats Card ComposableStatsCard with secondary stats 1`] = `
+Array [
+  <div
+    className="stats-card stats-card secondary secondary"
+  >
+    <div
+      className="card-stat card-stat"
+    >
+      <p
+        className="stat stat"
+      >
+        1000
+      </p>
+      <p
+        className="label label"
+      >
+        total
+      </p>
+    </div>
+    <div
+      className="card-stat card-stat"
+    >
+      <p
+        className="stat stat small-stat small-stat valid"
+      >
+        50%
+      </p>
+      <p
+        className="stat stat valid"
+      >
+        500
+      </p>
+      <p
+        className="label label"
+      >
+        valid
+      </p>
+    </div>
+    <div
+      className="card-stat card-stat"
+    >
+      <p
+        className="stat stat small-stat small-stat risky"
+      >
+        20%
+      </p>
+      <p
+        className="stat stat risky"
+      >
+        200
+      </p>
+      <p
+        className="label label"
+      >
+        risky
+      </p>
+    </div>
+    <div
+      className="card-stat card-stat"
+    >
+      <p
+        className="stat stat small-stat small-stat invalid"
+      >
+        30%
+      </p>
+      <p
+        className="stat stat invalid"
+      >
+        300
+      </p>
+      <p
+        className="label label"
+      >
+        invalid
+      </p>
+    </div>
+  </div>,
+  <br />,
+  <p>
+    This can also be imported as StatsCardSecondary:
+  </p>,
+  <div
+    className="stats-card stats-card secondary secondary"
+  >
+    <div
+      className="card-stat card-stat"
+    >
+      <p
+        className="stat stat"
+      >
+        1000
+      </p>
+      <p
+        className="label label"
+      >
+        total
+      </p>
+    </div>
+    <div
+      className="card-stat card-stat"
+    >
+      <p
+        className="stat stat small-stat small-stat valid"
+      >
+        50%
+      </p>
+      <p
+        className="stat stat valid"
+      >
+        500
+      </p>
+      <p
+        className="label label"
+      >
+        valid
+      </p>
+    </div>
+    <div
+      className="card-stat card-stat"
+    >
+      <p
+        className="stat stat small-stat small-stat risky"
+      >
+        20%
+      </p>
+      <p
+        className="stat stat risky"
+      >
+        200
+      </p>
+      <p
+        className="label label"
+      >
+        risky
+      </p>
+    </div>
+    <div
+      className="card-stat card-stat"
+    >
+      <p
+        className="stat stat small-stat small-stat invalid"
+      >
+        30%
+      </p>
+      <p
+        className="stat stat invalid"
+      >
+        300
+      </p>
+      <p
+        className="label label"
+      >
+        invalid
+      </p>
+    </div>
+  </div>,
+]
+`;
+
 exports[`Storyshots Stats Card StatsCard via composition 1`] = `
 <div
   className="stats-card stats-card"

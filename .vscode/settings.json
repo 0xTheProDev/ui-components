@@ -3,5 +3,6 @@
   "javascript.validate.enable": false,
   "eslint.autoFixOnSave": true,
   "workbench.editor.enablePreviewFromQuickOpen": false,
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.formatOnSave": true
 }
