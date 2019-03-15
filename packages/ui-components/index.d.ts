@@ -51,7 +51,6 @@ export { ToggleButtons } from './toggle-buttons';
 export { Tooltip, HTMLTooltip } from './tooltip';
 export { TruncatedList } from './truncated-list';
 export { UploadProgress } from './upload-progress';
-export { StatsCard } from './stats-card/';
-export { CardStat } from './stats-card/CardStat';
+export { StatsCard, StatsCardSecondary, ComposableStatsCard, CardStat, PreBuiltCardStat, PreBuiltCardStatSecondary, PrimaryStat, SecondaryStat, StatValue, CardStatLabel, } from './stats-card/';
 export { FilterDropdown } from './filter-dropdown/';
 export { FilterDropdownOption } from './filter-dropdown/FilterDropdownOption';

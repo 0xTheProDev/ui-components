@@ -8,15 +8,39 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import cn from 'classnames';
-import React, { Component } from 'react';
+import React from 'react';
 import Styles from './StatsCard.module.scss';
-export class CardStat extends Component {
-    render() {
-        const _a = this.props, { className, value, label, type, children } = _a, attributes = __rest(_a, ["className", "value", "label", "type", "children"]);
-        return (React.createElement("div", Object.assign({ className: cn(Styles['card-stat'], 'card-stat', className) }, attributes),
-            React.createElement("p", { className: cn(Styles.stat, 'stat', { [Styles[type]]: !!type }) }, value),
-            React.createElement("p", { className: cn(Styles.label, 'label') }, label),
-            children));
-    }
-}
-export default CardStat;
+const PreBuiltCardStat = (_a) => {
+    var { className, children, label, type, value } = _a, attributes = __rest(_a, ["className", "children", "label", "type", "value"]);
+    return (React.createElement(CardStat, Object.assign({ className: className }, attributes),
+        React.createElement(PrimaryStat, { type: type }, value),
+        React.createElement(CardStatLabel, null, label),
+        children));
+};
+const PreBuiltCardStatSecondary = (_a) => {
+    var { className, children, label, type, value, secondaryValue } = _a, attributes = __rest(_a, ["className", "children", "label", "type", "value", "secondaryValue"]);
+    return (React.createElement(CardStat, Object.assign({ className: className }, attributes),
+        secondaryValue && (React.createElement(SecondaryStat, { type: type }, secondaryValue)),
+        React.createElement(PrimaryStat, { type: type }, value),
+        React.createElement(CardStatLabel, null, label)));
+};
+const CardStat = (_a) => {
+    var { children, className } = _a, attributes = __rest(_a, ["children", "className"]);
+    return (React.createElement("div", Object.assign({ className: cn(Styles['card-stat'], 'card-stat', className) }, attributes), children));
+};
+const PrimaryStat = ({ children, type, }) => {
+    return (React.createElement("p", { className: cn(Styles.stat, 'stat', { [Styles[type]]: !!type }) }, children));
+};
+const SecondaryStat = ({ children, type, }) => {
+    return (React.createElement("p", { className: cn(Styles.stat, 'stat', Styles['small-stat'], 'small-stat', {
+            [Styles[type]]: !!type,
+        }) }, children));
+};
+const StatValue = ({ children, type, }) => {
+    return (React.createElement("p", { className: cn(Styles.stat, 'stat', { [Styles[type]]: !!type }) }, children));
+};
+const CardStatLabel = ({ children }) => {
+    return React.createElement("p", { className: cn(Styles.label, 'label') }, children);
+};
+export { CardStat, PrimaryStat, SecondaryStat, StatValue, CardStatLabel, PreBuiltCardStatSecondary, };
+export default PreBuiltCardStat;

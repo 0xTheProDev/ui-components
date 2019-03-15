@@ -8,15 +8,24 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import cn from 'classnames';
-import React, { Component } from 'react';
-import CardStat from './CardStat';
+import React from 'react';
+import PreBuiltCardStat, { CardStat, CardStatLabel, PreBuiltCardStatSecondary, PrimaryStat, SecondaryStat, StatValue, } from './CardStat';
 import Styles from './StatsCard.module.scss';
-export class StatsCard extends Component {
-    render() {
-        const _a = this.props, { className, stats, children } = _a, attributes = __rest(_a, ["className", "stats", "children"]);
-        return (React.createElement("div", Object.assign({ className: cn(Styles['stats-card'], 'stats-card', className) }, attributes),
-            stats && stats.map(stat => React.createElement(CardStat, Object.assign({ key: stat.label }, stat))),
-            children));
-    }
-}
+const StatsCard = (_a) => {
+    var { children, className, stats } = _a, attributes = __rest(_a, ["children", "className", "stats"]);
+    return (React.createElement("div", Object.assign({ className: cn(Styles['stats-card'], 'stats-card', className) }, attributes),
+        stats &&
+            stats.map(stat => React.createElement(PreBuiltCardStat, Object.assign({ key: stat.label }, stat))),
+        children));
+};
+const StatsCardSecondary = (_a) => {
+    var { children, className, stats } = _a, attributes = __rest(_a, ["children", "className", "stats"]);
+    return (React.createElement(ComposableStatsCard, Object.assign({ className: cn(Styles.secondary, 'secondary') }, attributes), stats &&
+        stats.map(stat => (React.createElement(PreBuiltCardStatSecondary, Object.assign({ key: stat.label }, stat))))));
+};
+const ComposableStatsCard = (_a) => {
+    var { children, className } = _a, attributes = __rest(_a, ["children", "className"]);
+    return (React.createElement("div", Object.assign({ className: cn(Styles['stats-card'], 'stats-card', className) }, attributes), children));
+};
+export { ComposableStatsCard, StatsCard, StatsCardSecondary, CardStat, PreBuiltCardStat, PreBuiltCardStatSecondary, PrimaryStat, SecondaryStat, StatValue, CardStatLabel, };
 export default StatsCard;

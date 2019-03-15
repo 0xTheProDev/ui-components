@@ -32,7 +32,7 @@
   }
 
   .stat {
-    padding-bottom: 7px;
+    padding-bottom: $scale-base-down-02;
     font-size: $scale-base-up-04;
     font-weight: 600;
     line-height: $scale-base-up-06;
@@ -47,17 +47,17 @@
   }
 
   &.secondary {
-    padding: 24px $scale-base-up-06;
+    padding: $scale-base-up-04 $scale-base-up-06;
 
     .stat {
-      font-size: 22px;
+      font-size: $scale-base-up-04;
       line-height: $scale-base-up-04;
     }
 
     .stat.small-stat {
       font-size: $scale-base-up-02;
       font-weight: 400;
-      line-height: 14px;
+      line-height: $scale-base-up-02;
     }
   }
 
