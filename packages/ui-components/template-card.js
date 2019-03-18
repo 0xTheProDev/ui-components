@@ -9,8 +9,6 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import React from 'react';
 import BlankTemplateImage from './BlankTemplateImage';
-import { Button } from './button';
-import { ButtonList } from './button-list';
 import Icon from './icon';
 import Styles from './styles/template-card.module.scss';
 import cn from './utilities/classnames';
@@ -35,17 +33,15 @@ export const EditorBadge = props => {
         editorCopy)) : null;
 };
 export const TemplateCard = (_a) => {
-    var { children, className, blank = false, thumbnailUrl = '', editorInfo = '', name, templateId, onSelect } = _a, attributes = __rest(_a, ["children", "className", "blank", "thumbnailUrl", "editorInfo", "name", "templateId", "onSelect"]);
-    const selectItem = (event) => {
-        onSelect(templateId);
-    };
+    var { renderActions = null, children, className, blank = false, thumbnailUrl = '', editorInfo = '', name, templateId, overlayText = null } = _a, attributes = __rest(_a, ["renderActions", "children", "className", "blank", "thumbnailUrl", "editorInfo", "name", "templateId", "overlayText"]);
     return (React.createElement("div", Object.assign({ className: cn('template-wrap', Styles['template-wrap'], className) }, attributes),
         React.createElement("div", { className: cn('thumb', Styles.thumb, blank ? ['is-blank', Styles['is-blank']] : '') },
             !blank ? (React.createElement("img", { src: thumbnailUrl, alt: "Template Image" })) : (BlankTemplateImage),
-            children,
-            React.createElement(ButtonList, { className: cn('btn-list', Styles['btn-list']) },
-                React.createElement(Button, { onClick: selectItem }, "Select"))),
-        React.createElement("p", { className: "is-size-h4" }, name),
+            React.createElement("div", { className: cn('btn-list', Styles['btn-list']) }, children),
+            overlayText && (React.createElement("div", { className: cn('overlay-text', Styles['overlay-text']) }, overlayText))),
+        React.createElement("div", { className: cn('template-card-actions', Styles['template-card-actions']) },
+            React.createElement("p", { className: "is-size-h4" }, name),
+            renderActions && renderActions()),
         typeof editorInfo === 'string' ? (React.createElement(EditorBadge, { type: editorInfo })) : (React.createElement("div", { className: cn('editor-type', Styles['editor-type']) }, editorInfo))));
 };
 export default TemplateCard;

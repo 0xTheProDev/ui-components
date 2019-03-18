@@ -12,13 +12,14 @@ export declare const EditorBadge: React.SFC<{
     designIcon?: IconType;
 }>;
 export interface TemplateCardProps {
+    renderActions?: () => React.ReactElement<any>;
     label?: string;
     className?: string;
     blank?: boolean;
     thumbnailUrl?: string;
     editorInfo?: any;
     name: string;
-    onSelect: (id: string) => void;
+    overlayText?: string;
     templateId: string;
 }
 export declare const TemplateCard: React.SFC<TemplateCardProps>;
