@@ -3,12 +3,13 @@ import React, { Component } from 'react';
 
 import { ButtonProps } from '../button';
 import DropdownButton, { DropdownButtonProps } from '../dropdown-button';
-import FilterDropdownOption, { FilterDropdownOptionProps } from './FilterDropdownOption';
+import FilterDropdownOption, {
+  FilterDropdownOptionProps,
+} from './FilterDropdownOption';
 
 import { FilterDropdownOptionType } from '../types/stats';
 
 import DropdownButtonStyles from '../styles/dropdown.module.scss';
-
 
 export interface FilterDropdownProps {
   options?: Array<FilterDropdownOptionType>;
@@ -32,14 +33,16 @@ export class FilterDropdown extends Component<CombinedProps> {
 
     return (
       <DropdownButton
-        className={cn('has-icon', DropdownButtonStyles['has-icon'], { [className]: className })}
+        className={cn('has-icon', DropdownButtonStyles['has-icon'], {
+          [className]: className,
+        })}
         icon={icon || 'filter'}
         type={type || 'secondary'}
         label={label}
         {...attributes}
       >
-        {
-          options && options.map(option => (
+        {options &&
+          options.map(option => (
             <FilterDropdownOption
               key={`filter-dropdown-option-${option.value}`}
               label={option.label}
@@ -48,8 +51,7 @@ export class FilterDropdown extends Component<CombinedProps> {
               onChange={onChange}
               checked={option.checked}
             />
-          ))
-        }
+          ))}
         {children}
       </DropdownButton>
     );

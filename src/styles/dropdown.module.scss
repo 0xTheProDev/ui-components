@@ -60,7 +60,8 @@
 }
 
 .dropdown-menu {
-  .input-checkbox-wrap, :global(.input-checkbox-wrap) {
+  .input-checkbox-wrap,
+  :global(.input-checkbox-wrap) {
     padding-left: $scale-base;
     margin-bottom: $scale-base;
     text-align: left;
