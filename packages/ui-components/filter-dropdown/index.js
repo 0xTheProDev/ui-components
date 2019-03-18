@@ -15,8 +15,11 @@ import DropdownButtonStyles from '../styles/dropdown.module.scss';
 export class FilterDropdown extends Component {
     render() {
         const _a = this.props, { icon, type, label, options, onChange, children, className } = _a, attributes = __rest(_a, ["icon", "type", "label", "options", "onChange", "children", "className"]);
-        return (React.createElement(DropdownButton, Object.assign({ className: cn('has-icon', DropdownButtonStyles['has-icon'], { [className]: className }), icon: icon || 'filter', type: type || 'secondary', label: label }, attributes),
-            options && options.map(option => (React.createElement(FilterDropdownOption, { key: `filter-dropdown-option-${option.value}`, label: option.label, type: option.type, value: option.value, onChange: onChange, checked: option.checked }))),
+        return (React.createElement(DropdownButton, Object.assign({ className: cn('has-icon', DropdownButtonStyles['has-icon'], {
+                [className]: className,
+            }), icon: icon || 'filter', type: type || 'secondary', label: label }, attributes),
+            options &&
+                options.map(option => (React.createElement(FilterDropdownOption, { key: `filter-dropdown-option-${option.value}`, label: option.label, type: option.type, value: option.value, onChange: onChange, checked: option.checked }))),
             children));
     }
 }
