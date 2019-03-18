@@ -1,11 +1,10 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import BlankTemplateImage from './BlankTemplateImage';
-import { Button } from './button';
-import { ButtonList } from './button-list';
 import Icon from './icon';
 import Styles from './styles/template-card.module.scss';
 import { IconType } from './types/icons';
 import cn from './utilities/classnames';
+
 export enum EditorType {
   Code = 'code',
   Design = 'design',
@@ -36,18 +35,21 @@ export const EditorBadge: React.SFC<{
     </p>
   ) : null;
 };
+
 export interface TemplateCardProps {
+  renderActions?: () => React.ReactElement<any>;
   label?: string;
   className?: string;
   blank?: boolean;
   thumbnailUrl?: string;
   editorInfo?: any;
   name: string;
-  onSelect: (id: string) => void;
+  overlayText?: string;
   templateId: string;
 }
 
 export const TemplateCard: React.SFC<TemplateCardProps> = ({
+  renderActions = null,
   children,
   className,
   blank = false,
@@ -55,45 +57,46 @@ export const TemplateCard: React.SFC<TemplateCardProps> = ({
   editorInfo = '',
   name,
   templateId,
-  onSelect,
+  overlayText = null,
   ...attributes
-}) => {
-  const selectItem = (event: React.MouseEvent<HTMLButtonElement>) => {
-    onSelect(templateId);
-  };
-
-  return (
+}) => (
+  <div
+    className={cn('template-wrap', Styles['template-wrap'], className)}
+    {...attributes}
+  >
     <div
-      className={cn('template-wrap', Styles['template-wrap'], className)}
-      {...attributes}
+      className={cn(
+        'thumb',
+        Styles.thumb,
+        blank ? ['is-blank', Styles['is-blank']] : ''
+      )}
     >
-      <div
-        className={cn(
-          'thumb',
-          Styles.thumb,
-          blank ? ['is-blank', Styles['is-blank']] : ''
-        )}
-      >
-        {!blank ? (
-          <img src={thumbnailUrl} alt="Template Image" />
-        ) : (
-          BlankTemplateImage
-        )}
-        {children}
-        <ButtonList className={cn('btn-list', Styles['btn-list'])}>
-          <Button onClick={selectItem}>Select</Button>
-        </ButtonList>
-      </div>
-      <p className="is-size-h4">{name}</p>
-      {typeof editorInfo === 'string' ? (
-        <EditorBadge type={editorInfo as EditorType} />
+      {!blank ? (
+        <img src={thumbnailUrl} alt="Template Image" />
       ) : (
-        <div className={cn('editor-type', Styles['editor-type'])}>
-          {editorInfo}
+        BlankTemplateImage
+      )}
+      <div className={cn('btn-list', Styles['btn-list'])}>{children}</div>
+      {overlayText && (
+        <div className={cn('overlay-text', Styles['overlay-text'])}>
+          {overlayText}
         </div>
       )}
     </div>
-  );
-};
+    <div
+      className={cn('template-card-actions', Styles['template-card-actions'])}
+    >
+      <p className="is-size-h4">{name}</p>
+      {renderActions && renderActions()}
+    </div>
+    {typeof editorInfo === 'string' ? (
+      <EditorBadge type={editorInfo as EditorType} />
+    ) : (
+      <div className={cn('editor-type', Styles['editor-type'])}>
+        {editorInfo}
+      </div>
+    )}
+  </div>
+);
 
 export default TemplateCard;

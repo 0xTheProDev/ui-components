@@ -21416,9 +21416,44 @@ exports[`Storyshots Template Card Blank Card 1`] = `
       </svg>
       <div
         className="btn-list"
+      />
+    </div>
+    <div
+      className="template-card-actions"
+    >
+      <p
+        className="is-size-h4"
+      >
+        Blank Template
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Template Card Card with Actions 1`] = `
+<div
+  style={
+    Object {
+      "width": "240px",
+    }
+  }
+>
+  <div
+    className="template-wrap"
+  >
+    <div
+      className="thumb"
+    >
+      <img
+        alt="Template Image"
+        src="http://via.placeholder.com/240"
+      />
+      <div
+        className="btn-list"
       >
         <button
-          className="btn btn-primary"
+          className="btn btn-secondary"
           disabled={false}
           id={undefined}
           onClick={[Function]}
@@ -21426,13 +21461,82 @@ exports[`Storyshots Template Card Blank Card 1`] = `
         >
           Select
         </button>
+        <button
+          className="btn btn-secondary"
+          disabled={false}
+          id={undefined}
+          onClick={[Function]}
+          type="button"
+        >
+          Preview
+        </button>
+      </div>
+      <div
+        className="overlay-text"
+      >
+        Updated: 3/15/19
       </div>
     </div>
-    <p
-      className="is-size-h4"
+    <div
+      className="template-card-actions"
     >
-      Blank Template
-    </p>
+      <p
+        className="is-size-h4"
+      >
+        Modern
+      </p>
+      <div
+        className="btn-list"
+      >
+        <div
+          className="btn btn-dropdown dropdown btn-tertiary btn-small has-icon is-left"
+          onClick={[Function]}
+        >
+          <i
+            className="sg-icon sg-icon-ellipsis-vertical"
+            onClick={undefined}
+            style={null}
+          />
+          <ul
+            className="dropdown-menu"
+          >
+            <a
+              className="dropdown-link"
+              href="#"
+            >
+              <i
+                className="sg-icon sg-icon-trash"
+                onClick={undefined}
+                style={null}
+              />
+              Delete
+            </a>
+            <a
+              className="dropdown-link"
+              href="#"
+            >
+              <i
+                className="sg-icon sg-icon-pencil"
+                onClick={undefined}
+                style={null}
+              />
+              Edit
+            </a>
+            <a
+              className="dropdown-link"
+              href="#"
+            >
+              <i
+                className="sg-icon sg-icon-view"
+                onClick={undefined}
+                style={null}
+              />
+              Preview
+            </a>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -21457,23 +21561,17 @@ exports[`Storyshots Template Card Card with Image - Code 1`] = `
       />
       <div
         className="btn-list"
-      >
-        <button
-          className="btn btn-primary"
-          disabled={false}
-          id={undefined}
-          onClick={[Function]}
-          type="button"
-        >
-          Select
-        </button>
-      </div>
+      />
     </div>
-    <p
-      className="is-size-h4"
+    <div
+      className="template-card-actions"
     >
-      Modern
-    </p>
+      <p
+        className="is-size-h4"
+      >
+        Modern
+      </p>
+    </div>
     <p
       className="editor-type"
     >
@@ -21520,11 +21618,15 @@ exports[`Storyshots Template Card Card with Image - Custom editor type 1`] = `
         </button>
       </div>
     </div>
-    <p
-      className="is-size-h4"
+    <div
+      className="template-card-actions"
     >
-      Modern
-    </p>
+      <p
+        className="is-size-h4"
+      >
+        Modern
+      </p>
+    </div>
     <div
       className="editor-type"
     >
@@ -21574,11 +21676,15 @@ exports[`Storyshots Template Card Card with Image - Design 1`] = `
         </button>
       </div>
     </div>
-    <p
-      className="is-size-h4"
+    <div
+      className="template-card-actions"
     >
-      Modern
-    </p>
+      <p
+        className="is-size-h4"
+      >
+        Modern
+      </p>
+    </div>
     <p
       className="editor-type"
     >
@@ -21625,11 +21731,15 @@ exports[`Storyshots Template Card Card with Image - Diff Name 1`] = `
         </button>
       </div>
     </div>
-    <p
-      className="is-size-h4"
+    <div
+      className="template-card-actions"
     >
-      Underwater Blue
-    </p>
+      <p
+        className="is-size-h4"
+      >
+        Underwater Blue
+      </p>
+    </div>
     <p
       className="editor-type"
     >
@@ -21676,11 +21786,15 @@ exports[`Storyshots Template Card Card with Image - No editor type 1`] = `
         </button>
       </div>
     </div>
-    <p
-      className="is-size-h4"
+    <div
+      className="template-card-actions"
     >
-      Modern
-    </p>
+      <p
+        className="is-size-h4"
+      >
+        Modern
+      </p>
+    </div>
   </div>
 </div>
 `;

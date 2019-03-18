@@ -16,7 +16,8 @@
       img {
         opacity: 0.1;
       }
-      .btn-list {
+      .btn-list,
+      .overlay-text {
         opacity: 1;
       }
     }
@@ -25,7 +26,8 @@
       height: 240px;
     }
     img,
-    .btn-list {
+    .btn-list,
+    .overlay-text {
       transition: opacity 0.3s;
     }
     img {
@@ -33,14 +35,24 @@
       max-width: 100%;
     }
     .btn-list {
+      height: 200px;
       position: absolute;
-      top: calc(50% - 20px);
+      top: $scale-base-down-01;
       width: 100%;
+      padding: 0 $scale-base-up-09;
       opacity: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+      :global(.btn) {
+        margin-top: $scale-base-up-02;
+      }
     }
   }
   .editor-type {
-    font-size: 13px;
+    margin-top: $scale-base-down-01;
+    font-size: $scale-base-up-01;
     line-height: 20px;
     opacity: 0;
     transition: opacity 0.3s;
@@ -51,6 +63,43 @@
   &:hover {
     .editor-type {
       opacity: 1;
+    }
+  }
+}
+
+.overlay-text {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  right: 0;
+  top: calc(100% - 40px);
+  font-size: $scale-base-up-01;
+  color: $slate-80;
+}
+
+.template-card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  :global(p.is-size-h4) {
+    margin: 0;
+  }
+  :global(.btn-list .btn-dropdown) {
+    &:before {
+      content: '';
+    }
+    padding: 4px;
+    background-color: $white;
+    border-color: $slate-10;
+    box-shadow: none;
+    :global(.sg-icon.sg-icon-ellipsis-vertical) {
+      font-size: $scale-base-up-04;
+      font-weight: bold;
+      color: $slate-40;
+      margin: 0;
+    }
+    :global(.dropdown-menu) {
+      margin-top: $scale-base-down-01;
     }
   }
 }
