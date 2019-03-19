@@ -10,16 +10,16 @@ import { Button } from '../src/button';
 import DropdownButton from '../src/dropdown-button';
 
 const stories = storiesOf('Template Card', module);
-const onSelect = (id: string) => {
-  action(`Template ${id} selected`);
-};
+
 stories.add('Blank Card', () => (
   <div style={{ width: '240px' }}>
     <TemplateCard
       templateId="blank"
       blank
       name="Blank Template"
-    />
+    >
+      <Button>Select</Button>
+    </TemplateCard>
   </div>
 ));
 
@@ -30,7 +30,9 @@ stories.add('Card with Image - Code', () => (
       editorInfo={EditorType.Code}
       name="Modern"
       thumbnailUrl="http://via.placeholder.com/240"
-    />
+    >
+      <Button>Select</Button>
+    </TemplateCard>
   </div>
 ));
 
@@ -94,6 +96,27 @@ stories.add('Card with Actions', () => (
       name="Modern"
       overlayText="Updated: 3/15/19"
       thumbnailUrl="http://via.placeholder.com/240"
+      renderActions={() => (
+        <DropdownButton left type="tertiary" small icon="ellipsis-vertical">
+          <a href="#"><Icon type="trash"></Icon>Delete</a>
+          <a href="#"><Icon type="pencil"></Icon>Edit</a>
+          <a href="#"><Icon type="view"></Icon>Preview</a>
+        </DropdownButton>
+      )}
+    >
+      <Button type="secondary">Select</Button>
+      <Button type="secondary">Preview</Button>
+    </TemplateCard>
+  </div>
+));
+
+stories.add('Blank Card with Actions', () => (
+  <div style={{ width: '240px' }}>
+    <TemplateCard
+      blank
+      templateId="12345"
+      name="Modern"
+      overlayText="Updated: 3/15/19"
       renderActions={() => (
         <DropdownButton left type="tertiary" small icon="ellipsis-vertical">
           <a href="#"><Icon type="trash"></Icon>Delete</a>

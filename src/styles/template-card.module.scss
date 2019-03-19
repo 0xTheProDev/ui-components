@@ -13,7 +13,8 @@
 
     &:hover {
       border-color: $sg-blue;
-      img {
+      img,
+      svg {
         opacity: 0.1;
       }
       .btn-list,
@@ -22,7 +23,6 @@
       }
     }
     &.is-blank {
-      border-style: dashed;
       height: 240px;
     }
     img,
