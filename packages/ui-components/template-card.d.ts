@@ -19,7 +19,7 @@ export interface TemplateCardProps {
     thumbnailUrl?: string;
     editorInfo?: any;
     name: string;
-    overlayText?: string;
+    overlayText?: string | React.ReactElement<any>;
     templateId: string;
 }
 export declare const TemplateCard: React.SFC<TemplateCardProps>;
