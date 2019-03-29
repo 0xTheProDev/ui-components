@@ -66,6 +66,31 @@ const DropdownIndicatorStylesOverride = (base: object) => ({
   ...{ pointerEvents: 'initial' },
 });
 
+export const baseOptionStyles = (base: object, state: any) => {
+  const focusedState = state.isFocused
+    ? { backgroundColor: SassVars['slate-10'] }
+    : {};
+  const isSelected = state.isSelected
+    ? { backgroundColor: SassVars['slate-20'], color: SassVars.slate }
+    : {};
+
+  return {
+    ...base,
+    padding: '9px 30px',
+    ...focusedState,
+    ...isSelected,
+    ':active': {},
+    'line-height': '18px',
+  };
+};
+
+export const linkOptionStyles = (base: object, state: any) => {
+  return {
+    ...baseOptionStyles(base, state),
+    'border-top': '1px solid #e9ecef',
+  };
+};
+
 const SelectStyles = {
   clearIndicator: (base: object) => {
     return {
@@ -197,23 +222,7 @@ const SelectStyles = {
       ...disabledLabel(state.selectProps.disabled),
     };
   },
-  option: (base: object, state: any) => {
-    const focusedState = state.isFocused
-      ? { backgroundColor: SassVars['slate-10'] }
-      : {};
-    const isSelected = state.isSelected
-      ? { backgroundColor: SassVars['slate-20'], color: SassVars.slate }
-      : {};
-
-    return {
-      ...base,
-      padding: '9px 30px',
-      ...focusedState,
-      ...isSelected,
-      ':active': {},
-      'line-height': '18px',
-    };
-  },
+  option: baseOptionStyles,
   placeholder: (base: object) => {
     return {
       ...base,
