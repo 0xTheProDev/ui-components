@@ -44,6 +44,18 @@ const DropdownIndicatorStyles = (base) => {
 };
 // Override styling to make tooltip work even if select is disabled
 const DropdownIndicatorStylesOverride = (base) => (Object.assign({}, base, { pointerEvents: 'initial' }));
+export const baseOptionStyles = (base, state) => {
+    const focusedState = state.isFocused
+        ? { backgroundColor: SassVars['slate-10'] }
+        : {};
+    const isSelected = state.isSelected
+        ? { backgroundColor: SassVars['slate-20'], color: SassVars.slate }
+        : {};
+    return Object.assign({}, base, { padding: '9px 30px' }, focusedState, isSelected, { ':active': {}, 'line-height': '18px' });
+};
+export const linkOptionStyles = (base, state) => {
+    return Object.assign({}, baseOptionStyles(base, state), { 'border-top': '1px solid #e9ecef' });
+};
 const SelectStyles = {
     clearIndicator: (base) => {
         return {
@@ -128,15 +140,7 @@ const SelectStyles = {
     multiValueRemove: (base, state) => {
         return Object.assign({}, base, Object.assign({}, multiValueBaseStyles, { ':hover': hoverMultiValueRemove(state.data.error), paddingLeft: 0 }), errorLabel(state.data.error), disabledLabel(state.selectProps.disabled));
     },
-    option: (base, state) => {
-        const focusedState = state.isFocused
-            ? { backgroundColor: SassVars['slate-10'] }
-            : {};
-        const isSelected = state.isSelected
-            ? { backgroundColor: SassVars['slate-20'], color: SassVars.slate }
-            : {};
-        return Object.assign({}, base, { padding: '9px 30px' }, focusedState, isSelected, { ':active': {}, 'line-height': '18px' });
-    },
+    option: baseOptionStyles,
     placeholder: (base) => {
         return Object.assign({}, base, {
             marginLeft: 0,
