@@ -51,8 +51,10 @@ export const Button: React.SFC<
   } else if (props.isReset) {
     btnType = 'reset';
   }
+  const { isSubmit, isReset, ...restOfProps } = props;
+
   return (
-    <Buttonized {...props}>
+    <Buttonized {...restOfProps}>
       <button type={btnType} disabled={props.disabled}>
         {props.children}
       </button>

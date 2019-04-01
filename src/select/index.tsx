@@ -18,6 +18,15 @@ const inputSelect = {
   margin: 0,
 };
 
+let iconX = SassVars['icon-x'];
+let iconCaret = SassVars['icon-caret'];
+
+if (process.env.NODE_ENV === 'test') {
+  // DeadCode elimination will remove this from the bundle.
+  iconX = `'"${SassVars['icon-x']}"'`;
+  iconCaret = `'"${SassVars['icon-caret']}"'`;
+}
+
 const multiValueBaseStyles = {
   backgroundColor: SassVars['sg-blue'],
   color: SassVars.white,
@@ -47,7 +56,7 @@ const DropdownIndicatorStyles = (base: object) => {
     '&::after': {
       ...mixins,
       color: SassVars['slate-60'],
-      content: `${SassVars['icon-caret']}`,
+      content: iconCaret,
       position: 'absolute',
       right: 5,
     },
@@ -99,7 +108,7 @@ const SelectStyles = {
       '&::after': {
         ...mixins,
         color: SassVars['slate-60'],
-        content: `${SassVars['icon-x']}`,
+        content: iconX,
         position: 'absolute',
         right: 20,
         transform: 'scale(0.6)',

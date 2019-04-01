@@ -1720,7 +1720,6 @@ exports[`Storyshots Button Secondary Submit Button with Icon 1`] = `
   className="btn btn-secondary has-icon"
   disabled={false}
   id={undefined}
-  isSubmit={true}
   onClick={[Function]}
   type="submit"
 >
@@ -13320,7 +13319,7 @@ exports[`Storyshots Segment Term Segment term which is being edited 1`] = `
               />
               <div
                 aria-hidden="true"
-                className="css-7afory"
+                className="css-1c712bu"
                 onMouseDown={[Function]}
                 onTouchEnd={[Function]}
               >
@@ -13440,7 +13439,7 @@ exports[`Storyshots Segment Term Segment term which is being edited 1`] = `
               />
               <div
                 aria-hidden="true"
-                className="css-7afory"
+                className="css-1c712bu"
                 onMouseDown={[Function]}
                 onTouchEnd={[Function]}
               >
@@ -13611,7 +13610,7 @@ exports[`Storyshots Segment Term Segment term which is being edited and is fille
               />
               <div
                 aria-hidden="true"
-                className="css-7afory"
+                className="css-1c712bu"
                 onMouseDown={[Function]}
                 onTouchEnd={[Function]}
               >
@@ -13731,7 +13730,7 @@ exports[`Storyshots Segment Term Segment term which is being edited and is fille
               />
               <div
                 aria-hidden="true"
-                className="css-7afory"
+                className="css-1c712bu"
                 onMouseDown={[Function]}
                 onTouchEnd={[Function]}
               >
@@ -13845,7 +13844,7 @@ exports[`Storyshots Segment Term Segment term which is being edited and is fille
               />
               <div
                 aria-hidden="true"
-                className="css-7afory"
+                className="css-1c712bu"
                 onMouseDown={[Function]}
                 onTouchEnd={[Function]}
               >
@@ -14216,7 +14215,7 @@ exports[`Storyshots Segment Term Segment terms 1`] = `
                   />
                   <div
                     aria-hidden="true"
-                    className="css-7afory"
+                    className="css-1c712bu"
                     onMouseDown={[Function]}
                     onTouchEnd={[Function]}
                   >
@@ -14336,7 +14335,7 @@ exports[`Storyshots Segment Term Segment terms 1`] = `
                   />
                   <div
                     aria-hidden="true"
-                    className="css-7afory"
+                    className="css-1c712bu"
                     onMouseDown={[Function]}
                     onTouchEnd={[Function]}
                   >
@@ -14619,7 +14618,7 @@ exports[`Storyshots Select Disabled 1`] = `
           />
           <div
             aria-hidden="true"
-            className="css-7afory"
+            className="css-1c712bu"
             onMouseDown={[Function]}
             onTouchEnd={[Function]}
           >
@@ -14853,7 +14852,7 @@ exports[`Storyshots Select Multi select - no values 1`] = `
           />
           <div
             aria-hidden="true"
-            className="css-7afory"
+            className="css-1c712bu"
             onMouseDown={[Function]}
             onTouchEnd={[Function]}
           >
@@ -15021,7 +15020,7 @@ exports[`Storyshots Select Multi select - open 1`] = `
           />
           <div
             aria-hidden="true"
-            className="css-7afory"
+            className="css-1c712bu"
             onMouseDown={[Function]}
             onTouchEnd={[Function]}
           >
@@ -15249,7 +15248,7 @@ exports[`Storyshots Select Multi select 1`] = `
           />
           <div
             aria-hidden="true"
-            className="css-7afory"
+            className="css-1c712bu"
             onMouseDown={[Function]}
             onTouchEnd={[Function]}
           >
@@ -15366,7 +15365,7 @@ exports[`Storyshots Select Option groups - open 1`] = `
           />
           <div
             aria-hidden="true"
-            className="css-7afory"
+            className="css-1c712bu"
             onMouseDown={[Function]}
             onTouchEnd={[Function]}
           >
@@ -15672,7 +15671,7 @@ exports[`Storyshots Select Option groups 1`] = `
           />
           <div
             aria-hidden="true"
-            className="css-7afory"
+            className="css-1c712bu"
             onMouseDown={[Function]}
             onTouchEnd={[Function]}
           >
@@ -15794,7 +15793,7 @@ exports[`Storyshots Select Searchable 1`] = `
           />
           <div
             aria-hidden="true"
-            className="css-7afory"
+            className="css-1c712bu"
             onMouseDown={[Function]}
             onTouchEnd={[Function]}
           >
@@ -15911,7 +15910,7 @@ exports[`Storyshots Select Standard 1`] = `
           />
           <div
             aria-hidden="true"
-            className="css-7afory"
+            className="css-1c712bu"
             onMouseDown={[Function]}
             onTouchEnd={[Function]}
           >
@@ -16033,7 +16032,7 @@ exports[`Storyshots Select Standard open 1`] = `
           />
           <div
             aria-hidden="true"
-            className="css-7afory"
+            className="css-1c712bu"
             onMouseDown={[Function]}
             onTouchEnd={[Function]}
           >
@@ -16507,7 +16506,7 @@ exports[`Storyshots Select With placeholder 1`] = `
           />
           <div
             aria-hidden="true"
-            className="css-7afory"
+            className="css-1c712bu"
             onMouseDown={[Function]}
             onTouchEnd={[Function]}
           >
@@ -16741,7 +16740,7 @@ exports[`Storyshots Select/AsyncSelect Multi select 1`] = `
           />
           <div
             aria-hidden="true"
-            className="css-7afory"
+            className="css-1c712bu"
             onMouseDown={[Function]}
             onTouchEnd={[Function]}
           >
@@ -16858,7 +16857,7 @@ exports[`Storyshots Select/AsyncSelect Multi select with default and cache optio
           />
           <div
             aria-hidden="true"
-            className="css-7afory"
+            className="css-1c712bu"
             onMouseDown={[Function]}
             onTouchEnd={[Function]}
           >
@@ -16975,7 +16974,7 @@ exports[`Storyshots Select/AsyncSelect Single select 1`] = `
           />
           <div
             aria-hidden="true"
-            className="css-7afory"
+            className="css-1c712bu"
             onMouseDown={[Function]}
             onTouchEnd={[Function]}
           >
@@ -17092,7 +17091,7 @@ exports[`Storyshots Select/AsyncSelect Single select with custom no options and 
           />
           <div
             aria-hidden="true"
-            className="css-7afory"
+            className="css-1c712bu"
             onMouseDown={[Function]}
             onTouchEnd={[Function]}
           >
@@ -17209,7 +17208,7 @@ exports[`Storyshots Select/AsyncSelect Single select with default options 1`] = 
           />
           <div
             aria-hidden="true"
-            className="css-7afory"
+            className="css-1c712bu"
             onMouseDown={[Function]}
             onTouchEnd={[Function]}
           >
@@ -17402,7 +17401,7 @@ exports[`Storyshots Select/Createable Createable 1`] = `
         >
           <div
             aria-hidden="true"
-            className="css-h6qd6s"
+            className="css-ljphs1"
             onMouseDown={[Function]}
             onTouchEnd={[Function]}
           >
@@ -17424,7 +17423,7 @@ exports[`Storyshots Select/Createable Createable 1`] = `
           />
           <div
             aria-hidden="true"
-            className="css-7afory"
+            className="css-1c712bu"
             onMouseDown={[Function]}
             onTouchEnd={[Function]}
           >
@@ -17971,7 +17970,7 @@ exports[`Storyshots Select/Createable Tagging - open 1`] = `
           />
           <div
             aria-hidden="true"
-            className="css-7afory"
+            className="css-1c712bu"
             onMouseDown={[Function]}
             onTouchEnd={[Function]}
           >
@@ -18423,7 +18422,7 @@ exports[`Storyshots Select/Createable Tagging 1`] = `
           />
           <div
             aria-hidden="true"
-            className="css-7afory"
+            className="css-1c712bu"
             onMouseDown={[Function]}
             onTouchEnd={[Function]}
           >
@@ -18542,7 +18541,7 @@ exports[`Storyshots Select/Label + Info disabled + error 1`] = `
         />
         <div
           aria-hidden="true"
-          className="css-7afory"
+          className="css-1c712bu"
           onMouseDown={[Function]}
           onTouchEnd={[Function]}
         >
@@ -18688,7 +18687,7 @@ exports[`Storyshots Select/Label + Info disabled - defaultValue - multi select 1
         />
         <div
           aria-hidden="true"
-          className="css-7afory"
+          className="css-1c712bu"
           onMouseDown={[Function]}
           onTouchEnd={[Function]}
         >
@@ -18811,7 +18810,7 @@ exports[`Storyshots Select/Label + Info disabled - defaultValue 1`] = `
         />
         <div
           aria-hidden="true"
-          className="css-7afory"
+          className="css-1c712bu"
           onMouseDown={[Function]}
           onTouchEnd={[Function]}
         >
@@ -18934,7 +18933,7 @@ exports[`Storyshots Select/Label + Info disabled 1`] = `
         />
         <div
           aria-hidden="true"
-          className="css-7afory"
+          className="css-1c712bu"
           onMouseDown={[Function]}
           onTouchEnd={[Function]}
         >
@@ -19057,7 +19056,7 @@ exports[`Storyshots Select/Label + Info error 1`] = `
         />
         <div
           aria-hidden="true"
-          className="css-7afory"
+          className="css-1c712bu"
           onMouseDown={[Function]}
           onTouchEnd={[Function]}
         >
@@ -19175,7 +19174,7 @@ exports[`Storyshots Select/Label + Info info 1`] = `
         />
         <div
           aria-hidden="true"
-          className="css-7afory"
+          className="css-1c712bu"
           onMouseDown={[Function]}
           onTouchEnd={[Function]}
         >
@@ -19298,7 +19297,7 @@ exports[`Storyshots Select/Label + Info label - required 1`] = `
         />
         <div
           aria-hidden="true"
-          className="css-7afory"
+          className="css-1c712bu"
           onMouseDown={[Function]}
           onTouchEnd={[Function]}
         >
@@ -19421,7 +19420,7 @@ exports[`Storyshots Select/Label + Info label 1`] = `
         />
         <div
           aria-hidden="true"
-          className="css-7afory"
+          className="css-1c712bu"
           onMouseDown={[Function]}
           onTouchEnd={[Function]}
         >
