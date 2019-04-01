@@ -13,6 +13,13 @@ const inputSelect = {
     color: 'inherit',
     margin: 0,
 };
+let iconX = SassVars['icon-x'];
+let iconCaret = SassVars['icon-caret'];
+if (process.env.NODE_ENV === 'test') {
+    // DeadCode elimination will remove this from the bundle.
+    iconX = `'"${SassVars['icon-x']}"'`;
+    iconCaret = `'"${SassVars['icon-caret']}"'`;
+}
 const multiValueBaseStyles = {
     backgroundColor: SassVars['sg-blue'],
     color: SassVars.white,
@@ -35,7 +42,7 @@ const hoverMultiValueRemove = (error) => ({
 const DropdownIndicatorStyles = (base) => {
     const dropdownIndicator = {
         padding: 0,
-        '&::after': Object.assign({}, mixins, { color: SassVars['slate-60'], content: `${SassVars['icon-caret']}`, position: 'absolute', right: 5 }),
+        '&::after': Object.assign({}, mixins, { color: SassVars['slate-60'], content: iconCaret, position: 'absolute', right: 5 }),
         svg: {
             display: 'none',
         },
@@ -60,7 +67,7 @@ const SelectStyles = {
     clearIndicator: (base) => {
         return {
             padding: 0,
-            '&::after': Object.assign({}, mixins, { color: SassVars['slate-60'], content: `${SassVars['icon-x']}`, position: 'absolute', right: 20, transform: 'scale(0.6)' }),
+            '&::after': Object.assign({}, mixins, { color: SassVars['slate-60'], content: iconX, position: 'absolute', right: 20, transform: 'scale(0.6)' }),
             svg: {
                 display: 'none',
             },

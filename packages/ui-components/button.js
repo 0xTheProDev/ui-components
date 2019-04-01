@@ -22,7 +22,8 @@ export const Button = props => {
     else if (props.isReset) {
         btnType = 'reset';
     }
-    return (React.createElement(Buttonized, Object.assign({}, props),
+    const { isSubmit, isReset } = props, restOfProps = __rest(props, ["isSubmit", "isReset"]);
+    return (React.createElement(Buttonized, Object.assign({}, restOfProps),
         React.createElement("button", { type: btnType, disabled: props.disabled }, props.children)));
 };
 export const Buttonized = (_a) => {
