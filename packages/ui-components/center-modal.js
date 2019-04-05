@@ -35,7 +35,7 @@ export class CenterModal extends Component {
                 hasX && (React.createElement(Icon, { type: "x", "data-role": "close-center-modal", onClick: onClose })),
                 renderHeader && React.createElement("h2", null, evaluateRenderProp(renderHeader)),
                 evaluateRenderProp(renderBody),
-                renderFooter && (React.createElement("div", { className: cn('modal-footer', Styles['modal-footer']) }, evaluateRenderProp(this.props.renderFooter)))),
+                renderFooter && (React.createElement("div", { className: cn('conf-alert-actions', Styles['conf-alert-actions']) }, evaluateRenderProp(this.props.renderFooter)))),
             React.createElement("div", { className: cn('modal-mask', Styles['modal-mask'], {
                     'is-visible': open,
                     [Styles['is-visible']]: open,
