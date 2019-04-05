@@ -4767,6 +4767,183 @@ exports[`Storyshots Dropdown Button With menu positioned to the left 1`] = `
 </div>
 `;
 
+exports[`Storyshots Dropdown Dropdown Header - with subheader 1`] = `
+<div
+  className="dropdown dropdown-block"
+  initialOpen={false}
+  onClick={[Function]}
+  role="button"
+>
+  <div
+    className="dropdown-content"
+  >
+    <h1>
+      Test Results: Dec. 12, 2018 at 4:45 PM MST
+    </h1>
+    <h3>
+      This is a subheader
+    </h3>
+    <ul
+      className="dropdown-menu"
+    >
+      <a
+        className="dropdown-link"
+        onClick={[Function]}
+        role="button list-item"
+      >
+        Dec. 12, 2018 at 4:45 PM MST
+      </a>
+      <a
+        className="dropdown-link"
+        onClick={[Function]}
+        role="button list-item"
+      >
+        Dec. 11, 2018 at 2:11 PM MST
+      </a>
+      <a
+        className="dropdown-link"
+        onClick={[Function]}
+        role="button list-item"
+      >
+        Dec. 11, 2018 at 10:17 AM MST
+      </a>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Dropdown Dropdown header - initially open 1`] = `
+<div
+  className="dropdown dropdown-block is-active"
+  initialOpen={true}
+  onClick={[Function]}
+  role="button"
+>
+  <div
+    className="dropdown-content"
+  >
+    <h1>
+      Test Results: Dec. 12, 2018 at 4:45 PM MST
+    </h1>
+    <ul
+      className="dropdown-menu"
+    >
+      <a
+        className="dropdown-link"
+        onClick={[Function]}
+        role="button list-item"
+      >
+        Dec. 12, 2018 at 4:45 PM MST
+      </a>
+      <a
+        className="dropdown-link"
+        onClick={[Function]}
+        role="button list-item"
+      >
+        Dec. 11, 2018 at 2:11 PM MST
+      </a>
+      <a
+        className="dropdown-link"
+        onClick={[Function]}
+        role="button list-item"
+      >
+        Dec. 11, 2018 at 10:17 AM MST
+      </a>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Dropdown Dropdown header 1`] = `
+<div
+  className="dropdown dropdown-block"
+  initialOpen={false}
+  onClick={[Function]}
+  role="button"
+>
+  <div
+    className="dropdown-content"
+  >
+    <h1>
+      Test Results: Dec. 12, 2018 at 4:45 PM MST
+    </h1>
+    <ul
+      className="dropdown-menu"
+    >
+      <a
+        className="dropdown-link"
+        onClick={[Function]}
+        role="button list-item"
+      >
+        Dec. 12, 2018 at 4:45 PM MST
+      </a>
+      <a
+        className="dropdown-link"
+        onClick={[Function]}
+        role="button list-item"
+      >
+        Dec. 11, 2018 at 2:11 PM MST
+      </a>
+      <a
+        className="dropdown-link"
+        onClick={[Function]}
+        role="button list-item"
+      >
+        Dec. 11, 2018 at 10:17 AM MST
+      </a>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Dropdown Dropdown paragraph 1`] = `
+<div
+  className="dropdown dropdown-block"
+  initialOpen={false}
+  onClick={[Function]}
+  role="button"
+>
+  <div
+    className="dropdown-content"
+  >
+    <p>
+      This is a paragraph
+    </p>
+    <p>
+      This is a paragraph
+    </p>
+    <p>
+      This is a paragraph
+    </p>
+    <ul
+      className="dropdown-menu"
+    >
+      <a
+        className="dropdown-link"
+        onClick={[Function]}
+        role="button list-item"
+      >
+        Dec. 12, 2018 at 4:45 PM MST
+      </a>
+      <a
+        className="dropdown-link"
+        onClick={[Function]}
+        role="button list-item"
+      >
+        Dec. 11, 2018 at 2:11 PM MST
+      </a>
+      <a
+        className="dropdown-link"
+        onClick={[Function]}
+        role="button list-item"
+      >
+        Dec. 11, 2018 at 10:17 AM MST
+      </a>
+    </ul>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Dropzone Dropzone (Active) 1`] = `
 <section
   className="dropzone is-active"

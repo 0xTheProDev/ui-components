@@ -20,6 +20,23 @@
   }
 }
 
+.dropdown-block {
+  display: inline-flex;
+  &::after {
+    @include icon-font-base;
+    content: $icon-caret;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: $scale-base-down-02;
+  }
+}
+
+.dropdown-content *:not(.dropdown-menu) {
+  margin-bottom: 0;
+}
+
 // in styles/global/tables, this is set for table headers
 .is-left .dropdown-menu {
   right: 0;
@@ -56,6 +73,11 @@
 
 .dropdown-menu-right-aligned {
   right: 0;
+  left: inherit;
+}
+
+.dropdown-block .dropdown-menu {
+  right: 20px;
   left: inherit;
 }
 

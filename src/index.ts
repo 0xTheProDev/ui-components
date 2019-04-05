@@ -23,6 +23,7 @@ export { ContactCount } from './contact-count';
 export { DateRangePicker, SingleDatePicker } from './datepicker';
 export { Divider } from './divider';
 export { DropdownButton } from './dropdown-button';
+export { Dropdown, DropdownLink, DropdownMenu } from './dropdown';
 export { Dropzone } from './dropzone';
 export { EmailCard, EmailCardAddButton } from './email-card';
 export { EmptyState } from './empty-state';
