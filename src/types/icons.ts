@@ -44,6 +44,7 @@ export type IconType =
   | 'filter'
   | 'forms'
   | 'gear'
+  | 'hash'
   | 'help'
   | 'help-error'
   | 'image'
