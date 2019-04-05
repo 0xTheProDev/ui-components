@@ -72,7 +72,9 @@ export class CenterModal extends Component<CenterModalProps> {
           {renderHeader && <h2>{evaluateRenderProp(renderHeader)}</h2>}
           {evaluateRenderProp(renderBody)}
           {renderFooter && (
-            <div className={cn('modal-footer', Styles['modal-footer'])}>
+            <div
+              className={cn('conf-alert-actions', Styles['conf-alert-actions'])}
+            >
               {evaluateRenderProp(this.props.renderFooter)}
             </div>
           )}

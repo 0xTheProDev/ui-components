@@ -2733,7 +2733,7 @@ exports[`Storyshots CenterModal CenterModal with footer and header, no x 1`] = `
       Please do not feed the scorpions. Doing so could result in scorpion wounds, fines of up to $2,500 and up to 5 years of community service.
     </p>
     <div
-      className="modal-footer"
+      className="conf-alert-actions"
     >
       <div
         className="btn-list"
@@ -2788,7 +2788,7 @@ exports[`Storyshots CenterModal CenterModal with footer and header, no x, large 
       Please do not feed the scorpions. Doing so could result in scorpion wounds, fines of up to $2,500 and up to 5 years of community service.
     </p>
     <div
-      className="modal-footer"
+      className="conf-alert-actions"
     >
       <div
         className="btn-list"
