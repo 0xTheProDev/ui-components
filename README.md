@@ -144,6 +144,16 @@ More information: https://semver.org/
 - `npm run image-snapshots`: Builds a static index.html file and runs image snapshot tests.
 - `npm run update-icon-types`: Pull latest styleguide css and update the types of icon to match all found instances of sg-icon-${type}
 
+## Updating Icons
+
+To update icons with the latest from StyleGuide follow these steps to change the font files and update necessary classes and variables.
+
+1. Download `eot`, `ttf`, `woff`, `woff2` files from [StyleGuide Icons](https://github.com/sendgrid/style-guide/tree/master/packages/style-guide/fonts/icons)
+2. Replace files in the [icons](src/styles/fonts/icons) directory with those that were downloaded
+3. Add new variable to the [variables](src/styles/global/variables.scss) file with the unicode value found in the [StyleGuide SVG](https://raw.githubusercontent.com/sendgrid/style-guide/master/packages/style-guide/fonts/icons/style-guide-icons.svg) file
+4. Add new style class for the icon in [icon.module.scss](src/styles/icon.module.scss) prepended with `.sg-icon-` and use the variables that were created in step 3
+5. Run `npm run update-icon-types` to add the new icon as a type in [icons.ts](src/types/icons.ts)
+
 ## Testing
 
 To make sure your additions don't break `ui-components`, run `npm run test`, which will test all of your changed `*.test.*` files and show a coverage report. To check image snapshots run `npm run image-snapshots` updating and other commands can be passed through to jest like `npm run image-snapshots -- -u`.
