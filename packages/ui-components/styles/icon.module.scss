@@ -284,6 +284,12 @@
   }
 }
 
+.sg-icon-hash {
+  &::before {
+    content: $icon-hash;
+  }
+}
+
 .sg-icon-help {
   &::before {
     content: $icon-help;
