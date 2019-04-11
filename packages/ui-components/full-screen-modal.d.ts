@@ -4,6 +4,7 @@ import { TooltipLength } from './tooltip';
 export interface FullScreenModelProps extends ModalProps {
     children?: React.ReactNode;
     className?: string;
+    creditsCount?: string;
     hasPadding?: boolean;
     isOpen?: boolean;
     onClose?: (event: any) => void;

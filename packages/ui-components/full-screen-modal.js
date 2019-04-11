@@ -18,10 +18,10 @@ export class FullscreenModal extends Component {
         modalWillReceiveProps(this.props, prevProps);
     }
     render() {
-        const _a = this.props, { bodyNode, children, className, hasPadding, isOpen, modalContainer, onClose, renderHeaderActions, headerTabs, title, tooltipText, tooltipLength } = _a, attributes = __rest(_a, ["bodyNode", "children", "className", "hasPadding", "isOpen", "modalContainer", "onClose", "renderHeaderActions", "headerTabs", "title", "tooltipText", "tooltipLength"]);
+        const _a = this.props, { bodyNode, children, className, creditsCount, hasPadding, isOpen, modalContainer, onClose, renderHeaderActions, headerTabs, title, tooltipText, tooltipLength } = _a, attributes = __rest(_a, ["bodyNode", "children", "className", "creditsCount", "hasPadding", "isOpen", "modalContainer", "onClose", "renderHeaderActions", "headerTabs", "title", "tooltipText", "tooltipLength"]);
         const headerActions = renderHeaderActions && renderHeaderActions();
         return ReactDOM.createPortal(React.createElement("div", Object.assign({ className: cn('modal-fullscreen', Styles['modal-fullscreen'], { [Styles['is-open']]: isOpen }, className) }, attributes),
-            React.createElement(FlexHeader, { headerActions: headerActions, headerTabs: headerTabs, onClose: onClose, title: title, tooltipText: tooltipText, tooltipLength: tooltipLength }),
+            React.createElement(FlexHeader, { creditsCount: creditsCount, headerActions: headerActions, headerTabs: headerTabs, onClose: onClose, title: title, tooltipText: tooltipText, tooltipLength: tooltipLength }),
             React.createElement("div", { className: cn('modal-content', { 'has-padding': hasPadding }) }, children)), modalContainer);
     }
 }
