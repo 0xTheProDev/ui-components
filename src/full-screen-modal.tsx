@@ -12,6 +12,7 @@ import { TooltipLength } from './tooltip';
 export interface FullScreenModelProps extends ModalProps {
   children?: React.ReactNode;
   className?: string;
+  creditsCount?: string;
   hasPadding?: boolean;
   isOpen?: boolean;
   onClose?: (event: any) => void;
@@ -40,6 +41,7 @@ export class FullscreenModal extends Component<FullScreenModelProps> {
       bodyNode,
       children,
       className,
+      creditsCount,
       hasPadding,
       isOpen,
       modalContainer,
@@ -65,6 +67,7 @@ export class FullscreenModal extends Component<FullScreenModelProps> {
         {...attributes}
       >
         <FlexHeader
+          creditsCount={creditsCount}
           headerActions={headerActions}
           headerTabs={headerTabs}
           onClose={onClose}

@@ -10395,6 +10395,68 @@ exports[`Storyshots FullScreen Modal Fullscreen Modal 1`] = `
 </div>
 `;
 
+exports[`Storyshots FullScreen Modal Fullscreen Modal with Credits 1`] = `
+<div>
+  <button
+    className="btn btn-primary"
+    disabled={false}
+    id={undefined}
+    onClick={[Function]}
+    type="button"
+  >
+    Open Modal
+  </button>
+  <div
+    className="modal-fullscreen is-open"
+  >
+    <header
+      className="flex-header"
+    >
+      <div>
+        <a
+          className="flex-header-action"
+          onClick={[Function]}
+        >
+          <i
+            className="sg-icon sg-icon-x"
+            onClick={undefined}
+            style={null}
+          />
+        </a>
+        <div
+          className="flex-header-title"
+        >
+          <h3>
+            Fullscreen Modal
+          </h3>
+        </div>
+      </div>
+      <div
+        className="flex-header-right"
+      >
+        <div
+          className="counter"
+        >
+          Credits
+          <span
+            className="counter-bubble"
+          >
+            150
+          </span>
+        </div>
+      </div>
+    </header>
+    <div
+      className="modal-content has-padding"
+    >
+      <div>
+        Here is some content
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots FullScreen Modal Fullscreen Modal with renderProps 1`] = `
 <div>
   <button

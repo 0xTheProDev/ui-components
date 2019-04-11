@@ -45,6 +45,21 @@ stories.add('Fullscreen Modal', () => (
   />
 ));
 
+stories.add('Fullscreen Modal with Credits', () => (
+  <ExampleContainer
+    render={({ isOpen, onClose }: any) => (
+      <FullscreenModal
+        isOpen={isOpen}
+        creditsCount={'150'}
+        title="Fullscreen Modal"
+        onClose={onClose}
+      >
+        <div>Here is some content</div>
+      </FullscreenModal>
+    )}
+  />
+));
+
 stories.add('Fullscreen Modal with renderProps', () => (
   <ExampleContainer
     render={({ isOpen, onClose }: any) => (
