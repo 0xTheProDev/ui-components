@@ -6,26 +6,17 @@
 [![GitHub contributors](https://img.shields.io/github/contributors/sendgrid/docs.svg)](https://github.com/sendgrid/ui-components/graphs/contributors)
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 
-Re-useable React components based on the SendGrid Style Guide.
-[Hosted StoryBook](https://sendgrid.github.io/ui-components)
+Re-useable React components based on the SendGrid Style Guide. [See them in action here](https://sendgrid.github.io/ui-components).
 
-## Getting Started with UI-components in your project
+## Getting Started with UI Components in your project
 
 Make sure your project has all required dependencies and development dependencies installed.
 
-Install devDependencies with:
-
 ```
-npm i --save-dev node-sass
+npm install
 ```
 
-Install dependencies with:
-
-```
-npm install --save-dev lodash raf react react-animate-height react-color react-dom react-select @sendgrid/ui-components
-```
-
-### Using your local UI-components in your project
+### Using your local UI Components in your project
 
 ```bash
 cd ~/ui-components/packages/ui-components
@@ -40,23 +31,24 @@ cd ~/myCoolProject/
 yarn link "@sendgrid/ui-components"
 ```
 
+List of available components in [Available Components](#available-components) section.
+
+### Importing a Particular Component
+
+You can import just the components that you need.
+
+```js
+import Badge from '@sendgrid/ui-components/badge';
+```
+
 ### Importing UI Components into Your Project
 
-To import the component on your desired page:
+Importing all of UI Components is discouraged and will be deprecated in a a future version of UI Components.
 
 ```ts
 import { Badge } from '@sendgrid/ui-components';
 ```
 
-List of available components in [Available Components](#available-components) section.
-
-### Importing a Particular Component
-
-Maybe you don't want to import all of UI Components. You can import just the components that you need.
-
-```js
-import Badge from '@sendgrid/ui-components/badge';
-```
 
 ### Getting Styles to Work
 
@@ -107,6 +99,8 @@ For this, use `attributes={{'data-test':"some-test-id}}"` as an attribute that d
 
 ### What are these Stateful Components?
 
+**Nota bene**: Stateful components are deprecated and should *not* be used in production projects.
+
 State is hard and all of the UI components should be purely presentational. But, that makes them hard to test out in Storybook. The stateful components (e.g. `StatefulTextInput`) are solely for working with Storybook and are not supported or endorsed in any way. Think of them as a private API. They can be removed at any time. You've been warned.
 
 ## Contributing to UI Components
@@ -119,12 +113,11 @@ Install project dependencies with:
 npm ci
 ```
 
-## Semver Versioning
+## Semantic Versioning
 
-When making a pull request, make sure the title has a [semver](https://semver.org/) bump level defined (**#major**, **#minor**, or **#patch**).
+When making a pull request, make sure the title has a [semantic version](https://semver.org/) bump level defined (**#major**, **#minor**, or **#patch**).
 
-Semver bumps are used to know when to update the [@sendgrid/ui-components npm package](https://www.npmjs.com/package/@sendgrid/ui-components).
-Patches and minor changes will be updated automatically, but major changes will update if you update your npm package version manually.
+Semantic versioning bumps are used to know when to update the [@sendgrid/ui-components npm package](https://www.npmjs.com/package/@sendgrid/ui-components). Patches and minor changes will be updated automatically, but major changes will update if you update your npm package version manually.
 
 More information: https://semver.org/
 
@@ -156,11 +149,11 @@ To update icons with the latest from StyleGuide follow these steps to change the
 
 ## Testing
 
-To make sure your additions don't break `ui-components`, run `npm run test`, which will test all of your changed `*.test.*` files and show a coverage report. To check image snapshots run `npm run image-snapshots` updating and other commands can be passed through to jest like `npm run image-snapshots -- -u`.
+To make sure your additions don't break UI Components, run `npm run test`, which will test all of your changed `*.test.*` files and show a coverage report. To check image snapshots run `npm run image-snapshots` updating and other commands can be passed through to jest like `npm run image-snapshots -- -u`.
 
 **Image Snapshots & Docker**:
 
-- Since we run image snapshots in Buildkite with docker we need to run them locally with docker as well because different OSs render fonts and other things differently. We don't publish our docker image so you'll have to build and re-build the image any time our dependencies change in package.json. To do so just run the command `docker-compose build build`. This should build the container and be ready to run.
+- Since we run image snapshots in Buildkite with docker we need to run them locally with docker as well because different OSs render fonts and other things differently. We don't publish our docker image so you'll have to build and re-build the image any time our dependencies change in `package.json`. To do so just run the command `docker-compose build build`. This should build the container and be ready to run.
 
 **Image Snapshots & Animations**:
 
@@ -168,7 +161,7 @@ To make sure your additions don't break `ui-components`, run `npm run test`, whi
 
 ## Deploying
 
-Visit the [Buildkite Master Branch](https://buildkite.com/sendgrid/ui-components/builds?branch=master) and select the SemVer appropriate to your deployment and you should be off and away. Make sure to post in FE Guild that a new version is going out.
+Visit the [Buildkite Master Branch](https://buildkite.com/sendgrid/ui-components/builds?branch=master) and select the semantic version appropriate to your deployment and you should be off and away. Make sure to post in `eng-guild-frontend` that a new version is going out.
 
 <a name="license"></a>
 
