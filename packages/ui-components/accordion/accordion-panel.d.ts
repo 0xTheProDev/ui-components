@@ -4,13 +4,13 @@ import AccordionPanelDescription from './accordion-panel-description';
 import AccordionPanelIcon from './accordion-panel-icon';
 import AccordionPanelTitle from './accordion-panel-title';
 export interface AccordionPanelProps {
-    children: React.ReactNode;
     className?: string;
     icon?: IconType;
     open?: boolean;
     noPadding?: boolean;
     onClick?: (e: any) => void;
     title?: React.ReactNode;
+    noChange?: boolean;
 }
 declare const AccordionPanelSFC: React.SFC<AccordionPanelProps>;
 export declare class AccordionPanel extends React.Component<AccordionPanelProps, {

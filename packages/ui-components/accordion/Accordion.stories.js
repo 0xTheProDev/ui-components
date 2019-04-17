@@ -94,3 +94,13 @@ stories.add('Accordion - Editor', () => (React.createElement(Accordion, { editor
                 React.createElement(CardContent, { title: "Spacer", iconType: "spacer" })),
             React.createElement(Card, { module: true, centered: true },
                 React.createElement(CardContent, { title: "Social", iconType: "social" })))))));
+stories.add('Accordion - HTML title, no children', () => {
+    return (React.createElement(Accordion, null,
+        React.createElement(AccordionPanel, { title: React.createElement(AccordionPanelTitle, { text: React.createElement("span", null, "HTML Title with no children") }), noPadding: true, open: true })));
+});
+stories.add('Accordion - HTML title, children, noChange', () => {
+    return (React.createElement(Accordion, null,
+        React.createElement(AccordionPanel, { title: React.createElement(AccordionPanelTitle, { text: React.createElement("span", null, "This is always open") }), noPadding: true, open: true, noChange: true },
+            React.createElement("p", null, LOREM_IPSUM)),
+        React.createElement(AccordionPanel, { title: React.createElement(AccordionPanelTitle, { text: React.createElement("span", null, "This is always closed") }), noPadding: true, noChange: true })));
+});

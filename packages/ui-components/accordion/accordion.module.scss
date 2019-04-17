@@ -1,26 +1,21 @@
 @import '../styles/global/variables.scss';
 @import '../styles/global/mixins.scss';
-
 .accordion-wrapper {
   background-color: $white;
   border: 1px solid $slate-10;
   border-radius: $border-radius;
-
   &.is-editor {
     border-right: 0;
     border-left: 0;
     border-radius: 0;
-
     .accordion-title {
       padding: 20px 20px 20px 40px;
     }
-
     .accordion-content {
       @include clearfix;
       padding: 15px;
     }
   }
-
   .has-badge {
     :global(.badge) {
       position: absolute;
@@ -30,7 +25,6 @@
       pointer-events: none;
     }
   }
-
   p {
     font-size: 13px;
     line-height: 20px;
@@ -39,27 +33,22 @@
 
 .accordion-panel {
   border-bottom: 1px solid $slate-10;
-
   &.has-child {
     .accordion-wrapper {
       border: 0;
     }
-
     .accordion-wrapper .accordion-content {
       padding: 30px;
     }
-
     .accordion-content {
       padding: 0;
     }
   }
-
   &.is-visible {
     > .accordion-title::after {
       transform: rotate(0);
     }
   }
-
   &:last-child {
     border-bottom: 0;
   }
@@ -69,7 +58,6 @@
   position: relative;
   padding: 15px 90px 15px 15px;
   cursor: pointer;
-
   &::after {
     @include icon-font-base;
     position: absolute;
@@ -81,22 +69,18 @@
     transform: rotate(-90deg);
     transition: transform 0.3s;
   }
-
   h2,
   h3,
   h4 {
     margin-bottom: 0;
   }
-
   h4 {
     line-height: 20px;
   }
-
   p {
     margin-top: 12px;
     margin-bottom: 0;
   }
-
   :global(.input-checkbox-wrap) {
     display: inline-block;
     margin-bottom: 0;
@@ -116,24 +100,19 @@
   padding: 30px;
   background-color: $slate-02;
   border-top: 1px solid $slate-10;
-
   &.accordion-list {
     padding: 0;
-
     li {
       position: relative;
       padding: 30px 60px;
       border-bottom: 1px solid $slate-10;
     }
-
     li:last-child {
       border-bottom: 0;
     }
-
     .is-complete::before {
       color: $mantis;
     }
-
     .btn {
       position: absolute;
       top: 50%;
@@ -141,7 +120,6 @@
       margin-top: -22.5px;
     }
   }
-
   p {
     margin-bottom: 0;
   }
@@ -151,17 +129,26 @@
   .accordion-title {
     padding-left: 50px;
   }
-
   .accordion-title::after {
     right: auto;
     left: 15px;
   }
 }
 
+.no-caret {
+  .accordion-title::after {
+    display: none;
+  }
+  .has-badge {
+    :global(.badge) {
+      right: 20px;
+    }
+  }
+}
+
 .accordion-large {
   .accordion-title {
     padding: 30px 90px 30px 100px;
-
     .accordion-icon {
       position: absolute;
       left: 30px;
@@ -170,25 +157,20 @@
       font-size: 40px;
     }
   }
-
   .accordion-title::after {
     margin-top: -20px;
     font-size: 40px;
   }
-
   .accordion-content {
     padding: 30px 100px;
-
     &.accordion-list {
       padding: 0;
     }
   }
-
   .accordion-list {
     li {
       padding: 30px 100px;
     }
-
     li::before {
       left: 70px;
     }

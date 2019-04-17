@@ -15,16 +15,17 @@ import AccordionPanelIcon from './accordion-panel-icon';
 import AccordionPanelTitle from './accordion-panel-title';
 import Styles from './accordion.module.scss';
 const AccordionPanelSFC = (_a) => {
-    var { children, className, icon, open, noPadding, onClick, title } = _a, attributes = __rest(_a, ["children", "className", "icon", "open", "noPadding", "onClick", "title"]);
+    var { children, className, icon, open, noPadding, onClick, title, noChange } = _a, attributes = __rest(_a, ["children", "className", "icon", "open", "noPadding", "onClick", "title", "noChange"]);
     return (React.createElement("div", Object.assign({ className: cn('accordion-panel', Styles['accordion-panel'], className, {
             [Styles['has-child']]: noPadding,
             'has-child': noPadding,
             [Styles['is-visible']]: open,
             'is-visible': open,
+            [Styles['no-caret']]: noChange,
         }) }, attributes),
-        React.createElement("div", { className: cn('accordion-title', Styles['accordion-title']), onClick: onClick }, title),
-        React.createElement(AnimateHeight, { duration: 500, height: open ? 'auto' : 0 },
-            React.createElement("div", { className: cn('accordion-content', Styles['accordion-content']), style: { display: 'block' } }, children))));
+        title && (React.createElement("div", { className: cn('accordion-title', Styles['accordion-title']), onClick: onClick }, title)),
+        children && (React.createElement(AnimateHeight, { duration: 500, height: open ? 'auto' : 0 },
+            React.createElement("div", { className: cn('accordion-content', Styles['accordion-content']), style: { display: 'block' } }, children)))));
 };
 const openProps = (props) => props.open;
 export class AccordionPanel extends React.Component {
@@ -34,6 +35,10 @@ export class AccordionPanel extends React.Component {
             open: openProps(this.props),
         };
         this.onAccordionPanelClick = (e) => {
+            const { noChange } = this.props;
+            if (noChange) {
+                return;
+            }
             const target = e.target;
             // Accordion titles support checkboxes within them -- if the checkbox was clicked, don't
             // toggle the open state.
@@ -44,7 +49,8 @@ export class AccordionPanel extends React.Component {
         };
     }
     render() {
-        return (React.createElement(AccordionPanelSFC, Object.assign({}, this.props, { open: this.state.open, onClick: this.onAccordionPanelClick }), this.props.children));
+        const { children } = this.props;
+        return (React.createElement(AccordionPanelSFC, Object.assign({}, this.props, { open: this.state.open, onClick: children ? this.onAccordionPanelClick : null }), children));
     }
 }
 export default AccordionPanel;

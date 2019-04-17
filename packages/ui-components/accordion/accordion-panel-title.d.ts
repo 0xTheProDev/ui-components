@@ -1,6 +1,6 @@
 import React from 'react';
 export interface AccordionPanelTitleTextProps {
-    text: string;
+    text: React.ReactNode;
     style?: React.CSSProperties;
     className?: string;
     badgeColor?: string;
