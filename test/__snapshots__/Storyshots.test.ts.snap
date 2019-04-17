@@ -305,6 +305,104 @@ exports[`Storyshots Accordion Accordion - Editor 1`] = `
 </div>
 `;
 
+exports[`Storyshots Accordion Accordion - HTML title, children, noChange 1`] = `
+<div
+  className="accordion-wrapper"
+>
+  <div
+    className="accordion-panel has-child is-visible no-caret"
+  >
+    <div
+      className="accordion-title"
+      onClick={[Function]}
+    >
+      <h2
+        className=""
+        style={undefined}
+      >
+        <span>
+          This is always open
+        </span>
+      </h2>
+    </div>
+    <div
+      aria-hidden={false}
+      className="rah-static rah-static--height-auto"
+      style={
+        Object {
+          "height": "auto",
+          "overflow": "visible",
+        }
+      }
+    >
+      <div
+        className={undefined}
+        style={Object {}}
+      >
+        <div
+          className="accordion-content"
+          style={
+            Object {
+              "display": "block",
+            }
+          }
+        >
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Vestibulum vehicula semper eleifend. Morbi tincidunt, magna non hendrerit malesuada,
+  ex est pulvinar nisi, ac luctus lorem quam vel nibh. Integer at tortor luctus
+  dui egestas consequat. Donec ut nibh lorem. Phasellus sed sapien lobortis,
+  egestas lacus nec, vehicula lorem. Donec hendrerit nibh sed velit placerat
+  aliquet. Morbi tristique pretium lorem, nec pretium turpis mattis vel.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="accordion-panel has-child no-caret"
+  >
+    <div
+      className="accordion-title"
+      onClick={null}
+    >
+      <h2
+        className=""
+        style={undefined}
+      >
+        <span>
+          This is always closed
+        </span>
+      </h2>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Accordion Accordion - HTML title, no children 1`] = `
+<div
+  className="accordion-wrapper"
+>
+  <div
+    className="accordion-panel has-child is-visible"
+  >
+    <div
+      className="accordion-title"
+      onClick={null}
+    >
+      <h2
+        className=""
+        style={undefined}
+      >
+        <span>
+          HTML Title with no children
+        </span>
+      </h2>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Accordion Accordion - Large - With Badge 1`] = `
 <div
   className="accordion-wrapper accordion-large"

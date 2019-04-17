@@ -3,7 +3,7 @@ import Badge from '../badge';
 import cn from '../utilities/classnames';
 import Styles from './accordion.module.scss';
 export interface AccordionPanelTitleTextProps {
-  text: string;
+  text: React.ReactNode;
   style?: React.CSSProperties;
   className?: string;
   badgeColor?: string;

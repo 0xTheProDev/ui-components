@@ -191,3 +191,41 @@ stories.add('Accordion - Editor', () => (
     </AccordionPanel>
   </Accordion>
 ));
+
+stories.add('Accordion - HTML title, no children', () => {
+  return (
+    <Accordion>
+      <AccordionPanel
+        title={
+          <AccordionPanelTitle
+            text={<span>HTML Title with no children</span>}
+          />
+        }
+        noPadding
+        open
+      />
+    </Accordion>
+  );
+});
+
+stories.add('Accordion - HTML title, children, noChange', () => {
+  return (
+    <Accordion>
+      <AccordionPanel
+        title={<AccordionPanelTitle text={<span>This is always open</span>} />}
+        noPadding
+        open
+        noChange
+      >
+        <p>{LOREM_IPSUM}</p>
+      </AccordionPanel>
+      <AccordionPanel
+        title={
+          <AccordionPanelTitle text={<span>This is always closed</span>} />
+        }
+        noPadding
+        noChange
+      />
+    </Accordion>
+  );
+});

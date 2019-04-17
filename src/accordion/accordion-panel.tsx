@@ -8,13 +8,13 @@ import AccordionPanelTitle from './accordion-panel-title';
 import Styles from './accordion.module.scss';
 
 export interface AccordionPanelProps {
-  children: React.ReactNode;
   className?: string;
   icon?: IconType;
   open?: boolean;
   noPadding?: boolean;
   onClick?: (e: any) => void;
   title?: React.ReactNode;
+  noChange?: boolean;
 }
 
 const AccordionPanelSFC: React.SFC<AccordionPanelProps> = ({
@@ -25,6 +25,7 @@ const AccordionPanelSFC: React.SFC<AccordionPanelProps> = ({
   noPadding,
   onClick,
   title,
+  noChange,
   ...attributes
 }) => {
   return (
@@ -34,45 +35,60 @@ const AccordionPanelSFC: React.SFC<AccordionPanelProps> = ({
         'has-child': noPadding,
         [Styles['is-visible']]: open,
         'is-visible': open,
+        [Styles['no-caret']]: noChange,
       })}
       {...attributes}
     >
-      <div
-        className={cn('accordion-title', Styles['accordion-title'])}
-        onClick={onClick}
-      >
-        {title}
-      </div>
-      <AnimateHeight duration={500} height={open ? 'auto' : 0}>
+      {title && (
         <div
-          className={cn('accordion-content', Styles['accordion-content'])}
-          style={{ display: 'block' }}
+          className={cn('accordion-title', Styles['accordion-title'])}
+          onClick={onClick}
         >
-          {children}
+          {title}
         </div>
-      </AnimateHeight>
+      )}
+      {children && (
+        <AnimateHeight duration={500} height={open ? 'auto' : 0}>
+          <div
+            className={cn('accordion-content', Styles['accordion-content'])}
+            style={{ display: 'block' }}
+          >
+            {children}
+          </div>
+        </AnimateHeight>
+      )}
     </div>
   );
 };
 const openProps = (props: AccordionPanelProps) => props.open;
-export class AccordionPanel extends React.Component<AccordionPanelProps, { open: boolean }> {
+export class AccordionPanel extends React.Component<
+  AccordionPanelProps,
+  { open: boolean }
+> {
   public readonly state = {
     open: openProps(this.props),
   };
 
   public render() {
+    const { children } = this.props;
+
     return (
       <AccordionPanelSFC
         {...this.props}
         open={this.state.open}
-        onClick={this.onAccordionPanelClick}
+        onClick={children ? this.onAccordionPanelClick : null}
       >
-        {this.props.children}
+        {children}
       </AccordionPanelSFC>
     );
   }
 
   private onAccordionPanelClick = (e: React.MouseEvent) => {
+    const { noChange } = this.props;
+    if (noChange) {
+      return;
+    }
+
     const target = e.target as HTMLElement;
 
     // Accordion titles support checkboxes within them -- if the checkbox was clicked, don't
