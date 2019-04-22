@@ -20,15 +20,15 @@ npm install
 
 ```bash
 cd ~/ui-components/packages/ui-components
-yarn link
-> info You can now run `yarn link "@sendgrid/ui-components"` in the projects where you want to use this package and it will be used instead.
+npm link
+> info You can now run `npm link "@sendgrid/ui-components"` in the projects where you want to use this package and it will be used instead.
 cd ~/ui-components/
 npx tsc --newline lf --watch
 ```
 
 ```bash
 cd ~/myCoolProject/
-yarn link "@sendgrid/ui-components"
+npm link "@sendgrid/ui-components"
 ```
 
 List of available components in [Available Components](#available-components) section.

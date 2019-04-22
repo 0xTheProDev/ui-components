@@ -11,6 +11,7 @@ import dropDownShadow from '../styles/global/mixins/dropdownShadow.scss';
 import SassVars from '../styles/global/variables.scss';
 import Tooltip from '../tooltip';
 import cn from '../utilities/classnames';
+import SearchableSelect from './SearchableSelect';
 import Styles from './select.module.scss';
 
 const inputSelect = {
@@ -70,7 +71,7 @@ const DropdownIndicatorStyles = (base: object) => {
 };
 
 // Override styling to make tooltip work even if select is disabled
-const DropdownIndicatorStylesOverride = (base: object) => ({
+export const DropdownIndicatorStylesOverride = (base: object) => ({
   ...base,
   ...{ pointerEvents: 'initial' },
 });
@@ -100,7 +101,7 @@ export const linkOptionStyles = (base: object, state: any) => {
   };
 };
 
-const SelectStyles = {
+export const SelectStyles = {
   clearIndicator: (base: object) => {
     return {
       padding: 0,
@@ -271,7 +272,7 @@ const SelectStyles = {
   },
 };
 
-const DropdownIndicator: React.SFC<
+export const DropdownIndicator: React.SFC<
   CommonProps<any> & SelectComponents<any> & IndicatorProps<any>
 > = props => {
   if (!props.selectProps.tooltip) {
@@ -317,17 +318,21 @@ const Select: React.SFC<any> = props => {
           {props.label}
         </label>
       )}
-      <ReactSelect
-        {...props}
-        components={props.components || { DropdownIndicator }}
-        isClearable={props.isClearable || false}
-        styles={{
-          ...SelectStyles,
-          ...props.styles,
-          ...dropdownIndicatorStylesOverride,
-        }}
-        isDisabled={props.disabled}
-      />
+      {props.isSearchable && !props.isMulti ? (
+        <SearchableSelect {...props} />
+      ) : (
+        <ReactSelect
+          {...props}
+          components={props.components || { DropdownIndicator }}
+          isClearable={props.isClearable || false}
+          styles={{
+            ...SelectStyles,
+            ...props.styles,
+            ...dropdownIndicatorStylesOverride,
+          }}
+          isDisabled={props.disabled}
+        />
+      )}
       {props.info && (
         <span
           className={cn('input-info', Styles['input-info'], {

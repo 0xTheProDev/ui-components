@@ -225,3 +225,26 @@
     background-color: $slate-20;
   }
 }
+
+.input-search-wrap {
+  position: absolute;
+  width: 100%;
+  z-index: 999;
+  background: $white;
+  box-shadow: 0 2px 6px 0 rgba(41, 70, 97, 0.2);
+
+  :global(.search__control) {
+    margin: $scale-base-up-03 $scale-base-up-03 $scale-base-up-04;
+
+    &:global(.search__control--is-focused) {
+      .is-search {
+        font-weight: bold;
+        color: $sg-blue;
+      }
+    }
+  }
+
+  :global(.search__menu) {
+    top: initial;
+  }
+}
