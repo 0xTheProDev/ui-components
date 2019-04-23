@@ -7,7 +7,10 @@ import Styles from './select.module.scss';
 class SearchableSelect extends Component {
     constructor() {
         super(...arguments);
-        this.state = { isOpen: false, value: this.props.defaultValue };
+        this.state = {
+            isOpen: false,
+            value: this.props.defaultValue || this.props.value || '',
+        };
     }
     toggleOpen() {
         this.setState((state) => ({
@@ -17,6 +20,7 @@ class SearchableSelect extends Component {
     onSelectChange(value) {
         this.toggleOpen();
         this.setState({ value });
+        this.props.onChange(value);
     }
     render() {
         // Override dropdownIndicator styling when tooltip is present
@@ -28,13 +32,13 @@ class SearchableSelect extends Component {
         }
         const { isOpen, value } = this.state;
         return (React.createElement("div", { style: { position: 'relative' } },
-            React.createElement(ReactSelect, { value: value, components: this.props.components || { DropdownIndicator }, placeholder: "Select a field", menuIsOpen: false, onMenuOpen: () => this.toggleOpen(), styles: Object.assign({}, SelectStyles, this.props.styles, dropdownIndicatorStylesOverride) }),
-            isOpen ? (React.createElement("div", { className: cn('input-search-wrap', Styles['input-search-wrap']) },
+            React.createElement(ReactSelect, Object.assign({}, this.props, { value: value, components: this.props.components || { DropdownIndicator }, placeholder: this.props.placeholder, menuIsOpen: false, onMenuOpen: () => this.toggleOpen(), styles: Object.assign({}, SelectStyles, this.props.styles, dropdownIndicatorStylesOverride), isDisabled: this.props.disabled })),
+            isOpen && (React.createElement("div", { className: cn('input-search-wrap', Styles['input-search-wrap']) },
                 React.createElement(ReactSelect, Object.assign({}, this.props, { autoFocus: true, backspaceRemovesValue: false, components: {
                         DropdownIndicator: SearchIcon,
                         IndicatorSeparator: null,
-                    }, controlShouldRenderValue: false, hideSelectedOptions: false, isClearable: false, menuIsOpen: true, onChange: (event) => this.onSelectChange(event), placeholder: "Search...", styles: Object.assign({}, SelectStyles, this.props.styles, dropdownIndicatorStylesOverride), classNamePrefix: "search", tabSelectsValue: false })))) : null,
-            isOpen ? React.createElement(Blanket, { onClick: () => this.toggleOpen() }) : null));
+                    }, controlShouldRenderValue: false, hideSelectedOptions: false, isClearable: false, menuIsOpen: true, onChange: (event) => this.onSelectChange(event), options: this.props.options, placeholder: "Search...", styles: Object.assign({}, SelectStyles, this.props.styles, dropdownIndicatorStylesOverride), classNamePrefix: "search", tabSelectsValue: false })))),
+            isOpen && React.createElement(Blanket, { onClick: () => this.toggleOpen() })));
     }
 }
 const SearchIcon = () => (React.createElement(Icon, { type: "search", className: cn('is-search', Styles['is-search']) }));

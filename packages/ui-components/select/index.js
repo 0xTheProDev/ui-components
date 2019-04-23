@@ -1,3 +1,12 @@
+var __rest = (this && this.__rest) || function (s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) if (e.indexOf(p[i]) < 0)
+            t[p[i]] = s[p[i]];
+    return t;
+};
 import React from 'react';
 import ReactSelect, { components } from 'react-select';
 import ReactAsyncSelect from 'react-select/lib/Async';
@@ -181,6 +190,7 @@ export const DropdownIndicator = props => {
         React.createElement(Tooltip, { content: props.selectProps.tooltip, direction: props.selectProps.tooltipDirection, length: props.selectProps.tooltipLength, hoverTarget: React.createElement(Icon, { type: "info-circle" }) })));
 };
 const Select = props => {
+    const { id } = props, restProps = __rest(props, ["id"]);
     // Override dropdownIndicator styling when tooltip is present
     let dropdownIndicatorStylesOverride;
     if (props.tooltip) {
@@ -188,7 +198,7 @@ const Select = props => {
             dropdownIndicator: DropdownIndicatorStylesOverride,
         };
     }
-    return (React.createElement("div", { className: cn('input-select-wrap', Styles['input-select-wrap'], {
+    return (React.createElement("div", { id: id, className: cn('input-select-wrap', Styles['input-select-wrap'], {
             [Styles['is-disabled']]: props.disabled,
             'is-disabled': props.disabled,
             [Styles['is-error']]: props.error,
@@ -197,7 +207,7 @@ const Select = props => {
             'is-required': props.required,
         }) },
         props.label && (React.createElement("label", { className: cn('input-select-label', Styles['input-select-label']) }, props.label)),
-        props.isSearchable && !props.isMulti ? (React.createElement(SearchableSelect, Object.assign({}, props))) : (React.createElement(ReactSelect, Object.assign({}, props, { components: props.components || { DropdownIndicator }, isClearable: props.isClearable || false, styles: Object.assign({}, SelectStyles, props.styles, dropdownIndicatorStylesOverride), isDisabled: props.disabled }))),
+        props.isSearchable && !props.isMulti ? (React.createElement(SearchableSelect, Object.assign({}, restProps))) : (React.createElement(ReactSelect, Object.assign({}, restProps, { components: props.components || { DropdownIndicator }, isClearable: props.isClearable || false, styles: Object.assign({}, SelectStyles, props.styles, dropdownIndicatorStylesOverride), isDisabled: props.disabled }))),
         props.info && (React.createElement("span", { className: cn('input-info', Styles['input-info'], {
                 danger: props.error,
                 [Styles.danger]: props.error,
