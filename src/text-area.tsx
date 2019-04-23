@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, ReactNode } from 'react';
 import Icon from './icon';
 import Styles from './styles/text-area.module.scss';
 import Tooltip, { TooltipDirection } from './tooltip';
@@ -8,7 +8,7 @@ export interface TextAreaProps {
   disabled?: boolean;
   error?: boolean;
   id: string;
-  info?: string;
+  info?: ReactNode;
   label: string;
   maxHeight?: number;
   required?: boolean;
