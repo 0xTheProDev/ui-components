@@ -13569,10 +13569,11 @@ exports[`Storyshots Segment Term Segment term which is being edited 1`] = `
       </label>
       <div
         className="input-select-wrap"
+        id="select-a"
       >
         <div
           className="css-5jw5i7"
-          id="select-a"
+          id={undefined}
           onKeyDown={[Function]}
         >
           <div
@@ -13689,10 +13690,11 @@ exports[`Storyshots Segment Term Segment term which is being edited 1`] = `
       </label>
       <div
         className="input-select-wrap"
+        id="select-b"
       >
         <div
           className="css-5jw5i7"
-          id="select-b"
+          id={undefined}
           onKeyDown={[Function]}
         >
           <div
@@ -13860,10 +13862,11 @@ exports[`Storyshots Segment Term Segment term which is being edited and is fille
       </label>
       <div
         className="input-select-wrap"
+        id="select-a"
       >
         <div
           className="css-5jw5i7"
-          id="select-a"
+          id={undefined}
           onKeyDown={[Function]}
         >
           <div
@@ -13980,10 +13983,11 @@ exports[`Storyshots Segment Term Segment term which is being edited and is fille
       </label>
       <div
         className="input-select-wrap"
+        id="select-b"
       >
         <div
           className="css-5jw5i7"
-          id="select-b"
+          id={undefined}
           onKeyDown={[Function]}
         >
           <div
@@ -14094,10 +14098,11 @@ exports[`Storyshots Segment Term Segment term which is being edited and is fille
     >
       <div
         className="input-select-wrap"
+        id="select-c"
       >
         <div
           className="css-5jw5i7"
-          id="select-c"
+          id={undefined}
           onKeyDown={[Function]}
         >
           <div
@@ -14465,10 +14470,11 @@ exports[`Storyshots Segment Term Segment terms 1`] = `
           </label>
           <div
             className="input-select-wrap"
+            id="select-a"
           >
             <div
               className="css-5jw5i7"
-              id="select-a"
+              id={undefined}
               onKeyDown={[Function]}
             >
               <div
@@ -14585,10 +14591,11 @@ exports[`Storyshots Segment Term Segment terms 1`] = `
           </label>
           <div
             className="input-select-wrap"
+            id="select-b"
           >
             <div
               className="css-5jw5i7"
-              id="select-b"
+              id={undefined}
               onKeyDown={[Function]}
             >
               <div
@@ -14868,6 +14875,7 @@ exports[`Storyshots Select Disabled 1`] = `
 >
   <div
     className="input-select-wrap is-disabled"
+    id={undefined}
   >
     <div
       className="css-5jw5i7"
@@ -14985,6 +14993,7 @@ exports[`Storyshots Select Disabled with tooltip 1`] = `
 >
   <div
     className="input-select-wrap is-disabled"
+    id={undefined}
   >
     <div
       className="css-5jw5i7"
@@ -15102,6 +15111,7 @@ exports[`Storyshots Select Multi select - no values 1`] = `
 >
   <div
     className="input-select-wrap"
+    id={undefined}
   >
     <div
       className="css-5jw5i7"
@@ -15219,6 +15229,7 @@ exports[`Storyshots Select Multi select - open 1`] = `
 >
   <div
     className="input-select-wrap"
+    id={undefined}
   >
     <div
       className="css-5jw5i7"
@@ -15447,6 +15458,7 @@ exports[`Storyshots Select Multi select 1`] = `
 >
   <div
     className="input-select-wrap"
+    id={undefined}
   >
     <div
       className="css-5jw5i7"
@@ -15615,6 +15627,7 @@ exports[`Storyshots Select Option groups - open 1`] = `
 >
   <div
     className="input-select-wrap"
+    id={undefined}
   >
     <div
       className="css-5jw5i7"
@@ -15921,6 +15934,7 @@ exports[`Storyshots Select Option groups 1`] = `
 >
   <div
     className="input-select-wrap"
+    id={undefined}
   >
     <div
       className="css-5jw5i7"
@@ -16043,6 +16057,7 @@ exports[`Storyshots Select Searchable 1`] = `
 >
   <div
     className="input-select-wrap"
+    id={undefined}
   >
     <div
       style={
@@ -16168,6 +16183,7 @@ exports[`Storyshots Select Standard 1`] = `
 >
   <div
     className="input-select-wrap"
+    id={undefined}
   >
     <div
       className="css-5jw5i7"
@@ -16290,6 +16306,7 @@ exports[`Storyshots Select Standard open 1`] = `
 >
   <div
     className="input-select-wrap"
+    id={undefined}
   >
     <div
       className="css-5jw5i7"
@@ -16497,6 +16514,7 @@ exports[`Storyshots Select With HTML tooltip 1`] = `
 >
   <div
     className="input-select-wrap"
+    id={undefined}
   >
     <div
       className="css-5jw5i7"
@@ -16647,6 +16665,7 @@ exports[`Storyshots Select With long tooltip 1`] = `
 >
   <div
     className="input-select-wrap"
+    id={undefined}
   >
     <div
       className="css-5jw5i7"
@@ -16764,6 +16783,7 @@ exports[`Storyshots Select With placeholder 1`] = `
 >
   <div
     className="input-select-wrap"
+    id={undefined}
   >
     <div
       className="css-5jw5i7"
@@ -16881,6 +16901,7 @@ exports[`Storyshots Select With tooltip 1`] = `
 >
   <div
     className="input-select-wrap"
+    id={undefined}
   >
     <div
       className="css-5jw5i7"
@@ -18794,6 +18815,7 @@ exports[`Storyshots Select/Createable Tagging 1`] = `
 exports[`Storyshots Select/Label + Info disabled + error 1`] = `
 <div
   className="input-select-wrap is-disabled is-error"
+  id={undefined}
 >
   <label
     className="input-select-label"
@@ -18917,6 +18939,7 @@ exports[`Storyshots Select/Label + Info disabled + error 1`] = `
 exports[`Storyshots Select/Label + Info disabled - defaultValue - multi select 1`] = `
 <div
   className="input-select-wrap is-disabled"
+  id={undefined}
 >
   <label
     className="input-select-label"
@@ -19063,6 +19086,7 @@ exports[`Storyshots Select/Label + Info disabled - defaultValue - multi select 1
 exports[`Storyshots Select/Label + Info disabled - defaultValue 1`] = `
 <div
   className="input-select-wrap is-disabled"
+  id={undefined}
 >
   <label
     className="input-select-label"
@@ -19186,6 +19210,7 @@ exports[`Storyshots Select/Label + Info disabled - defaultValue 1`] = `
 exports[`Storyshots Select/Label + Info disabled 1`] = `
 <div
   className="input-select-wrap is-disabled"
+  id={undefined}
 >
   <label
     className="input-select-label"
@@ -19309,6 +19334,7 @@ exports[`Storyshots Select/Label + Info disabled 1`] = `
 exports[`Storyshots Select/Label + Info error 1`] = `
 <div
   className="input-select-wrap is-error"
+  id={undefined}
 >
   <label
     className="input-select-label"
@@ -19432,6 +19458,7 @@ exports[`Storyshots Select/Label + Info error 1`] = `
 exports[`Storyshots Select/Label + Info info 1`] = `
 <div
   className="input-select-wrap"
+  id={undefined}
 >
   <div
     className="css-5jw5i7"
@@ -19550,6 +19577,7 @@ exports[`Storyshots Select/Label + Info info 1`] = `
 exports[`Storyshots Select/Label + Info label - required 1`] = `
 <div
   className="input-select-wrap is-required"
+  id={undefined}
 >
   <label
     className="input-select-label"
@@ -19673,6 +19701,7 @@ exports[`Storyshots Select/Label + Info label - required 1`] = `
 exports[`Storyshots Select/Label + Info label 1`] = `
 <div
   className="input-select-wrap is-disabled"
+  id={undefined}
 >
   <label
     className="input-select-label"

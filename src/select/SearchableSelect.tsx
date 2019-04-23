@@ -15,7 +15,10 @@ export interface SearchableSelectState {
 }
 
 class SearchableSelect extends Component<any> {
-  public state = { isOpen: false, value: this.props.defaultValue };
+  public state = {
+    isOpen: false,
+    value: this.props.defaultValue || this.props.value || '',
+  };
 
   public toggleOpen() {
     this.setState((state: SearchableSelectState) => ({
@@ -26,6 +29,7 @@ class SearchableSelect extends Component<any> {
   public onSelectChange(value: any) {
     this.toggleOpen();
     this.setState({ value });
+    this.props.onChange(value);
   }
 
   public render() {
@@ -43,9 +47,10 @@ class SearchableSelect extends Component<any> {
       <div style={{ position: 'relative' }}>
         {
           <ReactSelect
+            {...this.props}
             value={value}
             components={this.props.components || { DropdownIndicator }}
-            placeholder="Select a field"
+            placeholder={this.props.placeholder}
             menuIsOpen={false}
             onMenuOpen={() => this.toggleOpen()}
             styles={{
@@ -53,9 +58,10 @@ class SearchableSelect extends Component<any> {
               ...this.props.styles,
               ...dropdownIndicatorStylesOverride,
             }}
+            isDisabled={this.props.disabled}
           />
         }
-        {isOpen ? (
+        {isOpen && (
           <div className={cn('input-search-wrap', Styles['input-search-wrap'])}>
             <ReactSelect
               {...this.props}
@@ -70,6 +76,7 @@ class SearchableSelect extends Component<any> {
               isClearable={false}
               menuIsOpen
               onChange={(event: any) => this.onSelectChange(event)}
+              options={this.props.options}
               placeholder="Search..."
               styles={{
                 ...SelectStyles,
@@ -80,8 +87,8 @@ class SearchableSelect extends Component<any> {
               tabSelectsValue={false}
             />
           </div>
-        ) : null}
-        {isOpen ? <Blanket onClick={() => this.toggleOpen()} /> : null}
+        )}
+        {isOpen && <Blanket onClick={() => this.toggleOpen()} />}
       </div>
     );
   }

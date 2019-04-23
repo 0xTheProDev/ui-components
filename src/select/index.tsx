@@ -292,6 +292,8 @@ export const DropdownIndicator: React.SFC<
 };
 
 const Select: React.SFC<any> = props => {
+  const { id, ...restProps } = props;
+
   // Override dropdownIndicator styling when tooltip is present
   let dropdownIndicatorStylesOverride;
   if (props.tooltip) {
@@ -302,6 +304,7 @@ const Select: React.SFC<any> = props => {
 
   return (
     <div
+      id={id}
       className={cn('input-select-wrap', Styles['input-select-wrap'], {
         [Styles['is-disabled']]: props.disabled,
         'is-disabled': props.disabled,
@@ -319,10 +322,10 @@ const Select: React.SFC<any> = props => {
         </label>
       )}
       {props.isSearchable && !props.isMulti ? (
-        <SearchableSelect {...props} />
+        <SearchableSelect {...restProps} />
       ) : (
         <ReactSelect
-          {...props}
+          {...restProps}
           components={props.components || { DropdownIndicator }}
           isClearable={props.isClearable || false}
           styles={{
