@@ -1,6 +1,7 @@
 import cn from 'classnames';
 import React, { Component } from 'react';
 import ReactSelect from 'react-select';
+import { noop } from 'react-select/lib/utils';
 import Icon from '../icon';
 import {
   DropdownIndicator,
@@ -26,10 +27,10 @@ class SearchableSelect extends Component<any> {
     }));
   }
 
-  public onSelectChange(value: any) {
+  public onSelectChange(value: any, callback: (value: any) => void = noop) {
     this.toggleOpen();
     this.setState({ value });
-    this.props.onChange(value);
+    callback(value);
   }
 
   public render() {
@@ -75,7 +76,9 @@ class SearchableSelect extends Component<any> {
               hideSelectedOptions={false}
               isClearable={false}
               menuIsOpen
-              onChange={(event: any) => this.onSelectChange(event)}
+              onChange={(selectedOption: any) =>
+                this.onSelectChange(selectedOption, this.props.onChange)
+              }
               options={this.props.options}
               placeholder="Search..."
               styles={{
