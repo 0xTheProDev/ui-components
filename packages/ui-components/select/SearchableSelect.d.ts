@@ -9,7 +9,7 @@ declare class SearchableSelect extends Component<any> {
         value: any;
     };
     toggleOpen(): void;
-    onSelectChange(value: any): void;
+    onSelectChange(value: any, callback?: (value: any) => void): void;
     render(): JSX.Element;
 }
 export default SearchableSelect;

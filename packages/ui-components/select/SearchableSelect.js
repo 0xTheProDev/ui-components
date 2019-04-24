@@ -1,6 +1,7 @@
 import cn from 'classnames';
 import React, { Component } from 'react';
 import ReactSelect from 'react-select';
+import { noop } from 'react-select/lib/utils';
 import Icon from '../icon';
 import { DropdownIndicator, DropdownIndicatorStylesOverride, SelectStyles, } from './index';
 import Styles from './select.module.scss';
@@ -17,10 +18,10 @@ class SearchableSelect extends Component {
             isOpen: !state.isOpen,
         }));
     }
-    onSelectChange(value) {
+    onSelectChange(value, callback = noop) {
         this.toggleOpen();
         this.setState({ value });
-        this.props.onChange(value);
+        callback(value);
     }
     render() {
         // Override dropdownIndicator styling when tooltip is present
@@ -37,7 +38,7 @@ class SearchableSelect extends Component {
                 React.createElement(ReactSelect, Object.assign({}, this.props, { autoFocus: true, backspaceRemovesValue: false, components: {
                         DropdownIndicator: SearchIcon,
                         IndicatorSeparator: null,
-                    }, controlShouldRenderValue: false, hideSelectedOptions: false, isClearable: false, menuIsOpen: true, onChange: (event) => this.onSelectChange(event), options: this.props.options, placeholder: "Search...", styles: Object.assign({}, SelectStyles, this.props.styles, dropdownIndicatorStylesOverride), classNamePrefix: "search", tabSelectsValue: false })))),
+                    }, controlShouldRenderValue: false, hideSelectedOptions: false, isClearable: false, menuIsOpen: true, onChange: (selectedOption) => this.onSelectChange(selectedOption, this.props.onChange), options: this.props.options, placeholder: "Search...", styles: Object.assign({}, SelectStyles, this.props.styles, dropdownIndicatorStylesOverride), classNamePrefix: "search", tabSelectsValue: false })))),
             isOpen && React.createElement(Blanket, { onClick: () => this.toggleOpen() })));
     }
 }
