@@ -89,7 +89,7 @@
 
 // labels and statuses
 @mixin label($color) {
-  color: $color;
+  color: $slate;
 
   &::before {
     background-color: $color;
