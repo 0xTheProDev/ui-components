@@ -11396,6 +11396,12 @@ Array [
   </span>,
   <br />,
   <span
+    className="label label-triggered"
+  >
+    Triggered
+  </span>,
+  <br />,
+  <span
     className="label label-live"
   >
     Live

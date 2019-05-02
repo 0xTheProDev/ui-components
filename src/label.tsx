@@ -8,6 +8,7 @@ export interface LabelProps {
   type:
     | 'sent'
     | 'delivered'
+    | 'triggered'
     | 'live'
     | 'success'
     | 'scheduled'

@@ -11,6 +11,8 @@ stories.add('Labels', () => (
     <br />
     <Label text="Delivered" type="delivered" />
     <br />
+    <Label text="Triggered" type="triggered" />
+    <br />
     <Label text="Live" type="live" />
     <br />
     <Label text="Success" type="success" />

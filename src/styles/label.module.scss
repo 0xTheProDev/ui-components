@@ -21,7 +21,8 @@
   }
 
   &-sent,
-  &-delivered {
+  &-delivered,
+  &-triggered {
     @include label($mantis);
   }
 
