@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { get } from 'lodash';
+import { get, noop } from 'lodash';
 import React, { Component } from 'react';
 import ReactSelect from 'react-select';
 import Icon from '../icon';
@@ -25,6 +25,15 @@ class SearchableSelect extends Component {
             isOpen: !state.isOpen,
         }));
     }
+    onSelectChange(selectedOption) {
+        const onChange = get(this.props, 'onChange', noop);
+        const value = get(this.props, 'value.value', '');
+        onChange(selectedOption);
+        // Force the modal to close when selected value was clicked
+        if (selectedOption.value === value) {
+            this.toggleOpen();
+        }
+    }
     render() {
         // Override dropdownIndicator styling when tooltip is present
         let dropdownIndicatorStylesOverride;
@@ -40,7 +49,7 @@ class SearchableSelect extends Component {
                 React.createElement(ReactSelect, Object.assign({}, this.props, { autoFocus: true, backspaceRemovesValue: false, components: {
                         DropdownIndicator: SearchIcon,
                         IndicatorSeparator: null,
-                    }, controlShouldRenderValue: false, hideSelectedOptions: false, isClearable: false, menuIsOpen: true, onChange: this.props.onChange, options: this.props.options, placeholder: "Search...", styles: Object.assign({}, SelectStyles, this.props.styles, dropdownIndicatorStylesOverride), classNamePrefix: "search", tabSelectsValue: false })))),
+                    }, controlShouldRenderValue: false, hideSelectedOptions: false, isClearable: false, menuIsOpen: true, onChange: (value) => this.onSelectChange(value), options: this.props.options, placeholder: "Search...", styles: Object.assign({}, SelectStyles, this.props.styles, dropdownIndicatorStylesOverride), classNamePrefix: "search", tabSelectsValue: false })))),
             isOpen && React.createElement(Blanket, { onClick: () => this.toggleOpen() })));
     }
 }
