@@ -1,7 +1,7 @@
 import cn from 'classnames';
+import { get } from 'lodash';
 import React, { Component } from 'react';
 import ReactSelect from 'react-select';
-import { noop } from 'react-select/lib/utils';
 import Icon from '../icon';
 import { DropdownIndicator, DropdownIndicatorStylesOverride, SelectStyles, } from './index';
 import Styles from './select.module.scss';
@@ -10,18 +10,20 @@ class SearchableSelect extends Component {
         super(...arguments);
         this.state = {
             isOpen: false,
-            value: this.props.defaultValue || this.props.value || '',
         };
+    }
+    componentDidUpdate(prevProps) {
+        const prevValue = get(prevProps, 'value.value', '');
+        const currentValue = get(this.props, 'value.value', '');
+        // Close the dropdown if the selection was changed or new option was created
+        if (this.state.isOpen && prevValue !== currentValue) {
+            this.toggleOpen();
+        }
     }
     toggleOpen() {
         this.setState((state) => ({
             isOpen: !state.isOpen,
         }));
-    }
-    onSelectChange(value, callback = noop) {
-        this.toggleOpen();
-        this.setState({ value });
-        callback(value);
     }
     render() {
         // Override dropdownIndicator styling when tooltip is present
@@ -31,14 +33,14 @@ class SearchableSelect extends Component {
                 dropdownIndicator: DropdownIndicatorStylesOverride,
             };
         }
-        const { isOpen, value } = this.state;
+        const { isOpen } = this.state;
         return (React.createElement("div", { style: { position: 'relative' } },
-            React.createElement(ReactSelect, Object.assign({}, this.props, { value: value, components: this.props.components || { DropdownIndicator }, placeholder: this.props.placeholder, menuIsOpen: false, onMenuOpen: () => this.toggleOpen(), styles: Object.assign({}, SelectStyles, this.props.styles, dropdownIndicatorStylesOverride), isDisabled: this.props.disabled })),
+            React.createElement(ReactSelect, Object.assign({}, this.props, { components: this.props.components || { DropdownIndicator }, placeholder: this.props.placeholder, menuIsOpen: false, onMenuOpen: () => this.toggleOpen(), styles: Object.assign({}, SelectStyles, this.props.styles, dropdownIndicatorStylesOverride), isDisabled: this.props.disabled })),
             isOpen && (React.createElement("div", { className: cn('input-search-wrap', Styles['input-search-wrap']) },
                 React.createElement(ReactSelect, Object.assign({}, this.props, { autoFocus: true, backspaceRemovesValue: false, components: {
                         DropdownIndicator: SearchIcon,
                         IndicatorSeparator: null,
-                    }, controlShouldRenderValue: false, hideSelectedOptions: false, isClearable: false, menuIsOpen: true, onChange: (selectedOption) => this.onSelectChange(selectedOption, this.props.onChange), options: this.props.options, placeholder: "Search...", styles: Object.assign({}, SelectStyles, this.props.styles, dropdownIndicatorStylesOverride), classNamePrefix: "search", tabSelectsValue: false })))),
+                    }, controlShouldRenderValue: false, hideSelectedOptions: false, isClearable: false, menuIsOpen: true, onChange: this.props.onChange, options: this.props.options, placeholder: "Search...", styles: Object.assign({}, SelectStyles, this.props.styles, dropdownIndicatorStylesOverride), classNamePrefix: "search", tabSelectsValue: false })))),
             isOpen && React.createElement(Blanket, { onClick: () => this.toggleOpen() })));
     }
 }
