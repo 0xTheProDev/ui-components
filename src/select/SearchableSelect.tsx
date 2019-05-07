@@ -1,7 +1,7 @@
 import cn from 'classnames';
+import { get } from 'lodash';
 import React, { Component } from 'react';
 import ReactSelect from 'react-select';
-import { noop } from 'react-select/lib/utils';
 import Icon from '../icon';
 import {
   DropdownIndicator,
@@ -12,25 +12,26 @@ import Styles from './select.module.scss';
 
 export interface SearchableSelectState {
   isOpen: boolean;
-  value: string;
 }
 
 class SearchableSelect extends Component<any> {
   public state = {
     isOpen: false,
-    value: this.props.defaultValue || this.props.value || '',
   };
+
+  public componentDidUpdate(prevProps: any) {
+    const prevValue = get(prevProps, 'value.value', '');
+    const currentValue = get(this.props, 'value.value', '');
+    // Close the dropdown if the selection was changed or new option was created
+    if (this.state.isOpen && prevValue !== currentValue) {
+      this.toggleOpen();
+    }
+  }
 
   public toggleOpen() {
     this.setState((state: SearchableSelectState) => ({
       isOpen: !state.isOpen,
     }));
-  }
-
-  public onSelectChange(value: any, callback: (value: any) => void = noop) {
-    this.toggleOpen();
-    this.setState({ value });
-    callback(value);
   }
 
   public render() {
@@ -42,14 +43,13 @@ class SearchableSelect extends Component<any> {
       };
     }
 
-    const { isOpen, value } = this.state;
+    const { isOpen } = this.state;
 
     return (
       <div style={{ position: 'relative' }}>
         {
           <ReactSelect
             {...this.props}
-            value={value}
             components={this.props.components || { DropdownIndicator }}
             placeholder={this.props.placeholder}
             menuIsOpen={false}
@@ -76,9 +76,7 @@ class SearchableSelect extends Component<any> {
               hideSelectedOptions={false}
               isClearable={false}
               menuIsOpen
-              onChange={(selectedOption: any) =>
-                this.onSelectChange(selectedOption, this.props.onChange)
-              }
+              onChange={this.props.onChange}
               options={this.props.options}
               placeholder="Search..."
               styles={{
