@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { get } from 'lodash';
+import { get, noop } from 'lodash';
 import React, { Component } from 'react';
 import ReactSelect from 'react-select';
 import Icon from '../icon';
@@ -32,6 +32,18 @@ class SearchableSelect extends Component<any> {
     this.setState((state: SearchableSelectState) => ({
       isOpen: !state.isOpen,
     }));
+  }
+
+  public onSelectChange(selectedOption: any) {
+    const onChange = get(this.props, 'onChange', noop);
+    const value = get(this.props, 'value.value', '');
+
+    onChange(selectedOption);
+
+    // Force the modal to close when selected value was clicked
+    if (selectedOption.value === value) {
+      this.toggleOpen();
+    }
   }
 
   public render() {
@@ -76,7 +88,7 @@ class SearchableSelect extends Component<any> {
               hideSelectedOptions={false}
               isClearable={false}
               menuIsOpen
-              onChange={this.props.onChange}
+              onChange={(value: any) => this.onSelectChange(value)}
               options={this.props.options}
               placeholder="Search..."
               styles={{
