@@ -1,27 +1,21 @@
-@import '../styles/global/variables.scss';
+@import '~@sendgrid/design-primitives/tokens/design-components/scss/banner-message.scss';
 
 .banner-message {
   display: inline-block;
-  font-size: 13px;
-  padding: 9px 12px;
+  font-size: $banner-message-font-size;
+  padding: $banner-message-padding;
   text-align: left;
+  background-color: $banner-message-background-color;
+  border-left-width: $banner-message-border-width;
+  border-left-style: $banner-message-border-type;
+  border-left-color: $banner-message-border-color;
 
-  p {
-    max-width: none;
-    margin: 0;
+  &-beta {
+    background-color: $banner-message-beta-background-color;
+    border-left-color: $banner-message-beta-border-color;
   }
 
   a {
     text-decoration: underline;
-  }
-
-  &-beta {
-    background-color: rgba($screample, 0.05);
-    border-left: 2px solid $screample;
-  }
-
-  &-info {
-    background-color: rgba($sg-blue, 0.05);
-    border-left: 2px solid $sg-blue;
   }
 }
