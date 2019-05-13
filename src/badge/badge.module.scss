@@ -1,0 +1,125 @@
+@import '~@sendgrid/design-primitives/tokens/design-components/scss/global.scss';
+@import '~@sendgrid/design-primitives/tokens/design-components/scss/badge.scss';
+
+.badge {
+  display: inline-block;
+  padding: $badge-padding;
+  margin: $badge-margin;
+  font-size: $badge-font-size;
+  line-height: $badge-line-height;
+  letter-spacing: $badge-letter-spacing;
+  color: $color-white;
+  text-transform: uppercase;
+  vertical-align: middle;
+  background-color: $color-slate-40;
+  border-radius: $badge-border-radius;
+
+  &.is-right {
+    margin-left: $scale-down-02;
+  }
+
+  &.is-left {
+    margin-right: $scale-down-02;
+  }
+
+  &.is-sender {
+    width: 60px;
+    margin-right: $scale-down-02;
+    text-align: center;
+  }
+
+  &.badge-category {
+    margin-right: $scale-down-03;
+    color: $color-slate-60;
+    cursor: pointer;
+    background: $color-white;
+    border: 1px solid $color-slate-40;
+    transition: color 0.3s, background-color 0.3s;
+
+    &:hover,
+    &.is-hovered {
+      color: $color-white;
+      background-color: $color-slate-40;
+    }
+  }
+
+  &.sg-blue {
+    background-color: $color-blue;
+  }
+
+  &.slate {
+    background-color: $color-slate;
+  }
+
+  &.ron-burgundy {
+    background-color: $color-ron-burgundy;
+  }
+
+  &.burnt-orange {
+    background-color: $color-burnt-orange;
+  }
+
+  &.carrot {
+    background-color: $color-carrot;
+  }
+
+  &.mango {
+    background-color: $color-mango;
+  }
+
+  &.mantis {
+    background-color: $color-mantis;
+  }
+
+  &.spruce {
+    background-color: $color-spruce;
+  }
+
+  &.grass-stain {
+    background-color: $color-grass-stain;
+  }
+
+  &.lime {
+    background-color: $color-lime;
+  }
+
+  &.cobalt {
+    background-color: $color-cobalt;
+  }
+
+  &.bluebird {
+    background-color: $color-bluebird;
+  }
+
+  &.seafoam {
+    background-color: $color-seafoam;
+  }
+
+  &.caribbean {
+    background-color: $color-caribbean;
+  }
+
+  &.crown {
+    background-color: $color-crown;
+  }
+
+  &.screample {
+    background-color: $color-screample;
+  }
+
+  &.sangria {
+    background-color: $color-sangria;
+  }
+
+  &.lavender {
+    background-color: $color-lavender;
+  }
+
+  &.wild-strawberry {
+    background-color: $color-wild-strawberry;
+  }
+
+  &.steel {
+    background-color: $color-steel;
+  }
+}

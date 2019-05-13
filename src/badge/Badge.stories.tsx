@@ -2,9 +2,9 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import Badge from '../src/badge';
+import Badge from './index';
 
-import colors from '../src/utilities/colors';
+import colors from '../utilities/colors';
 
 const stories = storiesOf('Badge', module);
 
