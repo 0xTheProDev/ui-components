@@ -1,9 +1,15 @@
-import React from 'react';
+import { PointerEventsProperty, TextTransformProperty } from 'csstype';
+import React, { ReactNode } from 'react';
+import { Props as ReactAsyncSelectProps } from 'react-select/lib/Async';
 import { SelectComponents } from 'react-select/lib/components';
 import { IndicatorProps } from 'react-select/lib/components/indicators';
-import { CommonProps } from 'react-select/lib/types';
+import { Props as ReactCreateableProps } from 'react-select/lib/Creatable';
+import { Props as ReactSelectProps } from 'react-select/lib/Select';
+import { CommonProps, GroupedOptionsType, OptionsType } from 'react-select/lib/types';
+import { Omit } from '../types/utils';
 export declare const DropdownIndicatorStylesOverride: (base: object) => {
-    pointerEvents: string;
+    padding: number;
+    pointerEvents: PointerEventsProperty;
 };
 export declare const baseOptionStyles: (base: object, state: any) => {
     ':active': {};
@@ -68,7 +74,7 @@ export declare const SelectStyles: {
         };
     };
     container: (base: object) => {
-        pointerEvents: string;
+        pointerEvents: PointerEventsProperty;
     };
     control: (base: object, state: any) => {
         color: any;
@@ -308,7 +314,7 @@ export declare const SelectStyles: {
         fontWeight: number;
         marginBottom: number;
         padding: string;
-        textTransform: string;
+        textTransform: TextTransformProperty;
     };
     indicatorSeparator: () => {};
     menu: (base: object) => any;
@@ -424,10 +430,6 @@ export declare const SelectStyles: {
         marginLeft: number;
         marginRight: number;
     };
-    selectContainer: (base: object) => {
-        marginLeft: number;
-        marginRight: number;
-    };
     singleValue: (base: object) => {
         marginLeft: number;
         marginRight: number;
@@ -441,8 +443,23 @@ export declare const SelectStyles: {
     };
 };
 export declare const DropdownIndicator: React.SFC<CommonProps<any> & SelectComponents<any> & IndicatorProps<any>>;
-declare const Select: React.SFC<any>;
-declare const Createable: React.SFC<any>;
-declare const AsyncSelect: React.SFC<any>;
+export interface ReactNodeLabelOption {
+    label: ReactNode;
+    value: string;
+}
+export interface SelectProps extends Omit<ReactSelectProps, 'options'> {
+    options?: GroupedOptionsType<ReactNodeLabelOption> | OptionsType<ReactNodeLabelOption>;
+    disabled?: boolean;
+    error?: boolean;
+    info?: string;
+    label?: string;
+    required?: boolean;
+    tooltip?: ReactNode;
+    tooltipDirection?: string;
+    tooltipLength?: string;
+}
+declare const Select: React.SFC<ReactSelectProps<any> & SelectProps>;
+declare const Createable: React.SFC<ReactCreateableProps<any> & SelectProps>;
+declare const AsyncSelect: React.SFC<ReactAsyncSelectProps<any> & SelectProps>;
 export default Select;
 export { Select, Createable, AsyncSelect };

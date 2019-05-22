@@ -23,8 +23,33 @@ const powerups = [
     { label: 'Tanooki', value: 'tanooki' },
     { label: '1-up', value: '1up' },
 ];
+const meta = [
+    { label: 'One', value: 'one', number: 1 },
+    { label: 'Two', value: 'two', number: 2 },
+    { label: 'Three', value: 'three', number: 3 },
+];
+export class StatefulSelect extends React.Component {
+    constructor() {
+        super(...arguments);
+        this.state = {
+            value: meta[1],
+        };
+        this.handleChange = (value) => {
+            this.setState({ value });
+        };
+    }
+    render() {
+        return (React.createElement(React.Fragment, null,
+            React.createElement(Select, Object.assign({}, this.props, { onChange: this.handleChange })),
+            React.createElement("span", null,
+                "Meta: ",
+                this.state.value.number)));
+    }
+}
 stories.add('Standard', () => (React.createElement("div", { className: "input-select-wrap" },
     React.createElement(Select, { defaultValue: feels[1], name: "single", options: feels }))));
+stories.add('Standard with Option Metadata', () => (React.createElement("div", { className: "input-select-wrap" },
+    React.createElement(StatefulSelect, { defaultValue: meta[1], name: "single", options: meta }))));
 stories.add('Standard open', () => (React.createElement("div", { className: "input-select-wrap" },
     React.createElement(Select, { options: feels, placeholder: "Goobers", menuIsOpen: true }))));
 stories.add('With placeholder', () => (React.createElement("div", { className: "input-select-wrap" },

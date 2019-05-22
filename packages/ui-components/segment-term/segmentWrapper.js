@@ -15,13 +15,14 @@ export default class SegmentWrapper extends React.Component {
         };
         this.submit = (event) => {
             const target = event.target;
-            const role = target.getAttribute('role');
+            const className = target.getAttribute('class');
             const segmentTerm = this.self.current.querySelector('.segment-term') || this.self.current;
             const finishSubmit = () => {
                 this.setState({ editing: false });
                 document.removeEventListener('click', this.submit);
             };
-            if (!(segmentTerm.contains(target) || (role && role.includes('option')))) {
+            if (!(segmentTerm.contains(target) ||
+                (className && className.includes('__option')))) {
                 if (this.props.onSubmit) {
                     const isValid = this.props.onSubmit();
                     if (isValid) {

@@ -11,6 +11,7 @@ import React from 'react';
 import ReactSelect, { components } from 'react-select';
 import ReactAsyncSelect from 'react-select/lib/Async';
 import ReactCreateable from 'react-select/lib/Creatable';
+import { noop } from 'react-select/lib/utils';
 import Icon from '../icon';
 import mixins from '../styles/global/mixins.scss';
 import dropDownShadow from '../styles/global/mixins/dropdownShadow.scss';
@@ -60,7 +61,10 @@ const DropdownIndicatorStyles = (base) => {
     return Object.assign({}, base, dropdownIndicator);
 };
 // Override styling to make tooltip work even if select is disabled
-export const DropdownIndicatorStylesOverride = (base) => (Object.assign({}, base, { pointerEvents: 'initial' }));
+export const DropdownIndicatorStylesOverride = (base) => (Object.assign({}, base, {
+    padding: 0,
+    pointerEvents: 'initial',
+}));
 export const baseOptionStyles = (base, state) => {
     const focusedState = state.isFocused
         ? { backgroundColor: SassVars['slate-10'] }
@@ -164,12 +168,6 @@ export const SelectStyles = {
             marginRight: 0,
         });
     },
-    selectContainer: (base) => {
-        return Object.assign({}, base, {
-            marginLeft: 0,
-            marginRight: 0,
-        });
-    },
     singleValue: (base) => {
         return Object.assign({}, base, inputSelect, {
             marginLeft: 0,
@@ -260,7 +258,7 @@ const AsyncSelect = props => {
             'is-required': props.required,
         }) },
         props.label && (React.createElement("label", { className: cn('input-select-label', Styles['input-select-label']) }, props.label)),
-        React.createElement(ReactAsyncSelect, Object.assign({}, props, { components: props.components || {
+        React.createElement(ReactAsyncSelect, Object.assign({}, props, { loadOptions: props.loadOptions || noop, components: props.components || {
                 DropdownIndicator,
                 // Disabling default loading dots
                 LoadingIndicator: null,
