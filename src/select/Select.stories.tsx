@@ -18,7 +18,13 @@ const feels = [
   { label: 'Extraordinary', value: 'plvs_extra' },
 ];
 
-const powerups = [
+interface Powerup {
+  label: string;
+  value: string;
+  error?: boolean;
+}
+
+const powerups: Array<Powerup> = [
   { label: 'Mushroom', value: 'mushroom' },
   { label: 'Fire flower', value: 'fire-flower' },
   { label: 'Star', value: 'star' },
@@ -28,9 +34,39 @@ const powerups = [
   { label: '1-up', value: '1up' },
 ];
 
+const meta = [
+  { label: 'One', value: 'one', number: 1 },
+  { label: 'Two', value: 'two', number: 2 },
+  { label: 'Three', value: 'three', number: 3 },
+];
+export class StatefulSelect extends React.Component<SelectProps<any>> {
+  public readonly state = {
+    value: meta[1],
+  };
+
+  public render() {
+    return (
+      <>
+        <Select {...this.props} onChange={this.handleChange} />
+        <span>Meta: {this.state.value.number}</span>
+      </>
+    );
+  }
+
+  private handleChange = (value: { label: string; value: string }) => {
+    this.setState({ value });
+  };
+}
+
 stories.add('Standard', () => (
   <div className="input-select-wrap">
     <Select defaultValue={feels[1]} name="single" options={feels} />
+  </div>
+));
+
+stories.add('Standard with Option Metadata', () => (
+  <div className="input-select-wrap">
+    <StatefulSelect defaultValue={meta[1]} name="single" options={meta} />
   </div>
 ));
 

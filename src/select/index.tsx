@@ -1,15 +1,27 @@
-import React from 'react';
+import { PointerEventsProperty, TextTransformProperty } from 'csstype';
+import React, { ReactNode } from 'react';
 import ReactSelect, { components } from 'react-select';
-import ReactAsyncSelect from 'react-select/lib/Async';
+import ReactAsyncSelect, {
+  Props as ReactAsyncSelectProps,
+} from 'react-select/lib/Async';
 import { SelectComponents } from 'react-select/lib/components';
 import { IndicatorProps } from 'react-select/lib/components/indicators';
-import ReactCreateable from 'react-select/lib/Creatable';
-import { CommonProps } from 'react-select/lib/types';
+import ReactCreateable, {
+  Props as ReactCreateableProps,
+} from 'react-select/lib/Creatable';
+import { Props as ReactSelectProps } from 'react-select/lib/Select';
+import {
+  CommonProps,
+  GroupedOptionsType,
+  OptionsType,
+} from 'react-select/lib/types';
+import { noop } from 'react-select/lib/utils';
 import Icon from '../icon';
 import mixins from '../styles/global/mixins.scss';
 import dropDownShadow from '../styles/global/mixins/dropdownShadow.scss';
 import SassVars from '../styles/global/variables.scss';
 import Tooltip from '../tooltip';
+import { Omit } from '../types/utils';
 import cn from '../utilities/classnames';
 import SearchableSelect from './SearchableSelect';
 import Styles from './select.module.scss';
@@ -73,7 +85,10 @@ const DropdownIndicatorStyles = (base: object) => {
 // Override styling to make tooltip work even if select is disabled
 export const DropdownIndicatorStylesOverride = (base: object) => ({
   ...base,
-  ...{ pointerEvents: 'initial' },
+  ...{
+    padding: 0,
+    pointerEvents: 'initial' as PointerEventsProperty,
+  },
 });
 
 export const baseOptionStyles = (base: object, state: any) => {
@@ -121,7 +136,10 @@ export const SelectStyles = {
     };
   },
   container: (base: object) => {
-    return { ...base, ...{ pointerEvents: 'initial' } };
+    return {
+      ...base,
+      ...{ pointerEvents: 'initial' as PointerEventsProperty },
+    };
   },
   control: (base: object, state: any) => {
     const control = {
@@ -180,7 +198,7 @@ export const SelectStyles = {
       fontWeight: 600,
       marginBottom: 0,
       padding: '9px 30px',
-      textTransform: 'capitalize',
+      textTransform: 'capitalize' as TextTransformProperty,
     };
     return { ...base, ...groupStyle };
   },
@@ -242,15 +260,6 @@ export const SelectStyles = {
       },
     };
   },
-  selectContainer: (base: object) => {
-    return {
-      ...base,
-      ...{
-        marginLeft: 0,
-        marginRight: 0,
-      },
-    };
-  },
   singleValue: (base: object) => {
     return {
       ...base,
@@ -291,7 +300,26 @@ export const DropdownIndicator: React.SFC<
   );
 };
 
-const Select: React.SFC<any> = props => {
+export interface ReactNodeLabelOption {
+  label: ReactNode;
+  value: string;
+}
+
+export interface SelectProps extends Omit<ReactSelectProps, 'options'> {
+  options?:
+    | GroupedOptionsType<ReactNodeLabelOption>
+    | OptionsType<ReactNodeLabelOption>;
+  disabled?: boolean;
+  error?: boolean;
+  info?: string;
+  label?: string;
+  required?: boolean;
+  tooltip?: ReactNode;
+  tooltipDirection?: string;
+  tooltipLength?: string;
+}
+
+const Select: React.SFC<ReactSelectProps<any> & SelectProps> = props => {
   const { id, ...restProps } = props;
 
   // Override dropdownIndicator styling when tooltip is present
@@ -352,7 +380,9 @@ const Select: React.SFC<any> = props => {
   );
 };
 
-const Createable: React.SFC<any> = props => {
+const Createable: React.SFC<
+  ReactCreateableProps<any> & SelectProps
+> = props => {
   // Override dropdownIndicator styling when tooltip is present
   let dropdownIndicatorStylesOverride;
   if (props.tooltip) {
@@ -409,7 +439,9 @@ const Createable: React.SFC<any> = props => {
 // Async Select has a lot of the same props as the original Select
 // The notable different props include the following:
 // defaultOptions, loadOptions, cacheOptions, and onInputChange
-const AsyncSelect: React.SFC<any> = props => {
+const AsyncSelect: React.SFC<
+  ReactAsyncSelectProps<any> & SelectProps
+> = props => {
   // Override dropdownIndicator styling when tooltip is present
   let dropdownIndicatorStylesOverride;
   if (props.tooltip) {
@@ -438,6 +470,7 @@ const AsyncSelect: React.SFC<any> = props => {
       )}
       <ReactAsyncSelect
         {...props}
+        loadOptions={props.loadOptions || noop}
         components={
           props.components || {
             DropdownIndicator,
