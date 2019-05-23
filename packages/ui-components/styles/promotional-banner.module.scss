@@ -1,0 +1,43 @@
+@import './global/variables.scss';
+@import './global/mixins';
+
+.banner {
+  display: flex;
+  background: linear-gradient(45deg, $sg-blue, #b094ff);
+  padding: 20px;
+  min-width: 900px;
+
+  h1,
+  p,
+  a,
+  i {
+    color: white;
+  }
+
+  i {
+    cursor: pointer;
+    align-self: flex-start;
+    margin: 0 0 0 auto;
+    font-weight: bold;
+  }
+}
+
+.image-wrap {
+  min-width: 320px;
+}
+
+.main-content {
+  padding: 20px 0 15px 70px;
+  margin-right: 115px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.actions {
+  margin: 0 0 0 auto;
+}
+
+.learn-more {
+  margin-right: 45px;
+}
