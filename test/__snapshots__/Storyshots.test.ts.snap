@@ -12893,6 +12893,60 @@ exports[`Storyshots Progress Vertical Progress 1`] = `
 </section>
 `;
 
+exports[`Storyshots PromotionalBanner Ads 1`] = `
+<div
+  className="banner promotional-banner-wrap"
+>
+  <div
+    className="image-wrap"
+  >
+    <img
+      src="mock-test-stub"
+    />
+  </div>
+  <div
+    className="main-content"
+  >
+    <div>
+      <h1>
+        Create an Ad Campaign.
+      </h1>
+      <p>
+        Engage new and existing customers on Facebook and Instagram using data from your email.
+      </p>
+    </div>
+    <div
+      className="actions promotional-banner-actions"
+    >
+      <span
+        className="learn-more"
+      >
+        <a
+          href="https://coinmarketcap.com/currencies/chainlink/"
+          target="_blank"
+        >
+          Learn More
+        </a>
+      </span>
+      <button
+        className="btn btn-secondary btn-small"
+        disabled={false}
+        id={undefined}
+        onClick={[Function]}
+        type="button"
+      >
+        Create Ad Campaign
+      </button>
+    </div>
+  </div>
+  <i
+    className="sg-icon sg-icon-x"
+    onClick={[Function]}
+    style={null}
+  />
+</div>
+`;
+
 exports[`Storyshots Radio Checked Radio 1`] = `
 <div
   className="input-radio-wrap"

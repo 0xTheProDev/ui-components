@@ -85,6 +85,8 @@ module.exports = ({ config, mode }) => {
   config.resolve.extensions.push('.jsx');
   config.resolve.extensions.push('.css');
   config.resolve.extensions.push('.scss');
+  config.resolve.extensions.push('.svg');
+  config.resolve.extensions.push('.png');
 
   config.plugins = config.plugins.filter(
     plugin => plugin.constructor.name !== 'UglifyJsPlugin'
