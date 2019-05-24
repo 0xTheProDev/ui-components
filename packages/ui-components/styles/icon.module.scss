@@ -25,6 +25,18 @@
   }
 }
 
+.sg-icon-ab-testing {
+  &::before {
+    content: $icon-ab-testing;
+  }
+}
+
+.sg-icon-ad-campaign {
+  &::before {
+    content: $icon-ad-campaign;
+  }
+}
+
 .sg-icon-airplane {
   &::before {
     content: $icon-airplane;
@@ -67,6 +79,12 @@
   }
 }
 
+.sg-icon-briefcase {
+  &::before {
+    content: $icon-briefcase;
+  }
+}
+
 .sg-icon-builder {
   &::before {
     content: $icon-builder;
@@ -88,6 +106,12 @@
 .sg-icon-caret {
   &::before {
     content: $icon-caret;
+  }
+}
+
+.sg-icon-chat {
+  &::before {
+    content: $icon-chat;
   }
 }
 
@@ -175,6 +199,12 @@
   }
 }
 
+.sg-icon-connection {
+  &::before {
+    content: $icon-connection;
+  }
+}
+
 .sg-icon-contacts {
   &::before {
     content: $icon-contacts;
@@ -230,6 +260,12 @@
   }
 }
 
+.sg-icon-dual-flags {
+  &::before {
+    content: $icon-dual-flags;
+  }
+}
+
 .sg-icon-editor-code {
   &::before {
     content: $icon-editor-code;
@@ -275,6 +311,12 @@
 .sg-icon-forms {
   &::before {
     content: $icon-forms;
+  }
+}
+
+.sg-icon-frequency-optimization {
+  &::before {
+    content: $icon-frequency-optimization;
   }
 }
 
@@ -398,6 +440,18 @@
   }
 }
 
+.sg-icon-push-notifications {
+  &::before {
+    content: $icon-push-notifications;
+  }
+}
+
+.sg-icon-recipient-cpm {
+  &::before {
+    content: $icon-recipient-cpm;
+  }
+}
+
 .sg-icon-reload {
   &::before {
     content: $icon-reload;
@@ -419,6 +473,24 @@
 .sg-icon-segment {
   &::before {
     content: $icon-segment;
+  }
+}
+
+.sg-icon-send-optimization {
+  &::before {
+    content: $icon-send-optimization;
+  }
+}
+
+.sg-icon-sequence-optimization {
+  &::before {
+    content: $icon-sequence-optimization;
+  }
+}
+
+.sg-icon-settings {
+  &::before {
+    content: $icon-settings;
   }
 }
 
