@@ -42,7 +42,7 @@ Progress.defaultProps = {
 export interface ProgressStageProps {
   done?: boolean;
   selected?: boolean;
-  children: string;
+  children: React.ReactNode;
   className?: string;
 }
 
