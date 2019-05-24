@@ -8,7 +8,7 @@ export declare const Progress: React.SFC<ProgressProps>;
 export interface ProgressStageProps {
     done?: boolean;
     selected?: boolean;
-    children: string;
+    children: React.ReactNode;
     className?: string;
 }
 export declare const ProgressStage: React.SFC<ProgressStageProps>;
