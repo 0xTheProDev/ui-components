@@ -1,15 +1,14 @@
-@import './global/variables.scss';
-@import './global/mixins';
+@import '~@sendgrid/design-primitives/tokens/design-components/scss/global.scss';
 
 .banner {
   display: flex;
-  background: linear-gradient(45deg, $sg-blue, #b094ff);
+  background: linear-gradient(45deg, $color-blue, #b094ff 65%);
   padding: 20px;
   min-width: 900px;
 
   h1,
   p,
-  a,
+  a:not(.btn),
   i {
     color: white;
   }

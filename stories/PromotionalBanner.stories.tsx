@@ -14,7 +14,7 @@ stories.add('Ads', () => (
     description="Engage new and existing customers on Facebook and Instagram using data from your email."
     title="Create an Ad Campaign."
     learnMore={(
-      <a href="https://coinmarketcap.com/currencies/chainlink/" target="_blank">Learn More</a>
+      <a href="https://sendgrid.com" target="_blank">Learn More</a>
     )}
     actions={(
       <Button type="secondary" small>Create Ad Campaign</Button>
