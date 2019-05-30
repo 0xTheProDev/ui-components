@@ -31,17 +31,19 @@ export const PromotionalBanner: FC<PromotionalBannerProps> = ({
         'promotional-banner-wrap'
       )}
     >
-      <div className={cn(Styles['image-wrap'], 'image-wrap')}>{image}</div>
-      <div className={Styles['main-content']}>
-        <div>
-          <h1>{title}</h1>
-          <p>{description}</p>
-        </div>
-        <div className={cn(Styles.actions, 'promotional-banner-actions')}>
-          {learnMore && (
-            <span className={Styles['learn-more']}>{learnMore}</span>
-          )}
-          {actions}
+      <div className={Styles['centered-content']}>
+        <div className={cn(Styles['image-wrap'], 'image-wrap')}>{image}</div>
+        <div className={Styles['main-content']}>
+          <div>
+            <h1>{title}</h1>
+            <p>{description}</p>
+          </div>
+          <div className={cn(Styles.actions, 'promotional-banner-actions')}>
+            {learnMore && (
+              <span className={Styles['learn-more']}>{learnMore}</span>
+            )}
+            {actions}
+          </div>
         </div>
       </div>
       {onClickX && <Icon type="x" onClick={onClickX} />}
