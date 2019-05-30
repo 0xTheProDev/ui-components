@@ -1,6 +1,7 @@
 @import '~@sendgrid/design-primitives/tokens/design-components/scss/global.scss';
 
 .banner {
+  position: relative;
   display: flex;
   background: linear-gradient(45deg, $color-blue, #b094ff 65%);
   padding: 20px;
@@ -13,20 +14,28 @@
   }
 
   i {
+    position: absolute;
+    top: 20px;
+    right: 20px;
     cursor: pointer;
-    align-self: flex-start;
-    margin: 0 0 0 auto;
     font-weight: bold;
   }
 }
 
 .image-wrap {
+  position: relative;
   min-width: 320px;
+
+  img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
 }
 
 .main-content {
-  padding: 20px 0 15px 70px;
-  margin-right: 115px;
+  padding: 20px 20px 15px 70px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -42,4 +51,9 @@
   a {
     color: white;
   }
+}
+
+.centered-content {
+  display: inline-flex;
+  margin: auto;
 }
