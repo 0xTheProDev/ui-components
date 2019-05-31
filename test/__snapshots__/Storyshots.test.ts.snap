@@ -13673,7 +13673,7 @@ exports[`Storyshots Segment Term Segment term which is being edited 1`] = `
                     autoCorrect="off"
                     className={undefined}
                     disabled={false}
-                    id="react-select-39-input"
+                    id="react-select-38-input"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
@@ -13795,7 +13795,7 @@ exports[`Storyshots Segment Term Segment term which is being edited 1`] = `
                     autoCorrect="off"
                     className={undefined}
                     disabled={false}
-                    id="react-select-40-input"
+                    id="react-select-39-input"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
@@ -13968,7 +13968,7 @@ exports[`Storyshots Segment Term Segment term which is being edited and is fille
                     autoCorrect="off"
                     className={undefined}
                     disabled={false}
-                    id="react-select-41-input"
+                    id="react-select-40-input"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
@@ -14090,7 +14090,7 @@ exports[`Storyshots Segment Term Segment term which is being edited and is fille
                     autoCorrect="off"
                     className={undefined}
                     disabled={false}
-                    id="react-select-42-input"
+                    id="react-select-41-input"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
@@ -14206,7 +14206,7 @@ exports[`Storyshots Segment Term Segment term which is being edited and is fille
                     autoCorrect="off"
                     className={undefined}
                     disabled={false}
-                    id="react-select-43-input"
+                    id="react-select-42-input"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
@@ -14325,7 +14325,7 @@ exports[`Storyshots Segment Term Segment term with alert 1`] = `
     Entry Criteria
   </p>
   <div
-    className="segment-term has-alert has-separator"
+    className="segment-term has-alert"
     onClick={[Function]}
   >
     <p>
@@ -14455,11 +14455,6 @@ exports[`Storyshots Segment Term Segment terms 1`] = `
     <div
       className="segment-term-wrap"
     >
-      <p
-        className="segment-term-title"
-      >
-        Entry Criteria
-      </p>
       <div
         className="segment-term has-separator"
         onClick={[Function]}
@@ -14481,19 +14476,41 @@ exports[`Storyshots Segment Term Segment terms 1`] = `
           }
         />
       </div>
+      <div
+        className="segment-term-switch"
+      >
+        <div
+          className="btn-group"
+          style={undefined}
+        >
+          <button
+            className="btn btn-group-item btn-small is-active"
+            disabled={false}
+            id={undefined}
+            onClick={[Function]}
+            type="button"
+          >
+            AND
+          </button>
+          <button
+            className="btn btn-group-item btn-small"
+            disabled={false}
+            id={undefined}
+            onClick={[Function]}
+            type="button"
+          >
+            OR
+          </button>
+        </div>
+      </div>
     </div>
   </div>
   <div>
     <div
       className="segment-term-wrap"
     >
-      <p
-        className="segment-term-title"
-      >
-        Or
-      </p>
       <div
-        className="segment-term"
+        className="segment-term has-separator"
         onClick={[Function]}
       >
         <p>
@@ -14513,260 +14530,155 @@ exports[`Storyshots Segment Term Segment terms 1`] = `
           }
         />
       </div>
+      <div
+        className="segment-term-switch"
+      >
+        <div
+          className="btn-group"
+          style={undefined}
+        >
+          <button
+            className="btn btn-group-item btn-small is-active"
+            disabled={false}
+            id={undefined}
+            onClick={[Function]}
+            type="button"
+          >
+            AND
+          </button>
+          <button
+            className="btn btn-group-item btn-small"
+            disabled={false}
+            id={undefined}
+            onClick={[Function]}
+            type="button"
+          >
+            OR
+          </button>
+        </div>
+      </div>
     </div>
   </div>
   <div>
     <div
       className="segment-term-wrap"
     >
-      <p
-        className="segment-term-title"
-      >
-        Entry Criteria
-      </p>
       <div
         className="segment-term has-separator is-editable"
         onClick={undefined}
       >
         <div
           className="input-select-wrap"
+          id="select-a"
         >
           <label
             className="input-select-label"
-            htmlFor="select-a"
           >
-            Select send conditions
+            Date Added
           </label>
           <div
-            className="input-select-wrap"
-            id="select-a"
+            className="css-1agvba9-container"
+            id={undefined}
+            onKeyDown={[Function]}
           >
             <div
-              className="css-1agvba9-container"
-              id={undefined}
-              onKeyDown={[Function]}
+              className="css-12aanbu-control"
+              onMouseDown={[Function]}
+              onTouchEnd={[Function]}
             >
               <div
-                className="css-12aanbu-control"
-                onMouseDown={[Function]}
-                onTouchEnd={[Function]}
+                className="css-1m8oe7c"
               >
                 <div
-                  className="css-1m8oe7c"
+                  className="css-1o8h323-singleValue"
+                >
+                  The first time a contact
+                </div>
+                <div
+                  className="css-1g6gooi"
                 >
                   <div
-                    className="css-1o8h323-singleValue"
+                    className=""
+                    style={
+                      Object {
+                        "display": "inline-block",
+                      }
+                    }
                   >
-                    The first time a contact
-                  </div>
-                  <div
-                    className="css-1g6gooi"
-                  >
-                    <div
-                      className=""
+                    <input
+                      aria-autocomplete="list"
+                      aria-label={undefined}
+                      aria-labelledby={undefined}
+                      autoCapitalize="none"
+                      autoComplete="off"
+                      autoCorrect="off"
+                      className={undefined}
+                      disabled={false}
+                      id="react-select-37-input"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      spellCheck="false"
                       style={
                         Object {
-                          "display": "inline-block",
+                          "background": 0,
+                          "border": 0,
+                          "boxSizing": "content-box",
+                          "color": "inherit",
+                          "fontSize": "inherit",
+                          "label": "input",
+                          "opacity": 1,
+                          "outline": 0,
+                          "padding": 0,
+                          "width": "1px",
+                        }
+                      }
+                      tabIndex="0"
+                      type="text"
+                      value=""
+                    />
+                    <div
+                      style={
+                        Object {
+                          "height": 0,
+                          "left": 0,
+                          "overflow": "scroll",
+                          "position": "absolute",
+                          "top": 0,
+                          "visibility": "hidden",
+                          "whiteSpace": "pre",
                         }
                       }
                     >
-                      <input
-                        aria-autocomplete="list"
-                        aria-label={undefined}
-                        aria-labelledby={undefined}
-                        autoCapitalize="none"
-                        autoComplete="off"
-                        autoCorrect="off"
-                        className={undefined}
-                        disabled={false}
-                        id="react-select-37-input"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onFocus={[Function]}
-                        spellCheck="false"
-                        style={
-                          Object {
-                            "background": 0,
-                            "border": 0,
-                            "boxSizing": "content-box",
-                            "color": "inherit",
-                            "fontSize": "inherit",
-                            "label": "input",
-                            "opacity": 1,
-                            "outline": 0,
-                            "padding": 0,
-                            "width": "1px",
-                          }
-                        }
-                        tabIndex="0"
-                        type="text"
-                        value=""
-                      />
-                      <div
-                        style={
-                          Object {
-                            "height": 0,
-                            "left": 0,
-                            "overflow": "scroll",
-                            "position": "absolute",
-                            "top": 0,
-                            "visibility": "hidden",
-                            "whiteSpace": "pre",
-                          }
-                        }
-                      >
-                        
-                      </div>
+                      
                     </div>
-                  </div>
-                </div>
-                <div
-                  className="css-1wy0on6"
-                >
-                  <span
-                    className="css-0"
-                  />
-                  <div
-                    aria-hidden="true"
-                    className="css-1xhjog1-indicatorContainer"
-                    onMouseDown={[Function]}
-                    onTouchEnd={[Function]}
-                  >
-                    <svg
-                      aria-hidden="true"
-                      className="css-19bqh2r"
-                      focusable="false"
-                      height={20}
-                      viewBox="0 0 20 20"
-                      width={20}
-                    >
-                      <path
-                        d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
-                      />
-                    </svg>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <div
-          className="input-select-wrap"
-        >
-          <label
-            className="input-select-label"
-            htmlFor="select-b"
-          >
-            Select contact criteria
-          </label>
-          <div
-            className="input-select-wrap"
-            id="select-b"
-          >
-            <div
-              className="css-1agvba9-container"
-              id={undefined}
-              onKeyDown={[Function]}
-            >
               <div
-                className="css-12aanbu-control"
-                onMouseDown={[Function]}
-                onTouchEnd={[Function]}
+                className="css-1wy0on6"
               >
+                <span
+                  className="css-0"
+                />
                 <div
-                  className="css-1m8oe7c"
+                  aria-hidden="true"
+                  className="css-1xhjog1-indicatorContainer"
+                  onMouseDown={[Function]}
+                  onTouchEnd={[Function]}
                 >
-                  <div
-                    className="css-1o8h323-singleValue"
-                  >
-                    Abandons a cart
-                  </div>
-                  <div
-                    className="css-1g6gooi"
-                  >
-                    <div
-                      className=""
-                      style={
-                        Object {
-                          "display": "inline-block",
-                        }
-                      }
-                    >
-                      <input
-                        aria-autocomplete="list"
-                        aria-label={undefined}
-                        aria-labelledby={undefined}
-                        autoCapitalize="none"
-                        autoComplete="off"
-                        autoCorrect="off"
-                        className={undefined}
-                        disabled={false}
-                        id="react-select-38-input"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        onFocus={[Function]}
-                        spellCheck="false"
-                        style={
-                          Object {
-                            "background": 0,
-                            "border": 0,
-                            "boxSizing": "content-box",
-                            "color": "inherit",
-                            "fontSize": "inherit",
-                            "label": "input",
-                            "opacity": 1,
-                            "outline": 0,
-                            "padding": 0,
-                            "width": "1px",
-                          }
-                        }
-                        tabIndex="0"
-                        type="text"
-                        value=""
-                      />
-                      <div
-                        style={
-                          Object {
-                            "height": 0,
-                            "left": 0,
-                            "overflow": "scroll",
-                            "position": "absolute",
-                            "top": 0,
-                            "visibility": "hidden",
-                            "whiteSpace": "pre",
-                          }
-                        }
-                      >
-                        
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="css-1wy0on6"
-                >
-                  <span
-                    className="css-0"
-                  />
-                  <div
+                  <svg
                     aria-hidden="true"
-                    className="css-1xhjog1-indicatorContainer"
-                    onMouseDown={[Function]}
-                    onTouchEnd={[Function]}
+                    className="css-19bqh2r"
+                    focusable="false"
+                    height={20}
+                    viewBox="0 0 20 20"
+                    width={20}
                   >
-                    <svg
-                      aria-hidden="true"
-                      className="css-19bqh2r"
-                      focusable="false"
-                      height={20}
-                      viewBox="0 0 20 20"
-                      width={20}
-                    >
-                      <path
-                        d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
-                      />
-                    </svg>
-                  </div>
+                    <path
+                      d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                    />
+                  </svg>
                 </div>
               </div>
             </div>

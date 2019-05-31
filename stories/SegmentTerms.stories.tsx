@@ -20,12 +20,12 @@ stories.add('Segment terms', () => (
     <SegmentWrapper>
       {(editing: boolean, editClick: () => void) => (
         <SegmentTerm
-          title="Entry Criteria"
-          hasSeparator
           label="The first time a contact is added to"
           queryName="People in Los Angeles"
           editable
           editing={editing}
+          hasSeparator
+          hasQueryToggle
           onEdit={editClick}
           onDelete={editClick}
           renderInputs={() => (
@@ -37,7 +37,10 @@ stories.add('Segment terms', () => (
                 <Select
                   id="select-a"
                   options={[{ label: 'The first time a contact', value: '1' }]}
-                  defaultValue={{ label: 'The first time a contact', value: '1' }}
+                  defaultValue={{
+                    label: 'The first time a contact',
+                    value: '1',
+                  }}
                 />
               </div>
               <div className="input-select-wrap">
@@ -63,11 +66,12 @@ stories.add('Segment terms', () => (
     >
       {(editing: boolean, editClick: () => void) => (
         <SegmentTerm
-          title="Or"
           label="Every time a contact is added to"
           queryName="People in Denver"
           editable
           editing={editing}
+          hasSeparator
+          hasQueryToggle
           onEdit={editClick}
           onDelete={editClick}
           renderInputs={() => (
@@ -79,7 +83,10 @@ stories.add('Segment terms', () => (
                 <Select
                   id="select-a"
                   options={[{ label: 'The first time a contact', value: '1' }]}
-                  defaultValue={{ label: 'The first time a contact', value: '1' }}
+                  defaultValue={{
+                    label: 'The first time a contact',
+                    value: '1',
+                  }}
                 />
               </div>
               <div className="input-select-wrap">
@@ -100,39 +107,23 @@ stories.add('Segment terms', () => (
     <SegmentWrapper editing={true}>
       {(editing: boolean, editClick: () => void) => (
         <SegmentTerm
-          title="Entry Criteria"
-          hasSeparator
-          label="The first time a contact is added to"
-          queryName="People in Los Angeles"
+          label="Date Added is within the last"
+          queryName="30 Days"
           editable
           editing={editing}
           hasAddButton
-          onAddButtonClick={onAddButtonClick}
+          hasSeparator
           onEdit={editClick}
           onDelete={editClick}
           renderInputs={() => (
-            <Fragment>
-              <div className="input-select-wrap">
-                <label className="input-select-label" htmlFor="select-a">
-                  Select send conditions
-                </label>
-                <Select
-                  id="select-a"
-                  options={[{ label: 'The first time a contact', value: '1' }]}
-                  defaultValue={{ label: 'The first time a contact', value: '1' }}
-                />
-              </div>
-              <div className="input-select-wrap">
-                <label className="input-select-label" htmlFor="select-b">
-                  Select contact criteria
-                </label>
-                <Select
-                  id="select-b"
-                  options={[{ label: 'Abandons a cart', value: '1' }]}
-                  defaultValue={{ label: 'Abandons a cart', value: '1' }}
-                />
-              </div>
-            </Fragment>
+            <>
+              <Select
+                id="select-a"
+                options={[{ label: 'The first time a contact', value: '1' }]}
+                defaultValue={{ label: 'The first time a contact', value: '1' }}
+                label="Date Added"
+              />
+            </>
           )}
         />
       )}
@@ -174,7 +165,10 @@ stories.add('Segment term which is being edited', () => (
           <label className="input-select-label" htmlFor="select-b">
             Select contact criteria
           </label>
-          <Select id="select-b" options={[{ label: 'Abandons a cart', value: '1' }]} />
+          <Select
+            id="select-b"
+            options={[{ label: 'Abandons a cart', value: '1' }]}
+          />
         </div>
       </Fragment>
     )}
@@ -208,7 +202,10 @@ stories.add('Segment term which is being edited and is filled out', () => (
           <label className="input-select-label" htmlFor="select-b">
             Select contact criteria
           </label>
-          <Select id="select-b" options={[{ label: 'Abandons a cart', value: '1' }]} />
+          <Select
+            id="select-b"
+            options={[{ label: 'Abandons a cart', value: '1' }]}
+          />
         </div>
         <div className="input-select-wrap">
           <Select
@@ -224,7 +221,6 @@ stories.add('Segment term which is being edited and is filled out', () => (
 stories.add('Segment term with alert', () => (
   <SegmentTerm
     title="Entry Criteria"
-    hasSeparator
     label="The first time a contact is added to"
     queryName="People in Los Angeles"
     editable

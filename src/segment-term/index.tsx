@@ -1,9 +1,10 @@
 import React, { PureComponent } from 'react';
-import { Button } from '../button';
+import Button from '../button';
 import { ButtonList } from '../button-list';
 import { Icon } from '../icon';
 import ScssVars from '../styles/global/variables.scss';
 import Styles from '../styles/segment-term.module.scss';
+import ToggleButtons from '../toggle-buttons';
 import cn from '../utilities/classnames';
 import SegmentWrapper from './segmentWrapper';
 
@@ -11,6 +12,7 @@ export interface SegmentTermProps {
   editable?: boolean;
   editing?: boolean;
   hasAddButton?: boolean;
+  hasQueryToggle?: boolean;
   hasSeparator?: boolean;
   label?: string;
   onAddButtonClick?: (e: any) => void;
@@ -22,7 +24,7 @@ export interface SegmentTermProps {
   renderAlert?: () => React.ReactNode;
   renderInputs?: () => React.ReactNode;
   showConfirm?: boolean;
-  title: string;
+  title?: string;
   className?: string;
 }
 
@@ -31,9 +33,11 @@ export class SegmentTerm extends PureComponent<SegmentTermProps> {
     editable: false,
     editing: false,
     hasAddButton: false,
+    hasQueryToggle: false,
     hasSeparator: false,
     radios: false,
   };
+  public state = { queryToggle: 'and' };
 
   public get termControls(): React.ReactNode {
     const {
@@ -75,6 +79,7 @@ export class SegmentTerm extends PureComponent<SegmentTermProps> {
   public render() {
     const {
       hasAddButton,
+      hasQueryToggle,
       hasSeparator,
       editable,
       editing,
@@ -93,18 +98,26 @@ export class SegmentTerm extends PureComponent<SegmentTermProps> {
       ...attributes
     } = this.props;
 
+    const queryToggleAnd = this.state.queryToggle === 'and';
+
     return (
       <div
         className={cn(
           'segment-term-wrap',
           Styles['segment-term-wrap'],
-          className
+          className,
+          {
+            'is-collapsed': !queryToggleAnd,
+            [Styles['is-collapsed']]: !queryToggleAnd,
+          }
         )}
         {...attributes}
       >
-        <p className={cn('segment-term-title', Styles['segment-term-title'])}>
-          {title}
-        </p>
+        {title && (
+          <p className={cn('segment-term-title', Styles['segment-term-title'])}>
+            {title}
+          </p>
+        )}
         <div
           className={cn('segment-term', Styles['segment-term'], {
             // Double class names to keep unhashed classes for styleguide
@@ -131,6 +144,30 @@ export class SegmentTerm extends PureComponent<SegmentTermProps> {
           {this.termControls}
           {renderAlert && renderAlert()}
         </div>
+        {hasQueryToggle && (
+          <div
+            className={cn('segment-term-switch', Styles['segment-term-switch'])}
+          >
+            <ToggleButtons
+              keys={['and', 'or']}
+              selectedKey={this.state.queryToggle}
+              onChange={(event: any, key: string) => {
+                this.setState({ queryToggle: key });
+              }}
+            >
+              {(and, or) => (
+                <>
+                  <Button {...and} small type="group-item">
+                    AND
+                  </Button>
+                  <Button {...or} small type="group-item">
+                    OR
+                  </Button>
+                </>
+              )}
+            </ToggleButtons>
+          </div>
+        )}
         {hasAddButton && (
           <ButtonList>
             <Button type="secondary" icon="plus" onClick={onAddButtonClick}>
