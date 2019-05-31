@@ -8,14 +8,19 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import React, { PureComponent } from 'react';
-import { Button } from '../button';
+import Button from '../button';
 import { ButtonList } from '../button-list';
 import { Icon } from '../icon';
 import ScssVars from '../styles/global/variables.scss';
 import Styles from '../styles/segment-term.module.scss';
+import ToggleButtons from '../toggle-buttons';
 import cn from '../utilities/classnames';
 import SegmentWrapper from './segmentWrapper';
 export class SegmentTerm extends PureComponent {
+    constructor() {
+        super(...arguments);
+        this.state = { queryToggle: 'and' };
+    }
     get termControls() {
         const _a = this.props, { editable, editing, onDelete, onConfirm, showConfirm } = _a, attributes = __rest(_a, ["editable", "editing", "onDelete", "onConfirm", "showConfirm"]);
         if (editing) {
@@ -28,9 +33,13 @@ export class SegmentTerm extends PureComponent {
         return null;
     }
     render() {
-        const _a = this.props, { hasAddButton, hasSeparator, editable, editing, label, onAddButtonClick, onEdit, queryName, radios, renderAlert, renderInputs, title, onDelete, onConfirm, showConfirm, className } = _a, attributes = __rest(_a, ["hasAddButton", "hasSeparator", "editable", "editing", "label", "onAddButtonClick", "onEdit", "queryName", "radios", "renderAlert", "renderInputs", "title", "onDelete", "onConfirm", "showConfirm", "className"]);
-        return (React.createElement("div", Object.assign({ className: cn('segment-term-wrap', Styles['segment-term-wrap'], className) }, attributes),
-            React.createElement("p", { className: cn('segment-term-title', Styles['segment-term-title']) }, title),
+        const _a = this.props, { hasAddButton, hasQueryToggle, hasSeparator, editable, editing, label, onAddButtonClick, onEdit, queryName, radios, renderAlert, renderInputs, title, onDelete, onConfirm, showConfirm, className } = _a, attributes = __rest(_a, ["hasAddButton", "hasQueryToggle", "hasSeparator", "editable", "editing", "label", "onAddButtonClick", "onEdit", "queryName", "radios", "renderAlert", "renderInputs", "title", "onDelete", "onConfirm", "showConfirm", "className"]);
+        const queryToggleAnd = this.state.queryToggle === 'and';
+        return (React.createElement("div", Object.assign({ className: cn('segment-term-wrap', Styles['segment-term-wrap'], className, {
+                'is-collapsed': !queryToggleAnd,
+                [Styles['is-collapsed']]: !queryToggleAnd,
+            }) }, attributes),
+            title && (React.createElement("p", { className: cn('segment-term-title', Styles['segment-term-title']) }, title)),
             React.createElement("div", { className: cn('segment-term', Styles['segment-term'], {
                     // Double class names to keep unhashed classes for styleguide
                     [Styles['has-alert']]: !!renderAlert,
@@ -50,6 +59,12 @@ export class SegmentTerm extends PureComponent {
                     React.createElement("strong", null, queryName))),
                 this.termControls,
                 renderAlert && renderAlert()),
+            hasQueryToggle && (React.createElement("div", { className: cn('segment-term-switch', Styles['segment-term-switch']) },
+                React.createElement(ToggleButtons, { keys: ['and', 'or'], selectedKey: this.state.queryToggle, onChange: (event, key) => {
+                        this.setState({ queryToggle: key });
+                    } }, (and, or) => (React.createElement(React.Fragment, null,
+                    React.createElement(Button, Object.assign({}, and, { small: true, type: "group-item" }), "AND"),
+                    React.createElement(Button, Object.assign({}, or, { small: true, type: "group-item" }), "OR")))))),
             hasAddButton && (React.createElement(ButtonList, null,
                 React.createElement(Button, { type: "secondary", icon: "plus", onClick: onAddButtonClick }, "Add Condition")))));
     }
@@ -58,6 +73,7 @@ SegmentTerm.defaultProps = {
     editable: false,
     editing: false,
     hasAddButton: false,
+    hasQueryToggle: false,
     hasSeparator: false,
     radios: false,
 };

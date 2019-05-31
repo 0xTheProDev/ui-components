@@ -1,9 +1,49 @@
 @import './global/variables.scss';
 
 .segment-term-wrap {
+  position: relative;
+
+  &.is-collapsed {
+    > .segment-term-switch {
+      height: 0;
+      transform: translateY(-17px);
+      padding-left: 26px;
+      margin-bottom: 0;
+
+      :global .btn-group {
+        background-color: $white;
+      }
+      :global .btn-group-item.btn-small {
+        padding: 2px;
+      }
+    }
+
+    > .segment-term {
+      margin: 0;
+
+      &.has-separator::after {
+        height: 0;
+      }
+    }
+  }
+
   p {
     font-size: 13px;
     line-height: 18px;
+  }
+
+  > .segment-term-switch {
+    position: relative;
+    padding-left: 26px;
+    margin-bottom: 12px;
+    z-index: 1;
+
+    :global .btn-group {
+      background-color: $white;
+    }
+    :global .btn-group-item.btn-small {
+      padding: 2px;
+    }
   }
 }
 
@@ -30,10 +70,10 @@
 
   &.has-separator::after {
     position: absolute;
-    bottom: -43px;
-    left: 60px;
+    bottom: -63px;
+    left: 64px;
     width: 1px;
-    height: 42px;
+    height: 62px;
     border-left: 1px solid $slate-10;
     content: '';
   }
@@ -51,6 +91,7 @@
 
     :global {
       .input-select-wrap {
+        z-index: 2;
         min-width: 200px;
         margin-right: 20px;
         margin-bottom: 0;

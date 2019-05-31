@@ -4,6 +4,7 @@ export interface SegmentTermProps {
     editable?: boolean;
     editing?: boolean;
     hasAddButton?: boolean;
+    hasQueryToggle?: boolean;
     hasSeparator?: boolean;
     label?: string;
     onAddButtonClick?: (e: any) => void;
@@ -15,7 +16,7 @@ export interface SegmentTermProps {
     renderAlert?: () => React.ReactNode;
     renderInputs?: () => React.ReactNode;
     showConfirm?: boolean;
-    title: string;
+    title?: string;
     className?: string;
 }
 export declare class SegmentTerm extends PureComponent<SegmentTermProps> {
@@ -23,8 +24,12 @@ export declare class SegmentTerm extends PureComponent<SegmentTermProps> {
         editable: boolean;
         editing: boolean;
         hasAddButton: boolean;
+        hasQueryToggle: boolean;
         hasSeparator: boolean;
         radios: boolean;
+    };
+    state: {
+        queryToggle: string;
     };
     readonly termControls: React.ReactNode;
     render(): JSX.Element;
