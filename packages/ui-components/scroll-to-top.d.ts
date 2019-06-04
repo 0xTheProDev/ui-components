@@ -1,7 +1,7 @@
 import { RefObject, SFC } from 'react';
 interface ScrollToTopButtonProps {
-    scrollContainerRef?: RefObject<HTMLElement>;
-    scrollContainerElement?: HTMLElement;
+    scrollContainerRef?: RefObject<HTMLElement | Window>;
+    scrollContainerElement?: HTMLElement | Window;
     className?: string;
 }
 /**

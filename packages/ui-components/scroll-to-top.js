@@ -4,6 +4,13 @@ import React, { useCallback, useEffect, useState } from 'react';
 import Button from './button';
 import Icon from './icon';
 import Styles from './styles/scroll-to-top.scss';
+const scrollContainerIsWindow = (container) => container === window;
+const getScrollPos = (container) => {
+    if (scrollContainerIsWindow(container)) {
+        return window.scrollY;
+    }
+    return container ? container.scrollTop : 0;
+};
 /**
  * Render a button that will scroll to the top of an html element,
  * given that the top of the html element is scrolled out of view.
@@ -23,10 +30,8 @@ export const ScrollToTopButton = props => {
     const onScroll = useCallback(throttle(() => {
         requestAnimationFrame(() => {
             const height = window.innerHeight;
-            const scrollPosition = currentScrollContainer
-                ? currentScrollContainer.scrollTop
-                : 0;
-            setButtonState(scrollPosition >= height / 2);
+            const scrollPos = getScrollPos(currentScrollContainer);
+            setButtonState(scrollPos >= height / 2);
         });
     }, 100, { leading: false, trailing: true }), [currentScrollContainer]);
     const onClick = useCallback(() => {
