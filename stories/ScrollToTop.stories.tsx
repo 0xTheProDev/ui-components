@@ -5,7 +5,7 @@ import { ScrollToTopButton } from '../src/scroll-to-top';
 
 const stories = storiesOf('Scroll to Top', module);
 
-class ExampleContainer extends Component<{}, { scrollContainer: HTMLDivElement }> {
+class ExampleContainer extends Component<{ scrollViewport: boolean }, { scrollContainer: HTMLDivElement }> {
   public state = { scrollContainer: null };
 
   // since the component does not rerender after the initial didMount, the ref passed to the
@@ -19,17 +19,26 @@ class ExampleContainer extends Component<{}, { scrollContainer: HTMLDivElement }
   }
 
   public render() {
+    const { scrollViewport } = this.props;
+
     return (
       <div>
-        <div style={{ height: '400px', overflow: 'auto' }} ref={this.updateRef}>
+        <div
+          style={scrollViewport ? { height: '400px', overflow: 'auto' } : null}
+          ref={scrollViewport ? this.updateRef : null}
+        >
           <div style={{ width: '100%', height: '4000px', backgroundImage: 'linear-gradient(red, yellow)' }} />
         </div>
-        <ScrollToTopButton scrollContainerElement={this.state.scrollContainer} />
+        <ScrollToTopButton scrollContainerElement={this.state.scrollContainer || window} />
       </div>
     );
   }
 }
 
-stories.add('Scroll to Top [skip]', () => (
-  <ExampleContainer />
+stories.add('Scroll to Top with a scrolling div viewport [skip]', () => (
+  <ExampleContainer scrollViewport />
+));
+
+stories.add('Scroll to Top with window scrolling viewport [skip]', () => (
+  <ExampleContainer scrollViewport={false} />
 ));

@@ -13550,7 +13550,7 @@ exports[`Storyshots Save Button With icon on dark 1`] = `
 </div>
 `;
 
-exports[`Storyshots Scroll to Top Scroll to Top [skip] 1`] = `
+exports[`Storyshots Scroll to Top Scroll to Top with a scrolling div viewport [skip] 1`] = `
 <div>
   <div
     style={
@@ -13559,6 +13559,37 @@ exports[`Storyshots Scroll to Top Scroll to Top [skip] 1`] = `
         "overflow": "auto",
       }
     }
+  >
+    <div
+      style={
+        Object {
+          "backgroundImage": "linear-gradient(red, yellow)",
+          "height": "4000px",
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+  <button
+    className="btn btn-secondary scroll-button scroll-button btn-small"
+    disabled={false}
+    id={undefined}
+    onClick={[Function]}
+    type="button"
+  >
+    <i
+      className="sg-icon sg-icon-sort-asc"
+      onClick={undefined}
+      style={null}
+    />
+  </button>
+</div>
+`;
+
+exports[`Storyshots Scroll to Top Scroll to Top with window scrolling viewport [skip] 1`] = `
+<div>
+  <div
+    style={null}
   >
     <div
       style={

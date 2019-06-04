@@ -6,10 +6,20 @@ import Icon from './icon';
 import Styles from './styles/scroll-to-top.scss';
 
 interface ScrollToTopButtonProps {
-  scrollContainerRef?: RefObject<HTMLElement>;
-  scrollContainerElement?: HTMLElement;
+  scrollContainerRef?: RefObject<HTMLElement | Window>;
+  scrollContainerElement?: HTMLElement | Window;
   className?: string;
 }
+
+const scrollContainerIsWindow = (
+  container: HTMLElement | Window
+): container is Window => container === window;
+const getScrollPos = (container: HTMLElement | Window) => {
+  if (scrollContainerIsWindow(container)) {
+    return window.scrollY;
+  }
+  return container ? container.scrollTop : 0;
+};
 
 /**
  * Render a button that will scroll to the top of an html element,
@@ -32,10 +42,9 @@ export const ScrollToTopButton: SFC<ScrollToTopButtonProps> = props => {
       () => {
         requestAnimationFrame(() => {
           const height = window.innerHeight;
-          const scrollPosition = currentScrollContainer
-            ? currentScrollContainer.scrollTop
-            : 0;
-          setButtonState(scrollPosition >= height / 2);
+          const scrollPos = getScrollPos(currentScrollContainer);
+
+          setButtonState(scrollPos >= height / 2);
         });
       },
       100,
