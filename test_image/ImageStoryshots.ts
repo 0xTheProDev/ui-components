@@ -31,10 +31,14 @@ const beforeScreenshot = () =>
 const customizePage = page => {
   return page.setViewport({ width: 800, height: 600 });
 };
-// DontTest is added to the names of storybook stories
-// that render animations/things we dont want to include in imageshots.
+
 initStoryshots({
-  storyNameRegex: /^((?!\[skip\]).)*$/,
+  // Skip entire kinds of stories from story snapshots if it includes DontImageStoryshot
+  // i.e. storiesOf('Some Kind of Story (DontImageStoryshot)', module)
+  storyKindRegex: /^((?!.*?DontImageStoryshot).)*$/,
+  // Skip names of stories from story snapshots if it includes DontImageStoryshot
+  // i.e. .add("All Checked (DontImageStoryshot)", () => (...))
+  storyNameRegex: /^((?!.*?DontImageStoryshot).)*$/,
   suite: 'Image storyshots',
   test: imageSnapshot({ storybookUrl: targetPath, getMatchOptions }),
   beforeScreenshot,

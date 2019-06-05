@@ -50,7 +50,7 @@ const edit = (
   </ButtonList>
 );
 
-loaderStories.add('KANPE [skip]', () => (
+loaderStories.add('KANPE [DontImageStoryshot]', () => (
   <FlexHeader
     title="Title Goes Here"
     onClose={() => {}}
@@ -60,7 +60,7 @@ loaderStories.add('KANPE [skip]', () => (
   />
 ));
 
-loaderStories.add('KANPE - Second Tab Active [skip]', () => (
+loaderStories.add('KANPE - Second Tab Active [DontImageStoryshot]', () => (
   <FlexHeader
     title="Title Goes Here"
     onClose={() => {}}
@@ -70,7 +70,7 @@ loaderStories.add('KANPE - Second Tab Active [skip]', () => (
   />
 ));
 
-loaderStories.add('KANPE - No Credits [skip]', () => (
+loaderStories.add('KANPE - No Credits [DontImageStoryshot]', () => (
   <FlexHeader
     title="Title Goes Here"
     onClose={() => {}}

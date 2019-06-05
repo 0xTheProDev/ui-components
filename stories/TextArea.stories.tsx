@@ -140,7 +140,7 @@ stories.add('Scrollable', () => (
   </TextAreaContainer>
 ));
 
-stories.add('With Tooltip [skip]', () => (
+stories.add('With Tooltip [DontImageStoryshot]', () => (
   <TextAreaContainer>
     {(value, handleChange) => (
       <TextArea

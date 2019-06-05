@@ -1,6 +1,5 @@
 import { storiesOf } from '@storybook/react';
 import React, { Component } from 'react';
-
 import { DateRangePicker, SingleDatePicker } from '../src/datepicker';
 
 const stories = storiesOf('DatePicker', module);
@@ -22,9 +21,13 @@ class DateRangePickerContainer extends Component<{}, any> {
         endDateId="endDate"
         startDate={this.state.startDate}
         endDate={this.state.endDate}
-        onDatesChange={({ startDate, endDate }) => { this.setState({ startDate, endDate })}}
+        onDatesChange={({ startDate, endDate }) => {
+          this.setState({ startDate, endDate });
+        }}
         focusedInput={this.state.focusedInput}
-        onFocusChange={(focusedInput) => { this.setState({ focusedInput })}}
+        onFocusChange={focusedInput => {
+          this.setState({ focusedInput });
+        }}
         verticalSpacing={10}
       />
     );
@@ -48,10 +51,6 @@ class SingleDatePickerContainer extends Component<{}, any> {
   }
 }
 
-stories.add('Date picker', () => (
-  <DateRangePickerContainer />
-));
+stories.add('Date picker', () => <DateRangePickerContainer />);
 
-stories.add('Single date picker', () => (
-  <SingleDatePickerContainer />
-));
+stories.add('Single date picker', () => <SingleDatePickerContainer />);
