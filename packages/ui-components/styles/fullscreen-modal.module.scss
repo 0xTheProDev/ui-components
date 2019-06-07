@@ -19,12 +19,6 @@
     background-color: darken($slate, 5%);
   }
   :global {
-    h2,
-    [data-tooltip] i,
-    i,
-    [data-tooltip] i:hover {
-      color: $white;
-    }
     [data-tooltip] i {
       margin-left: 6px;
     }
@@ -33,10 +27,6 @@
     flex: 1;
     margin-bottom: 0;
     margin-left: 27px;
-  }
-  &-header [data-tooltip] .sg-icon,
-  &-header [data-tooltip] .sg-icon:hover {
-    color: $white;
   }
   .modal-content {
     height: calc(100vh - 70px);

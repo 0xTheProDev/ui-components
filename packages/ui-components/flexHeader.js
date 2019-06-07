@@ -16,7 +16,7 @@ import cn from './utilities/classnames';
 export class FlexHeader extends Component {
     render() {
         const _a = this.props, { className, creditsCount, onClose, headerActions, headerTabs, title, tooltipText, tooltipLength: tooltipSize, iconType = 'x' } = _a, attributes = __rest(_a, ["className", "creditsCount", "onClose", "headerActions", "headerTabs", "title", "tooltipText", "tooltipLength", "iconType"]);
-        return (React.createElement("header", { className: cn(Styles['flex-header'], 'flex-header', {
+        return (React.createElement("header", { className: cn(Styles['flex-header'], 'flex-header', Styles['is-light'], 'is-light', {
                 [className]: !!className,
             }) },
             React.createElement("div", null,
