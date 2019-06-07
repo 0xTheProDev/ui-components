@@ -36,9 +36,15 @@ export class FlexHeader extends Component<FlexHeaderProps> {
 
     return (
       <header
-        className={cn(Styles['flex-header'], 'flex-header', {
-          [className]: !!className,
-        })}
+        className={cn(
+          Styles['flex-header'],
+          'flex-header',
+          Styles['is-light'],
+          'is-light',
+          {
+            [className]: !!className,
+          }
+        )}
       >
         <div>
           {onClose && (

@@ -9936,7 +9936,7 @@ exports[`Storyshots FilterableList FilterableList with Two Input Fields and Cust
 
 exports[`Storyshots Flex Header Edit Code - with a large tooltip 1`] = `
 <header
-  className="flex-header"
+  className="flex-header is-light"
 >
   <div>
     <a
@@ -9977,7 +9977,7 @@ exports[`Storyshots Flex Header Edit Code - with a large tooltip 1`] = `
       className="btn-list"
     >
       <button
-        className="btn btn-tertiary"
+        className="btn btn-secondary"
         disabled={false}
         id={undefined}
         onClick={[Function]}
@@ -10001,7 +10001,7 @@ exports[`Storyshots Flex Header Edit Code - with a large tooltip 1`] = `
 
 exports[`Storyshots Flex Header Email Preview 1`] = `
 <header
-  className="flex-header"
+  className="flex-header is-light"
 >
   <div>
     <a
@@ -10045,7 +10045,7 @@ exports[`Storyshots Flex Header Email Preview 1`] = `
 
 exports[`Storyshots Flex Header Image Library 1`] = `
 <header
-  className="flex-header"
+  className="flex-header is-light"
 >
   <div>
     <a
@@ -10076,7 +10076,7 @@ exports[`Storyshots Flex Header Image Library 1`] = `
 
 exports[`Storyshots Flex Header Import HTML - with html tooltip 1`] = `
 <header
-  className="flex-header"
+  className="flex-header is-light"
 >
   <div>
     <a
@@ -10148,7 +10148,7 @@ exports[`Storyshots Flex Header Import HTML - with html tooltip 1`] = `
       className="btn-list"
     >
       <button
-        className="btn btn-tertiary"
+        className="btn btn-secondary"
         disabled={false}
         id={undefined}
         onClick={[Function]}
@@ -10172,7 +10172,7 @@ exports[`Storyshots Flex Header Import HTML - with html tooltip 1`] = `
 
 exports[`Storyshots Flex Header KANPE [DontImageStoryshot] 1`] = `
 <header
-  className="flex-header"
+  className="flex-header is-light"
 >
   <div>
     <a
@@ -10236,7 +10236,7 @@ exports[`Storyshots Flex Header KANPE [DontImageStoryshot] 1`] = `
       className="btn-list"
     >
       <button
-        className="btn btn-tertiary"
+        className="btn btn-primary"
         disabled={false}
         id={undefined}
         onClick={[Function]}
@@ -10251,7 +10251,7 @@ exports[`Storyshots Flex Header KANPE [DontImageStoryshot] 1`] = `
 
 exports[`Storyshots Flex Header KANPE - No Credits [DontImageStoryshot] 1`] = `
 <header
-  className="flex-header"
+  className="flex-header is-light"
 >
   <div>
     <a
@@ -10308,7 +10308,7 @@ exports[`Storyshots Flex Header KANPE - No Credits [DontImageStoryshot] 1`] = `
 
 exports[`Storyshots Flex Header KANPE - Only one Tab. No secondary 1`] = `
 <header
-  className="flex-header"
+  className="flex-header is-light"
 >
   <div>
     <a
@@ -10363,7 +10363,7 @@ exports[`Storyshots Flex Header KANPE - Only one Tab. No secondary 1`] = `
 
 exports[`Storyshots Flex Header KANPE - Second Tab Active [DontImageStoryshot] 1`] = `
 <header
-  className="flex-header"
+  className="flex-header is-light"
 >
   <div>
     <a
@@ -10427,7 +10427,7 @@ exports[`Storyshots Flex Header KANPE - Second Tab Active [DontImageStoryshot] 1
       className="btn-list"
     >
       <button
-        className="btn btn-tertiary"
+        className="btn btn-primary"
         disabled={false}
         id={undefined}
         onClick={[Function]}
@@ -10455,7 +10455,7 @@ exports[`Storyshots FullScreen Modal Fullscreen Modal 1`] = `
     className="modal-fullscreen is-open"
   >
     <header
-      className="flex-header"
+      className="flex-header is-light"
     >
       <div>
         <a
@@ -10508,7 +10508,7 @@ exports[`Storyshots FullScreen Modal Fullscreen Modal with Credits 1`] = `
     className="modal-fullscreen is-open"
   >
     <header
-      className="flex-header"
+      className="flex-header is-light"
     >
       <div>
         <a
@@ -10570,7 +10570,7 @@ exports[`Storyshots FullScreen Modal Fullscreen Modal with renderProps 1`] = `
     className="modal-fullscreen is-open"
   >
     <header
-      className="flex-header"
+      className="flex-header is-light"
     >
       <div>
         <a
@@ -10611,7 +10611,7 @@ exports[`Storyshots FullScreen Modal Fullscreen Modal with renderProps 1`] = `
           className="btn-list"
         >
           <button
-            className="btn btn-primary btn-on-dark"
+            className="btn btn-primary"
             disabled={false}
             id={undefined}
             onClick={[Function]}
@@ -10620,7 +10620,7 @@ exports[`Storyshots FullScreen Modal Fullscreen Modal with renderProps 1`] = `
             Confirm
           </button>
           <button
-            className="btn btn-secondary btn-on-dark"
+            className="btn btn-secondary"
             disabled={false}
             id={undefined}
             onClick={[Function]}
@@ -10685,7 +10685,7 @@ exports[`Storyshots Fullscreen Modal Title inside of fullscreen modal 1`] = `
     className="modal-fullscreen is-open"
   >
     <header
-      className="flex-header"
+      className="flex-header is-light"
     >
       <div>
         <a
@@ -10887,7 +10887,7 @@ exports[`Storyshots Image Library with initial image that does not exist in the 
   className="modal-fullscreen is-open"
 >
   <header
-    className="flex-header"
+    className="flex-header is-light"
   >
     <div>
       <a
@@ -11077,7 +11077,7 @@ exports[`Storyshots Image Library with upload alert, no images 1`] = `
   className="modal-fullscreen is-open"
 >
   <header
-    className="flex-header"
+    className="flex-header is-light"
   >
     <div>
       <a
@@ -11218,7 +11218,7 @@ exports[`Storyshots Image Library without upload alert, with images 1`] = `
   className="modal-fullscreen is-open"
 >
   <header
-    className="flex-header"
+    className="flex-header is-light"
   >
     <div>
       <a

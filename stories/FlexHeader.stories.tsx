@@ -12,7 +12,7 @@ const loaderStories = storiesOf('Flex Header', module);
 
 const renderActions = (
   <ButtonList>
-    <Button type="tertiary">Cancel</Button>
+    <Button type="secondary">Cancel</Button>
     <Button className="btn btn-primary">Update</Button>
   </ButtonList>
 );
@@ -38,7 +38,7 @@ const renderTabs = (num?: number, secondActive?: boolean) => {
 
 const buyCredits = (
   <ButtonList>
-    <Button type="tertiary">Buy Credits</Button>
+    <Button type="primary">Buy Credits</Button>
   </ButtonList>
 );
 
