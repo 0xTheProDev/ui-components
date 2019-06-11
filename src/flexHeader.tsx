@@ -17,6 +17,7 @@ export interface FlexHeaderProps {
   tooltipLength?: TooltipLength;
   onClose?: (event: any) => void;
   iconType?: 'x' | 'mc-return';
+  isDark?: boolean;
 }
 
 export class FlexHeader extends Component<FlexHeaderProps> {
@@ -31,20 +32,17 @@ export class FlexHeader extends Component<FlexHeaderProps> {
       tooltipText,
       tooltipLength: tooltipSize,
       iconType = 'x',
+      isDark = false,
       ...attributes
     } = this.props;
 
     return (
       <header
-        className={cn(
-          Styles['flex-header'],
-          'flex-header',
-          Styles['is-light'],
-          'is-light',
-          {
-            [className]: !!className,
-          }
-        )}
+        className={cn(Styles['flex-header'], 'flex-header', {
+          [Styles['is-light']]: !isDark,
+          'is-light': !isDark,
+          [className]: !!className,
+        })}
       >
         <div>
           {onClose && (

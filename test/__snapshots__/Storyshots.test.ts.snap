@@ -10249,6 +10249,85 @@ exports[`Storyshots Flex Header KANPE [DontImageStoryshot] 1`] = `
 </header>
 `;
 
+exports[`Storyshots Flex Header KANPE - Dark [DontImageStoryshot] 1`] = `
+<header
+  className="flex-header"
+>
+  <div>
+    <a
+      className="flex-header-action"
+      onClick={[Function]}
+    >
+      <i
+        className="sg-icon sg-icon-x"
+        onClick={undefined}
+        style={null}
+      />
+    </a>
+    <div
+      className="flex-header-title"
+    >
+      <h3>
+        Title Goes Here
+      </h3>
+    </div>
+    <div
+      className="flex-header-tabs"
+    >
+      <div
+        className="flex-header-tab"
+        onClick={undefined}
+      >
+        <i
+          className="sg-icon sg-icon-mail"
+          onClick={undefined}
+          style={null}
+        />
+        Run New Test
+      </div>
+      <div
+        className="flex-header-tab is-active"
+        onClick={undefined}
+      >
+        <i
+          className="sg-icon sg-icon-mail"
+          onClick={undefined}
+          style={null}
+        />
+        View Test Results
+      </div>
+    </div>
+  </div>
+  <div
+    className="flex-header-right"
+  >
+    <div
+      className="counter"
+    >
+      Credits
+      <span
+        className="counter-bubble"
+      >
+        26
+      </span>
+    </div>
+    <div
+      className="btn-list"
+    >
+      <button
+        className="btn btn-primary"
+        disabled={false}
+        id={undefined}
+        onClick={[Function]}
+        type="button"
+      >
+        Buy Credits
+      </button>
+    </div>
+  </div>
+</header>
+`;
+
 exports[`Storyshots Flex Header KANPE - No Credits [DontImageStoryshot] 1`] = `
 <header
   className="flex-header is-light"

@@ -87,6 +87,17 @@ loaderStories.add('KANPE - Only one Tab. No secondary', () => (
   />
 ));
 
+loaderStories.add('KANPE - Dark [DontImageStoryshot]', () => (
+  <FlexHeader
+    isDark
+    title="Title Goes Here"
+    onClose={() => {}}
+    creditsCount="26"
+    headerTabs={renderTabs(2, true)}
+    headerActions={buyCredits}
+  />
+));
+
 loaderStories.add('Image Library', () => (
   <FlexHeader title="Image Library" onClose={() => {}} />
 ));
