@@ -11,6 +11,7 @@ export interface FlexHeaderProps {
     tooltipLength?: TooltipLength;
     onClose?: (event: any) => void;
     iconType?: 'x' | 'mc-return';
+    isDark?: boolean;
 }
 export declare class FlexHeader extends Component<FlexHeaderProps> {
     render(): JSX.Element;

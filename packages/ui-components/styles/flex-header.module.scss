@@ -118,10 +118,14 @@
     margin: 0;
     color: currentColor;
   }
+
   :global(.sg-icon) {
     margin-left: 5px;
     font-size: 13px;
-    // color: #ffffff !important;
+    color: $white;
+    &:hover {
+      color: $white;
+    }
   }
 }
 
