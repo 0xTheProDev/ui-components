@@ -28,7 +28,7 @@ const renderTabs = (num?: number, secondActive?: boolean) => {
       {num > 1 && (
         <FlexHeaderTab
           text="View Test Results"
-          iconType="mail"
+          iconType="view"
           isActive={!!secondActive}
         />
       )}
@@ -93,7 +93,7 @@ loaderStories.add('KANPE - Dark [DontImageStoryshot]', () => (
     title="Title Goes Here"
     onClose={() => {}}
     creditsCount="26"
-    headerTabs={renderTabs(2, true)}
+    headerTabs={renderTabs(2)}
     headerActions={buyCredits}
   />
 ));

@@ -39,6 +39,8 @@ export class FlexHeader extends Component<FlexHeaderProps> {
     return (
       <header
         className={cn(Styles['flex-header'], 'flex-header', {
+          [Styles['is-dark']]: isDark,
+          'is-dark': isDark,
           [Styles['is-light']]: !isDark,
           'is-light': !isDark,
           [className]: !!className,

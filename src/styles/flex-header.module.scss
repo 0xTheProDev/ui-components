@@ -2,17 +2,64 @@
 
 .flex-header {
   display: grid;
-  color: $white;
-  background: #21394f;
   height: 70px;
   grid-template-columns: 1.4fr 0.6fr;
 
-  :global(.counter) {
-    margin: 0 27px;
+  &.is-dark {
     color: $white;
-    :global(.counter-bubble) {
-      color: $slate;
-      background: $white;
+    background: #21394f;
+
+    :global(.sg-icon) {
+      color: $white;
+      &:hover {
+        color: $white;
+      }
+    }
+
+    :global(.counter) {
+      margin: 0 27px;
+      color: $white;
+      :global(.counter-bubble) {
+        color: $slate;
+        background: $white;
+      }
+    }
+
+    .flex-header-action {
+      color: $white;
+    }
+
+    .flex-header-action:hover {
+      color: $white;
+    }
+
+    .flex-header-title {
+      h3 {
+        color: $white;
+      }
+    }
+
+    .flex-header-tab {
+      border-right: 1px solid $header-tabs-border-color;
+      border-left: 1px solid $header-tabs-border-color;
+      color: $slate-60;
+      opacity: 0.6;
+    }
+
+    .flex-header-tab:hover {
+      color: $white;
+      opacity: 1;
+    }
+
+    .flex-header-tab:only-of-type {
+      border-right: 1px solid $header-tabs-border-color;
+      border-left: 1px solid $header-tabs-border-color;
+    }
+
+    .flex-header-tab.is-active {
+      color: $white;
+      background: $header-tabs-hover;
+      opacity: 1;
     }
   }
 
@@ -30,8 +77,16 @@
       }
     }
 
+    .flex-header-action {
+      color: $slate;
+    }
+
+    .flex-header-action:hover {
+      color: $slate;
+    }
+
     .flex-header-title::before {
-      border-left-color: $slate-20;
+      border-left: 1px solid $slate-20;
     }
 
     .flex-header-tab {
@@ -89,12 +144,8 @@
   justify-content: center;
   width: 70px;
   height: 70px;
-  color: currentColor;
   cursor: pointer;
 
-  &:hover {
-    color: currentColor;
-  }
   :global(.sg-icon) {
     font-size: 20px;
   }
@@ -110,22 +161,16 @@
     left: 0;
     display: block;
     height: 70px;
-    border-left: 1px solid rgba(0, 0, 0, 0.2);
     content: '';
   }
 
   h3 {
     margin: 0;
-    color: currentColor;
   }
 
   :global(.sg-icon) {
     margin-left: 5px;
     font-size: 13px;
-    color: $white;
-    &:hover {
-      color: $white;
-    }
   }
 }
 
@@ -145,27 +190,11 @@
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.75px;
-  color: #7f90a0;
   text-transform: uppercase;
   cursor: pointer;
-  border-right: 1px solid rgba(0, 0, 0, 0.2);
-  border-left: 1px solid rgba(0, 0, 0, 0.2);
-  opacity: 0.6;
-  &:hover {
-    color: currentColor;
-    opacity: 1;
-  }
+
   &:last-of-type {
     border-left: 0;
-  }
-  &:only-of-type {
-    border-right: 1px solid rgba(0, 0, 0, 0.2);
-    border-left: 1px solid rgba(0, 0, 0, 0.2);
-  }
-  &.is-active {
-    color: #fff;
-    background: #394f64;
-    opacity: 1;
   }
 
   :global(i) {
