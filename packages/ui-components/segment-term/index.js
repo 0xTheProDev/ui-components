@@ -17,10 +17,6 @@ import ToggleButtons from '../toggle-buttons';
 import cn from '../utilities/classnames';
 import SegmentWrapper from './segmentWrapper';
 export class SegmentTerm extends PureComponent {
-    constructor() {
-        super(...arguments);
-        this.state = { queryToggle: 'and' };
-    }
     get termControls() {
         const _a = this.props, { editable, editing, onDelete, onConfirm, showConfirm } = _a, attributes = __rest(_a, ["editable", "editing", "onDelete", "onConfirm", "showConfirm"]);
         if (editing) {
@@ -33,8 +29,8 @@ export class SegmentTerm extends PureComponent {
         return null;
     }
     render() {
-        const _a = this.props, { hasAddButton, hasQueryToggle, hasSeparator, editable, editing, label, onAddButtonClick, onEdit, queryName, radios, renderAlert, renderInputs, title, onDelete, onConfirm, showConfirm, className } = _a, attributes = __rest(_a, ["hasAddButton", "hasQueryToggle", "hasSeparator", "editable", "editing", "label", "onAddButtonClick", "onEdit", "queryName", "radios", "renderAlert", "renderInputs", "title", "onDelete", "onConfirm", "showConfirm", "className"]);
-        const queryToggleAnd = this.state.queryToggle === 'and';
+        const _a = this.props, { hasAddButton, hasQueryToggle, hasSeparator, editable, editing, label, onAddButtonClick, onEdit, onQueryToggle, queryName, queryToggle, radios, renderAlert, renderInputs, title, onDelete, onConfirm, showConfirm, className } = _a, attributes = __rest(_a, ["hasAddButton", "hasQueryToggle", "hasSeparator", "editable", "editing", "label", "onAddButtonClick", "onEdit", "onQueryToggle", "queryName", "queryToggle", "radios", "renderAlert", "renderInputs", "title", "onDelete", "onConfirm", "showConfirm", "className"]);
+        const queryToggleAnd = queryToggle === 'and';
         return (React.createElement("div", Object.assign({ className: cn('segment-term-wrap', Styles['segment-term-wrap'], className, {
                 'is-collapsed': !queryToggleAnd,
                 [Styles['is-collapsed']]: !queryToggleAnd,
@@ -60,9 +56,7 @@ export class SegmentTerm extends PureComponent {
                 this.termControls,
                 renderAlert && renderAlert()),
             hasQueryToggle && (React.createElement("div", { className: cn('segment-term-switch', Styles['segment-term-switch']) },
-                React.createElement(ToggleButtons, { keys: ['and', 'or'], selectedKey: this.state.queryToggle, onChange: (event, key) => {
-                        this.setState({ queryToggle: key });
-                    } }, (and, or) => (React.createElement(React.Fragment, null,
+                React.createElement(ToggleButtons, { keys: ['and', 'or'], selectedKey: this.props.queryToggle, onChange: (event, key) => onQueryToggle(key) }, (and, or) => (React.createElement(React.Fragment, null,
                     React.createElement(Button, Object.assign({}, and, { small: true, type: "group-item" }), "AND"),
                     React.createElement(Button, Object.assign({}, or, { small: true, type: "group-item" }), "OR")))))),
             hasAddButton && (React.createElement(ButtonList, null,
@@ -75,6 +69,7 @@ SegmentTerm.defaultProps = {
     hasAddButton: false,
     hasQueryToggle: false,
     hasSeparator: false,
+    queryToggle: 'and',
     radios: false,
 };
 export { SegmentWrapper };

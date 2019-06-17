@@ -8,6 +8,7 @@ import ToggleButtons from '../toggle-buttons';
 import cn from '../utilities/classnames';
 import SegmentWrapper from './segmentWrapper';
 
+type Conjunction = 'and' | 'or';
 export interface SegmentTermProps {
   editable?: boolean;
   editing?: boolean;
@@ -19,7 +20,9 @@ export interface SegmentTermProps {
   onDelete?: (e: any) => void;
   onConfirm?: (e: any) => void;
   onEdit?: (e: any) => void;
+  onQueryToggle?: (operation: Conjunction) => void;
   queryName?: string;
+  queryToggle?: Conjunction;
   radios?: boolean;
   renderAlert?: () => React.ReactNode;
   renderInputs?: () => React.ReactNode;
@@ -35,9 +38,9 @@ export class SegmentTerm extends PureComponent<SegmentTermProps> {
     hasAddButton: false,
     hasQueryToggle: false,
     hasSeparator: false,
+    queryToggle: 'and',
     radios: false,
   };
-  public state = { queryToggle: 'and' };
 
   public get termControls(): React.ReactNode {
     const {
@@ -86,7 +89,9 @@ export class SegmentTerm extends PureComponent<SegmentTermProps> {
       label,
       onAddButtonClick,
       onEdit,
+      onQueryToggle,
       queryName,
+      queryToggle,
       radios,
       renderAlert,
       renderInputs,
@@ -98,7 +103,7 @@ export class SegmentTerm extends PureComponent<SegmentTermProps> {
       ...attributes
     } = this.props;
 
-    const queryToggleAnd = this.state.queryToggle === 'and';
+    const queryToggleAnd = queryToggle === 'and';
 
     return (
       <div
@@ -150,10 +155,8 @@ export class SegmentTerm extends PureComponent<SegmentTermProps> {
           >
             <ToggleButtons
               keys={['and', 'or']}
-              selectedKey={this.state.queryToggle}
-              onChange={(event: any, key: string) => {
-                this.setState({ queryToggle: key });
-              }}
+              selectedKey={this.props.queryToggle}
+              onChange={(event: any, key: Conjunction) => onQueryToggle(key)}
             >
               {(and, or) => (
                 <>
