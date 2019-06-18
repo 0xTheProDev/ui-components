@@ -20,11 +20,6 @@ export { Column } from './grid/column';
 export { Checkbox } from './checkbox';
 export { ConfirmationModal } from './confirmation-modal';
 export { ContactCount } from './contact-count';
-export {
-  DateRangePicker,
-  SingleDatePicker,
-  DayPickerRangeController,
-} from './datepicker';
 export { Divider } from './divider';
 export { DropdownButton } from './dropdown-button';
 export { Dropdown, DropdownLink, DropdownMenu } from './dropdown';

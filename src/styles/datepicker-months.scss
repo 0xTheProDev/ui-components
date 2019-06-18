@@ -1,0 +1,32 @@
+.datepicker-container {
+  /* react-dates renders the week header as a sibling of the calendar
+   * and thus cannot control the z-index relative to the rest
+   * of the calendar and month/year select menus
+   */
+  & :global(.DayPicker_weekHeader) {
+    display: none;
+  }
+
+  & :global(.SingleDatePickerInput__showClearDate) {
+    padding-right: 0px;
+  }
+
+  & :global(.SingleDatePickerInput_clearDate) {
+    padding: 0;
+    margin: 0 8px;
+  }
+}
+
+.datepicker-clear-icon {
+  font-size: 10px;
+}
+
+.datepicker-month-container {
+  display: flex;
+  justify-content: center;
+
+  & > :global(.input-select-wrap) {
+    width: 100px;
+    margin: 5px;
+  }
+}
