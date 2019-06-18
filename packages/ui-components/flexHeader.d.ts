@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { TooltipLength } from './tooltip';
+import { TooltipDirection, TooltipLength } from './tooltip';
 import { IconType } from './types/icons';
 export interface FlexHeaderProps {
     className?: string;
@@ -9,6 +9,7 @@ export interface FlexHeaderProps {
     title: string;
     tooltipText?: string;
     tooltipLength?: TooltipLength;
+    tooltipDirection?: TooltipDirection;
     onClose?: (event: any) => void;
     iconType?: 'x' | 'mc-return';
     isDark?: boolean;

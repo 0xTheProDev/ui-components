@@ -11,11 +11,11 @@ import React, { Component } from 'react';
 import Counter from './counter';
 import { Icon } from './icon';
 import Styles from './styles/flex-header.module.scss';
-import { HTMLTooltip, Tooltip } from './tooltip';
+import { HTMLTooltip, Tooltip, } from './tooltip';
 import cn from './utilities/classnames';
 export class FlexHeader extends Component {
     render() {
-        const _a = this.props, { className, creditsCount, onClose, headerActions, headerTabs, title, tooltipText, tooltipLength: tooltipSize, iconType = 'x', isDark = false } = _a, attributes = __rest(_a, ["className", "creditsCount", "onClose", "headerActions", "headerTabs", "title", "tooltipText", "tooltipLength", "iconType", "isDark"]);
+        const _a = this.props, { className, creditsCount, onClose, headerActions, headerTabs, title, tooltipText, tooltipDirection = 'down', tooltipLength: tooltipSize, iconType = 'x', isDark = false } = _a, attributes = __rest(_a, ["className", "creditsCount", "onClose", "headerActions", "headerTabs", "title", "tooltipText", "tooltipDirection", "tooltipLength", "iconType", "isDark"]);
         return (React.createElement("header", { className: cn(Styles['flex-header'], 'flex-header', {
                 [Styles['is-dark']]: isDark,
                 'is-dark': isDark,
@@ -29,8 +29,8 @@ export class FlexHeader extends Component {
                 React.createElement("div", { className: cn(Styles['flex-header-title'], 'flex-header-title') },
                     React.createElement("h3", null,
                         title,
-                        typeof tooltipText === 'string' ? (React.createElement(Tooltip, { content: tooltipText, length: tooltipSize, direction: "down" },
-                            React.createElement(Icon, { type: "info-circle" }))) : (tooltipText && (React.createElement(HTMLTooltip, { style: { display: 'inline-block' }, direction: "right", length: tooltipSize, hoverTarget: React.createElement(Icon, { type: "info-circle" }) }, tooltipText))))),
+                        typeof tooltipText === 'string' ? (React.createElement(Tooltip, { content: tooltipText, length: tooltipSize, direction: tooltipDirection },
+                            React.createElement(Icon, { type: "info-circle" }))) : (tooltipText && (React.createElement(HTMLTooltip, { style: { display: 'inline-block' }, direction: tooltipDirection, length: tooltipSize, hoverTarget: React.createElement(Icon, { type: "info-circle" }) }, tooltipText))))),
                 headerTabs),
             React.createElement("div", { className: cn(Styles['flex-header-right'], 'flex-header-right') },
                 typeof creditsCount !== 'undefined' ? (React.createElement(Counter, { text: "Credits", count: creditsCount })) : (''),
