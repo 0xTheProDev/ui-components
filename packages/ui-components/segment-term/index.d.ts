@@ -14,7 +14,7 @@ export interface SegmentTermProps {
     onEdit?: (e: any) => void;
     onQueryToggle?: (operation: Conjunction) => void;
     queryName?: string;
-    queryToggle?: Conjunction;
+    queryToggle?: string;
     radios?: boolean;
     renderAlert?: () => React.ReactNode;
     renderInputs?: () => React.ReactNode;
