@@ -10116,6 +10116,102 @@ exports[`Storyshots Flex Header Import HTML - with html tooltip 1`] = `
             />
           </div>
           <div
+            className="tooltip-js-content is-down"
+            data-tooltip-length="large"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            style={
+              Object {
+                "left": -10000,
+                "top": 21,
+              }
+            }
+          >
+            <div>
+              This is an HTML tooltip with a link. 
+              <a
+                href="#"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+      </h3>
+    </div>
+  </div>
+  <div
+    className="flex-header-right"
+  >
+    
+    <div
+      className="btn-list"
+    >
+      <button
+        className="btn btn-secondary"
+        disabled={false}
+        id={undefined}
+        onClick={[Function]}
+        type="button"
+      >
+        Cancel
+      </button>
+      <button
+        className="btn btn-primary btn btn-primary"
+        disabled={false}
+        id={undefined}
+        onClick={[Function]}
+        type="button"
+      >
+        Update
+      </button>
+    </div>
+  </div>
+</header>
+`;
+
+exports[`Storyshots Flex Header Import HTML - with html tooltip direction 1`] = `
+<header
+  className="flex-header is-light"
+>
+  <div>
+    <a
+      className="flex-header-action"
+      onClick={[Function]}
+    >
+      <i
+        className="sg-icon sg-icon-x"
+        onClick={undefined}
+        style={null}
+      />
+    </a>
+    <div
+      className="flex-header-title"
+    >
+      <h3>
+        Import Drag & Drop HTML
+        <div
+          className="html-tooltip"
+          length="large"
+          style={
+            Object {
+              "display": "inline-block",
+              "position": "relative",
+            }
+          }
+        >
+          <div
+            className="tooltip-js-parent"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+          >
+            <i
+              className="sg-icon sg-icon-info-circle"
+              onClick={undefined}
+              style={null}
+            />
+          </div>
+          <div
             className="tooltip-js-content"
             data-tooltip-length="large"
             onMouseEnter={[Function]}

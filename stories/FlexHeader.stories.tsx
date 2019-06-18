@@ -129,3 +129,18 @@ loaderStories.add('Import HTML - with html tooltip', () => (
     headerActions={renderActions}
   />
 ));
+
+loaderStories.add('Import HTML - with html tooltip direction', () => (
+  <FlexHeader
+    title="Import Drag & Drop HTML"
+    onClose={() => { }}
+    tooltipText={
+      <div>
+        This is an HTML tooltip with a link. <a href="#">Learn More</a>
+      </div>
+    }
+    tooltipDirection="right"
+    tooltipLength="large"
+    headerActions={renderActions}
+  />
+));

@@ -3,7 +3,12 @@ import Counter from './counter';
 import { Icon } from './icon';
 
 import Styles from './styles/flex-header.module.scss';
-import { HTMLTooltip, Tooltip, TooltipLength } from './tooltip';
+import {
+  HTMLTooltip,
+  Tooltip,
+  TooltipDirection,
+  TooltipLength,
+} from './tooltip';
 import { IconType } from './types/icons';
 import cn from './utilities/classnames';
 
@@ -15,6 +20,7 @@ export interface FlexHeaderProps {
   title: string;
   tooltipText?: string;
   tooltipLength?: TooltipLength;
+  tooltipDirection?: TooltipDirection;
   onClose?: (event: any) => void;
   iconType?: 'x' | 'mc-return';
   isDark?: boolean;
@@ -30,6 +36,7 @@ export class FlexHeader extends Component<FlexHeaderProps> {
       headerTabs,
       title,
       tooltipText,
+      tooltipDirection = 'down',
       tooltipLength: tooltipSize,
       iconType = 'x',
       isDark = false,
@@ -62,7 +69,7 @@ export class FlexHeader extends Component<FlexHeaderProps> {
                 <Tooltip
                   content={tooltipText}
                   length={tooltipSize}
-                  direction="down"
+                  direction={tooltipDirection}
                 >
                   <Icon type="info-circle" />
                 </Tooltip>
@@ -70,7 +77,7 @@ export class FlexHeader extends Component<FlexHeaderProps> {
                 tooltipText && (
                   <HTMLTooltip
                     style={{ display: 'inline-block' }}
-                    direction="right"
+                    direction={tooltipDirection}
                     length={tooltipSize}
                     hoverTarget={<Icon type="info-circle" />}
                   >
