@@ -1,0 +1,24 @@
+@import '../styles/global/variables.scss';
+
+.table-state {
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: $slate-02;
+  border: 1px solid $slate-10;
+
+  &.is-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > .table-search-text {
+      max-width: 720px;
+      margin-bottom: 0;
+      margin-right: auto;
+      margin-left: auto;
+      word-break: break-all;
+      font-size: 13px;
+      line-height: 20px;
+    }
+  }
+}

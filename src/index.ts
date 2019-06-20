@@ -60,6 +60,8 @@ export {
   TableHeader,
   TableBody,
 } from './table/table';
+export { TableSearch } from './table-search/table-search';
+export { ComposableTableSearch } from './table-search/composable-table-search';
 export { TextInput } from './text-input';
 export { ToggleButtons } from './toggle-buttons';
 export { Tooltip, HTMLTooltip } from './tooltip';
