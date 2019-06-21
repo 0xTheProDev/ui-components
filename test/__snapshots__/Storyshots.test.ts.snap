@@ -13879,7 +13879,7 @@ exports[`Storyshots Segment Term Segment term which is being edited 1`] = `
                     autoCorrect="off"
                     className={undefined}
                     disabled={false}
-                    id="react-select-38-input"
+                    id="react-select-39-input"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
@@ -14001,7 +14001,7 @@ exports[`Storyshots Segment Term Segment term which is being edited 1`] = `
                     autoCorrect="off"
                     className={undefined}
                     disabled={false}
-                    id="react-select-39-input"
+                    id="react-select-40-input"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
@@ -14174,7 +14174,7 @@ exports[`Storyshots Segment Term Segment term which is being edited and is fille
                     autoCorrect="off"
                     className={undefined}
                     disabled={false}
-                    id="react-select-40-input"
+                    id="react-select-41-input"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
@@ -14296,7 +14296,7 @@ exports[`Storyshots Segment Term Segment term which is being edited and is fille
                     autoCorrect="off"
                     className={undefined}
                     disabled={false}
-                    id="react-select-41-input"
+                    id="react-select-42-input"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
@@ -14412,7 +14412,7 @@ exports[`Storyshots Segment Term Segment term which is being edited and is fille
                     autoCorrect="off"
                     className={undefined}
                     disabled={false}
-                    id="react-select-42-input"
+                    id="react-select-43-input"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}
@@ -14820,7 +14820,7 @@ exports[`Storyshots Segment Term Segment terms 1`] = `
                       autoCorrect="off"
                       className={undefined}
                       disabled={false}
-                      id="react-select-37-input"
+                      id="react-select-38-input"
                       onBlur={[Function]}
                       onChange={[Function]}
                       onFocus={[Function]}
@@ -17390,7 +17390,7 @@ exports[`Storyshots Select/AsyncSelect Multi select 1`] = `
                 autoCorrect="off"
                 className={undefined}
                 disabled={false}
-                id="react-select-35-input"
+                id="react-select-36-input"
                 onBlur={[Function]}
                 onChange={[Function]}
                 onFocus={[Function]}
@@ -17508,7 +17508,7 @@ exports[`Storyshots Select/AsyncSelect Multi select with default and cache optio
                 autoCorrect="off"
                 className={undefined}
                 disabled={false}
-                id="react-select-36-input"
+                id="react-select-37-input"
                 onBlur={[Function]}
                 onChange={[Function]}
                 onFocus={[Function]}
@@ -17626,7 +17626,7 @@ exports[`Storyshots Select/AsyncSelect Single select 1`] = `
                 autoCorrect="off"
                 className={undefined}
                 disabled={false}
-                id="react-select-32-input"
+                id="react-select-33-input"
                 onBlur={[Function]}
                 onChange={[Function]}
                 onFocus={[Function]}
@@ -17744,7 +17744,7 @@ exports[`Storyshots Select/AsyncSelect Single select with custom no options and 
                 autoCorrect="off"
                 className={undefined}
                 disabled={false}
-                id="react-select-34-input"
+                id="react-select-35-input"
                 onBlur={[Function]}
                 onChange={[Function]}
                 onFocus={[Function]}
@@ -17862,7 +17862,7 @@ exports[`Storyshots Select/AsyncSelect Single select with default options 1`] = 
                 autoCorrect="off"
                 className={undefined}
                 disabled={false}
-                id="react-select-33-input"
+                id="react-select-34-input"
                 onBlur={[Function]}
                 onChange={[Function]}
                 onFocus={[Function]}
@@ -18059,7 +18059,7 @@ exports[`Storyshots Select/Createable Createable 1`] = `
                 autoCorrect="off"
                 className={undefined}
                 disabled={false}
-                id="react-select-26-input"
+                id="react-select-27-input"
                 onBlur={[Function]}
                 onChange={[Function]}
                 onFocus={[Function]}
@@ -18275,7 +18275,7 @@ exports[`Storyshots Select/Createable Multi-select text input 1`] = `
                 autoCorrect="off"
                 className={undefined}
                 disabled={false}
-                id="react-select-27-input"
+                id="react-select-28-input"
                 onBlur={[Function]}
                 onChange={[Function]}
                 onFocus={[Function]}
@@ -18449,7 +18449,7 @@ exports[`Storyshots Select/Createable Multi-select text input with errors 1`] = 
                 autoCorrect="off"
                 className={undefined}
                 disabled={false}
-                id="react-select-28-input"
+                id="react-select-29-input"
                 onBlur={[Function]}
                 onChange={[Function]}
                 onFocus={[Function]}
@@ -18628,7 +18628,7 @@ exports[`Storyshots Select/Createable Tagging - open 1`] = `
                 autoCorrect="off"
                 className={undefined}
                 disabled={false}
-                id="react-select-30-input"
+                id="react-select-31-input"
                 onBlur={[Function]}
                 onChange={[Function]}
                 onFocus={[Function]}
@@ -18706,7 +18706,7 @@ exports[`Storyshots Select/Createable Tagging - open 1`] = `
         >
           <div
             className="css-3cs47o-option"
-            id="react-select-30-option-2"
+            id="react-select-31-option-2"
             onClick={[Function]}
             onMouseMove={[Function]}
             onMouseOver={[Function]}
@@ -18716,7 +18716,7 @@ exports[`Storyshots Select/Createable Tagging - open 1`] = `
           </div>
           <div
             className="css-3cs47o-option"
-            id="react-select-30-option-3"
+            id="react-select-31-option-3"
             onClick={[Function]}
             onMouseMove={[Function]}
             onMouseOver={[Function]}
@@ -18726,7 +18726,7 @@ exports[`Storyshots Select/Createable Tagging - open 1`] = `
           </div>
           <div
             className="css-3cs47o-option"
-            id="react-select-30-option-4"
+            id="react-select-31-option-4"
             onClick={[Function]}
             onMouseMove={[Function]}
             onMouseOver={[Function]}
@@ -18736,7 +18736,7 @@ exports[`Storyshots Select/Createable Tagging - open 1`] = `
           </div>
           <div
             className="css-3cs47o-option"
-            id="react-select-30-option-5"
+            id="react-select-31-option-5"
             onClick={[Function]}
             onMouseMove={[Function]}
             onMouseOver={[Function]}
@@ -18746,7 +18746,7 @@ exports[`Storyshots Select/Createable Tagging - open 1`] = `
           </div>
           <div
             className="css-3cs47o-option"
-            id="react-select-30-option-6"
+            id="react-select-31-option-6"
             onClick={[Function]}
             onMouseMove={[Function]}
             onMouseOver={[Function]}
@@ -18885,7 +18885,7 @@ exports[`Storyshots Select/Createable Tagging - tooltip 1`] = `
                 autoCorrect="off"
                 className={undefined}
                 disabled={false}
-                id="react-select-31-input"
+                id="react-select-32-input"
                 onBlur={[Function]}
                 onChange={[Function]}
                 onFocus={[Function]}
@@ -19082,7 +19082,7 @@ exports[`Storyshots Select/Createable Tagging 1`] = `
                 autoCorrect="off"
                 className={undefined}
                 disabled={false}
-                id="react-select-29-input"
+                id="react-select-30-input"
                 onBlur={[Function]}
                 onChange={[Function]}
                 onFocus={[Function]}
@@ -19799,6 +19799,129 @@ exports[`Storyshots Select/Label + Info error 1`] = `
     className="input-info danger"
   >
     it's a trap
+  </span>
+</div>
+`;
+
+exports[`Storyshots Select/Label + Info info (with ReactNode) 1`] = `
+<div
+  className="input-select-wrap"
+  id={undefined}
+>
+  <div
+    className="css-1agvba9-container"
+    id={undefined}
+    onKeyDown={[Function]}
+  >
+    <div
+      className="css-bbrij5-control"
+      onMouseDown={[Function]}
+      onTouchEnd={[Function]}
+    >
+      <div
+        className="css-1m8oe7c"
+      >
+        <div
+          className="css-1stfvtj-placeholder"
+        >
+          Select...
+        </div>
+        <div
+          className="css-1g6gooi"
+        >
+          <div
+            className=""
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
+            <input
+              aria-autocomplete="list"
+              aria-label={undefined}
+              aria-labelledby={undefined}
+              autoCapitalize="none"
+              autoComplete="off"
+              autoCorrect="off"
+              className={undefined}
+              disabled={false}
+              id="react-select-26-input"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              spellCheck="false"
+              style={
+                Object {
+                  "background": 0,
+                  "border": 0,
+                  "boxSizing": "content-box",
+                  "color": "inherit",
+                  "fontSize": "inherit",
+                  "label": "input",
+                  "opacity": 1,
+                  "outline": 0,
+                  "padding": 0,
+                  "width": "1px",
+                }
+              }
+              tabIndex="0"
+              type="text"
+              value=""
+            />
+            <div
+              style={
+                Object {
+                  "height": 0,
+                  "left": 0,
+                  "overflow": "scroll",
+                  "position": "absolute",
+                  "top": 0,
+                  "visibility": "hidden",
+                  "whiteSpace": "pre",
+                }
+              }
+            >
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="css-1wy0on6"
+      >
+        <span
+          className="css-0"
+        />
+        <div
+          aria-hidden="true"
+          className="css-1xhjog1-indicatorContainer"
+          onMouseDown={[Function]}
+          onTouchEnd={[Function]}
+        >
+          <svg
+            aria-hidden="true"
+            className="css-19bqh2r"
+            focusable="false"
+            height={20}
+            viewBox="0 0 20 20"
+            width={20}
+          >
+            <path
+              d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <span
+    className="input-info"
+  >
+    with some 
+    <strong>
+      React nodes
+    </strong>
   </span>
 </div>
 `;
@@ -21022,6 +21145,40 @@ exports[`Storyshots Switch Switch - On 1`] = `
   <div
     className="switch-selector"
   />
+</div>
+`;
+
+exports[`Storyshots Table Search Composable Table Search (accepts children) 1`] = `
+<div
+  className="table-state some-composable-table-search-class"
+>
+  <p>
+    Adding my own shtuff inside!
+  </p>
+</div>
+`;
+
+exports[`Storyshots Table Search Default (with clear button and children) 1`] = `
+<div
+  className="table-state is-search some-table-search-class"
+>
+  <p
+    className="table-search-text"
+  >
+    Displaying results for: 
+    <strong>
+      alfred.lucero
+    </strong>
+  </p>
+  <button
+    className="btn btn-secondary btn-small"
+    disabled={false}
+    id={undefined}
+    onClick={[Function]}
+    type="button"
+  >
+    Clear
+  </button>
 </div>
 `;
 

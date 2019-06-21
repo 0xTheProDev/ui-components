@@ -317,6 +317,17 @@ labelStories.add('info', () => (
   />
 ));
 
+labelStories.add('info (with ReactNode)', () => (
+  <Select
+    options={powerups}
+    info={
+      <React.Fragment>
+        with some <strong>React nodes</strong>
+      </React.Fragment>
+    }
+  />
+));
+
 export interface FieldState {
   value: Array<{ label: string; value: string }>;
   inputValue: string;
