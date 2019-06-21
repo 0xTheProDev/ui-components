@@ -123,6 +123,9 @@ labelStories.add('label', () => (React.createElement(React.Fragment, null,
 labelStories.add('label - required', () => (React.createElement(React.Fragment, null,
     React.createElement(Select, { label: 'Powerups', options: powerups, required: true, info: `it's a trap` }))));
 labelStories.add('info', () => (React.createElement(Select, { options: powerups, info: 'Read this to better understand the dropdown.' })));
+labelStories.add('info (with ReactNode)', () => (React.createElement(Select, { options: powerups, info: React.createElement(React.Fragment, null,
+        "with some ",
+        React.createElement("strong", null, "React nodes")) })));
 export class CreateableTextInput extends React.Component {
     constructor() {
         super(...arguments);

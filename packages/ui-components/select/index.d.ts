@@ -451,7 +451,7 @@ export interface SelectProps extends Omit<ReactSelectProps, 'options'> {
     options?: GroupedOptionsType<ReactNodeLabelOption> | OptionsType<ReactNodeLabelOption>;
     disabled?: boolean;
     error?: boolean;
-    info?: string;
+    info?: string | React.ReactNode;
     label?: string;
     required?: boolean;
     tooltip?: ReactNode;
