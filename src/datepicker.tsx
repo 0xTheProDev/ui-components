@@ -73,6 +73,7 @@ export class SingleDatePickerWithRange extends Component<
           }
           options={months}
           className="input-select-wrap"
+          classNamePrefix="input-select-wrap"
         />
         <Select
           value={years.find(y => y.value === month.year().toString())}
@@ -81,6 +82,7 @@ export class SingleDatePickerWithRange extends Component<
           }
           options={years}
           className="input-select-wrap"
+          classNamePrefix="input-select-wrap"
         />
       </div>
     );

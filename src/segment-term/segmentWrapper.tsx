@@ -55,8 +55,9 @@ export default class SegmentWrapper extends React.Component<
     if (
       !(
         segmentTerm.contains(target) ||
-        (className && className.includes('__option'))
-      )
+        (className && className.includes('__option')) ||
+        (className && className.includes('Calendar'))
+      ) // Don't submit if selecting inside a Select or DatePicker component
     ) {
       if (this.props.onSubmit) {
         const isValid = this.props.onSubmit();

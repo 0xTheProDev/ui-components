@@ -142,7 +142,7 @@ stories.add('Disabled with tooltip', () => (
 
 stories.add('Searchable', () => (
   <div className="input-select-wrap">
-    <Select defaultValue={feels[1]} isSearchable options={feels} />
+    <Select defaultValue={feels[1]} isSearchable isClearable options={feels} />
   </div>
 ));
 
