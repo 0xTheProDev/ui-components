@@ -26,8 +26,8 @@ export class SingleDatePickerWithRange extends Component {
             value: label.toString(),
         }));
         return (React.createElement("div", { className: Styles['datepicker-month-container'] },
-            React.createElement(Select, { value: months.find(m => m.value === month.month().toString()), onChange: ({ value }) => onMonthSelect(month, value), options: months, className: "input-select-wrap" }),
-            React.createElement(Select, { value: years.find(y => y.value === month.year().toString()), onChange: ({ value }) => onYearSelect(month, value), options: years, className: "input-select-wrap" })));
+            React.createElement(Select, { value: months.find(m => m.value === month.month().toString()), onChange: ({ value }) => onMonthSelect(month, value), options: months, className: "input-select-wrap", classNamePrefix: "input-select-wrap" }),
+            React.createElement(Select, { value: years.find(y => y.value === month.year().toString()), onChange: ({ value }) => onYearSelect(month, value), options: years, className: "input-select-wrap", classNamePrefix: "input-select-wrap" })));
     }
 }
 export default SingleDatePickerWithRange;
