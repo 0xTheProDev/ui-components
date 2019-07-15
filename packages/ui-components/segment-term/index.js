@@ -55,7 +55,7 @@ export class SegmentTerm extends PureComponent {
                     React.createElement("strong", null, queryName))),
                 this.termControls,
                 renderAlert && renderAlert()),
-            hasQueryToggle && (React.createElement("div", { className: cn('segment-term-switch', Styles['segment-term-switch']) },
+            hasQueryToggle && (React.createElement("div", { className: cn('segment-term-switch', Styles['segment-term-switch']), key: this.props.queryToggleKey },
                 React.createElement(ToggleButtons, { keys: ['and', 'or'], selectedKey: this.props.queryToggle, onChange: (event, key) => onQueryToggle(key) }, (and, or) => (React.createElement(React.Fragment, null,
                     React.createElement(Button, Object.assign({}, and, { small: true, type: "group-item" }), "AND"),
                     React.createElement(Button, Object.assign({}, or, { small: true, type: "group-item" }), "OR")))))),
