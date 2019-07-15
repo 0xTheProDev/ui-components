@@ -23,6 +23,7 @@ export interface SegmentTermProps {
   onQueryToggle?: (operation: Conjunction) => void;
   queryName?: string;
   queryToggle?: string;
+  queryToggleKey?: string;
   radios?: boolean;
   renderAlert?: () => React.ReactNode;
   renderInputs?: () => React.ReactNode;
@@ -152,6 +153,7 @@ export class SegmentTerm extends PureComponent<SegmentTermProps> {
         {hasQueryToggle && (
           <div
             className={cn('segment-term-switch', Styles['segment-term-switch'])}
+            key={this.props.queryToggleKey}
           >
             <ToggleButtons
               keys={['and', 'or']}
