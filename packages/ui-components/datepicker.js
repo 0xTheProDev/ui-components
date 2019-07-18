@@ -13,7 +13,7 @@ export class SingleDatePickerWithRange extends Component {
     render() {
         const { id, focused, onFocusChange, date, onDateChange } = this.props;
         return (React.createElement("div", { className: Styles['datepicker-container'] },
-            React.createElement(SingleDatePicker, Object.assign({}, omit(this.props, 'startYear', 'endYear'), { id: id, date: date, onDateChange: onDateChange, focused: focused, onFocusChange: onFocusChange, renderMonthElement: monthProps => this.renderMonthElement(monthProps), daySize: 50, showClearDate: true, customCloseIcon: React.createElement(Icon, { type: "x", className: Styles['datepicker-clear-icon'] }) }))));
+            React.createElement(SingleDatePicker, Object.assign({}, omit(this.props, 'startYear', 'endYear'), { id: id, date: date, onDateChange: onDateChange, focused: focused, onFocusChange: onFocusChange, renderMonthElement: monthProps => this.renderMonthElement(monthProps), daySize: 50, customCloseIcon: React.createElement(Icon, { type: "x", className: Styles['datepicker-clear-icon'] }) }))));
     }
     renderMonthElement({ month, onMonthSelect, onYearSelect, }) {
         const currentYear = moment().year();
