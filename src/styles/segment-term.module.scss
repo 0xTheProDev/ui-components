@@ -1,9 +1,12 @@
 @import './global/variables.scss';
 
-.segment-term-wrap {
+:global .segment-term-wrap {
+  transform: initial;
   position: relative;
 
   &.is-collapsed {
+    transform: initial;
+
     > .segment-term-switch {
       height: 0;
       transform: translateY(-17px);
@@ -20,6 +23,8 @@
 
     > .segment-term {
       margin: 0;
+      box-sizing: content-box;
+      transform: initial;
 
       &.has-separator::after {
         height: 0;
@@ -39,6 +44,7 @@
     z-index: 1;
 
     :global .btn-group {
+      border: 1px solid $slate-20;
       background-color: $white;
     }
     :global .btn-group-item.btn-small {
@@ -61,6 +67,9 @@
   background: $white;
   border: 1px solid $slate-10;
   border-radius: $border-radius;
+  box-sizing: content-box;
+  transform: none;
+  transition: margin-bottom 0.3s;
 
   &:hover {
     .segment-term-edit {
@@ -188,6 +197,13 @@
     color: $sg-blue;
     cursor: pointer;
     opacity: 0;
+  }
+
+  > .segment-term-text {
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 550px;
   }
 }
 

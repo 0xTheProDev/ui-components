@@ -84,6 +84,7 @@ export class SegmentTerm extends PureComponent<SegmentTermProps> {
     const {
       hasAddButton,
       hasQueryToggle,
+      queryToggleKey,
       hasSeparator,
       editable,
       editing,
@@ -142,7 +143,7 @@ export class SegmentTerm extends PureComponent<SegmentTermProps> {
         >
           {editing && renderInputs && renderInputs()}
           {!editing && (
-            <p>
+            <p className={Styles['segment-term-text']}>
               {`${label} `}
               <strong>{queryName}</strong>
             </p>
@@ -153,11 +154,11 @@ export class SegmentTerm extends PureComponent<SegmentTermProps> {
         {hasQueryToggle && (
           <div
             className={cn('segment-term-switch', Styles['segment-term-switch'])}
-            key={this.props.queryToggleKey}
+            key={queryToggleKey}
           >
             <ToggleButtons
               keys={['and', 'or']}
-              selectedKey={this.props.queryToggle}
+              selectedKey={queryToggle}
               onChange={(event: any, key: Conjunction) => onQueryToggle(key)}
             >
               {(and, or) => (

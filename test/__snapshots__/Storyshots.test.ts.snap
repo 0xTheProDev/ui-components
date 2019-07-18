@@ -13805,7 +13805,9 @@ exports[`Storyshots Segment Term Segment term which cannot be edited 1`] = `
     className="segment-term is-live"
     onClick={undefined}
   >
-    <p>
+    <p
+      className="segment-term-text"
+    >
       The first time a contact is added to 
       <strong>
         People in Los Angeles
@@ -14534,7 +14536,9 @@ exports[`Storyshots Segment Term Segment term with alert 1`] = `
     className="segment-term has-alert"
     onClick={[Function]}
   >
-    <p>
+    <p
+      className="segment-term-text"
+    >
       The first time a contact is added to 
       <strong>
         People in Los Angeles
@@ -14665,7 +14669,9 @@ exports[`Storyshots Segment Term Segment terms 1`] = `
         className="segment-term has-separator"
         onClick={[Function]}
       >
-        <p>
+        <p
+          className="segment-term-text"
+        >
           The first time a contact is added to 
           <strong>
             People in Los Angeles
@@ -14719,7 +14725,9 @@ exports[`Storyshots Segment Term Segment terms 1`] = `
         className="segment-term has-separator"
         onClick={[Function]}
       >
-        <p>
+        <p
+          className="segment-term-text"
+        >
           Every time a contact is added to 
           <strong>
             People in Denver

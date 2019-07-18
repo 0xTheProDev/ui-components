@@ -34,7 +34,6 @@ export class SingleDatePickerWithRange extends Component<
           onFocusChange={onFocusChange}
           renderMonthElement={monthProps => this.renderMonthElement(monthProps)}
           daySize={50}
-          showClearDate
           customCloseIcon={
             <Icon type="x" className={Styles['datepicker-clear-icon']} />
           }
