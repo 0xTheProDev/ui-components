@@ -144,6 +144,12 @@ export const SelectStyles = {
     indicatorSeparator: () => {
         return {};
     },
+    input: (base) => {
+        return Object.assign({}, base, {
+            marginLeft: 0,
+            marginRight: 0,
+        });
+    },
     menu: (base) => {
         const menu = Object.assign({}, dropDownShadow, { backgroundColor: SassVars['slate-02'], borderColor: SassVars['slate-10'], borderRadius: 2, fontSize: 13, margin: 0 });
         return Object.assign({}, base, menu);

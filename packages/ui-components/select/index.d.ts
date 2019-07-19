@@ -317,6 +317,10 @@ export declare const SelectStyles: {
         textTransform: TextTransformProperty;
     };
     indicatorSeparator: () => {};
+    input: (base: object) => {
+        marginLeft: number;
+        marginRight: number;
+    };
     menu: (base: object) => any;
     multiValue: (base: object, state: any) => {
         backgroundColor: any;
