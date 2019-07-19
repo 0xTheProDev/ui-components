@@ -1,0 +1,7 @@
+@import './variables.scss';
+
+@keyframes #{$animations-skeleton-loader} {
+  to {
+    background-position: 200% 0, 0 0;
+  }
+}

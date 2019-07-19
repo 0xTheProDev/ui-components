@@ -5,6 +5,8 @@ export {
   AccordionPanelTitle,
   AccordionPanelDescription,
   AccordionPanelIcon,
+  TableAccordion,
+  TableAccordionPanel,
 } from './accordion';
 export { Action, Actions, ActionsCell } from './actions';
 export { Alert } from './alert';

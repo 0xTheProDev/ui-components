@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/react';
 import React, { Component, Fragment } from 'react';
-import Accordion, { AccordionPanel, AccordionPanelDescription, AccordionPanelIcon, AccordionPanelTitle, } from '.';
+import Accordion, { AccordionPanel, AccordionPanelDescription, AccordionPanelIcon, AccordionPanelTitle, TableAccordion, TableAccordionPanel, } from '.';
 import Card from '../card';
 import Checkbox from '../checkbox';
 import Icon from '../icon';
@@ -11,6 +11,10 @@ const LOREM_IPSUM = `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   dui egestas consequat. Donec ut nibh lorem. Phasellus sed sapien lobortis,
   egestas lacus nec, vehicula lorem. Donec hendrerit nibh sed velit placerat
   aliquet. Morbi tristique pretium lorem, nec pretium turpis mattis vel.`;
+const template = {
+    name: 'Name',
+    updated_at: 'Tue, Mar 13, 2018 10:43 PM EST',
+};
 stories.add('Accordion - Standard', () => (React.createElement(Accordion, null,
     React.createElement(AccordionPanel, { title: React.createElement(AccordionPanelTitle, { text: "Accordion Title" }), open: true },
         React.createElement("p", null, LOREM_IPSUM)),
@@ -103,4 +107,11 @@ stories.add('Accordion - HTML title, children, noChange', () => {
         React.createElement(AccordionPanel, { title: React.createElement(AccordionPanelTitle, { text: React.createElement("span", null, "This is always open") }), noPadding: true, open: true, noChange: true },
             React.createElement("p", null, LOREM_IPSUM)),
         React.createElement(AccordionPanel, { title: React.createElement(AccordionPanelTitle, { text: React.createElement("span", null, "This is always closed") }), noPadding: true, noChange: true })));
+});
+stories.add('Accordion - Templates', () => {
+    return (React.createElement(React.Fragment, null,
+        React.createElement(TableAccordion, { col1Header: "Templates", col2Header: "Last Edited" }, [1, 2, 3].map(id => (React.createElement(TableAccordionPanel, { key: id, col1Title: template.name, col2Title: template.updated_at, actions: () => React.createElement("div", null, "Action") },
+            React.createElement("p", null, LOREM_IPSUM))))),
+        React.createElement(TableAccordion, { col1Header: "Templates", col2Header: "Last Edited" }, [1, 2, 3].map(id => (React.createElement(TableAccordionPanel, { key: id, col1Title: "", col2Title: "", actions: () => null },
+            React.createElement("p", null, LOREM_IPSUM)))))));
 });

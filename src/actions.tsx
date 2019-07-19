@@ -4,6 +4,7 @@ import cn from './utilities/classnames';
 
 import DropdownButton from './dropdown-button';
 import Icon from './icon';
+import Styles from './styles/actions.module.scss';
 import EmailCardStyles from './styles/email-card.module.scss';
 
 import { IconType } from './types/icons';
@@ -30,6 +31,7 @@ export const Actions: React.SFC<ActionsProps> = ({
     className={cn(
       {
         actions: !inEmailCard,
+        [Styles.actions]: !inEmailCard,
         [EmailCardStyles['email-row-actions']]: inEmailCard,
         'email-row-actions': inEmailCard,
       },

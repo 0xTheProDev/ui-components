@@ -9,7 +9,7 @@ export interface AccordionPanelProps {
     open?: boolean;
     noPadding?: boolean;
     onClick?: (e: any) => void;
-    title?: React.ReactNode;
+    title?: React.ReactNode | (() => React.ReactNode);
     noChange?: boolean;
 }
 declare const AccordionPanelSFC: React.SFC<AccordionPanelProps>;

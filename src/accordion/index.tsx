@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import cn from '../utilities/classnames';
 import Styles from './accordion.module.scss';
 
@@ -10,12 +10,16 @@ import {
   AccordionPanelTitle,
 } from './accordion-panel';
 
+import TableAccordion from './table-accordion';
+import TableAccordionPanel from './table-accordion-panel';
+
 export interface AccordionProps {
   caretLeft?: boolean;
   className?: string;
   editor?: boolean;
   large?: boolean;
   list?: boolean;
+  templates?: boolean;
 }
 
 export const Accordion: React.SFC<AccordionProps> = ({
@@ -25,6 +29,7 @@ export const Accordion: React.SFC<AccordionProps> = ({
   editor,
   large,
   list,
+  templates,
 }) => {
   return (
     <div
@@ -41,6 +46,8 @@ export const Accordion: React.SFC<AccordionProps> = ({
           'accordion-list': list,
           [Styles['is-editor']]: editor,
           'is-editor': editor,
+          [Styles['is-templates']]: templates,
+          'is-templates': templates,
         }
       )}
     >
@@ -56,4 +63,6 @@ export {
   AccordionPanelDescription,
   AccordionPanelIcon,
   AccordionPanelTitle,
+  TableAccordion,
+  TableAccordionPanel,
 };

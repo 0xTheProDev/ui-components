@@ -6,7 +6,10 @@ import Accordion, {
   AccordionPanelDescription,
   AccordionPanelIcon,
   AccordionPanelTitle,
+  TableAccordion,
+  TableAccordionPanel,
 } from '.';
+import { Actions } from '../actions';
 import Card from '../card';
 import Checkbox from '../checkbox';
 import Icon from '../icon';
@@ -19,6 +22,11 @@ const LOREM_IPSUM = `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   dui egestas consequat. Donec ut nibh lorem. Phasellus sed sapien lobortis,
   egestas lacus nec, vehicula lorem. Donec hendrerit nibh sed velit placerat
   aliquet. Morbi tristique pretium lorem, nec pretium turpis mattis vel.`;
+
+const template = {
+  name: 'Name',
+  updated_at: 'Tue, Mar 13, 2018 10:43 PM EST',
+};
 
 stories.add('Accordion - Standard', () => (
   <Accordion>
@@ -227,5 +235,37 @@ stories.add('Accordion - HTML title, children, noChange', () => {
         noChange
       />
     </Accordion>
+  );
+});
+
+stories.add('Accordion - Templates', () => {
+  return (
+    <>
+      <TableAccordion col1Header="Templates" col2Header="Last Edited">
+        {[1, 2, 3].map(id => (
+          <TableAccordionPanel
+            key={id}
+            col1Title={template.name}
+            col2Title={template.updated_at}
+            actions={() => <div>Action</div>}
+          >
+            <p>{LOREM_IPSUM}</p>
+          </TableAccordionPanel>
+        ))}
+      </TableAccordion>
+
+      <TableAccordion col1Header="Templates" col2Header="Last Edited">
+        {[1, 2, 3].map(id => (
+          <TableAccordionPanel
+            key={id}
+            col1Title=""
+            col2Title=""
+            actions={() => null}
+          >
+            <p>{LOREM_IPSUM}</p>
+          </TableAccordionPanel>
+        ))}
+      </TableAccordion>
+    </>
   );
 });

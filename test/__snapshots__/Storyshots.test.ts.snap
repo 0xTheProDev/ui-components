@@ -1039,6 +1039,467 @@ exports[`Storyshots Accordion Accordion - Standard 1`] = `
 </div>
 `;
 
+exports[`Storyshots Accordion Accordion - Templates 1`] = `
+Array [
+  <div
+    className="table-accordion"
+  >
+    <header
+      className="accordion-header"
+    >
+      <p>
+        Templates
+      </p>
+      <p>
+        Last Edited
+      </p>
+    </header>
+    <div
+      className="accordion-wrapper accordion-caret-left is-templates"
+    >
+      <div
+        className="table-accordion-panel"
+      >
+        <div
+          className="accordion-panel"
+        >
+          <div
+            className="accordion-title"
+            onClick={[Function]}
+          >
+            <h3>
+              Name
+            </h3>
+            <p
+              className="date"
+            >
+              Tue, Mar 13, 2018 10:43 PM EST
+            </p>
+            <div
+              onClick={[Function]}
+            >
+              <div
+                className="actions"
+              >
+                <div
+                  className="btn-list"
+                >
+                  <div
+                    className="btn btn-dropdown dropdown has-icon"
+                    onClick={[Function]}
+                  >
+                    <i
+                      className="sg-icon sg-icon-ellipsis-vertical"
+                      onClick={undefined}
+                      style={null}
+                    />
+                    <ul
+                      className="dropdown-menu"
+                    >
+                      <div
+                        className="dropdown-link"
+                      >
+                        Action
+                      </div>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={true}
+            className="rah-static rah-static--height-zero"
+            style={
+              Object {
+                "height": 0,
+                "overflow": "hidden",
+              }
+            }
+          >
+            <div
+              className={undefined}
+              style={Object {}}
+            >
+              <div
+                className="accordion-content"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+              >
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Vestibulum vehicula semper eleifend. Morbi tincidunt, magna non hendrerit malesuada,
+  ex est pulvinar nisi, ac luctus lorem quam vel nibh. Integer at tortor luctus
+  dui egestas consequat. Donec ut nibh lorem. Phasellus sed sapien lobortis,
+  egestas lacus nec, vehicula lorem. Donec hendrerit nibh sed velit placerat
+  aliquet. Morbi tristique pretium lorem, nec pretium turpis mattis vel.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="table-accordion-panel"
+      >
+        <div
+          className="accordion-panel"
+        >
+          <div
+            className="accordion-title"
+            onClick={[Function]}
+          >
+            <h3>
+              Name
+            </h3>
+            <p
+              className="date"
+            >
+              Tue, Mar 13, 2018 10:43 PM EST
+            </p>
+            <div
+              onClick={[Function]}
+            >
+              <div
+                className="actions"
+              >
+                <div
+                  className="btn-list"
+                >
+                  <div
+                    className="btn btn-dropdown dropdown has-icon"
+                    onClick={[Function]}
+                  >
+                    <i
+                      className="sg-icon sg-icon-ellipsis-vertical"
+                      onClick={undefined}
+                      style={null}
+                    />
+                    <ul
+                      className="dropdown-menu"
+                    >
+                      <div
+                        className="dropdown-link"
+                      >
+                        Action
+                      </div>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={true}
+            className="rah-static rah-static--height-zero"
+            style={
+              Object {
+                "height": 0,
+                "overflow": "hidden",
+              }
+            }
+          >
+            <div
+              className={undefined}
+              style={Object {}}
+            >
+              <div
+                className="accordion-content"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+              >
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Vestibulum vehicula semper eleifend. Morbi tincidunt, magna non hendrerit malesuada,
+  ex est pulvinar nisi, ac luctus lorem quam vel nibh. Integer at tortor luctus
+  dui egestas consequat. Donec ut nibh lorem. Phasellus sed sapien lobortis,
+  egestas lacus nec, vehicula lorem. Donec hendrerit nibh sed velit placerat
+  aliquet. Morbi tristique pretium lorem, nec pretium turpis mattis vel.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="table-accordion-panel"
+      >
+        <div
+          className="accordion-panel"
+        >
+          <div
+            className="accordion-title"
+            onClick={[Function]}
+          >
+            <h3>
+              Name
+            </h3>
+            <p
+              className="date"
+            >
+              Tue, Mar 13, 2018 10:43 PM EST
+            </p>
+            <div
+              onClick={[Function]}
+            >
+              <div
+                className="actions"
+              >
+                <div
+                  className="btn-list"
+                >
+                  <div
+                    className="btn btn-dropdown dropdown has-icon"
+                    onClick={[Function]}
+                  >
+                    <i
+                      className="sg-icon sg-icon-ellipsis-vertical"
+                      onClick={undefined}
+                      style={null}
+                    />
+                    <ul
+                      className="dropdown-menu"
+                    >
+                      <div
+                        className="dropdown-link"
+                      >
+                        Action
+                      </div>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden={true}
+            className="rah-static rah-static--height-zero"
+            style={
+              Object {
+                "height": 0,
+                "overflow": "hidden",
+              }
+            }
+          >
+            <div
+              className={undefined}
+              style={Object {}}
+            >
+              <div
+                className="accordion-content"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+              >
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Vestibulum vehicula semper eleifend. Morbi tincidunt, magna non hendrerit malesuada,
+  ex est pulvinar nisi, ac luctus lorem quam vel nibh. Integer at tortor luctus
+  dui egestas consequat. Donec ut nibh lorem. Phasellus sed sapien lobortis,
+  egestas lacus nec, vehicula lorem. Donec hendrerit nibh sed velit placerat
+  aliquet. Morbi tristique pretium lorem, nec pretium turpis mattis vel.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="table-accordion"
+  >
+    <header
+      className="accordion-header"
+    >
+      <p>
+        Templates
+      </p>
+      <p>
+        Last Edited
+      </p>
+    </header>
+    <div
+      className="accordion-wrapper accordion-caret-left is-templates"
+    >
+      <div
+        className="table-accordion-panel"
+      >
+        <div
+          className="accordion-panel"
+        >
+          <div
+            className="accordion-title"
+            onClick={[Function]}
+          >
+            <h3>
+              
+            </h3>
+            <p
+              className="date"
+            >
+              
+            </p>
+            <span />
+          </div>
+          <div
+            aria-hidden={true}
+            className="rah-static rah-static--height-zero"
+            style={
+              Object {
+                "height": 0,
+                "overflow": "hidden",
+              }
+            }
+          >
+            <div
+              className={undefined}
+              style={Object {}}
+            >
+              <div
+                className="accordion-content"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+              >
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Vestibulum vehicula semper eleifend. Morbi tincidunt, magna non hendrerit malesuada,
+  ex est pulvinar nisi, ac luctus lorem quam vel nibh. Integer at tortor luctus
+  dui egestas consequat. Donec ut nibh lorem. Phasellus sed sapien lobortis,
+  egestas lacus nec, vehicula lorem. Donec hendrerit nibh sed velit placerat
+  aliquet. Morbi tristique pretium lorem, nec pretium turpis mattis vel.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="table-accordion-panel"
+      >
+        <div
+          className="accordion-panel"
+        >
+          <div
+            className="accordion-title"
+            onClick={[Function]}
+          >
+            <h3>
+              
+            </h3>
+            <p
+              className="date"
+            >
+              
+            </p>
+            <span />
+          </div>
+          <div
+            aria-hidden={true}
+            className="rah-static rah-static--height-zero"
+            style={
+              Object {
+                "height": 0,
+                "overflow": "hidden",
+              }
+            }
+          >
+            <div
+              className={undefined}
+              style={Object {}}
+            >
+              <div
+                className="accordion-content"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+              >
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Vestibulum vehicula semper eleifend. Morbi tincidunt, magna non hendrerit malesuada,
+  ex est pulvinar nisi, ac luctus lorem quam vel nibh. Integer at tortor luctus
+  dui egestas consequat. Donec ut nibh lorem. Phasellus sed sapien lobortis,
+  egestas lacus nec, vehicula lorem. Donec hendrerit nibh sed velit placerat
+  aliquet. Morbi tristique pretium lorem, nec pretium turpis mattis vel.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="table-accordion-panel"
+      >
+        <div
+          className="accordion-panel"
+        >
+          <div
+            className="accordion-title"
+            onClick={[Function]}
+          >
+            <h3>
+              
+            </h3>
+            <p
+              className="date"
+            >
+              
+            </p>
+            <span />
+          </div>
+          <div
+            aria-hidden={true}
+            className="rah-static rah-static--height-zero"
+            style={
+              Object {
+                "height": 0,
+                "overflow": "hidden",
+              }
+            }
+          >
+            <div
+              className={undefined}
+              style={Object {}}
+            >
+              <div
+                className="accordion-content"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+              >
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Vestibulum vehicula semper eleifend. Morbi tincidunt, magna non hendrerit malesuada,
+  ex est pulvinar nisi, ac luctus lorem quam vel nibh. Integer at tortor luctus
+  dui egestas consequat. Donec ut nibh lorem. Phasellus sed sapien lobortis,
+  egestas lacus nec, vehicula lorem. Donec hendrerit nibh sed velit placerat
+  aliquet. Morbi tristique pretium lorem, nec pretium turpis mattis vel.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;
+
 exports[`Storyshots Alerts Alert which is not dismissable 1`] = `
 <div
   className="alert alert-warning"
