@@ -205,6 +205,15 @@ export const SelectStyles = {
   indicatorSeparator: () => {
     return {};
   },
+  input: (base: object) => {
+    return {
+      ...base,
+      ...{
+        marginLeft: 0,
+        marginRight: 0,
+      },
+    };
+  },
   menu: (base: object) => {
     const menu = {
       ...dropDownShadow,
