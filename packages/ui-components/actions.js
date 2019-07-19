@@ -11,6 +11,7 @@ import React, { createContext, Fragment } from 'react';
 import cn from './utilities/classnames';
 import DropdownButton from './dropdown-button';
 import Icon from './icon';
+import Styles from './styles/actions.module.scss';
 import EmailCardStyles from './styles/email-card.module.scss';
 // using Children.map to attach this prop is problematic because we
 // may wish to render <Link> elements as opposed to <Action> elements
@@ -20,6 +21,7 @@ export const Actions = (_a) => {
     var { children, className, inEmailCard, vertical } = _a, attributes = __rest(_a, ["children", "className", "inEmailCard", "vertical"]);
     return (React.createElement("div", Object.assign({ className: cn({
             actions: !inEmailCard,
+            [Styles.actions]: !inEmailCard,
             [EmailCardStyles['email-row-actions']]: inEmailCard,
             'email-row-actions': inEmailCard,
         }, className) }, attributes),

@@ -18,7 +18,7 @@ export const TableAccordionPanel = (_a) => {
     return (React.createElement("div", { className: cn('table-accordion-panel', Styles['table-accordion-panel']) },
         React.createElement(AccordionPanel, Object.assign({ title: React.createElement(Fragment, null,
                 React.createElement("h3", null, col1Title),
-                React.createElement("p", { className: cn('date', Styles['date']) }, col2Title),
+                React.createElement("p", { className: cn('date', Styles.date) }, col2Title),
                 action ? (React.createElement("div", { onClick: e => e.stopPropagation() },
                     React.createElement(Actions, { className: Styles.actions, vertical: true }, action))) : (React.createElement("span", null))) }, attributes), children)));
 };

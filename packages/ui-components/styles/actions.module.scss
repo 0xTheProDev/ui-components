@@ -1,0 +1,15 @@
+@import './global/variables.scss';
+
+.actions {
+  :global {
+    .dropdown {
+      &:hover {
+        background-color: $slate-05;
+      }
+
+      &.is-active {
+        background-color: $slate-10;
+      }
+    }
+  }
+}

@@ -7,8 +7,8 @@ var __rest = (this && this.__rest) || function (s, e) {
             t[p[i]] = s[p[i]];
     return t;
 };
-import React from 'react';
 import cn from 'classnames';
+import React from 'react';
 import Styles from './accordion.module.scss';
 import Accordion from './index';
 export const TableAccordion = (_a) => {
