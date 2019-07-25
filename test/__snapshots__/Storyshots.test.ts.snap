@@ -21317,6 +21317,209 @@ Array [
 ]
 `;
 
+exports[`Storyshots Stats Card StatsCard that is loading 1`] = `
+<div
+  className="stats-card stats-card"
+>
+  <div
+    className="card-stat card-stat"
+  >
+    <svg
+      className="fragment-loader loader"
+    >
+      <rect
+        className="fragment-square left"
+        height={10}
+        width={10}
+      />
+      <rect
+        className="fragment-square middle"
+        height={10}
+        width={10}
+      />
+      <rect
+        className="fragment-square right"
+        height={10}
+        width={10}
+      />
+    </svg>
+    <p
+      className="label label"
+    >
+      delivered
+    </p>
+  </div>
+  <div
+    className="card-stat card-stat"
+  >
+    <svg
+      className="fragment-loader loader"
+    >
+      <rect
+        className="fragment-square left"
+        height={10}
+        width={10}
+      />
+      <rect
+        className="fragment-square middle"
+        height={10}
+        width={10}
+      />
+      <rect
+        className="fragment-square right"
+        height={10}
+        width={10}
+      />
+    </svg>
+    <p
+      className="label label"
+    >
+      unique opens
+    </p>
+  </div>
+  <div
+    className="card-stat card-stat"
+  >
+    <svg
+      className="fragment-loader loader"
+    >
+      <rect
+        className="fragment-square left"
+        height={10}
+        width={10}
+      />
+      <rect
+        className="fragment-square middle"
+        height={10}
+        width={10}
+      />
+      <rect
+        className="fragment-square right"
+        height={10}
+        width={10}
+      />
+    </svg>
+    <p
+      className="label label"
+    >
+      unique clicks
+    </p>
+  </div>
+  <div
+    className="card-stat card-stat"
+  >
+    <svg
+      className="fragment-loader loader"
+    >
+      <rect
+        className="fragment-square left"
+        height={10}
+        width={10}
+      />
+      <rect
+        className="fragment-square middle"
+        height={10}
+        width={10}
+      />
+      <rect
+        className="fragment-square right"
+        height={10}
+        width={10}
+      />
+    </svg>
+    <p
+      className="label label"
+    >
+      requests
+    </p>
+  </div>
+  <div
+    className="card-stat card-stat"
+  >
+    <svg
+      className="fragment-loader loader"
+    >
+      <rect
+        className="fragment-square left"
+        height={10}
+        width={10}
+      />
+      <rect
+        className="fragment-square middle"
+        height={10}
+        width={10}
+      />
+      <rect
+        className="fragment-square right"
+        height={10}
+        width={10}
+      />
+    </svg>
+    <p
+      className="label label"
+    >
+      bounces
+    </p>
+  </div>
+  <div
+    className="card-stat card-stat"
+  >
+    <svg
+      className="fragment-loader loader"
+    >
+      <rect
+        className="fragment-square left"
+        height={10}
+        width={10}
+      />
+      <rect
+        className="fragment-square middle"
+        height={10}
+        width={10}
+      />
+      <rect
+        className="fragment-square right"
+        height={10}
+        width={10}
+      />
+    </svg>
+    <p
+      className="label label"
+    >
+      unsubscribes
+    </p>
+  </div>
+  <div
+    className="card-stat card-stat"
+  >
+    <svg
+      className="fragment-loader loader"
+    >
+      <rect
+        className="fragment-square left"
+        height={10}
+        width={10}
+      />
+      <rect
+        className="fragment-square middle"
+        height={10}
+        width={10}
+      />
+      <rect
+        className="fragment-square right"
+        height={10}
+        width={10}
+      />
+    </svg>
+    <p
+      className="label label"
+    >
+      spam reports
+    </p>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Stats Card StatsCard via composition 1`] = `
 <div
   className="stats-card stats-card"

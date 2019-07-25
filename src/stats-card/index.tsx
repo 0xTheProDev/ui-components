@@ -16,12 +16,14 @@ export interface StatsCardProps {
   children?: React.ReactNode;
   className?: string;
   stats?: Array<CardStatType>;
+  loading?: boolean;
 }
 
 const StatsCard = ({
   children,
   className,
   stats,
+  loading,
   ...attributes
 }: StatsCardProps) => {
   return (
@@ -30,7 +32,9 @@ const StatsCard = ({
       {...attributes}
     >
       {stats &&
-        stats.map(stat => <PreBuiltCardStat key={stat.label} {...stat} />)}
+        stats.map(stat => (
+          <PreBuiltCardStat key={stat.label} {...stat} loading={loading} />
+        ))}
       {children}
     </div>
   );

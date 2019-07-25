@@ -1,6 +1,7 @@
 import cn from 'classnames';
 import React, { ReactNode } from 'react';
 
+import { FragmentLoader } from '../fragment-loader';
 import { CardStatType } from '../types/stats';
 import Styles from './StatsCard.module.scss';
 
@@ -11,6 +12,7 @@ export interface CardStatProps {
   type?: CardStatType['type'];
   value: CardStatType['value'] | ReactNode;
   secondaryValue?: CardStatType['secondaryValue'] | ReactNode;
+  loading?: boolean;
 }
 
 const PreBuiltCardStat = ({
@@ -19,11 +21,16 @@ const PreBuiltCardStat = ({
   label,
   type,
   value,
+  loading,
   ...attributes
 }: CardStatProps) => {
   return (
     <CardStat className={className} {...attributes}>
-      <PrimaryStat type={type}>{value}</PrimaryStat>
+      {loading ? (
+        <FragmentLoader className={Styles.loader} />
+      ) : (
+        <PrimaryStat type={type}>{value}</PrimaryStat>
+      )}
       <CardStatLabel>{label}</CardStatLabel>
       {children}
     </CardStat>

@@ -105,6 +105,10 @@ stories.add('StatsCard with stats prop', () => (
   </Fragment>
 ));
 
+stories.add('StatsCard that is loading', () => (
+  <StatsCard stats={statsWithoutTypes} loading />
+));
+
 stories.add('StatsCard via composition', () => (
   <Fragment>
     <StatsCard>
