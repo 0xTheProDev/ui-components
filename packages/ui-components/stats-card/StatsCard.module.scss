@@ -9,7 +9,7 @@
   justify-content: space-around;
   width: 100%;
   padding: $scale-base-up-06;
-  border: 1px solid $slate-20;
+  border: 1px solid $slate-10;
   border-radius: $border-radius;
 
   // .email-stat has been genericized as .card-stat.
@@ -99,5 +99,9 @@
 
   .invalid {
     color: $stats-validation-invalid;
+  }
+
+  .loader {
+    margin: 0 auto 25px;
   }
 }

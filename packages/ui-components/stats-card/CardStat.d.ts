@@ -7,8 +7,9 @@ export interface CardStatProps {
     type?: CardStatType['type'];
     value: CardStatType['value'] | ReactNode;
     secondaryValue?: CardStatType['secondaryValue'] | ReactNode;
+    loading?: boolean;
 }
-declare const PreBuiltCardStat: ({ className, children, label, type, value, ...attributes }: CardStatProps) => JSX.Element;
+declare const PreBuiltCardStat: ({ className, children, label, type, value, loading, ...attributes }: CardStatProps) => JSX.Element;
 declare const PreBuiltCardStatSecondary: ({ className, children, label, type, value, secondaryValue, ...attributes }: CardStatProps) => JSX.Element;
 declare const CardStat: ({ children, className, ...attributes }: {
     children?: React.ReactNode;

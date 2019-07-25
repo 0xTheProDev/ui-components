@@ -5,8 +5,9 @@ export interface StatsCardProps {
     children?: React.ReactNode;
     className?: string;
     stats?: Array<CardStatType>;
+    loading?: boolean;
 }
-declare const StatsCard: ({ children, className, stats, ...attributes }: StatsCardProps) => JSX.Element;
+declare const StatsCard: ({ children, className, stats, loading, ...attributes }: StatsCardProps) => JSX.Element;
 declare const StatsCardSecondary: ({ children, className, stats, ...attributes }: StatsCardProps) => JSX.Element;
 declare const ComposableStatsCard: ({ children, className, ...attributes }: {
     children?: React.ReactNode;

@@ -9,11 +9,12 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import cn from 'classnames';
 import React from 'react';
+import { FragmentLoader } from '../fragment-loader';
 import Styles from './StatsCard.module.scss';
 const PreBuiltCardStat = (_a) => {
-    var { className, children, label, type, value } = _a, attributes = __rest(_a, ["className", "children", "label", "type", "value"]);
+    var { className, children, label, type, value, loading } = _a, attributes = __rest(_a, ["className", "children", "label", "type", "value", "loading"]);
     return (React.createElement(CardStat, Object.assign({ className: className }, attributes),
-        React.createElement(PrimaryStat, { type: type }, value),
+        loading ? (React.createElement(FragmentLoader, { className: Styles.loader })) : (React.createElement(PrimaryStat, { type: type }, value)),
         React.createElement(CardStatLabel, null, label),
         children));
 };

@@ -12,10 +12,10 @@ import React from 'react';
 import PreBuiltCardStat, { CardStat, CardStatLabel, PreBuiltCardStatSecondary, PrimaryStat, SecondaryStat, StatValue, } from './CardStat';
 import Styles from './StatsCard.module.scss';
 const StatsCard = (_a) => {
-    var { children, className, stats } = _a, attributes = __rest(_a, ["children", "className", "stats"]);
+    var { children, className, stats, loading } = _a, attributes = __rest(_a, ["children", "className", "stats", "loading"]);
     return (React.createElement("div", Object.assign({ className: cn(Styles['stats-card'], 'stats-card', className) }, attributes),
         stats &&
-            stats.map(stat => React.createElement(PreBuiltCardStat, Object.assign({ key: stat.label }, stat))),
+            stats.map(stat => (React.createElement(PreBuiltCardStat, Object.assign({ key: stat.label }, stat, { loading: loading })))),
         children));
 };
 const StatsCardSecondary = (_a) => {

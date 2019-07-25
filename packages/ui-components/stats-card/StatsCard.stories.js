@@ -89,6 +89,7 @@ stories.add('StatsCard with stats prop', () => (React.createElement(Fragment, nu
     React.createElement(StatsCard, { stats: statsWithoutTypes }),
     React.createElement("br", null),
     React.createElement(StatsCard, { stats: statsWithTypes }))));
+stories.add('StatsCard that is loading', () => (React.createElement(StatsCard, { stats: statsWithoutTypes, loading: true })));
 stories.add('StatsCard via composition', () => (React.createElement(Fragment, null,
     React.createElement(StatsCard, null,
         React.createElement(PreBuiltCardStat, Object.assign({}, statsWithoutTypes[0])),
