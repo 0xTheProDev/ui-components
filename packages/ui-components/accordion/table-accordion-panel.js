@@ -13,10 +13,10 @@ import { Actions } from '../actions';
 import AccordionPanel from './accordion-panel';
 import Styles from './accordion.module.scss';
 export const TableAccordionPanel = (_a) => {
-    var { actions, children, col1Title, col2Title } = _a, attributes = __rest(_a, ["actions", "children", "col1Title", "col2Title"]);
+    var { actions, children, col1Title, col2Title, onClick, open } = _a, attributes = __rest(_a, ["actions", "children", "col1Title", "col2Title", "onClick", "open"]);
     const action = actions();
     return (React.createElement("div", { className: cn('table-accordion-panel', Styles['table-accordion-panel']) },
-        React.createElement(AccordionPanel, Object.assign({ title: React.createElement(Fragment, null,
+        React.createElement(AccordionPanel, Object.assign({ onClick: onClick, open: open, title: React.createElement(Fragment, null,
                 React.createElement("h3", null, col1Title),
                 React.createElement("p", { className: cn('date', Styles.date) }, col2Title),
                 action ? (React.createElement("div", { onClick: e => e.stopPropagation() },

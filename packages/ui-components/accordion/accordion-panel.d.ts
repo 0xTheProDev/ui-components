@@ -19,6 +19,7 @@ export declare class AccordionPanel extends React.Component<AccordionPanelProps,
     readonly state: {
         open: boolean;
     };
+    componentDidUpdate(prevProps: AccordionPanelProps): void;
     render(): JSX.Element;
     private onAccordionPanelClick;
 }

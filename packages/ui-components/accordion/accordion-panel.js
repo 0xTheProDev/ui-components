@@ -48,6 +48,11 @@ export class AccordionPanel extends React.Component {
             this.setState(({ open }) => ({ open: !open }));
         };
     }
+    componentDidUpdate(prevProps) {
+        if (prevProps.open !== this.props.open) {
+            this.setState({ open: this.props.open });
+        }
+    }
     render() {
         const { children } = this.props;
         return (React.createElement(AccordionPanelSFC, Object.assign({}, this.props, { open: this.state.open, onClick: children ? this.onAccordionPanelClick : null }), children));
