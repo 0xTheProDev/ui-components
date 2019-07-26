@@ -9,11 +9,21 @@ export interface TableAccordionPanelProps {
   actions: () => React.ReactNode;
   col1Title: string;
   col2Title: string;
+  onClick?: (e: any) => void;
+  open?: boolean;
 }
 
 export const TableAccordionPanel: React.SFC<
   TableAccordionPanelProps & React.HTMLAttributes<HTMLDivElement>
-> = ({ actions, children, col1Title, col2Title, ...attributes }) => {
+> = ({
+  actions,
+  children,
+  col1Title,
+  col2Title,
+  onClick,
+  open,
+  ...attributes
+}) => {
   const action = actions();
 
   return (
@@ -21,6 +31,8 @@ export const TableAccordionPanel: React.SFC<
       className={cn('table-accordion-panel', Styles['table-accordion-panel'])}
     >
       <AccordionPanel
+        onClick={onClick}
+        open={open}
         title={
           <Fragment>
             <h3>{col1Title}</h3>

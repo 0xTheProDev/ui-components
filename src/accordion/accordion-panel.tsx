@@ -69,6 +69,12 @@ export class AccordionPanel extends React.Component<
     open: openProps(this.props),
   };
 
+  public componentDidUpdate(prevProps: AccordionPanelProps) {
+    if (prevProps.open !== this.props.open) {
+      this.setState({ open: this.props.open });
+    }
+  }
+
   public render() {
     const { children } = this.props;
 
