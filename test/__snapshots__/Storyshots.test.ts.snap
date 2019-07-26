@@ -5889,7 +5889,7 @@ exports[`Storyshots EmailCard Email Card - Disable Inbox Details 1`] = `
       className="email-stats"
     >
       <p
-        className="stat delivered"
+        className="stat"
       >
         966
       </p>
@@ -5903,7 +5903,7 @@ exports[`Storyshots EmailCard Email Card - Disable Inbox Details 1`] = `
       className="email-stats"
     >
       <p
-        className="stat unique-opens"
+        className="stat"
       >
         80.2%
       </p>
@@ -5917,7 +5917,7 @@ exports[`Storyshots EmailCard Email Card - Disable Inbox Details 1`] = `
       className="email-stats"
     >
       <p
-        className="stat unique-clicks"
+        className="stat"
       >
         6024
       </p>
@@ -5931,7 +5931,7 @@ exports[`Storyshots EmailCard Email Card - Disable Inbox Details 1`] = `
       className="email-stats"
     >
       <p
-        className="stat unsubscribes"
+        className="stat"
       >
         0
       </p>
@@ -6162,7 +6162,7 @@ exports[`Storyshots EmailCard Email Card - Live 1`] = `
       className="email-stats"
     >
       <p
-        className="stat delivered"
+        className="stat"
       >
         966
       </p>
@@ -6176,7 +6176,7 @@ exports[`Storyshots EmailCard Email Card - Live 1`] = `
       className="email-stats"
     >
       <p
-        className="stat unique-opens"
+        className="stat"
       >
         80.2%
       </p>
@@ -6190,7 +6190,7 @@ exports[`Storyshots EmailCard Email Card - Live 1`] = `
       className="email-stats"
     >
       <p
-        className="stat unique-clicks"
+        className="stat"
       >
         6024
       </p>
@@ -6204,7 +6204,7 @@ exports[`Storyshots EmailCard Email Card - Live 1`] = `
       className="email-stats"
     >
       <p
-        className="stat unsubscribes"
+        className="stat"
       >
         0
       </p>
@@ -6341,7 +6341,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
         className="email-stats"
       >
         <p
-          className="stat delivered"
+          className="stat"
         >
           966
         </p>
@@ -6355,7 +6355,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
         className="email-stats"
       >
         <p
-          className="stat unique-opens"
+          className="stat"
         >
           80.2%
         </p>
@@ -6369,7 +6369,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
         className="email-stats"
       >
         <p
-          className="stat unique-clicks"
+          className="stat"
         >
           6024
         </p>
@@ -6383,7 +6383,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
         className="email-stats"
       >
         <p
-          className="stat unsubscribes"
+          className="stat"
         >
           0
         </p>
@@ -6516,7 +6516,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
         className="email-stats"
       >
         <p
-          className="stat delivered"
+          className="stat"
         >
           966
         </p>
@@ -6530,7 +6530,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
         className="email-stats"
       >
         <p
-          className="stat unique-opens"
+          className="stat"
         >
           80.2%
         </p>
@@ -6544,7 +6544,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
         className="email-stats"
       >
         <p
-          className="stat unique-clicks"
+          className="stat"
         >
           6024
         </p>
@@ -6558,7 +6558,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
         className="email-stats"
       >
         <p
-          className="stat unsubscribes"
+          className="stat"
         >
           0
         </p>
@@ -6691,7 +6691,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
         className="email-stats"
       >
         <p
-          className="stat delivered"
+          className="stat"
         >
           966
         </p>
@@ -6705,7 +6705,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
         className="email-stats"
       >
         <p
-          className="stat unique-opens"
+          className="stat"
         >
           80.2%
         </p>
@@ -6719,7 +6719,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
         className="email-stats"
       >
         <p
-          className="stat unique-clicks"
+          className="stat"
         >
           6024
         </p>
@@ -6733,7 +6733,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
         className="email-stats"
       >
         <p
-          className="stat unsubscribes"
+          className="stat"
         >
           0
         </p>
@@ -6866,7 +6866,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
         className="email-stats"
       >
         <p
-          className="stat delivered"
+          className="stat"
         >
           966
         </p>
@@ -6880,7 +6880,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
         className="email-stats"
       >
         <p
-          className="stat unique-opens"
+          className="stat"
         >
           80.2%
         </p>
@@ -6894,7 +6894,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
         className="email-stats"
       >
         <p
-          className="stat unique-clicks"
+          className="stat"
         >
           6024
         </p>
@@ -6908,7 +6908,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
         className="email-stats"
       >
         <p
-          className="stat unsubscribes"
+          className="stat"
         >
           0
         </p>
@@ -7059,7 +7059,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
         className="email-stats"
       >
         <p
-          className="stat delivered"
+          className="stat"
         >
           966
         </p>
@@ -7073,7 +7073,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
         className="email-stats"
       >
         <p
-          className="stat unique-opens"
+          className="stat"
         >
           80.2%
         </p>
@@ -7087,7 +7087,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
         className="email-stats"
       >
         <p
-          className="stat unique-clicks"
+          className="stat"
         >
           6024
         </p>
@@ -7101,7 +7101,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
         className="email-stats"
       >
         <p
-          className="stat unsubscribes"
+          className="stat"
         >
           0
         </p>
@@ -7234,7 +7234,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
         className="email-stats"
       >
         <p
-          className="stat delivered"
+          className="stat"
         >
           966
         </p>
@@ -7248,7 +7248,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
         className="email-stats"
       >
         <p
-          className="stat unique-opens"
+          className="stat"
         >
           80.2%
         </p>
@@ -7262,7 +7262,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
         className="email-stats"
       >
         <p
-          className="stat unique-clicks"
+          className="stat"
         >
           6024
         </p>
@@ -7276,7 +7276,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
         className="email-stats"
       >
         <p
-          className="stat unsubscribes"
+          className="stat"
         >
           0
         </p>
@@ -7409,7 +7409,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
         className="email-stats"
       >
         <p
-          className="stat delivered"
+          className="stat"
         >
           966
         </p>
@@ -7423,7 +7423,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
         className="email-stats"
       >
         <p
-          className="stat unique-opens"
+          className="stat"
         >
           80.2%
         </p>
@@ -7437,7 +7437,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
         className="email-stats"
       >
         <p
-          className="stat unique-clicks"
+          className="stat"
         >
           6024
         </p>
@@ -7451,7 +7451,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
         className="email-stats"
       >
         <p
-          className="stat unsubscribes"
+          className="stat"
         >
           0
         </p>
@@ -7584,7 +7584,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
         className="email-stats"
       >
         <p
-          className="stat delivered"
+          className="stat"
         >
           966
         </p>
@@ -7598,7 +7598,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
         className="email-stats"
       >
         <p
-          className="stat unique-opens"
+          className="stat"
         >
           80.2%
         </p>
@@ -7612,7 +7612,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
         className="email-stats"
       >
         <p
-          className="stat unique-clicks"
+          className="stat"
         >
           6024
         </p>
@@ -7626,7 +7626,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
         className="email-stats"
       >
         <p
-          className="stat unsubscribes"
+          className="stat"
         >
           0
         </p>
@@ -7763,7 +7763,7 @@ exports[`Storyshots EmailCard Email Card - Paused 1`] = `
       className="email-stats"
     >
       <p
-        className="stat delivered"
+        className="stat"
       >
         966
       </p>
@@ -7777,7 +7777,7 @@ exports[`Storyshots EmailCard Email Card - Paused 1`] = `
       className="email-stats"
     >
       <p
-        className="stat unique-opens"
+        className="stat"
       >
         80.2%
       </p>
@@ -7791,7 +7791,7 @@ exports[`Storyshots EmailCard Email Card - Paused 1`] = `
       className="email-stats"
     >
       <p
-        className="stat unique-clicks"
+        className="stat"
       >
         6024
       </p>
@@ -7805,7 +7805,7 @@ exports[`Storyshots EmailCard Email Card - Paused 1`] = `
       className="email-stats"
     >
       <p
-        className="stat unsubscribes"
+        className="stat"
       >
         0
       </p>
@@ -7941,7 +7941,7 @@ exports[`Storyshots EmailCard Email Card 1`] = `
       className="email-stats"
     >
       <p
-        className="stat delivered"
+        className="stat"
       >
         966
       </p>
@@ -7955,7 +7955,7 @@ exports[`Storyshots EmailCard Email Card 1`] = `
       className="email-stats"
     >
       <p
-        className="stat unique-opens"
+        className="stat"
       >
         80.2%
       </p>
@@ -7969,7 +7969,7 @@ exports[`Storyshots EmailCard Email Card 1`] = `
       className="email-stats"
     >
       <p
-        className="stat unique-clicks"
+        className="stat"
       >
         6024
       </p>
@@ -7983,7 +7983,7 @@ exports[`Storyshots EmailCard Email Card 1`] = `
       className="email-stats"
     >
       <p
-        className="stat unsubscribes"
+        className="stat"
       >
         0
       </p>
@@ -8119,7 +8119,7 @@ exports[`Storyshots EmailCard Email Card with Alerts  1`] = `
       className="email-stats"
     >
       <p
-        className="stat delivered"
+        className="stat"
       >
         966
       </p>
@@ -8133,7 +8133,7 @@ exports[`Storyshots EmailCard Email Card with Alerts  1`] = `
       className="email-stats"
     >
       <p
-        className="stat unique-opens"
+        className="stat"
       >
         80.2%
       </p>
@@ -8147,7 +8147,7 @@ exports[`Storyshots EmailCard Email Card with Alerts  1`] = `
       className="email-stats"
     >
       <p
-        className="stat unique-clicks"
+        className="stat"
       >
         6024
       </p>
@@ -8161,7 +8161,7 @@ exports[`Storyshots EmailCard Email Card with Alerts  1`] = `
       className="email-stats"
     >
       <p
-        className="stat unsubscribes"
+        className="stat"
       >
         0
       </p>
@@ -8330,7 +8330,7 @@ exports[`Storyshots EmailCard Email Card with Blank Statistics 1`] = `
       className="email-stats"
     >
       <p
-        className="stat delivered"
+        className="stat"
       >
         —
       </p>
@@ -8344,7 +8344,7 @@ exports[`Storyshots EmailCard Email Card with Blank Statistics 1`] = `
       className="email-stats"
     >
       <p
-        className="stat unique-opens"
+        className="stat"
       >
         —
       </p>
@@ -8358,7 +8358,7 @@ exports[`Storyshots EmailCard Email Card with Blank Statistics 1`] = `
       className="email-stats"
     >
       <p
-        className="stat unique-clicks"
+        className="stat"
       >
         —
       </p>
@@ -8372,9 +8372,277 @@ exports[`Storyshots EmailCard Email Card with Blank Statistics 1`] = `
       className="email-stats"
     >
       <p
-        className="stat unsubscribes"
+        className="stat"
       >
         —
+      </p>
+      <p
+        className="label"
+      >
+        Unsubscribes
+      </p>
+    </div>
+  </div>
+  <div
+    className="email-card"
+  >
+    <div
+      className="email-card-count"
+    >
+      <p>
+        Email 
+        1
+      </p>
+    </div>
+    <div
+      className="email-card-content"
+    >
+      <button
+        className="btn btn-secondary"
+        disabled={false}
+        id={undefined}
+        onClick={[Function]}
+        type="button"
+      >
+        <span
+          className="email-card-content-edit"
+        >
+          <i
+            className="sg-icon sg-icon-pencil"
+            onClick={undefined}
+            style={null}
+          />
+          Edit
+        </span>
+      </button>
+    </div>
+    <div
+      className="email-card-details"
+    >
+      <table>
+        <tbody>
+          <tr>
+            <td
+              className="label required"
+            >
+              Subject
+            </td>
+            <td>
+              <a
+                href="#"
+              >
+                Welcome to SendGrid
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="label"
+            >
+              Preheader
+            </td>
+            <td>
+              <a
+                href="#"
+              >
+                Get starting sending up to 12,000 emails Today
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="label required"
+            >
+              From Sender
+            </td>
+            <td>
+              <a
+                href="#"
+              >
+                Tyler Hale &lt;tyler.hale@sendgrid.com&gt;
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots EmailCard Email Card with Loading Statistics 1`] = `
+<div
+  className="email-card-wrap"
+>
+  <div
+    className="email-card-send-time has-value"
+  >
+    <a
+      className="btn btn-secondary"
+      href="#"
+      id={undefined}
+      onClick={undefined}
+    >
+      Send Instantly
+    </a>
+    
+  </div>
+  <div
+    className="email-card-stats"
+  >
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat"
+      >
+        <svg
+          className="fragment-loader loader"
+        >
+          <rect
+            className="fragment-square left"
+            height={10}
+            width={10}
+          />
+          <rect
+            className="fragment-square middle"
+            height={10}
+            width={10}
+          />
+          <rect
+            className="fragment-square right"
+            height={10}
+            width={10}
+          />
+        </svg>
+      </p>
+      <p
+        className="label"
+      >
+        Emails Sent
+      </p>
+    </div>
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat"
+      >
+        <svg
+          className="fragment-loader loader"
+        >
+          <rect
+            className="fragment-square left"
+            height={10}
+            width={10}
+          />
+          <rect
+            className="fragment-square middle"
+            height={10}
+            width={10}
+          />
+          <rect
+            className="fragment-square right"
+            height={10}
+            width={10}
+          />
+        </svg>
+      </p>
+      <p
+        className="label"
+      >
+        Delivered
+      </p>
+    </div>
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat"
+      >
+        <svg
+          className="fragment-loader loader"
+        >
+          <rect
+            className="fragment-square left"
+            height={10}
+            width={10}
+          />
+          <rect
+            className="fragment-square middle"
+            height={10}
+            width={10}
+          />
+          <rect
+            className="fragment-square right"
+            height={10}
+            width={10}
+          />
+        </svg>
+      </p>
+      <p
+        className="label"
+      >
+        Unique Opens
+      </p>
+    </div>
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat"
+      >
+        <svg
+          className="fragment-loader loader"
+        >
+          <rect
+            className="fragment-square left"
+            height={10}
+            width={10}
+          />
+          <rect
+            className="fragment-square middle"
+            height={10}
+            width={10}
+          />
+          <rect
+            className="fragment-square right"
+            height={10}
+            width={10}
+          />
+        </svg>
+      </p>
+      <p
+        className="label"
+      >
+        Unique Clicks
+      </p>
+    </div>
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat"
+      >
+        <svg
+          className="fragment-loader loader"
+        >
+          <rect
+            className="fragment-square left"
+            height={10}
+            width={10}
+          />
+          <rect
+            className="fragment-square middle"
+            height={10}
+            width={10}
+          />
+          <rect
+            className="fragment-square right"
+            height={10}
+            width={10}
+          />
+        </svg>
       </p>
       <p
         className="label"
@@ -8726,7 +8994,7 @@ exports[`Storyshots EmailCard Email card with actions 1`] = `
       className="email-stats"
     >
       <p
-        className="stat delivered"
+        className="stat"
       >
         966
       </p>
@@ -8740,7 +9008,7 @@ exports[`Storyshots EmailCard Email card with actions 1`] = `
       className="email-stats"
     >
       <p
-        className="stat unique-opens"
+        className="stat"
       >
         80.2%
       </p>
@@ -8754,7 +9022,7 @@ exports[`Storyshots EmailCard Email card with actions 1`] = `
       className="email-stats"
     >
       <p
-        className="stat unique-clicks"
+        className="stat"
       >
         6024
       </p>
@@ -8768,7 +9036,7 @@ exports[`Storyshots EmailCard Email card with actions 1`] = `
       className="email-stats"
     >
       <p
-        className="stat unsubscribes"
+        className="stat"
       >
         0
       </p>

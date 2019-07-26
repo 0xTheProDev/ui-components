@@ -171,6 +171,7 @@ export interface EmailCardProps {
     clicks: StatisticType;
     unsubscribes: StatisticType;
   };
+  statisticsLoading?: boolean;
   className?: string;
 }
 
@@ -204,6 +205,7 @@ export class EmailCard extends React.Component<EmailCardProps> {
       renderSendTimeAlert,
       sendTimeValue,
       statistics,
+      statisticsLoading,
       ...attributes
     } = this.props;
     const alertEl = renderAlert && renderAlert();
@@ -230,22 +232,25 @@ export class EmailCard extends React.Component<EmailCardProps> {
         />
         {statistics && (
           <Statistics commonClass="email-stats">
-            <EmailCardStat specificClass="" statistic={statistics.sent} />
             <EmailCardStat
-              specificClass="delivered"
+              statistic={statistics.sent}
+              loading={statisticsLoading}
+            />
+            <EmailCardStat
               statistic={statistics.delivered}
+              loading={statisticsLoading}
             />
             <EmailCardStat
-              specificClass="unique-opens"
               statistic={statistics.opens}
+              loading={statisticsLoading}
             />
             <EmailCardStat
-              specificClass="unique-clicks"
               statistic={statistics.clicks}
+              loading={statisticsLoading}
             />
             <EmailCardStat
-              specificClass="unsubscribes"
               statistic={statistics.unsubscribes}
+              loading={statisticsLoading}
             />
           </Statistics>
         )}

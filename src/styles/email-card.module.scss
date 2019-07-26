@@ -174,37 +174,10 @@
   }
 
   .stat {
+    color: $slate;
     margin-bottom: 0;
     font-size: 20px;
     line-height: 30px;
-  }
-
-  .delivered {
-    color: $stats-delivered;
-  }
-
-  .opens {
-    color: $stats-opens;
-  }
-
-  .unique-opens {
-    color: $stats-unique-opens;
-  }
-
-  .clicks {
-    color: $stats-clicks;
-  }
-
-  .unique-clicks {
-    color: $stats-unique-clicks;
-  }
-
-  .unsubscribes {
-    color: $stats-unsubscribes;
-  }
-
-  .spam-reports {
-    color: $stats-spam-reports;
   }
 
   .label {
@@ -213,6 +186,10 @@
     font-weight: 600;
     line-height: 15px;
     text-transform: uppercase;
+  }
+
+  .loader {
+    margin: 0 auto 25px;
   }
 }
 

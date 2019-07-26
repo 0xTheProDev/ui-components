@@ -1,4 +1,6 @@
 import React from 'react';
+
+import { FragmentLoader } from './fragment-loader';
 import Styles from './styles/email-card.module.scss';
 import cn from './utilities/classnames';
 
@@ -15,16 +17,18 @@ export interface StatisticsProps {
 
 export const EmailCardStat: React.SFC<{
   statistic: StatisticType;
-  specificClass: string;
   commonClass?: string;
-}> = ({ statistic, specificClass, commonClass }) => (
+  loading?: boolean;
+}> = ({ statistic, commonClass, loading }) => (
   <div className={commonClass} key={statistic.label}>
-    <p
-      className={cn('stat', specificClass, Styles.stat, Styles[specificClass])}
-    >
-      {statistic.amount || parseInt(statistic.amount as string, 10) === 0
-        ? statistic.amount
-        : NO_STATS_CHAR}
+    <p className={cn('stat', Styles.stat)}>
+      {loading ? (
+        <FragmentLoader className={Styles.loader} />
+      ) : statistic.amount || parseInt(statistic.amount as string, 10) === 0 ? (
+        statistic.amount
+      ) : (
+        NO_STATS_CHAR
+      )}
     </p>
     <p className={cn('label', Styles.label)}>{statistic.label}</p>
   </div>

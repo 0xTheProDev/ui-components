@@ -117,6 +117,9 @@ loaderStories.add('Email Card with No Statistics', () => (
 loaderStories.add('Email Card with Blank Statistics', () => (
   <EmailCard sendTimeValue="Send Instantly" {...cardDataBlankStats} />
 ));
+loaderStories.add('Email Card with Loading Statistics', () => (
+  <EmailCard sendTimeValue="Send Instantly" {...cardDataBlankStats} statisticsLoading />
+));
 
 loaderStories.add('Email Card - Edit Mode', () => (
   <EmailCard {...cardDataNoStats} editing />
@@ -174,7 +177,7 @@ const renderWarningAlert = () => {
       <Fragment>
         Changes you've made to this email have not been applied to your live
         automation.
-        <Button onClick={() => {}} type="primary" small>
+        <Button onClick={() => { }} type="primary" small>
           Save and Apply
         </Button>
         <span
@@ -182,7 +185,7 @@ const renderWarningAlert = () => {
           data-tooltip="Discard Changes"
           data-tooltip-pos="up"
         >
-          <Icon type="trash" onClick={() => {}} />
+          <Icon type="trash" onClick={() => { }} />
         </span>
       </Fragment>
     </Alert>
