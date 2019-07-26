@@ -42,6 +42,7 @@ export interface EmailCardProps {
         clicks: StatisticType;
         unsubscribes: StatisticType;
     };
+    statisticsLoading?: boolean;
     className?: string;
 }
 export declare class EmailCard extends React.Component<EmailCardProps> {

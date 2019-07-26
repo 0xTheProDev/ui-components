@@ -10,8 +10,8 @@ export interface StatisticsProps {
 }
 export declare const EmailCardStat: React.SFC<{
     statistic: StatisticType;
-    specificClass: string;
     commonClass?: string;
+    loading?: boolean;
 }>;
 export declare const Statistics: React.SFC<StatisticsProps>;
 export default Statistics;

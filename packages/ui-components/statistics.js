@@ -8,13 +8,12 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import React from 'react';
+import { FragmentLoader } from './fragment-loader';
 import Styles from './styles/email-card.module.scss';
 import cn from './utilities/classnames';
 export const NO_STATS_CHAR = '—';
-export const EmailCardStat = ({ statistic, specificClass, commonClass }) => (React.createElement("div", { className: commonClass, key: statistic.label },
-    React.createElement("p", { className: cn('stat', specificClass, Styles.stat, Styles[specificClass]) }, statistic.amount || parseInt(statistic.amount, 10) === 0
-        ? statistic.amount
-        : NO_STATS_CHAR),
+export const EmailCardStat = ({ statistic, commonClass, loading }) => (React.createElement("div", { className: commonClass, key: statistic.label },
+    React.createElement("p", { className: cn('stat', Styles.stat) }, loading ? (React.createElement(FragmentLoader, { className: Styles.loader })) : statistic.amount || parseInt(statistic.amount, 10) === 0 ? (statistic.amount) : (NO_STATS_CHAR)),
     React.createElement("p", { className: cn('label', Styles.label) }, statistic.label)));
 export const Statistics = (_a) => {
     var { commonClass, className, children } = _a, attributes = __rest(_a, ["commonClass", "className", "children"]);

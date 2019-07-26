@@ -50,7 +50,7 @@ export const EmailCardAddButton = (_a) => {
 };
 export class EmailCard extends React.Component {
     render() {
-        const _a = this.props, { className, contentInvalid, details, disableInboxDetails, editable, editing, hasContent, live, n, onContentEditClick, onSaveAlertClick, paused, renderActions, renderAlert, renderSendTimeLink, renderSendTimeAlert, sendTimeValue, statistics } = _a, attributes = __rest(_a, ["className", "contentInvalid", "details", "disableInboxDetails", "editable", "editing", "hasContent", "live", "n", "onContentEditClick", "onSaveAlertClick", "paused", "renderActions", "renderAlert", "renderSendTimeLink", "renderSendTimeAlert", "sendTimeValue", "statistics"]);
+        const _a = this.props, { className, contentInvalid, details, disableInboxDetails, editable, editing, hasContent, live, n, onContentEditClick, onSaveAlertClick, paused, renderActions, renderAlert, renderSendTimeLink, renderSendTimeAlert, sendTimeValue, statistics, statisticsLoading } = _a, attributes = __rest(_a, ["className", "contentInvalid", "details", "disableInboxDetails", "editable", "editing", "hasContent", "live", "n", "onContentEditClick", "onSaveAlertClick", "paused", "renderActions", "renderAlert", "renderSendTimeLink", "renderSendTimeAlert", "sendTimeValue", "statistics", "statisticsLoading"]);
         const alertEl = renderAlert && renderAlert();
         const sendTimeAlert = renderSendTimeAlert && renderSendTimeAlert();
         return (React.createElement("div", Object.assign({ className: cn('email-card-wrap', Styles['email-card-wrap'], className, {
@@ -66,11 +66,11 @@ export class EmailCard extends React.Component {
             }) }, attributes),
             React.createElement(EmailCardSendTime, { value: sendTimeValue, renderSendTimeLink: renderSendTimeLink, alert: sendTimeAlert }),
             statistics && (React.createElement(Statistics, { commonClass: "email-stats" },
-                React.createElement(EmailCardStat, { specificClass: "", statistic: statistics.sent }),
-                React.createElement(EmailCardStat, { specificClass: "delivered", statistic: statistics.delivered }),
-                React.createElement(EmailCardStat, { specificClass: "unique-opens", statistic: statistics.opens }),
-                React.createElement(EmailCardStat, { specificClass: "unique-clicks", statistic: statistics.clicks }),
-                React.createElement(EmailCardStat, { specificClass: "unsubscribes", statistic: statistics.unsubscribes }))),
+                React.createElement(EmailCardStat, { statistic: statistics.sent, loading: statisticsLoading }),
+                React.createElement(EmailCardStat, { statistic: statistics.delivered, loading: statisticsLoading }),
+                React.createElement(EmailCardStat, { statistic: statistics.opens, loading: statisticsLoading }),
+                React.createElement(EmailCardStat, { statistic: statistics.clicks, loading: statisticsLoading }),
+                React.createElement(EmailCardStat, { statistic: statistics.unsubscribes, loading: statisticsLoading }))),
             React.createElement("div", { className: cn('email-card', Styles['email-card'], 'email-card') },
                 React.createElement("div", { className: cn('email-card-count', Styles['email-card-count']) },
                     React.createElement("p", null,
